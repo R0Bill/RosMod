@@ -1,0 +1,11 @@
+{
+  "modid": "Rosmontis",
+  "name": "Rosmontis",
+  "author_list": ["Bill"],
+  "description": "This is a description!\n\"This\" is a second line of description.\nThis \"\\\" is a slash. If you add another line like this:\nAll the spaces on the left of this will be gone. If you want spacing on a new line, do it:\n    like this.",
+  "version": "0.0.1",
+  "sts_version": "12-18-2022",
+  "mts_version": "3.30.0",
+  "dependencies": ["basemod", "stslib"],
+  "update_json": ""
+}

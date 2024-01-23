@@ -1,0 +1,26 @@
+{
+  "${modID}:PowerID": {
+    "NAME": "Ultimate Power",
+    "DESCRIPTIONS": [
+      "You are Very Cool and Strong."
+    ]
+  },
+  "${modID}:Skill3Power": {
+    "NAME": "with your wishes",
+    "DESCRIPTIONS": [
+      "Double any attack cards cost and will play 3 times. Lost 3 Dexterity. 50% to stun target."
+    ]
+  },
+  "${modID}:Skill2Power": {
+    "NAME": "Ultimate Power",
+    "DESCRIPTIONS": [
+      "You are Very Cool and Strong."
+    ]
+  },
+  "${modID}:Skill1Power": {
+    "NAME": "Ultimate Power",
+    "DESCRIPTIONS": [
+      "You are Very Cool and Strong."
+    ]
+  }
+}

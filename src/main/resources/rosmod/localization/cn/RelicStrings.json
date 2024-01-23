@@ -1,0 +1,29 @@
+{
+  "${modID}:RelicID": {
+    "NAME": "Good Relic",
+    "FLAVOR": "Flavor text displayed in detailed relic view.",
+    "DESCRIPTIONS": [
+      "Gain [E] at the start of your turn. [E] is an energy icon."
+    ]
+  },
+  "${modID}:AnnE": {
+    "NAME": "歼灭战装备",
+    "FLAVOR": "迷迭香持有这些重剑，只有她能使用的剑",
+    "DESCRIPTIONS": [
+      "当你使用攻击牌时，对所有敌人造成3点伤害"
+    ]
+  },"${modID}:StolenMiniCake": {
+  "NAME": "Good Relic",
+  "FLAVOR": "Flavor text displayed in detailed relic view.",
+  "DESCRIPTIONS": [
+    "Gain [E] at the start of your turn. [E] is an energy icon."
+  ]
+  },
+  "${modID}:ShoesFromAmiya": {
+    "NAME": "ShoesFromAmiya",
+    "FLAVOR": "Flavor text displayed in detailed relic view.",
+    "DESCRIPTIONS": [
+      "Gain [E] at the start of your turn. [E] is an energy icon."
+    ]
+  }
+}

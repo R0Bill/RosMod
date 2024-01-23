@@ -1,0 +1,99 @@
+{
+  "Rosmontis:ExampleCard": {
+    "NAME": "Name",
+    "DESCRIPTION": "Description.",
+    "UPGRADE_DESCRIPTION": "This will automatically be used if the card is upgraded. Remove it if unneeded.",
+    "EXTENDED_DESCRIPTION": [
+      "You can put more text in here.",
+      "If you need to use it for stuff.",
+      "Blizzard is a good example for this."
+    ]
+  },
+  "Rosmontis:StrikeRos": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage.",
+    "EXTENDED_DESCRIPTION": [
+      "Her brothers handle the sword.",
+      "They strike with her order.",
+      "--Script Caster KK"
+    ]
+  },
+  "Rosmontis:DefendRos": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Block !B! .",
+    "EXTENDED_DESCRIPTION": [
+      "Her brothers handle the sword.",
+      "They strike with her order."
+    ]
+  },
+  "Rosmontis:Skill3": {
+    "NAME": "with your wishes",
+    "DESCRIPTION": "Being fully attack. *Double all attack cards cost and they will play 3 times. Moreover, attack cards have 50% to Stun target. Lost 3 Dexterity.",
+    "UPGRADE_DESCRIPTION": "Innate.Being fully attack. *Double all attack cards cost and they will play 3 times. Moreover, attack cards have 50% to Stun target. Lost 3 Dexterity.",
+    "EXTENDED_DESCRIPTION": [
+      "You can put more text in here.",
+      "If you need to use it for stuff.",
+      "Blizzard is a good example for this."
+    ]
+  },
+  "Rosmontis:Memory": {
+    "NAME": "Memory",
+    "DESCRIPTION": "Gain [E] [E] in next turn.",
+    "UPGRADE_DESCRIPTION": "Retain. Gain [E] [E] in next turn.",
+    "EXTENDED_DESCRIPTION": [
+      "You can put more text in here.",
+      "If you need to use it for stuff.",
+      "Blizzard is a good example for this."
+    ]
+  },
+  "Rosmontis:ConcentrateRos": {
+    "NAME": "Concentrate",
+    "DESCRIPTION": "Description.",
+    "UPGRADE_DESCRIPTION": "This will automatically be used if the card is upgraded. Remove it if unneeded.",
+    "EXTENDED_DESCRIPTION": [
+      "You can put more text in here.",
+      "If you need to use it for stuff.",
+      "Blizzard is a good example for this."
+    ]
+  },
+  "Rosmontis:FlyRos": {
+    "NAME": "fly",
+    "DESCRIPTION": "Description.",
+    "UPGRADE_DESCRIPTION": "This will automatically be used if the card is upgraded. Remove it if unneeded.",
+    "EXTENDED_DESCRIPTION": [
+      "You can put more text in here.",
+      "If you need to use it for stuff.",
+      "Blizzard is a good example for this."
+    ]
+  },
+  "Rosmontis:HeavyAttackRos": {
+    "NAME": "HeavyAttack",
+    "DESCRIPTION": "Description.",
+    "UPGRADE_DESCRIPTION": "This will automatically be used if the card is upgraded. Remove it if unneeded.",
+    "EXTENDED_DESCRIPTION": [
+      "You can put more text in here.",
+      "If you need to use it for stuff.",
+      "Blizzard is a good example for this."
+    ]
+  },
+  "Rosmontis:PsyStorm": {
+    "NAME": "PsyStorm",
+    "DESCRIPTION": "Description.",
+    "UPGRADE_DESCRIPTION": "This will automatically be used if the card is upgraded. Remove it if unneeded.",
+    "EXTENDED_DESCRIPTION": [
+      "You can put more text in here.",
+      "If you need to use it for stuff.",
+      "Blizzard is a good example for this."
+    ]
+  },
+  "Rosmontis:QuickAttack": {
+    "NAME": "Name",
+    "DESCRIPTION": "Description.",
+    "UPGRADE_DESCRIPTION": "This will automatically be used if the card is upgraded. Remove it if unneeded.",
+    "EXTENDED_DESCRIPTION": [
+      "You can put more text in here.",
+      "If you need to use it for stuff.",
+      "Blizzard is a good example for this."
+    ]
+  }
+}
