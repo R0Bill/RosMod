@@ -29,9 +29,7 @@
     "DESCRIPTION": "全力以赴。所有攻击牌费用*2，视为打出3次。每次打出有20%的概率眩晕目标。失去3点敏捷。",
     "UPGRADE_DESCRIPTION": "固有。全力以赴。所有攻击牌费用*2，视为打出3次。每次打出有20%的概率眩晕目标。失去3点敏捷。",
     "EXTENDED_DESCRIPTION": [
-      "You can put more text in here.",
-      "If you need to use it for stuff.",
-      "Blizzard is a good example for this."
+      "这片大地仍垂怜你"
     ]
   },
   "${modID}:Memory": {
@@ -57,7 +55,7 @@
   "${modID}:FlyRos": {
     "NAME": "飞行",
     "DESCRIPTION": "消耗。获得1回合无实体。获得2敏捷",
-    "UPGRADE_DESCRIPTION": "This will automatically be used if the card is upgraded. Remove it if unneeded.",
+    "UPGRADE_DESCRIPTION": "获得1回合无实体。获得2敏捷",
     "EXTENDED_DESCRIPTION": [
       "You can put more text in here.",
       "If you need to use it for stuff.",
@@ -66,8 +64,7 @@
   },
   "${modID}:HeavyAttackRos": {
     "NAME": "HeavyAttack",
-    "DESCRIPTION": "Description.",
-    "UPGRADE_DESCRIPTION": "This will automatically be used if the card is upgraded. Remove it if unneeded.",
+    "DESCRIPTION": "造成 *2 次 !D! 单体伤害和 *3 点全体伤害",
     "EXTENDED_DESCRIPTION": [
       "You can put more text in here.",
       "If you need to use it for stuff.",
