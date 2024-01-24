@@ -7,9 +7,9 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.BarricadePower;
 import rosmod.cards.BaseCard;
 import rosmod.character.MyCharacter;
-import rosmod.powers.Skill1Power;
 import rosmod.powers.Skill2Power;
 import rosmod.util.CardStats;
 
@@ -37,7 +37,9 @@ public class Skill2 extends BaseCard {
                 break;
             }
         }
-        if(!powerExists)
-           addToBot((AbstractGameAction) new ApplyPowerAction((AbstractCreature) abstractPlayer, (AbstractCreature) abstractPlayer, (AbstractPower) new Skill2Power((AbstractCreature) abstractPlayer)));
+        if (!powerExists) {
+            addToBot((AbstractGameAction) new ApplyPowerAction((AbstractCreature) abstractPlayer, (AbstractCreature) abstractPlayer, (AbstractPower) new Skill2Power((AbstractCreature) abstractPlayer)));
+            addToBot((AbstractGameAction) new ApplyPowerAction((AbstractCreature) abstractPlayer, (AbstractCreature) abstractPlayer, (AbstractPower) new BarricadePower((AbstractCreature) abstractPlayer)));
+        }
     }
 }

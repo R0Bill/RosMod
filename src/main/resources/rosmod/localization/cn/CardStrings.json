@@ -11,7 +11,7 @@
   },
   "${modID}:StrikeRos": {
     "NAME": "打击",
-    "DESCRIPTION": "造成 !D! 点伤害",
+    "DESCRIPTION": "造成 !D! 点伤害。",
     "EXTENDED_DESCRIPTION": [
       "她的兄弟手握重剑",
       "挥锤大地"
@@ -19,7 +19,7 @@
   },
   "${modID}:DefendRos": {
     "NAME": "防御",
-    "DESCRIPTION": "格挡 !B! 伤害",
+    "DESCRIPTION": "格挡 !B! 伤害。",
     "EXTENDED_DESCRIPTION": [
       "剑盾立体防御"
     ]
@@ -44,8 +44,8 @@
   },
   "${modID}:ConcentrateRos": {
     "NAME": "集中",
-    "DESCRIPTION": "随机消耗一张牌，获得3点临时生命",
-    "UPGRADE_DESCRIPTION": "消耗一张牌，获得5点临时生命",
+    "DESCRIPTION": "随机消耗一张牌，获得3点临时生命。",
+    "UPGRADE_DESCRIPTION": "消耗一张牌，获得5点临时生命。",
     "EXTENDED_DESCRIPTION": [
       "You can put more text in here.",
       "If you need to use it for stuff.",
@@ -54,8 +54,8 @@
   },
   "${modID}:FlyRos": {
     "NAME": "飞行",
-    "DESCRIPTION": "消耗。获得1回合无实体。获得2敏捷",
-    "UPGRADE_DESCRIPTION": "获得1回合无实体。获得2敏捷",
+    "DESCRIPTION": "消耗。获得1回合无实体。获得2敏捷。",
+    "UPGRADE_DESCRIPTION": "获得1回合无实体。获得2敏捷。",
     "EXTENDED_DESCRIPTION": [
       "You can put more text in here.",
       "If you need to use it for stuff.",
@@ -63,8 +63,8 @@
     ]
   },
   "${modID}:HeavyAttackRos": {
-    "NAME": "HeavyAttack",
-    "DESCRIPTION": "造成 *2 次 !D! 单体伤害和 *3 点全体伤害",
+    "NAME": "重击",
+    "DESCRIPTION": "造成 *2 次 !D! 单体伤害和 *3 点全体伤害。",
     "EXTENDED_DESCRIPTION": [
       "You can put more text in here.",
       "If you need to use it for stuff.",
@@ -72,9 +72,9 @@
     ]
   },
   "${modID}:PsyStorm": {
-    "NAME": "PsyStorm",
-    "DESCRIPTION": "Description.",
-    "UPGRADE_DESCRIPTION": "This will automatically be used if the card is upgraded. Remove it if unneeded.",
+    "NAME": "念力风暴",
+    "DESCRIPTION": "消耗。对全体敌人造成2-4-8-16-32...点伤害。",
+    "UPGRADE_DESCRIPTION": "消耗，保留。对全体敌人造成2-4-8-16-32...点伤害。",
     "EXTENDED_DESCRIPTION": [
       "You can put more text in here.",
       "If you need to use it for stuff.",
@@ -82,9 +82,8 @@
     ]
   },
   "${modID}:QuickAttack": {
-    "NAME": "Name",
-    "DESCRIPTION": "Description.",
-    "UPGRADE_DESCRIPTION": "This will automatically be used if the card is upgraded. Remove it if unneeded.",
+    "NAME": "快速攻击",
+    "DESCRIPTION": "造成 !D! 点伤害。",
     "EXTENDED_DESCRIPTION": [
       "You can put more text in here.",
       "If you need to use it for stuff.",
@@ -93,6 +92,36 @@
   },
   "${modID}:ShieldStrike": {
     "NAME": "ShieldStrike",
+    "DESCRIPTION": "Description.",
+    "UPGRADE_DESCRIPTION": "This will automatically be used if the card is upgraded. Remove it if unneeded.",
+    "EXTENDED_DESCRIPTION": [
+      "You can put more text in here.",
+      "If you need to use it for stuff.",
+      "Blizzard is a good example for this."
+    ]
+  },
+  "${modID}:Skill1": {
+    "NAME": "Skill1",
+    "DESCRIPTION": "Description.",
+    "UPGRADE_DESCRIPTION": "This will automatically be used if the card is upgraded. Remove it if unneeded.",
+    "EXTENDED_DESCRIPTION": [
+      "You can put more text in here.",
+      "If you need to use it for stuff.",
+      "Blizzard is a good example for this."
+    ]
+  },
+  "${modID}:Skill2": {
+    "NAME": "Skill2",
+    "DESCRIPTION": "Description.",
+    "UPGRADE_DESCRIPTION": "This will automatically be used if the card is upgraded. Remove it if unneeded.",
+    "EXTENDED_DESCRIPTION": [
+      "You can put more text in here.",
+      "If you need to use it for stuff.",
+      "Blizzard is a good example for this."
+    ]
+  },
+  "${modID}:AddDefend": {
+    "NAME": "AddDefend",
     "DESCRIPTION": "Description.",
     "UPGRADE_DESCRIPTION": "This will automatically be used if the card is upgraded. Remove it if unneeded.",
     "EXTENDED_DESCRIPTION": [

@@ -31,9 +31,8 @@
     "DESCRIPTION": "Being fully attack. *Double all attack cards cost and they will play 3 times. Moreover, attack cards have 50% to Stun target. Lost 3 Dexterity.",
     "UPGRADE_DESCRIPTION": "Innate.Being fully attack. *Double all attack cards cost and they will play 3 times. Moreover, attack cards have 50% to Stun target. Lost 3 Dexterity.",
     "EXTENDED_DESCRIPTION": [
-      "You can put more text in here.",
-      "If you need to use it for stuff.",
-      "Blizzard is a good example for this."
+      "\"I'm here..",
+      "for watching you die\""
     ]
   },
   "Rosmontis:Memory": {
@@ -88,6 +87,46 @@
   },
   "Rosmontis:QuickAttack": {
     "NAME": "Name",
+    "DESCRIPTION": "Description.",
+    "UPGRADE_DESCRIPTION": "This will automatically be used if the card is upgraded. Remove it if unneeded.",
+    "EXTENDED_DESCRIPTION": [
+      "You can put more text in here.",
+      "If you need to use it for stuff.",
+      "Blizzard is a good example for this."
+    ]
+  },
+  "Rosmontis:ShieldStrike": {
+    "NAME": "ShieldStrike",
+    "DESCRIPTION": "Description.",
+    "UPGRADE_DESCRIPTION": "This will automatically be used if the card is upgraded. Remove it if unneeded.",
+    "EXTENDED_DESCRIPTION": [
+      "You can put more text in here.",
+      "If you need to use it for stuff.",
+      "Blizzard is a good example for this."
+    ]
+  },
+  "Rosmontis:Skill1": {
+    "NAME": "Skill1",
+    "DESCRIPTION": "Description.",
+    "UPGRADE_DESCRIPTION": "This will automatically be used if the card is upgraded. Remove it if unneeded.",
+    "EXTENDED_DESCRIPTION": [
+      "You can put more text in here.",
+      "If you need to use it for stuff.",
+      "Blizzard is a good example for this."
+    ]
+  },
+  "Rosmontis:Skill2": {
+    "NAME": "Skill2",
+    "DESCRIPTION": "Description.",
+    "UPGRADE_DESCRIPTION": "This will automatically be used if the card is upgraded. Remove it if unneeded.",
+    "EXTENDED_DESCRIPTION": [
+      "You can put more text in here.",
+      "If you need to use it for stuff.",
+      "Blizzard is a good example for this."
+    ]
+  },
+  "Rosmontis:AddDefend": {
+    "NAME": "AddDefend",
     "DESCRIPTION": "Description.",
     "UPGRADE_DESCRIPTION": "This will automatically be used if the card is upgraded. Remove it if unneeded.",
     "EXTENDED_DESCRIPTION": [

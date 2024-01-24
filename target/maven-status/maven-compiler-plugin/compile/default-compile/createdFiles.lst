@@ -1,6 +1,7 @@
 rosmod\BasicMod.class
 rosmod\cards\power\Skill2.class
 rosmod\util\CardStats.class
+rosmod\cards\skill\AddDefend.class
 rosmod\relics\BaseRelic$1.class
 rosmod\powers\Skill1Power.class
 rosmod\cards\attack\HeavyAttackRos.class
@@ -8,6 +9,7 @@ rosmod\cards\BaseCard$VariableType.class
 rosmod\cards\skill\Memory.class
 rosmod\cards\skill\ConcentrateRos.class
 rosmod\powers\Skill2Power.class
+rosmod\cards\attack\ShieldStrike.class
 rosmod\util\TextureLoader.class
 rosmod\potions\BasePotion.class
 rosmod\cards\skill\FlyRos.class
