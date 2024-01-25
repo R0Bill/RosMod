@@ -28,7 +28,6 @@ public class AddAttack extends BaseCard {
         super(ID,info);
         setDamage(DAMAGE, UPG_DAMAGE);
         this.cardsToPreview = new QuickAttack();
-        setCostUpgrade(0);
     }
     @Override
     public void triggerOnGlowCheck() {
