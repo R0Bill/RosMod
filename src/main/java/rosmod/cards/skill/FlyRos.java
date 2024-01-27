@@ -1,17 +1,13 @@
 package rosmod.cards.skill;
 
-import basemod.abstracts.cardbuilder.actionbuilder.EffectActionBuilder;
-import basemod.animations.SpineAnimation;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
-import javafx.animation.Animation;
 import rosmod.cards.BaseCard;
 import rosmod.character.MyCharacter;
 import rosmod.util.CardStats;
@@ -27,7 +23,8 @@ public class FlyRos extends BaseCard {
     );
     public FlyRos(){
         super(ID,info);
-        setExhaust(true,false);
+        setExhaust(true);
+        setCostUpgrade(1);
     }
 
     @Override

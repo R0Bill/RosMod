@@ -1,6 +1,7 @@
 D:\ModTheSpire\RosMod\src\main\java\rosmod\cards\skill\DefendRos.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\util\CardStats.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\cards\skill\ConcentrateRos.java
+D:\ModTheSpire\RosMod\src\main\java\rosmod\relics\Terminal.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\relics\AnnE.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\relics\BaseRelic.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\cards\skill\PsyStorm.java
@@ -29,3 +30,4 @@ D:\ModTheSpire\RosMod\src\main\java\rosmod\relics\ShoesFromAmiya.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\cards\power\Skill2.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\actions\AddAttackAction.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\cards\attack\QuickAttack.java
+D:\ModTheSpire\RosMod\src\main\java\rosmod\cards\skill\EntrenchRos.java

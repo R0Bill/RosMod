@@ -12,6 +12,7 @@ rosmod\powers\Skill2Power.class
 rosmod\cards\attack\ShieldStrike.class
 rosmod\util\TextureLoader.class
 rosmod\potions\BasePotion.class
+rosmod\relics\Terminal.class
 rosmod\cards\skill\FlyRos.class
 rosmod\relics\BaseRelic.class
 rosmod\actions\AddAttackAction.class
@@ -27,6 +28,7 @@ rosmod\cards\skill\DefendRos.class
 rosmod\cards\BaseCard$1.class
 rosmod\util\GeneralUtils.class
 rosmod\cards\BaseCard$LocalVarInfo.class
+rosmod\cards\skill\EntrenchRos.class
 rosmod\relics\ShoesFromAmiya.class
 rosmod\relics\AnnE.class
 rosmod\cards\attack\AddAttack.class

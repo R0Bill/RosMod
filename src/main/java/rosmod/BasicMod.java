@@ -2,15 +2,10 @@ package rosmod;
 
 import basemod.AutoAdd;
 import basemod.BaseMod;
+import basemod.helpers.RelicType;
 import basemod.interfaces.*;
-import com.badlogic.gdx.graphics.Color;
-import com.megacrit.cardcrawl.unlock.UnlockTracker;
-import rosmod.cards.BaseCard;
-import rosmod.relics.BaseRelic;
-import rosmod.util.GeneralUtils;
-import rosmod.util.KeywordInfo;
-import rosmod.util.TextureLoader;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.utils.GdxRuntimeException;
 import com.evacipated.cardcrawl.modthespire.Loader;
@@ -20,12 +15,22 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.localization.*;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.scannotation.AnnotationDB;
+import rosmod.cards.BaseCard;
+import rosmod.relics.BaseRelic;
+import rosmod.relics.Terminal;
+import rosmod.util.GeneralUtils;
+import rosmod.util.KeywordInfo;
+import rosmod.util.TextureLoader;
 
 import java.nio.charset.StandardCharsets;
 import java.util.*;
+
+import static basemod.BaseMod.addRelicToCustomPool;
 
 @SpireInitializer
 public class BasicMod implements
@@ -227,18 +232,17 @@ public class BasicMod implements
 
     @Override
     public void receiveEditRelics() { //somewhere in the class
+        BaseMod.addRelic((AbstractRelic) new Terminal(), RelicType.SHARED);
         new AutoAdd(modID) //Loads files from this mod
                 .packageFilter(BaseRelic.class) //In the same package as this class
                 .any(BaseRelic.class, (info, relic) -> { //Run this code for any classes that extend this class
                     if (relic.pool != null)
-                        BaseMod.addRelicToCustomPool(relic, relic.pool); //Register a custom character specific relic
-                    else
-                        BaseMod.addRelic(relic, relic.relicType); //Register a shared or base game character specific relic
-
-                    //If the class is annotated with @AutoAdd.Seen, it will be marked as seen, making it visible in the relic library.
-                    //If you want all your relics to be visible by default, just remove this if statement.
+                        addRelicToCustomPool(relic, relic.pool); //Register a custom character specific relic
+                    else {
+                        BaseMod.addRelic(relic, relic.relicType); //Register a shared or base game character specific relic\
+                    }
 //                    if (info.seen)
-//                        UnlockTracker.markRelicAsSeen(relic.relicId);
+                    UnlockTracker.markRelicAsSeen(relic.relicId);
                 });
     }
 }
