@@ -6,27 +6,23 @@ import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardQueueItem;
 import com.megacrit.cardcrawl.core.AbstractCreature;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import java.util.ArrayList;
 
-public class Skill3Power extends AbstractPower {
-    private static final PowerStrings powerStrings;
-    public static final String NAME ;
-    public static final String[] DESCRIPTIONS;
+import static rosmod.BasicMod.makeID;
+
+public class Skill3Power extends BasePower {
+    public static final String POWER_ID = makeID("Skill3Power");
+
+    private static final AbstractPower.PowerType TYPE = AbstractPower.PowerType.BUFF;
+    private static final boolean TURN_BASED = false;
 
     public Skill3Power(AbstractCreature owner) {
-        this.name = NAME;
-        this.ID = "Skill3Power";
-        this.owner = owner;
-        this.updateDescription();
-        this.type = PowerType.BUFF;
-        this.loadRegion("doubleTap");
+        super(POWER_ID, TYPE, TURN_BASED, owner, -1);
     }
     @Override
     public void updateDescription() {
@@ -105,14 +101,5 @@ public class Skill3Power extends AbstractPower {
             int tempa = abstractCard.cost;
             abstractCard.setCostForTurn(tempa*2);
         }
-    }
-    @Override
-    public void atEndOfTurn(boolean isPlayer) {
-    }
-
-    static {
-        powerStrings = CardCrawlGame.languagePack.getPowerStrings("Skill3Power");
-        NAME = powerStrings.NAME;
-        DESCRIPTIONS = powerStrings.DESCRIPTIONS;
     }
 }

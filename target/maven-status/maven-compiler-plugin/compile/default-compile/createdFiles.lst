@@ -28,6 +28,7 @@ rosmod\cards\power\CommandTerminal.class
 rosmod\relics\StolenMiniCake.class
 rosmod\cards\skill\DefendRos.class
 rosmod\cards\BaseCard$1.class
+rosmod\cards\attack\Impulse.class
 rosmod\util\GeneralUtils.class
 rosmod\cards\BaseCard$LocalVarInfo.class
 rosmod\cards\skill\EntrenchRos.class

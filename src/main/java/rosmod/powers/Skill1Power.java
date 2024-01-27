@@ -7,28 +7,25 @@ import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
+import static rosmod.BasicMod.makeID;
 
-public class Skill1Power extends AbstractPower {
-    private static PowerStrings getPowerStrings(String ID)
-    {
-        return CardCrawlGame.languagePack.getPowerStrings(ID);
-    }
-    private static final PowerStrings powerStrings;
-    public static final String NAME ;
-    public static final String[] DESCRIPTIONS;
+
+public class Skill1Power extends BasePower {
+    public static final String POWER_ID = makeID("Skill1Power");
+
+    private static final AbstractPower.PowerType TYPE = AbstractPower.PowerType.BUFF;
+    private static final boolean TURN_BASED = false;
+    //The only thing this controls is the color of the number on the power icon.
+    //Turn based powers are white, non-turn based powers are red or green depending on if their amount is positive or negative.
+    //For a power to actually decrease/go away on its own they do it themselves.
+    //Look at powers that do this like VulnerablePower and DoubleTapPower.
     private static int magic = 0;
 
     public Skill1Power(AbstractCreature owner) {
-        this.name = NAME;
-        this.ID = "Skill1Power";
-        this.owner = owner;
-        this.updateDescription();
-        this.loadRegion("doubleTap");
+        super(POWER_ID, TYPE, TURN_BASED, owner, -1);
     }
     @Override
     public void updateDescription() {
@@ -59,9 +56,4 @@ public class Skill1Power extends AbstractPower {
         magic=0;
     }
 
-    static {
-        powerStrings = CardCrawlGame.languagePack.getPowerStrings("Skill1Power");
-        NAME = powerStrings.NAME;
-        DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    }
 }
