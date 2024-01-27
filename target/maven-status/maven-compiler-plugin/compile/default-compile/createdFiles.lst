@@ -2,6 +2,7 @@ rosmod\BasicMod.class
 rosmod\cards\power\Skill2.class
 rosmod\util\CardStats.class
 rosmod\cards\skill\AddDefend.class
+rosmod\powers\CommandTerminalPower.class
 rosmod\relics\BaseRelic$1.class
 rosmod\powers\Skill1Power.class
 rosmod\cards\attack\HeavyAttackRos.class
@@ -23,6 +24,7 @@ rosmod\powers\Skill3Power.class
 rosmod\cards\skill\PsyStorm.class
 rosmod\cards\power\Skill1.class
 rosmod\cards\BaseCard$QuickDynamicVariable.class
+rosmod\cards\power\CommandTerminal.class
 rosmod\relics\StolenMiniCake.class
 rosmod\cards\skill\DefendRos.class
 rosmod\cards\BaseCard$1.class
