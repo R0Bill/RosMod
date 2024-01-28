@@ -2,6 +2,7 @@ rosmod\BasicMod.class
 rosmod\cards\power\Skill2.class
 rosmod\util\CardStats.class
 rosmod\cards\skill\AddDefend.class
+rosmod\cards\skill\Intimidate.class
 rosmod\powers\CommandTerminalPower.class
 rosmod\relics\BaseRelic$1.class
 rosmod\powers\Skill1Power.class
