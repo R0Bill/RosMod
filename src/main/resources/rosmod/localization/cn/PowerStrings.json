@@ -12,19 +12,31 @@
     ]
   },
   "${modID}:Skill2Power": {
-    "NAME": "Ultimate Power",
+    "NAME": "Skill2Power",
     "DESCRIPTIONS": [
       "You are Very Cool and Strong."
     ]
   },
   "${modID}:Skill1Power": {
-    "NAME": "Ultimate Power",
+    "NAME": "Skill1Power",
     "DESCRIPTIONS": [
       "You are Very Cool and Strong."
     ]
   },
   "${modID}:CommandTerminalPower": {
-    "NAME": "Ultimate Power",
+    "NAME": "CommandTerminalPower",
+    "DESCRIPTIONS": [
+      "You are Very Cool and Strong."
+    ]
+  },
+  "${modID}:MilliaPower": {
+    "NAME": "MilliaPower",
+    "DESCRIPTIONS": [
+      "You are Very Cool and Strong."
+    ]
+  },
+  "${modID}:StablePower": {
+    "NAME": "StablePower",
     "DESCRIPTIONS": [
       "You are Very Cool and Strong."
     ]

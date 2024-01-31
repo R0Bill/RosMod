@@ -1,7 +1,7 @@
 package rosmod.relics;
 
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import rosmod.character.MyCharacter;
+import rosmod.character.Rosmontis;
 
 import static rosmod.BasicMod.makeID;
 
@@ -12,7 +12,7 @@ public class StolenMiniCake extends BaseRelic{
     private static final LandingSound SOUND = LandingSound.CLINK; //The sound played when the relic is clicked.
 
     public StolenMiniCake() {
-        super(ID, NAME, MyCharacter.Enums.CARD_COLOR, RARITY, SOUND);
+        super(ID, NAME, Rosmontis.Enums.CARD_COLOR, RARITY, SOUND);
     }
 
     @Override

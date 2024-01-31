@@ -1,14 +1,14 @@
 package rosmod.relics;
 
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import rosmod.character.MyCharacter;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
+import com.megacrit.cardcrawl.actions.utility.UseCardAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import rosmod.character.Rosmontis;
 
 import static rosmod.BasicMod.makeID;
 
@@ -19,7 +19,7 @@ public class AnnE extends BaseRelic {
     private static final LandingSound SOUND = LandingSound.CLINK; //The sound played when the relic is clicked.
 
     public AnnE() {
-        super(ID, NAME, MyCharacter.Enums.CARD_COLOR, RARITY, SOUND);
+        super(ID, NAME, Rosmontis.Enums.CARD_COLOR, RARITY, SOUND);
     }
 
     @Override

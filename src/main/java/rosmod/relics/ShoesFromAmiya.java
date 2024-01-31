@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.DexterityPower;
-import rosmod.character.MyCharacter;
+import rosmod.character.Rosmontis;
 
 import static rosmod.BasicMod.makeID;
 
@@ -17,7 +17,7 @@ public class ShoesFromAmiya extends BaseRelic{
     private static final LandingSound SOUND = LandingSound.CLINK; //The sound played when the relic is clicked.
 
     public ShoesFromAmiya() {
-        super(ID, NAME, MyCharacter.Enums.CARD_COLOR, RARITY, SOUND);
+        super(ID, NAME, Rosmontis.Enums.CARD_COLOR, RARITY, SOUND);
     }
 
     @Override

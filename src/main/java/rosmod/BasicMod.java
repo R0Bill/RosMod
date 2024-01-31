@@ -21,6 +21,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.scannotation.AnnotationDB;
 import rosmod.cards.BaseCard;
+import rosmod.character.Rosmontis;
 import rosmod.relics.BaseRelic;
 import rosmod.relics.Terminal;
 import rosmod.util.GeneralUtils;
@@ -72,7 +73,7 @@ public class BasicMod implements
     public static void initialize() {
         new BasicMod();
 
-        BaseMod.addColor(rosmod.character.MyCharacter.Enums.CARD_COLOR, cardColor,
+        BaseMod.addColor(Rosmontis.Enums.CARD_COLOR, cardColor,
                 BG_ATTACK, BG_SKILL, BG_POWER, ENERGY_ORB,
                 BG_ATTACK_P, BG_SKILL_P, BG_POWER_P, ENERGY_ORB_P,
                 SMALL_ORB);
@@ -218,8 +219,8 @@ public class BasicMod implements
 
     @Override
     public void receiveEditCharacters() {
-        BaseMod.addCharacter(new rosmod.character.MyCharacter(),
-                CHAR_SELECT_BUTTON, CHAR_SELECT_PORTRAIT, rosmod.character.MyCharacter.Enums.YOUR_CHARACTER);
+        BaseMod.addCharacter(new Rosmontis(),
+                CHAR_SELECT_BUTTON, CHAR_SELECT_PORTRAIT, Rosmontis.Enums.YOUR_CHARACTER);
     }
 
     @Override

@@ -12,19 +12,31 @@
     ]
   },
   "Rosmontis:Skill2Power": {
-    "NAME": "Ultimate Power",
+    "NAME": "Skill2Power",
     "DESCRIPTIONS": [
       "You are Very Cool and Strong."
     ]
   },
   "Rosmontis:Skill1Power": {
-    "NAME": "Ultimate Power",
+    "NAME": "Skill1Power",
     "DESCRIPTIONS": [
       "You are Very Cool and Strong."
     ]
   },
   "Rosmontis:CommandTerminalPower": {
-    "NAME": "Ultimate Power",
+    "NAME": "CommandTerminalPower",
+    "DESCRIPTIONS": [
+      "You are Very Cool and Strong."
+    ]
+  },
+  "Rosmontis:MilliaPower": {
+    "NAME": "MilliaPower",
+    "DESCRIPTIONS": [
+      "You are Very Cool and Strong."
+    ]
+  },
+  "Rosmontis:StablePower": {
+    "NAME": "StablePower",
     "DESCRIPTIONS": [
       "You are Very Cool and Strong."
     ]

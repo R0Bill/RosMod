@@ -3,7 +3,7 @@ package rosmod.relics;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import rosmod.character.MyCharacter;
+import rosmod.character.Rosmontis;
 
 import static rosmod.BasicMod.makeID;
 
@@ -15,7 +15,7 @@ public class Plant extends BaseRelic {//回合开始时基于5点护盾
     private static final AbstractRelic.LandingSound SOUND = AbstractRelic.LandingSound.CLINK; //The sound played when the relic is clicked.
 
     public Plant() {
-        super(ID, NAME, MyCharacter.Enums.CARD_COLOR, RARITY, SOUND);
+        super(ID, NAME, Rosmontis.Enums.CARD_COLOR, RARITY, SOUND);
     }
 
     @Override

@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.DexterityPower;
-import rosmod.character.MyCharacter;
+import rosmod.character.Rosmontis;
 
 import static rosmod.BasicMod.makeID;
 
@@ -17,8 +17,8 @@ public class JudgeCount extends BaseRelic {
     private static final LandingSound SOUND = LandingSound.CLINK; //The sound played when the relic is clicked.
 
     public JudgeCount() {
-        super(ID, NAME, MyCharacter.Enums.CARD_COLOR, RARITY, SOUND);
-        this.counter = 2;
+        super(ID, NAME, Rosmontis.Enums.CARD_COLOR, RARITY, SOUND);
+        this.counter = 1;
     }
 
     @Override

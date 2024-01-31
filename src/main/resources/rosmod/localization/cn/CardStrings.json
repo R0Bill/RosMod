@@ -92,8 +92,8 @@
   },
   "${modID}:ShieldStrike": {
     "NAME": "ShieldStrike",
-    "DESCRIPTION": "Description.",
-    "UPGRADE_DESCRIPTION": "This will automatically be used if the card is upgraded. Remove it if unneeded.",
+    "DESCRIPTION": "造成你当前护盾量的伤害（受伤害判定影响），目前为 !D! ",
+    "UPGRADE_DESCRIPTION": "造成你当前护盾量的伤害（受伤害判定影响），目前为 !D!",
     "EXTENDED_DESCRIPTION": [
       "You can put more text in here.",
       "If you need to use it for stuff.",
@@ -102,8 +102,8 @@
   },
   "${modID}:Skill1": {
     "NAME": "Skill1",
-    "DESCRIPTION": "Description.",
-    "UPGRADE_DESCRIPTION": "This will automatically be used if the card is upgraded. Remove it if unneeded.",
+    "DESCRIPTION": "每回合第3张攻击牌视为打出两次",
+    "UPGRADE_DESCRIPTION": "固有。每回合第3张攻击牌视为打出两次",
     "EXTENDED_DESCRIPTION": [
       "You can put more text in here.",
       "If you need to use it for stuff.",
@@ -112,8 +112,8 @@
   },
   "${modID}:Skill2": {
     "NAME": "Skill2",
-    "DESCRIPTION": "Description.",
-    "UPGRADE_DESCRIPTION": "This will automatically be used if the card is upgraded. Remove it if unneeded.",
+    "DESCRIPTION": "格挡不会消失，你造成的伤害增加你格挡量的一半",
+    "UPGRADE_DESCRIPTION": "固有。格挡不会消失，你造成的伤害增加你格挡量的一半",
     "EXTENDED_DESCRIPTION": [
       "You can put more text in here.",
       "If you need to use it for stuff.",
@@ -122,8 +122,7 @@
   },
   "${modID}:AddDefend": {
     "NAME": "AddDefend",
-    "DESCRIPTION": "Description.",
-    "UPGRADE_DESCRIPTION": "This will automatically be used if the card is upgraded. Remove it if unneeded.",
+    "DESCRIPTION": "获得 !B! 格挡。如果上一张打出的是技能牌，获得两次。",
     "EXTENDED_DESCRIPTION": [
       "You can put more text in here.",
       "If you need to use it for stuff.",
@@ -132,8 +131,7 @@
   },
   "${modID}:EntrenchRos": {
     "NAME": "EntrenchRos",
-    "DESCRIPTION": "Description.",
-    "UPGRADE_DESCRIPTION": "This will automatically be used if the card is upgraded. Remove it if unneeded.",
+    "DESCRIPTION": "消耗。格挡翻倍",
     "EXTENDED_DESCRIPTION": [
       "You can put more text in here.",
       "If you need to use it for stuff.",
@@ -141,9 +139,9 @@
     ]
   },
   "${modID}:CommandTerminal": {
-    "NAME": "EntrenchRos",
-    "DESCRIPTION": "Description.",
-    "UPGRADE_DESCRIPTION": "This will automatically be used if the card is upgraded. Remove it if unneeded.",
+    "NAME": "CommandTerminal",
+    "DESCRIPTION": "回合开始时，治疗1，能量1",
+    "UPGRADE_DESCRIPTION": "固有。回合开始时，治疗1，能量1",
     "EXTENDED_DESCRIPTION": [
       "You can put more text in here.",
       "If you need to use it for stuff.",
@@ -151,9 +149,8 @@
     ]
   },
   "${modID}:Impulse": {
-    "NAME": "EntrenchRos",
-    "DESCRIPTION": "Description.",
-    "UPGRADE_DESCRIPTION": "This will automatically be used if the card is upgraded. Remove it if unneeded.",
+    "NAME": "Impulse",
+    "DESCRIPTION": "消耗。造成 !D! 伤害，斩杀手牌加入此牌复制",
     "EXTENDED_DESCRIPTION": [
       "You can put more text in here.",
       "If you need to use it for stuff.",
@@ -161,9 +158,104 @@
     ]
   },
   "${modID}:Intimidate": {
-    "NAME": "EntrenchRos",
-    "DESCRIPTION": "Description.",
-    "UPGRADE_DESCRIPTION": "This will automatically be used if the card is upgraded. Remove it if unneeded.",
+    "NAME": "Intimidate",
+    "DESCRIPTION": "消耗。给予所有敌人99层易伤和虚弱",
+    "EXTENDED_DESCRIPTION": [
+      "You can put more text in here.",
+      "If you need to use it for stuff.",
+      "Blizzard is a good example for this."
+    ]
+  },
+  "${modID}:Judgement": {
+    "NAME": "Judgement",
+    "DESCRIPTION": "造成 !D! 伤害，斩杀永久加1敏捷",
+    "UPGRADE_DESCRIPTION": "造成 !D! 伤害，斩杀永久加2敏捷",
+    "EXTENDED_DESCRIPTION": [
+      "You can put more text in here.",
+      "If you need to use it for stuff.",
+      "Blizzard is a good example for this."
+    ]
+  },
+  "${modID}:StealBlock": {
+    "NAME": "StealBlock",
+    "DESCRIPTION": "造成 !D! 伤害，获得 !D! 格挡。",
+    "EXTENDED_DESCRIPTION": [
+      "You can put more text in here.",
+      "If you need to use it for stuff.",
+      "Blizzard is a good example for this."
+    ]
+  },
+  "${modID}:MilliaDisaster": {
+    "NAME": "MilliaDisaster",
+    "DESCRIPTION": "这回合内每使用一张技能牌对随机敌人造成你当前护盾量的伤害",
+    "EXTENDED_DESCRIPTION": [
+      "You can put more text in here.",
+      "If you need to use it for stuff.",
+      "Blizzard is a good example for this."
+    ]
+  },
+  "${modID}:Stable": {
+    "NAME": "Stable",
+    "DESCRIPTION": "你造成伤害时额外造成20%真实伤害（向上取整）",
+    "UPGRADE_DESCRIPTION": "固有。你造成伤害时额外造成20%真实伤害（向上取整）",
+    "EXTENDED_DESCRIPTION": [
+      "You can put more text in here.",
+      "If you need to use it for stuff.",
+      "Blizzard is a good example for this."
+    ]
+  },
+  "${modID}:Summon": {
+    "NAME": "Summon",
+    "DESCRIPTION": "消耗。获得两层多层护甲",
+    "EXTENDED_DESCRIPTION": [
+      "You can put more text in here.",
+      "If you need to use it for stuff.",
+      "Blizzard is a good example for this."
+    ]
+  },
+  "${modID}:Extrasensory": {
+    "NAME": "Extrasensory",
+    "DESCRIPTION": "消耗。根据敌人数量给召唤物",
+    "UPGRADE_DESCRIPTION": "消耗。根据敌人数量两倍给召唤物",
+    "EXTENDED_DESCRIPTION": [
+      "You can put more text in here.",
+      "If you need to use it for stuff.",
+      "Blizzard is a good example for this."
+    ]
+  },
+  "${modID}:LoseControl": {
+    "NAME": "LoseControl",
+    "DESCRIPTION": "失去2生命，造成 !D! 点伤害（受益3倍力量加成）。如果计算力量时伤害大于18点，获得1力量",
+    "UPGRADE_DESCRIPTION": "失去2生命，造成 !D! 点伤害（受益3倍力量加成）。如果计算力量时伤害大于16点，获得1力量",
+    "EXTENDED_DESCRIPTION": [
+      "You can put more text in here.",
+      "If you need to use it for stuff.",
+      "Blizzard is a good example for this."
+    ]
+  },
+  "${modID}:ThrowAway": {
+    "NAME": "ThrowAway",
+    "DESCRIPTION": "造成5点伤害，抽1张牌",
+    "UPGRADE_DESCRIPTION": "造成5点伤害，抽2张牌",
+    "EXTENDED_DESCRIPTION": [
+      "You can put more text in here.",
+      "If you need to use it for stuff.",
+      "Blizzard is a good example for this."
+    ]
+  },
+  "${modID}:DoublePre": {
+    "NAME": "DoublePre",
+    "DESCRIPTION": "获得 快速攻击，召唤物",
+    "EXTENDED_DESCRIPTION": [
+      "You can put more text in here.",
+      "If you need to use it for stuff.",
+      "Blizzard is a good example for this."
+    ]
+  },
+  "${modID}:Deprive": {
+    "NAME": "Deprive",
+    "DESCRIPTION": "给予 99虚弱，-99力量",
+    "UPGRADE_DESCRIPTION": "给予 99虚弱，-99力量，99易伤",
     "EXTENDED_DESCRIPTION": [
       "You can put more text in here.",
       "If you need to use it for stuff.",

@@ -19,8 +19,9 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
-import rosmod.cards.skill.DefendRos;
 import rosmod.cards.attack.StrikeRos;
+import rosmod.cards.power.Skill1;
+import rosmod.cards.skill.DefendRos;
 import rosmod.relics.AnnE;
 
 import java.util.ArrayList;
@@ -28,7 +29,7 @@ import java.util.ArrayList;
 import static rosmod.BasicMod.characterPath;
 import static rosmod.BasicMod.makeID;
 
-public class MyCharacter extends CustomPlayer {
+public class Rosmontis extends CustomPlayer {
     //Stats
     public static final int ENERGY_PER_TURN = 3;
     public static final int MAX_HP = 60;
@@ -61,7 +62,7 @@ public class MyCharacter extends CustomPlayer {
         public static CardLibrary.LibraryType LIBRARY_COLOR;
     }
 
-    public MyCharacter() {
+    public Rosmontis() {
         super(NAMES[0], Enums.YOUR_CHARACTER,
                 new CustomEnergyOrb(null, null, LAYER_SPEED), //Energy Orb
                 new SpineAnimation(characterPath("/animation/char_391_rosmon.atlas"),characterPath("/animation/char_391_rosmon.json"),1F)); //Animation
@@ -97,6 +98,7 @@ public class MyCharacter extends CustomPlayer {
         retVal.add(DefendRos.ID);
         retVal.add(DefendRos.ID);
         retVal.add(DefendRos.ID);
+        retVal.add(Skill1.ID);
 
         return retVal;
     }
@@ -229,6 +231,6 @@ public class MyCharacter extends CustomPlayer {
     @Override
     public AbstractPlayer newInstance() {
         //Makes a new instance of your character class.
-        return new MyCharacter();
+        return new Rosmontis();
     }
 }
