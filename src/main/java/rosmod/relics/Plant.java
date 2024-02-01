@@ -21,6 +21,6 @@ public class Plant extends BaseRelic {//回合开始时基于5点护盾
     @Override
     public void atTurnStart() {
         flash();
-        addToBot(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, 5));
+        addToBot(new GainBlockAction(AbstractDungeon.player, null, 5));
     }
 }

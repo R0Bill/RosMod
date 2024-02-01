@@ -73,8 +73,8 @@
   },
   "Rosmontis:PsyStorm": {
     "NAME": "念力风暴",
-    "DESCRIPTION": "消耗。对全体敌人造成2-4-8-16-32...点伤害。",
-    "UPGRADE_DESCRIPTION": "消耗，保留。对全体敌人造成2-4-8-16-32...点伤害。",
+    "DESCRIPTION": "消耗。对全体敌人造成2-4-8-16-32...点伤害。数量取决于X",
+    "UPGRADE_DESCRIPTION": "消耗，保留。对全体敌人造成2-4-8-16-32...点伤害。数量取决于X",
     "EXTENDED_DESCRIPTION": [
       "You can put more text in here.",
       "If you need to use it for stuff.",

@@ -26,17 +26,20 @@ public class Terminal extends CustomRelic implements ClickableRelic {
     }
 
     public void onRightClick() {
-        if (!AbstractDungeon.player.exhaustPile.isEmpty()) {
-            AbstractCard card = AbstractDungeon.player.exhaustPile.getTopCard();
-            if (AbstractDungeon.player.hand.size() < BaseMod.MAX_HAND_SIZE) {
+        if (AbstractDungeon.player.energy.energy >= 1) {
+            if (!AbstractDungeon.player.exhaustPile.isEmpty()) {
+                AbstractCard card = AbstractDungeon.player.exhaustPile.getTopCard();
+                if (AbstractDungeon.player.hand.size() < BaseMod.MAX_HAND_SIZE) {
 
-                addToBot((AbstractGameAction) new MakeTempCardInHandAction(card, 1));
-                //AbstractDungeon.player.hand.addToHand(card);
-                AbstractDungeon.player.exhaustPile.removeCard(card);
+                    addToBot((AbstractGameAction) new MakeTempCardInHandAction(card, 1));
+                    //AbstractDungeon.player.hand.addToHand(card);
+                    AbstractDungeon.player.exhaustPile.removeCard(card);
+                }
             }
+            AbstractDungeon.player.hand.refreshHandLayout();
+            AbstractDungeon.player.hand.glowCheck();
+            AbstractDungeon.player.energy.use(1);
         }
-        AbstractDungeon.player.hand.refreshHandLayout();
-        AbstractDungeon.player.hand.glowCheck();
     }
 
 }

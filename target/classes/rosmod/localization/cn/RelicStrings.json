@@ -13,38 +13,59 @@
       "当你使用攻击牌时，对所有敌人造成3点伤害"
     ]
   },"Rosmontis:StolenMiniCake": {
-  "NAME": "Good Relic",
-  "FLAVOR": "Flavor text displayed in detailed relic view.",
+  "NAME": "StolenMiniCake",
+  "FLAVOR": "博士还回来的小蛋糕。显然迷迭香忘了这件事。",
   "DESCRIPTIONS": [
-    "Gain [E] at the start of your turn. [E] is an energy icon."
+    "每回合开始时，获得 [E] 。"
   ]
   },
   "Rosmontis:ShoesFromAmiya": {
     "NAME": "ShoesFromAmiya",
-    "FLAVOR": "Flavor text displayed in detailed relic view.",
+    "FLAVOR": "阿米娅送的鞋，很合脚。",
     "DESCRIPTIONS": [
-      "Gain [E] at the start of your turn. [E] is an energy icon."
+      "战斗开始时，获得3点敏捷"
     ]
   },
   "Rosmontis:Terminal": {
     "NAME": "Terminal",
-    "FLAVOR": "Flavor text displayed in detailed relic view.",
+    "FLAVOR": "罗德岛定制便携式终端，现主要用作笔记",
     "DESCRIPTIONS": [
-      "Gain [E] at the start of your turn. [E] is an energy icon."
+      "右键点击时，消耗 [E] ，回忆上一张消耗的牌。"
     ]
   },
   "Rosmontis:Plant": {
     "NAME": "Plant",
-    "FLAVOR": "Flavor text displayed in detailed relic view.",
+    "FLAVOR": "一份业余的植物标本，似乎还未来得及交付。",
     "DESCRIPTIONS": [
-      "Gain [E] at the start of your turn. [E] is an energy icon."
+      "每回合开始时，获得5点护盾"
     ]
   },
   "Rosmontis:JudgeCount": {
     "NAME": "JudgeCount",
-    "FLAVOR": "Flavor text displayed in detailed relic view.",
+    "FLAVOR": "“我将持刑。”",
     "DESCRIPTIONS": [
-      "Gain [E] at the start of your turn. [E] is an energy icon."
+      "在战斗开始时，获得等同于层数的敏捷。"
+    ]
+  },
+  "Rosmontis:AncientCoin": {
+    "NAME": "古旧钱币",
+    "FLAVOR": "生锈的古代钱币，已经无法辨认年代。这东西在泰拉荒地上随处可见。",
+    "DESCRIPTIONS": [
+      "立刻获得150金币。"
+    ]
+  },
+  "Rosmontis:TheHug": {
+    "NAME": "迷迭香之拥",
+    "FLAVOR": "“谁来审判？”",
+    "DESCRIPTIONS": [
+      "战斗开始时，所有敌人失去30%生命。"
+    ]
+  },
+  "Rosmontis:TargetHand": {
+    "NAME": "碎靶之手",
+    "FLAVOR": "目标，可不仅仅是连续命中靶心",
+    "DESCRIPTIONS": [
+      "战斗开始时，获得两倍于敌人数量的力量。"
     ]
   }
 }

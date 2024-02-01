@@ -5,6 +5,7 @@ rosmod\util\CardStats.class
 rosmod\cards\attack\LoseControl.class
 rosmod\cards\skill\AddDefend.class
 rosmod\cards\skill\Intimidate.class
+rosmod\relics\TargetHand.class
 rosmod\powers\CommandTerminalPower.class
 rosmod\powers\Skill1Power.class
 rosmod\cards\BaseCard$VariableType.class
@@ -48,10 +49,12 @@ rosmod\cards\skill\PsyStorm.class
 rosmod\cards\power\Skill1.class
 rosmod\relics\StolenMiniCake.class
 rosmod\cards\BaseCard$1.class
+rosmod\relics\TheHug.class
 rosmod\cards\BaseCard$LocalVarInfo.class
 rosmod\relics\AnnE.class
 rosmod\relics\Plant.class
 rosmod\cards\skill\DoublePre.class
+rosmod\relics\AncientCoin.class
 rosmod\cards\power\Skill3.class
 rosmod\util\TextureLoader$1.class
 rosmod\cards\attack\Judgement.class
