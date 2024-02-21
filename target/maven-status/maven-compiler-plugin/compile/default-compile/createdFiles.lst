@@ -7,6 +7,7 @@ rosmod\cards\skill\AddDefend.class
 rosmod\cards\skill\Intimidate.class
 rosmod\relics\TargetHand.class
 rosmod\powers\CommandTerminalPower.class
+rosmod\powers\GiveBlockNextTurn.class
 rosmod\powers\Skill1Power.class
 rosmod\cards\BaseCard$VariableType.class
 rosmod\cards\skill\Memory.class
@@ -32,6 +33,7 @@ rosmod\cards\power\Skill2.class
 rosmod\cards\skill\Extrasensory.class
 rosmod\relics\BaseRelic$1.class
 rosmod\character\Rosmontis.class
+rosmod\cards\skill\StunSelf.class
 rosmod\powers\MilliaPower.class
 rosmod\cards\skill\Summon.class
 rosmod\cards\attack\HeavyAttackRos.class
@@ -43,6 +45,7 @@ rosmod\relics\Terminal.class
 rosmod\cards\skill\FlyRos.class
 rosmod\actions\AddAttackAction.class
 rosmod\cards\BaseCard.class
+rosmod\cards\other\Infected.class
 rosmod\cards\attack\ThrowAway.class
 rosmod\powers\Skill3Power.class
 rosmod\cards\skill\PsyStorm.class

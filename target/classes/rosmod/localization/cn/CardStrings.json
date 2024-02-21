@@ -167,7 +167,7 @@
     ]
   },
   "Rosmontis:Judgement": {
-    "NAME": "Judgement",
+    "NAME": "在这立法典",
     "DESCRIPTION": "造成 !D! 伤害，斩杀永久加1敏捷",
     "UPGRADE_DESCRIPTION": "造成 !D! 伤害，斩杀永久加2敏捷",
     "EXTENDED_DESCRIPTION": [
@@ -256,6 +256,24 @@
     "NAME": "Deprive",
     "DESCRIPTION": "给予 99虚弱，-99力量",
     "UPGRADE_DESCRIPTION": "给予 99虚弱，-99力量，99易伤",
+    "EXTENDED_DESCRIPTION": [
+      "You can put more text in here.",
+      "If you need to use it for stuff.",
+      "Blizzard is a good example for this."
+    ]
+  },
+  "Rosmontis:StunSelf": {
+    "NAME": "StunSelf",
+    "DESCRIPTION": "获得 !B! 格挡。在下回合开始时，获得一半于该数值格挡",
+    "EXTENDED_DESCRIPTION": [
+      "You can put more text in here.",
+      "If you need to use it for stuff.",
+      "Blizzard is a good example for this."
+    ]
+  },
+  "Rosmontis:Infected": {
+    "NAME": "Infected",
+    "DESCRIPTION": "抽到时获得1力量，回合结束时失去5点生命。",
     "EXTENDED_DESCRIPTION": [
       "You can put more text in here.",
       "If you need to use it for stuff.",

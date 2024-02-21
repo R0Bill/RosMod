@@ -29,7 +29,7 @@ public class Extrasensory extends BaseCard {//根据敌人数量给召唤物
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (this.upgraded) {
-            addToBot((AbstractGameAction) new MakeTempCardInHandAction((AbstractCard) new Summon(), AbstractDungeon.getCurrRoom().monsters.monsters.size()));
+            addToBot((AbstractGameAction) new MakeTempCardInHandAction((AbstractCard) new Summon(), AbstractDungeon.getCurrRoom().monsters.monsters.size() / 2));
         }
         addToBot((AbstractGameAction) new MakeTempCardInHandAction((AbstractCard) new Summon(), AbstractDungeon.getCurrRoom().monsters.monsters.size()));
     }

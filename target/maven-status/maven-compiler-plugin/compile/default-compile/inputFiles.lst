@@ -14,6 +14,7 @@ D:\ModTheSpire\RosMod\src\main\java\rosmod\relics\StolenMiniCake.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\util\GeneralUtils.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\cards\attack\AddAttack.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\powers\Skill2Power.java
+D:\ModTheSpire\RosMod\src\main\java\rosmod\cards\skill\StunSelf.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\powers\BasePower.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\relics\Plant.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\cards\skill\DoublePre.java
@@ -25,6 +26,7 @@ D:\ModTheSpire\RosMod\src\main\java\rosmod\cards\power\Skill2.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\cards\attack\Impulse.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\cards\attack\QuickAttack.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\cards\skill\EntrenchRos.java
+D:\ModTheSpire\RosMod\src\main\java\rosmod\cards\other\Infected.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\relics\JudgeCount.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\cards\skill\ConcentrateRos.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\relics\Terminal.java
@@ -51,4 +53,5 @@ D:\ModTheSpire\RosMod\src\main\java\rosmod\relics\ShoesFromAmiya.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\cards\attack\ThrowAway.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\cards\attack\Judgement.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\actions\AddAttackAction.java
+D:\ModTheSpire\RosMod\src\main\java\rosmod\powers\GiveBlockNextTurn.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\cards\skill\MilliaDisaster.java

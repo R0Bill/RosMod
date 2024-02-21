@@ -13,35 +13,35 @@
       "当你使用攻击牌时，对所有敌人造成3点伤害"
     ]
   },"Rosmontis:StolenMiniCake": {
-  "NAME": "StolenMiniCake",
+  "NAME": "小蛋糕",
   "FLAVOR": "博士还回来的小蛋糕。显然迷迭香忘了这件事。",
   "DESCRIPTIONS": [
     "每回合开始时，获得 [E] 。"
   ]
   },
   "Rosmontis:ShoesFromAmiya": {
-    "NAME": "ShoesFromAmiya",
+    "NAME": "黑皮鞋",
     "FLAVOR": "阿米娅送的鞋，很合脚。",
     "DESCRIPTIONS": [
       "战斗开始时，获得3点敏捷"
     ]
   },
   "Rosmontis:Terminal": {
-    "NAME": "Terminal",
+    "NAME": "迷迭香的终端",
     "FLAVOR": "罗德岛定制便携式终端，现主要用作笔记",
     "DESCRIPTIONS": [
       "右键点击时，消耗 [E] ，回忆上一张消耗的牌。"
     ]
   },
   "Rosmontis:Plant": {
-    "NAME": "Plant",
+    "NAME": "植物标本",
     "FLAVOR": "一份业余的植物标本，似乎还未来得及交付。",
     "DESCRIPTIONS": [
       "每回合开始时，获得5点护盾"
     ]
   },
   "Rosmontis:JudgeCount": {
-    "NAME": "JudgeCount",
+    "NAME": "香谟拉比法典",
     "FLAVOR": "“我将持刑。”",
     "DESCRIPTIONS": [
       "在战斗开始时，获得等同于层数的敏捷。"

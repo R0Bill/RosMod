@@ -3,7 +3,7 @@
 
     <properties>
         <modID>Rosmontis</modID>
-        <author>Bill</author>
+        <author>R0Bill</author>
 
         <!-- Change the path for your system to match your Steam installation. -->
         <steam.windows>E:/steam/steamapps</steam.windows>
