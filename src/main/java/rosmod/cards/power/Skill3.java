@@ -55,8 +55,10 @@ public class Skill3 extends BaseCard {
                 }
             }
             for (AbstractCard abstractCard : groupCopy) {
-                int tempa = abstractCard.cost;
-                abstractCard.setCostForTurn(tempa * 2);
+                if (abstractCard.cardID != "TouchingStars") {
+                    int tempa = abstractCard.cost;
+                    abstractCard.setCostForTurn(tempa * 2);
+                }
             }
         }
     }

@@ -30,7 +30,8 @@ public class Skill1 extends BaseCard {
     }
 
     @Override
-    public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster){boolean powerExists = false;
+    public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
+        boolean powerExists = false;
         for (AbstractPower pow : AbstractDungeon.player.powers) {
             if (pow.ID.equals("Skill1Power")) {
                 powerExists = true;

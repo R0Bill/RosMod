@@ -187,7 +187,7 @@
   },
   "${modID}:MilliaDisaster": {
     "NAME": "MilliaDisaster",
-    "DESCRIPTION": "这回合内每使用一张技能牌对随机敌人造成你当前护盾量的伤害",
+    "DESCRIPTION": "这回合内每使用一张技能牌对随机敌人造成你当前护盾量的伤害，获得一张感染",
     "EXTENDED_DESCRIPTION": [
       "You can put more text in here.",
       "If you need to use it for stuff.",
@@ -274,6 +274,34 @@
   "${modID}:Infected": {
     "NAME": "Infected",
     "DESCRIPTION": "抽到时获得1力量，回合结束时失去5点生命。",
+    "EXTENDED_DESCRIPTION": [
+      "You can put more text in here.",
+      "If you need to use it for stuff.",
+      "Blizzard is a good example for this."
+    ]
+  },
+  "${modID}:MedBox": {
+    "NAME": "MedBox",
+    "DESCRIPTION": "消耗。治疗 !M! 点生命。",
+    "EXTENDED_DESCRIPTION": [
+      "You can put more text in here.",
+      "If you need to use it for stuff.",
+      "Blizzard is a good example for this."
+    ]
+  },
+  "${modID}:AddAttack": {
+    "NAME": "AddAttack",
+    "DESCRIPTION": "造成 !D! 点伤害，获得一张快速攻击",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害，获得一张快速攻击",
+    "EXTENDED_DESCRIPTION": [
+      "You can put more text in here.",
+      "If you need to use it for stuff.",
+      "Blizzard is a good example for this."
+    ]
+  },
+  "${modID}:Accumulation": {
+    "NAME": "Accumulation",
+    "DESCRIPTION": "消耗。获得 !M! 力量和敏捷。可被多次升级。",
     "EXTENDED_DESCRIPTION": [
       "You can put more text in here.",
       "If you need to use it for stuff.",

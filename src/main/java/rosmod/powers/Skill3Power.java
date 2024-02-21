@@ -31,7 +31,7 @@ public class Skill3Power extends BasePower {
     }
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (!card.purgeOnUse && card.type == AbstractCard.CardType.ATTACK ) {
+        if (!card.purgeOnUse && card.type == AbstractCard.CardType.ATTACK && card.cardID != "TouchingStars") {
             this.flash();
             //attack 3 times
             AbstractMonster m = null;
@@ -61,8 +61,10 @@ public class Skill3Power extends BasePower {
                 }
             }
             for (AbstractCard abstractCard : groupCopy){
-                int tempa = abstractCard.cost;
-                abstractCard.setCostForTurn(tempa*2);
+                if (abstractCard.cardID != "TouchingStars") {
+                    int tempa = abstractCard.cost;
+                    abstractCard.setCostForTurn(tempa * 2);
+                }
             }
             //stun by StSLib
             double Ran = Math.random();
@@ -97,9 +99,11 @@ public class Skill3Power extends BasePower {
                 continue;
             }
         }
-        for (AbstractCard abstractCard : groupCopy){
-            int tempa = abstractCard.cost;
-            abstractCard.setCostForTurn(tempa*2);
+        for (AbstractCard abstractCard : groupCopy) {
+            if (abstractCard.cardID != "TouchingStars") {
+                int tempa = abstractCard.cost;
+                abstractCard.setCostForTurn(tempa * 2);
+            }
         }
     }
 }

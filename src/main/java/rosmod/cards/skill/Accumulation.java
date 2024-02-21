@@ -2,21 +2,19 @@ package rosmod.cards.skill;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.DexterityPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import rosmod.cards.BaseCard;
-import rosmod.cards.other.Infected;
 import rosmod.character.Rosmontis;
-import rosmod.powers.MilliaPower;
 import rosmod.util.CardStats;
 
-public class MilliaDisaster extends BaseCard {//本回合x技能牌造成护盾量伤害
-    public static final String ID = makeID("MilliaDisaster");
+public class Accumulation extends BaseCard {
+    public static final String ID = makeID("Accumulation");
     private static final CardStats info = new CardStats(
             Rosmontis.Enums.CARD_COLOR, //The card color. If you're making your own character, it'll look something like this. Otherwise, it'll be CardColor.RED or something similar for a basegame character color.
             AbstractCard.CardType.SKILL, //The type. ATTACK/SKILL/POWER/CURSE/STATUS
@@ -25,25 +23,29 @@ public class MilliaDisaster extends BaseCard {//本回合x技能牌造成护盾�
             2 //The card's base cost. -1 is X cost, -2 is no cost for unplayable cards like curses, or Reflex.
     );
 
-    public MilliaDisaster() {
+    public Accumulation(int upgrades) {
         super(ID, info);
-        setExhaust(true);
-        setCostUpgrade(1);
-        this.cardsToPreview = new Infected();
+        this.baseMagicNumber = 1;
+        this.timesUpgraded = upgrades;
+        this.magicNumber = this.baseMagicNumber;
+        this.exhaust = true;
     }
 
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        boolean powerExists = false;
-        for (AbstractPower pow : AbstractDungeon.player.powers) {
-            if (pow.ID.equals("MilliaPower")) {
-                powerExists = true;
-                break;
-            }
-        }
-        if (!powerExists) {
-            addToBot((AbstractGameAction) new ApplyPowerAction((AbstractCreature) abstractPlayer, (AbstractCreature) abstractPlayer, (AbstractPower) new MilliaPower((AbstractCreature) abstractPlayer)));
-            addToBot((AbstractGameAction) new MakeTempCardInHandAction((AbstractCard) new Infected(), 1));
-        }
+        addToBot((AbstractGameAction) new ApplyPowerAction((AbstractCreature) abstractPlayer, (AbstractCreature) abstractPlayer, (AbstractPower) new DexterityPower((AbstractCreature) abstractPlayer, this.magicNumber), this.magicNumber));
+        addToBot((AbstractGameAction) new ApplyPowerAction((AbstractCreature) abstractPlayer, (AbstractCreature) abstractPlayer, (AbstractPower) new StrengthPower((AbstractCreature) abstractPlayer, this.magicNumber), this.magicNumber));
 
+    }
+
+    public void upgrade() {
+        upgradeMagicNumber(1);
+        this.timesUpgraded++;
+        this.upgraded = true;
+        this.name = cardStrings.NAME + "+" + this.timesUpgraded;
+        initializeTitle();
+    }
+
+    public Accumulation() {
+        this(0);
     }
 }
