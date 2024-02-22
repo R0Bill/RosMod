@@ -131,14 +131,13 @@ public class Rosmontis extends CustomPlayer {
     }
     @Override
     public void useFastAttackAnimation() {
-            if(ATTACK_BOOL){
-                this.state.setAnimation(0, "Attack_A", false);
-                ATTACK_BOOL=false;
-            }
-            else{
-                this.state.setAnimation(0, "Attack_B", false);
-                ATTACK_BOOL=true;
-            }
+        if (ATTACK_BOOL) {
+            this.state.setAnimation(0, "Attack_A", false);
+            ATTACK_BOOL = false;
+        } else {
+            this.state.setAnimation(0, "Attack_B", false);
+            ATTACK_BOOL = true;
+        }
         this.state.addAnimation(0, "Idle", true, 0.0F);
     }
     @Override

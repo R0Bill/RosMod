@@ -6,10 +6,13 @@ D:\ModTheSpire\RosMod\src\main\java\rosmod\relics\BaseRelic.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\cards\skill\PsyStorm.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\powers\Skill3Power.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\cards\power\Skill1.java
+D:\ModTheSpire\RosMod\src\main\java\rosmod\ui\SkinSelectScreen.java
+D:\ModTheSpire\RosMod\src\main\java\rosmod\cards\attack\TouchingStars.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\cards\skill\FlyRos.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\relics\TargetHand.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\cards\attack\HeavyAttackRos.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\relics\AncientCoin.java
+D:\ModTheSpire\RosMod\src\main\java\rosmod\cards\skill\Accumulation.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\relics\StolenMiniCake.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\util\GeneralUtils.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\cards\attack\AddAttack.java
@@ -36,6 +39,7 @@ D:\ModTheSpire\RosMod\src\main\java\rosmod\cards\attack\LoseControl.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\util\KeywordInfo.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\powers\MilliaPower.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\powers\Skill1Power.java
+D:\ModTheSpire\RosMod\src\main\java\rosmod\cards\skill\MedBox.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\util\TextureLoader.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\cards\power\Skill3.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\cards\attack\StealBlock.java

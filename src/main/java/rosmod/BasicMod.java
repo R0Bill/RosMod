@@ -246,4 +246,8 @@ public class BasicMod implements
                     UnlockTracker.markRelicAsSeen(relic.relicId);
                 });
     }
+
+    public static String MakePath(String id) {
+        return "Rosmontis_" + id;
+    }
 }
