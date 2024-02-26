@@ -317,5 +317,15 @@
       "If you need to use it for stuff.",
       "Blizzard is a good example for this."
     ]
+  },
+  "${modID}:TouchingStars": {
+    "NAME": "触及星辰",
+    "DESCRIPTION": "保留，消耗。造成 !D! 点伤害。每过一回合，此牌费用-1。",
+    "UPGRADE_DESCRIPTION": "固有，保留，消耗。造成 !D! 点伤害。每过一回合，此牌费用-1。",
+    "EXTENDED_DESCRIPTION": [
+      "You can put more text in here.",
+      "If you need to use it for stuff.",
+      "Blizzard is a good example for this."
+    ]
   }
 }

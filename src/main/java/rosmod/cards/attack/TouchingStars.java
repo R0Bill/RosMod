@@ -28,6 +28,7 @@ public class TouchingStars extends BaseCard {
         setSelfRetain(true);
         setCostUpgrade(5);
         setExhaust(true);
+        setInnate(false, true);
     }
 
     @Override
@@ -47,7 +48,7 @@ public class TouchingStars extends BaseCard {
     public boolean canUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         boolean powerExists = false;
         for (AbstractPower pow : AbstractDungeon.player.powers) {
-            if (pow.ID.equals("Skill1Power")) {
+            if (pow.ID.equals("Skill1Power") || pow.ID.equals("Skill2Power") || pow.ID.equals("Skill3Power")) {
                 powerExists = true;
                 break;
             }
