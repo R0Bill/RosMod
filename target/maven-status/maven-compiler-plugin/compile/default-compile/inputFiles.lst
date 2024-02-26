@@ -8,6 +8,7 @@ D:\ModTheSpire\RosMod\src\main\java\rosmod\powers\Skill3Power.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\cards\power\Skill1.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\ui\SkinSelectScreen.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\cards\attack\TouchingStars.java
+D:\ModTheSpire\RosMod\src\main\java\rosmod\patches\SkinSelectPatch.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\cards\skill\FlyRos.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\relics\TargetHand.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\cards\attack\HeavyAttackRos.java
@@ -28,6 +29,7 @@ D:\ModTheSpire\RosMod\src\main\java\rosmod\powers\StablePower.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\cards\power\Skill2.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\cards\attack\Impulse.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\cards\attack\QuickAttack.java
+D:\ModTheSpire\RosMod\src\main\java\rosmod\cards\skill\Backpack.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\cards\skill\EntrenchRos.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\cards\other\Infected.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\relics\JudgeCount.java

@@ -100,7 +100,8 @@ public class BasicMod implements
     {
         return Settings.language.name().toLowerCase();
     }
-    private static final String defaultLanguage = "cn";
+
+    private static final String defaultLanguage = "zhs";
 
     public static final Map<String, KeywordInfo> keywords = new HashMap<>();
 
@@ -248,6 +249,6 @@ public class BasicMod implements
     }
 
     public static String MakePath(String id) {
-        return "Rosmontis_" + id;
+        return "Rosmontis:" + id;
     }
 }

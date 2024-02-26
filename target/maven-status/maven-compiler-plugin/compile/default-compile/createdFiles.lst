@@ -4,6 +4,7 @@ rosmod\cards\power\Skill2.class
 rosmod\relics\JudgeCount.class
 rosmod\util\CardStats.class
 rosmod\cards\attack\LoseControl.class
+rosmod\patches\SkinSelectPatch$UpdateButtonPatch.class
 rosmod\cards\skill\AddDefend.class
 rosmod\cards\skill\Extrasensory.class
 rosmod\cards\skill\Intimidate.class
@@ -38,6 +39,7 @@ rosmod\cards\power\Stable.class
 rosmod\cards\other\Infected.class
 rosmod\cards\attack\ThrowAway.class
 rosmod\powers\Skill3Power.class
+rosmod\patches\SkinSelectPatch.class
 rosmod\cards\skill\PsyStorm.class
 rosmod\cards\power\Skill1.class
 rosmod\cards\BaseCard$QuickDynamicVariable.class
@@ -48,12 +50,14 @@ rosmod\cards\BaseCard$1.class
 rosmod\cards\attack\Impulse.class
 rosmod\util\GeneralUtils.class
 rosmod\relics\TheHug.class
+rosmod\cards\skill\Backpack.class
 rosmod\cards\BaseCard$LocalVarInfo.class
 rosmod\cards\skill\EntrenchRos.class
 rosmod\relics\ShoesFromAmiya.class
 rosmod\cards\skill\MedBox.class
 rosmod\relics\AnnE.class
 rosmod\relics\Plant.class
+rosmod\patches\SkinSelectPatch$RenderButtonPatch.class
 rosmod\cards\skill\DoublePre.class
 rosmod\powers\StablePower.class
 rosmod\cards\attack\AddAttack.class

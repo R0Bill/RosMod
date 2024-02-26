@@ -50,7 +50,7 @@ public class SkinSelectScreen implements ISubscriber, CustomSavable<Integer> {
     static {
         TEXT = (CardCrawlGame.languagePack.getUIString(BasicMod.MakePath(SkinSelectScreen.class.getSimpleName()))).TEXT;
         SKINS.add(new Skin(0, ""));
-        SKINS.add(new Skin(1, ""));
+        SKINS.add(new Skin(1, "_epoque_17"));
         Inst = new SkinSelectScreen();
     }
 
@@ -133,6 +133,7 @@ public class SkinSelectScreen implements ISubscriber, CustomSavable<Integer> {
     }
 
     public void render(SpriteBatch sb) {
+        Color RC = Color.valueOf("bacdbaff");
         float centerX = Settings.WIDTH * 0.8F;
         float centerY = Settings.HEIGHT * 0.5F;
         renderSkin(sb, centerX, centerY);
@@ -140,8 +141,7 @@ public class SkinSelectScreen implements ISubscriber, CustomSavable<Integer> {
         Color color = Settings.GOLD_COLOR.cpy();
         color.a /= 2.0F;
         float dist = 100.0F * Settings.scale;
-        FontHelper.renderFontCentered(sb, FontHelper.cardTitleFont, this.curName, centerX, centerY, Settings.GOLD_COLOR);
-        FontHelper.renderFontCentered(sb, FontHelper.cardTitleFont, this.nextName, centerX + dist * 1.5F, centerY - dist, color);
+        FontHelper.renderFontCentered(sb, FontHelper.cardTitleFont, this.curName, centerX, centerY, RC);
         if (this.leftHb.hovered) {
             sb.setColor(Color.LIGHT_GRAY);
         } else {
