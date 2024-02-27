@@ -182,7 +182,7 @@ public class SkinSelectScreen implements ISubscriber, CustomSavable<Integer> {
 
         public Skin(int index, String charPath) {
             this.charPath = "rosmod/images/character/animation/char_391_rosmon" + charPath;
-            this.shoulder = "rosmod/images/character/shoulder.png";
+            this.shoulder = "rosmod/images/character/shoulder" + charPath + ".png";
             this.name = SkinSelectScreen.TEXT[index + 1];
         }
     }
