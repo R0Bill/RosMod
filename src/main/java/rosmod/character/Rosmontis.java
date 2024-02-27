@@ -6,6 +6,7 @@ import basemod.animations.SpineAnimation;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.math.MathUtils;
+import com.esotericsoftware.spine.AnimationState;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -23,6 +24,7 @@ import rosmod.cards.attack.StrikeRos;
 import rosmod.cards.power.Skill1;
 import rosmod.cards.skill.DefendRos;
 import rosmod.relics.AnnE;
+import rosmod.ui.SkinSelectScreen;
 
 import java.util.ArrayList;
 
@@ -50,6 +52,9 @@ public class Rosmontis extends CustomPlayer {
     private static final String SHOULDER_1 = characterPath("shoulder.png"); //Shoulder 1 and 2 are used at rest sites.
     private static final String SHOULDER_2 = characterPath("shoulder2.png");
     private static final String CORPSE = characterPath("corpse.png"); //Corpse is when you die.
+    private static SkinSelectScreen.Skin SKIN = SkinSelectScreen.getSkin();
+    private static final String ORB_VFX = "rosmod/images/ui/orb/vfx.png";
+    private static final String[] ORB_URL = new String[]{"rosmod/images/ui/orb/layer5.png", "rosmod/images/ui/orb/layer4.png", "rosmod/images/ui/orb/layer3.png", "rosmod/images/ui/orb/layer2.png", "rosmod/images/ui/orb/layer1.png", "rosmod/images/ui/orb/layer6.png", "rosmod/images/ui/orb/layer5d.png", "rosmod/images/ui/orb/layer4d.png", "rosmod/images/ui/orb/layer3d.png", "rosmod/images/ui/orb/layer2d.png", "rosmod/images/ui/orb/layer1d.png"};
 
     public static class Enums {
         //These are used to identify your character, as well as your character's card color.
@@ -64,8 +69,8 @@ public class Rosmontis extends CustomPlayer {
 
     public Rosmontis() {
         super(NAMES[0], Enums.YOUR_CHARACTER,
-                new CustomEnergyOrb(null, null, LAYER_SPEED), //Energy Orb
-                new SpineAnimation(characterPath("/animation/char_391_rosmon.atlas"),characterPath("/animation/char_391_rosmon.json"),1F)); //Animation
+                new CustomEnergyOrb(ORB_URL, ORB_VFX, LAYER_SPEED), //Energy Orb
+                new SpineAnimation(SKIN.charPath + ".atlas", SKIN.charPath + ".json", 1F)); //Animation
 
         initializeClass(null,
                 SHOULDER_2,
@@ -75,14 +80,24 @@ public class Rosmontis extends CustomPlayer {
                 20.0F, -20.0F, 200.0F, 250.0F, //Character hitbox. x y position, then width and height.
                 new EnergyManager(ENERGY_PER_TURN));
 
+        refreshSkin();
+
         //Location for text bubbles. You can adjust it as necessary later. For most characters, these values are fine.
         dialogX = (drawX + 0.0F * Settings.scale);
         dialogY = (drawY + 220.0F * Settings.scale);
 
-        loadAnimation(characterPath("/animation/char_391_rosmon.atlas"),characterPath("/animation/char_391_rosmon.json"),1F);
+        //loadAnimation(characterPath(SKIN.charPath+".atlas"),characterPath(SKIN.charPath+".json"),1F);
         this.stateData.setMix("Idle", "Die", 0.1F);
         this.state.setAnimation(0, "Start", false);
         this.state.setAnimation(0, "Idle", true);
+    }
+
+    public void refreshSkin() {
+        SkinSelectScreen.Skin skin = SkinSelectScreen.getSkin();
+        loadAnimation(skin.charPath + ".atlas", skin.charPath + ".json", 0.9F);
+        AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);
+        e.setTime(e.getEndTime() * MathUtils.random());
+        e.setTimeScale(1F);
     }
 
     @Override
