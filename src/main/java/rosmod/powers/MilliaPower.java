@@ -1,11 +1,9 @@
 package rosmod.powers;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -27,16 +25,19 @@ public class MilliaPower extends BasePower {
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if (!card.purgeOnUse && card.type == AbstractCard.CardType.SKILL) {
-            flash();
-            AbstractMonster abstractMonster = AbstractDungeon.getCurrRoom().monsters.getRandomMonster();
-            addToBot(new DamageAction(abstractMonster, new DamageInfo(AbstractDungeon.player, AbstractDungeon.player.currentBlock, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_HEAVY));
-        }
-    }
+            for (AbstractMonster mo : (AbstractDungeon.getCurrRoom()).monsters.monsters) {
+                boolean temp = true;
+                for (AbstractPower pow : mo.powers) {
+                    if (pow.ID.equals("FearPower")) {
+                        temp = false;
+                    }
+                }
+                if (temp) {
+                    addToBot((AbstractGameAction) new ApplyPowerAction((AbstractCreature) mo, (AbstractCreature) AbstractDungeon.player, (AbstractPower) new FearPower((AbstractCreature) mo, 6)));
+                    break;
+                }
+            }
 
-    @Override
-    public void atEndOfTurn(boolean isPlayer) {
-        if (isPlayer) {
-            addToBot((AbstractGameAction) new RemoveSpecificPowerAction(this.owner, this.owner, "MilliaPower"));
         }
     }
 }

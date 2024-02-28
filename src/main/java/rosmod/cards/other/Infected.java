@@ -32,7 +32,7 @@ public class Infected extends BaseCard {
     }
 
     public void triggerOnEndOfTurnForPlayingCard() {
-        addToBot((AbstractGameAction) new LoseHPAction((AbstractCreature) AbstractDungeon.player, (AbstractCreature) AbstractDungeon.player, 5));
+        addToBot((AbstractGameAction) new LoseHPAction((AbstractCreature) AbstractDungeon.player, (AbstractCreature) AbstractDungeon.player, 1));
     }
 
     public void triggerWhenDrawn() {

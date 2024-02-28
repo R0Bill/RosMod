@@ -32,13 +32,25 @@
   "${modID}:MilliaPower": {
     "NAME": "MilliaPower",
     "DESCRIPTIONS": [
-      "You are Very Cool and Strong."
+      "使用技能牌时，随机对没有被恐惧的敌人造成恐惧。"
     ]
   },
   "${modID}:StablePower": {
-    "NAME": "StablePower",
+    "NAME": "思维稳定",
     "DESCRIPTIONS": [
       "You are Very Cool and Strong."
+    ]
+  },
+  "${modID}:FearPower": {
+    "NAME": "恐惧",
+    "DESCRIPTIONS": [
+      "使受到的攻击增加。"
+    ]
+  },
+  "${modID}:ExtendPower": {
+    "NAME": "创想",
+    "DESCRIPTIONS": [
+      "回合开始时，向手牌添加一张思维衍生。"
     ]
   }
 }

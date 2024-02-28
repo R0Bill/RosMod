@@ -187,7 +187,7 @@
   },
   "${modID}:MilliaDisaster": {
     "NAME": "MilliaDisaster",
-    "DESCRIPTION": "这回合内每使用一张技能牌对随机敌人造成你当前护盾量的伤害，获得一张感染",
+    "DESCRIPTION": "这回合内每使用一张技能牌对随机敌人施加恐惧，获得一张感染",
     "EXTENDED_DESCRIPTION": [
       "You can put more text in here.",
       "If you need to use it for stuff.",
@@ -273,7 +273,7 @@
   },
   "${modID}:Infected": {
     "NAME": "Infected",
-    "DESCRIPTION": "抽到时获得1力量，回合结束时失去5点生命。",
+    "DESCRIPTION": "抽到时获得1力量，回合结束时失去1点生命。",
     "EXTENDED_DESCRIPTION": [
       "You can put more text in here.",
       "If you need to use it for stuff.",
@@ -320,8 +320,26 @@
   },
   "${modID}:TouchingStars": {
     "NAME": "触及星辰",
-    "DESCRIPTION": "保留，消耗。造成 !D! 点伤害。每过一回合，此牌费用-1。",
-    "UPGRADE_DESCRIPTION": "固有，保留，消耗。造成 !D! 点伤害。每过一回合，此牌费用-1。",
+    "DESCRIPTION": "保留，消耗。造成 !D! 点真实伤害。每过一回合，此牌费用-1。",
+    "UPGRADE_DESCRIPTION": "固有，保留，消耗。造成 !D! 点真实伤害。每过一回合，此牌费用-1。",
+    "EXTENDED_DESCRIPTION": [
+      "You can put more text in here.",
+      "If you need to use it for stuff.",
+      "Blizzard is a good example for this."
+    ]
+  },
+  "${modID}:Extend": {
+    "NAME": "思维衍生",
+    "DESCRIPTION": "保留，消耗。造成 !D! 点真实伤害。每过一回合，此牌伤害增加手牌里同名牌数量的5倍。",
+    "EXTENDED_DESCRIPTION": [
+      "You can put more text in here.",
+      "If you need to use it for stuff.",
+      "Blizzard is a good example for this."
+    ]
+  },
+  "${modID}:ExtendP": {
+    "NAME": "创想",
+    "DESCRIPTION": "在每回合的开始和现在将一张思维衍生加入手牌。",
     "EXTENDED_DESCRIPTION": [
       "You can put more text in here.",
       "If you need to use it for stuff.",

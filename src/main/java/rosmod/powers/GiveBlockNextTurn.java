@@ -21,12 +21,9 @@ public class GiveBlockNextTurn extends BasePower {
         super(POWER_ID, TYPE, TURN_BASED, owner, amount);
     }
 
-    @Override
-    public void atEndOfTurn(boolean isPlayer) {
-        if (isPlayer) {
-            addToBot(new GainBlockAction(AbstractDungeon.player, null, amount));
-            addToBot((AbstractGameAction) new RemoveSpecificPowerAction(this.owner, this.owner, "GiveBlockNextTurn"));
-        }
+    public void atStartOfTurn() {
+        addToBot(new GainBlockAction(AbstractDungeon.player, null, amount));
+        addToBot((AbstractGameAction) new RemoveSpecificPowerAction(this.owner, this.owner, "GiveBlockNextTurn"));
     }
 
 }

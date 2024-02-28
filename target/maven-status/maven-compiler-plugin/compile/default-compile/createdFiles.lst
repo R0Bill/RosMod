@@ -8,6 +8,7 @@ rosmod\patches\SkinSelectPatch$UpdateButtonPatch.class
 rosmod\cards\skill\AddDefend.class
 rosmod\cards\skill\Extrasensory.class
 rosmod\cards\skill\Intimidate.class
+rosmod\powers\ExtendPower.class
 rosmod\ui\SkinSelectScreen$Skin.class
 rosmod\relics\TargetHand.class
 rosmod\powers\CommandTerminalPower.class
@@ -16,6 +17,7 @@ rosmod\character\Rosmontis.class
 rosmod\cards\skill\StunSelf.class
 rosmod\powers\GiveBlockNextTurn.class
 rosmod\powers\MilliaPower.class
+rosmod\patches\RelicPatch$PlayerAttackedBeforeBlockPatch.class
 rosmod\cards\skill\Summon.class
 rosmod\powers\Skill1Power.class
 rosmod\cards\attack\HeavyAttackRos.class
@@ -27,6 +29,7 @@ rosmod\powers\Skill2Power.class
 rosmod\cards\attack\ShieldStrike.class
 rosmod\util\TextureLoader.class
 rosmod\potions\BasePotion.class
+rosmod\patches\RelicPatch.class
 rosmod\character\Rosmontis$Enums.class
 rosmod\relics\Terminal.class
 rosmod\cards\skill\FlyRos.class
@@ -51,6 +54,7 @@ rosmod\cards\attack\Impulse.class
 rosmod\util\GeneralUtils.class
 rosmod\relics\TheHug.class
 rosmod\cards\skill\Backpack.class
+rosmod\relics\Oath.class
 rosmod\cards\BaseCard$LocalVarInfo.class
 rosmod\cards\skill\EntrenchRos.class
 rosmod\relics\ShoesFromAmiya.class
@@ -61,11 +65,14 @@ rosmod\patches\SkinSelectPatch$RenderButtonPatch.class
 rosmod\cards\skill\DoublePre.class
 rosmod\powers\StablePower.class
 rosmod\cards\attack\AddAttack.class
+rosmod\cards\power\ExtendP.class
+rosmod\powers\FearPower.class
 rosmod\relics\AncientCoin.class
 rosmod\cards\attack\StrikeRos.class
 rosmod\powers\BasePower.class
 rosmod\ui\SkinSelectScreen.class
 rosmod\cards\skill\Accumulation.class
+rosmod\cards\attack\Extend.class
 rosmod\cards\power\Skill3.class
 rosmod\util\KeywordInfo.class
 rosmod\util\TextureLoader$1.class

@@ -15,7 +15,7 @@ import rosmod.character.Rosmontis;
 import rosmod.powers.MilliaPower;
 import rosmod.util.CardStats;
 
-public class MilliaDisaster extends BaseCard {//本回合x技能牌造成护盾量伤害
+public class MilliaDisaster extends BaseCard {
     public static final String ID = makeID("MilliaDisaster");
     private static final CardStats info = new CardStats(
             Rosmontis.Enums.CARD_COLOR, //The card color. If you're making your own character, it'll look something like this. Otherwise, it'll be CardColor.RED or something similar for a basegame character color.

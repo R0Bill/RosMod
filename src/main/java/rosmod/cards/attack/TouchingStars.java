@@ -33,7 +33,7 @@ public class TouchingStars extends BaseCard {
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        addToBot(new DamageAction(abstractMonster, new DamageInfo(abstractPlayer, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_HEAVY));
+        addToBot(new DamageAction(abstractMonster, new DamageInfo(abstractPlayer, damage, DamageInfo.DamageType.HP_LOSS), AbstractGameAction.AttackEffect.SLASH_HEAVY));
     }
 
     @Override

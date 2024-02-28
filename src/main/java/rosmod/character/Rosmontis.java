@@ -49,8 +49,6 @@ public class Rosmontis extends CustomPlayer {
     private static final String[] TEXT = characterStrings.TEXT;
 
     //Image file paths
-    private static final String SHOULDER_1 = characterPath("shoulder.png"); //Shoulder 1 and 2 are used at rest sites.
-    private static final String SHOULDER_2 = characterPath("shoulder2.png");
     private static final String CORPSE = characterPath("corpse.png"); //Corpse is when you die.
     private static SkinSelectScreen.Skin SKIN = SkinSelectScreen.getSkin();
     private static final String ORB_VFX = "rosmod/images/ui/orb/vfx.png";
@@ -73,8 +71,8 @@ public class Rosmontis extends CustomPlayer {
                 new SpineAnimation(SKIN.charPath + ".atlas", SKIN.charPath + ".json", 1F)); //Animation
 
         initializeClass(null,
-                SHOULDER_2,
-                SHOULDER_1,
+                SKIN.shoulder,
+                SKIN.shoulder,
                 CORPSE,
                 getLoadout(),
                 20.0F, -20.0F, 200.0F, 250.0F, //Character hitbox. x y position, then width and height.
