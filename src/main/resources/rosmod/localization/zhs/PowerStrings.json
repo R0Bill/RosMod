@@ -8,31 +8,31 @@
   "${modID}:Skill3Power": {
     "NAME": "如你所愿",
     "DESCRIPTIONS": [
-      "全力以赴。所有攻击牌费用*2，视为打出3次。每次打出有50%的概率眩晕目标。失去3点敏捷。"
+      "全力以赴。所有攻击牌费用变为 #y两倍 ，视为打出 #y3次 。每次打出有50%的概率眩晕目标。失去3点敏捷。"
     ]
   },
   "${modID}:Skill2Power": {
     "NAME": "Skill2Power",
     "DESCRIPTIONS": [
-      "You are Very Cool and Strong."
+      "格挡不会消失，你造成的伤害增加你格挡量的一半。"
     ]
   },
   "${modID}:Skill1Power": {
     "NAME": "Skill1Power",
     "DESCRIPTIONS": [
-      "You are Very Cool and Strong."
+      "每回合第3张攻击牌视为打出两次。"
     ]
   },
   "${modID}:CommandTerminalPower": {
-    "NAME": "CommandTerminalPower",
+    "NAME": "指挥终端",
     "DESCRIPTIONS": [
-      "You are Very Cool and Strong."
+      "回合开始时，治疗1，能量1。"
     ]
   },
   "${modID}:MilliaPower": {
-    "NAME": "MilliaPower",
+    "NAME": "“米利亚的灾祸”",
     "DESCRIPTIONS": [
-      "使用技能牌时，随机对没有被恐惧的敌人造成恐惧。"
+      "使用技能牌时，随机对没有被恐惧的敌人造成 #b 恐惧。如果所有敌人都被恐惧了，加深恐惧。"
     ]
   },
   "${modID}:StablePower": {
@@ -44,13 +44,19 @@
   "${modID}:FearPower": {
     "NAME": "恐惧",
     "DESCRIPTIONS": [
-      "使受到的攻击增加。"
+      "使受到的攻击增加 #b。"
     ]
   },
   "${modID}:ExtendPower": {
     "NAME": "创想",
     "DESCRIPTIONS": [
-      "回合开始时，向手牌添加一张思维衍生。"
+      "回合开始时，向手牌添加一张 #y思维衍生 。"
+    ]
+  },
+  "${modID}:AttachPower": {
+    "NAME": "连击",
+    "DESCRIPTIONS": [
+      "下 #b 张牌将视为额外打出一张 #y快速攻击。"
     ]
   }
 }

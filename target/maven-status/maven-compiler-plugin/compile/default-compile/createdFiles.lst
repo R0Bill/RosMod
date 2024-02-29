@@ -1,6 +1,7 @@
 rosmod\BasicMod.class
 rosmod\cards\attack\StealBlock.class
 rosmod\cards\power\Skill2.class
+rosmod\cards\skill\GetReady.class
 rosmod\relics\JudgeCount.class
 rosmod\util\CardStats.class
 rosmod\cards\attack\LoseControl.class
@@ -8,6 +9,7 @@ rosmod\patches\SkinSelectPatch$UpdateButtonPatch.class
 rosmod\cards\skill\AddDefend.class
 rosmod\cards\skill\Extrasensory.class
 rosmod\cards\skill\Intimidate.class
+rosmod\cards\attack\ExpressStrike.class
 rosmod\powers\ExtendPower.class
 rosmod\ui\SkinSelectScreen$Skin.class
 rosmod\relics\TargetHand.class
@@ -15,10 +17,12 @@ rosmod\powers\CommandTerminalPower.class
 rosmod\relics\BaseRelic$1.class
 rosmod\character\Rosmontis.class
 rosmod\cards\skill\StunSelf.class
+rosmod\relics\JessicaWallet.class
 rosmod\powers\GiveBlockNextTurn.class
 rosmod\powers\MilliaPower.class
 rosmod\patches\RelicPatch$PlayerAttackedBeforeBlockPatch.class
 rosmod\cards\skill\Summon.class
+rosmod\cards\skill\TacticalGuide.class
 rosmod\powers\Skill1Power.class
 rosmod\cards\attack\HeavyAttackRos.class
 rosmod\cards\BaseCard$VariableType.class
@@ -26,7 +30,9 @@ rosmod\cards\skill\Memory.class
 rosmod\cards\skill\ConcentrateRos.class
 rosmod\cards\skill\MilliaDisaster.class
 rosmod\powers\Skill2Power.class
+rosmod\event\PickUp$1.class
 rosmod\cards\attack\ShieldStrike.class
+rosmod\event\PickUp.class
 rosmod\util\TextureLoader.class
 rosmod\potions\BasePotion.class
 rosmod\patches\RelicPatch.class
@@ -38,6 +44,8 @@ rosmod\actions\AddAttackAction.class
 rosmod\cards\BaseCard.class
 rosmod\cards\skill\Deprive.class
 rosmod\cards\attack\TouchingStars.class
+rosmod\event\PickUp$CurrentScreen.class
+rosmod\powers\AttachPower.class
 rosmod\cards\power\Stable.class
 rosmod\cards\other\Infected.class
 rosmod\cards\attack\ThrowAway.class

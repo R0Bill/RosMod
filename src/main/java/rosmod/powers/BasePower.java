@@ -1,15 +1,18 @@
 package rosmod.powers;
 
-import rosmod.util.GeneralUtils;
-import rosmod.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import rosmod.util.GeneralUtils;
+import rosmod.util.TextureLoader;
 
 public abstract class BasePower extends AbstractPower {
+    public void updateDescription() {
+        this.description = DESCRIPTIONS[0];
+    }
     private static PowerStrings getPowerStrings(String ID)
     {
         return CardCrawlGame.languagePack.getPowerStrings(ID);

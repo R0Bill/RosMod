@@ -21,7 +21,7 @@ public class Terminal extends CustomRelic implements ClickableRelic {
     private static final LandingSound SOUND = LandingSound.CLINK; //The sound played when the relic is clicked.
 
     public Terminal() {
-        super(ID, ImageMaster.loadImage(relicPath("example.png")), ImageMaster.loadImage(relicPath("example.png")), AbstractRelic.RelicTier.COMMON, AbstractRelic.LandingSound.FLAT);
+        super(ID, ImageMaster.loadImage(relicPath("Terminal.png")), ImageMaster.loadImage(relicPath("Terminal.png")), AbstractRelic.RelicTier.COMMON, AbstractRelic.LandingSound.FLAT);
         this.counter = -1;
     }
 

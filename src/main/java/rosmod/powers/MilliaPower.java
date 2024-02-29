@@ -18,13 +18,14 @@ public class MilliaPower extends BasePower {
     private static final AbstractPower.PowerType TYPE = AbstractPower.PowerType.BUFF;
     private static final boolean TURN_BASED = true;
 
-    public MilliaPower(AbstractCreature owner) {
-        super(POWER_ID, TYPE, TURN_BASED, owner, -1);
+    public MilliaPower(AbstractCreature owner, int amount) {
+        super(POWER_ID, TYPE, TURN_BASED, owner, amount);
     }
 
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if (!card.purgeOnUse && card.type == AbstractCard.CardType.SKILL) {
+            boolean used = false;
             for (AbstractMonster mo : (AbstractDungeon.getCurrRoom()).monsters.monsters) {
                 boolean temp = true;
                 for (AbstractPower pow : mo.powers) {
@@ -32,12 +33,15 @@ public class MilliaPower extends BasePower {
                         temp = false;
                     }
                 }
-                if (temp) {
-                    addToBot((AbstractGameAction) new ApplyPowerAction((AbstractCreature) mo, (AbstractCreature) AbstractDungeon.player, (AbstractPower) new FearPower((AbstractCreature) mo, 6)));
+                if (temp && !used) {
+                    addToBot((AbstractGameAction) new ApplyPowerAction((AbstractCreature) mo, (AbstractCreature) AbstractDungeon.player, (AbstractPower) new FearPower((AbstractCreature) mo, this.amount)));
                     break;
                 }
             }
-
+            if (!used) {
+                AbstractMonster mo = AbstractDungeon.getCurrRoom().monsters.getRandomMonster();
+                addToBot((AbstractGameAction) new ApplyPowerAction((AbstractCreature) mo, (AbstractCreature) AbstractDungeon.player, (AbstractPower) new FearPower((AbstractCreature) mo, this.amount)));
+            }
         }
     }
 }

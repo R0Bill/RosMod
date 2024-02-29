@@ -41,7 +41,7 @@ public class MilliaDisaster extends BaseCard {
             }
         }
         if (!powerExists) {
-            addToBot((AbstractGameAction) new ApplyPowerAction((AbstractCreature) abstractPlayer, (AbstractCreature) abstractPlayer, (AbstractPower) new MilliaPower((AbstractCreature) abstractPlayer)));
+            addToBot((AbstractGameAction) new ApplyPowerAction((AbstractCreature) abstractPlayer, (AbstractCreature) abstractPlayer, (AbstractPower) new MilliaPower((AbstractCreature) abstractPlayer, 3)));
             addToBot((AbstractGameAction) new MakeTempCardInHandAction((AbstractCard) new Infected(), 1));
         }
 

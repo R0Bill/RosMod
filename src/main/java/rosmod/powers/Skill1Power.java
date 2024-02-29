@@ -1,13 +1,12 @@
 package rosmod.powers;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.cards.CardQueueItem;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import static rosmod.BasicMod.makeID;
@@ -38,16 +37,36 @@ public class Skill1Power extends BasePower {
             magic++;
             if(magic>=2 && abstractCard.upgraded){
                 magic=0;
-                if(abstractCard.target==AbstractCard.CardTarget.ALL_ENEMY)
-                    addToBot((AbstractGameAction)new DamageAllEnemiesAction(AbstractDungeon.player, DamageInfo.createDamageMatrix(abstractCard.damage, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-                else
-                    addToBot((AbstractGameAction)new DamageAction(action.target,new DamageInfo(AbstractDungeon.player,abstractCard.damage,DamageInfo.DamageType.THORNS),AbstractGameAction.AttackEffect.SLASH_HEAVY));
+                flash();
+                AbstractMonster m = null;
+                if (action.target != null)
+                    m = (AbstractMonster) action.target;
+                AbstractCard tmp = abstractCard;
+                AbstractDungeon.player.limbo.addToBottom(tmp);
+                tmp.current_x = abstractCard.current_x;
+                tmp.current_y = abstractCard.current_y;
+                tmp.target_x = Settings.WIDTH / 2.0F - 300.0F * Settings.scale;
+                tmp.target_y = Settings.HEIGHT / 2.0F;
+                if (m != null)
+                    tmp.calculateCardDamage(m);
+                tmp.purgeOnUse = true;
+                AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(tmp, m, 0, true, true), true);
             } else if (magic>=3&& !abstractCard.upgraded) {
                 magic=0;
-                if(abstractCard.target==AbstractCard.CardTarget.ALL_ENEMY)
-                    addToBot((AbstractGameAction)new DamageAllEnemiesAction(AbstractDungeon.player, DamageInfo.createDamageMatrix(abstractCard.damage, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-                else
-                    addToBot((AbstractGameAction)new DamageAction(action.target,new DamageInfo(AbstractDungeon.player,abstractCard.damage,DamageInfo.DamageType.THORNS),AbstractGameAction.AttackEffect.SLASH_HEAVY));
+                flash();
+                AbstractMonster m = null;
+                if (action.target != null)
+                    m = (AbstractMonster) action.target;
+                AbstractCard tmp = abstractCard;
+                AbstractDungeon.player.limbo.addToBottom(tmp);
+                tmp.current_x = abstractCard.current_x;
+                tmp.current_y = abstractCard.current_y;
+                tmp.target_x = Settings.WIDTH / 2.0F - 300.0F * Settings.scale;
+                tmp.target_y = Settings.HEIGHT / 2.0F;
+                if (m != null)
+                    tmp.calculateCardDamage(m);
+                tmp.purgeOnUse = true;
+                AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(tmp, m, 0, true, true), true);
             }
         }
     }

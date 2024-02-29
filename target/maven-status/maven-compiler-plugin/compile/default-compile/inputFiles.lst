@@ -1,6 +1,8 @@
 D:\ModTheSpire\RosMod\src\main\java\rosmod\cards\skill\DefendRos.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\cards\skill\Extrasensory.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\util\CardStats.java
+D:\ModTheSpire\RosMod\src\main\java\rosmod\cards\skill\GetReady.java
+D:\ModTheSpire\RosMod\src\main\java\rosmod\cards\skill\TacticalGuide.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\relics\TheHug.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\relics\BaseRelic.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\cards\skill\PsyStorm.java
@@ -10,6 +12,7 @@ D:\ModTheSpire\RosMod\src\main\java\rosmod\ui\SkinSelectScreen.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\cards\attack\TouchingStars.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\patches\SkinSelectPatch.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\cards\skill\FlyRos.java
+D:\ModTheSpire\RosMod\src\main\java\rosmod\powers\AttachPower.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\relics\TargetHand.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\cards\attack\HeavyAttackRos.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\relics\AncientCoin.java
@@ -45,12 +48,14 @@ D:\ModTheSpire\RosMod\src\main\java\rosmod\cards\attack\LoseControl.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\util\KeywordInfo.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\powers\MilliaPower.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\powers\Skill1Power.java
+D:\ModTheSpire\RosMod\src\main\java\rosmod\relics\JessicaWallet.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\cards\skill\MedBox.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\util\TextureLoader.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\cards\power\Skill3.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\patches\RelicPatch.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\cards\attack\StealBlock.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\cards\power\CommandTerminal.java
+D:\ModTheSpire\RosMod\src\main\java\rosmod\event\PickUp.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\cards\skill\Intimidate.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\cards\attack\ShieldStrike.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\cards\attack\StrikeRos.java
@@ -67,3 +72,4 @@ D:\ModTheSpire\RosMod\src\main\java\rosmod\cards\attack\Judgement.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\actions\AddAttackAction.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\powers\GiveBlockNextTurn.java
 D:\ModTheSpire\RosMod\src\main\java\rosmod\cards\skill\MilliaDisaster.java
+D:\ModTheSpire\RosMod\src\main\java\rosmod\cards\attack\ExpressStrike.java

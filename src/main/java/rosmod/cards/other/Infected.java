@@ -28,7 +28,10 @@ public class Infected extends BaseCard {
     }
 
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
+    }
 
+    public boolean canUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
+        return false;
     }
 
     public void triggerOnEndOfTurnForPlayingCard() {

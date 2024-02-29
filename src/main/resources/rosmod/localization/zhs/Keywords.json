@@ -2,8 +2,17 @@
   {
     "PROPER_NAME": "真实伤害",
     "NAMES": [
-      "真实伤害"
+      "真实伤害",
+      "直接伤害"
     ],
     "DESCRIPTION": "造成生命的直接衰减。"
+  },
+  {
+    "PROPER_NAME": "眩晕",
+    "NAMES": [
+      "眩晕",
+      "击晕"
+    ],
+    "DESCRIPTION": "无法行动一回合。"
   }
 ]
