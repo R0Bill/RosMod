@@ -1,7 +1,5 @@
 package rosmod.powers;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.powers.AbstractPower;
@@ -18,14 +16,16 @@ public class FearPower extends BasePower {
     }
 
     public int onAttackedToChangeDamage(DamageInfo info, int damageAmount) {
-        if (info.type == DamageInfo.DamageType.NORMAL)
-            return damageAmount + this.amount;
-        return damageAmount;
+        return info.type == DamageInfo.DamageType.NORMAL ? damageAmount + this.amount : damageAmount;
+    }
+
+    public float atDamageGive(float damage, DamageInfo.DamageType type) {
+        return type == DamageInfo.DamageType.NORMAL ? damage - (float) this.amount : damage;
     }
 
     public void atEndOfTurn(boolean isPlayer) {
         if (!isPlayer)
-            addToBot((AbstractGameAction) new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
+            this.amount -= Math.floor((float) this.amount / 2);
     }
 
 }

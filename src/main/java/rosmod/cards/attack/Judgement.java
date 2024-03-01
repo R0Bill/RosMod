@@ -23,8 +23,8 @@ public class Judgement extends BaseCard {
             CardTarget.ENEMY, //The target. Single target is ENEMY, all enemies is ALL_ENEMY. Look at cards similar to what you want to see what to use.
             2 //The card's base cost. -1 is X cost, -2 is no cost for unplayable cards like curses, or Reflex.
     );
-    private static final int DAMAGE = 12;
-    private static final int UPG_DAMAGE = 4;
+    private static final int DAMAGE = 15;
+    private static final int UPG_DAMAGE = 10;
 
     public Judgement() {
         super(ID, info);
@@ -45,7 +45,10 @@ public class Judgement extends BaseCard {
                 CardCrawlGame.screenShake.mildRumble(5.0F);
                 AbstractRelic jg = AbstractDungeon.player.getRelic(JudgeCount.ID);
                 if (this.upgraded)
+                    jg.counter += 2;
+                else
                     jg.counter++;
+
             } else {
                 AbstractRelic jg = AbstractDungeon.player.getRelic(JudgeCount.ID);
                 jg.flash();

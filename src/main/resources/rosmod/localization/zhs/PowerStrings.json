@@ -44,7 +44,7 @@
   "${modID}:FearPower": {
     "NAME": "恐惧",
     "DESCRIPTIONS": [
-      "使受到的攻击增加 #b。"
+      "使受到的攻击增加 #b。造成的伤害减少 #b。回合结束时减少二分之一。"
     ]
   },
   "${modID}:ExtendPower": {

@@ -25,6 +25,7 @@ public class Infected extends BaseCard {
     //    private static final int DEX = 1;
     public Infected() {
         super(ID, info); //Pass the required information to the BaseCard constructor.
+        setSelfRetain(true);
     }
 
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
@@ -41,5 +42,8 @@ public class Infected extends BaseCard {
     public void triggerWhenDrawn() {
         addToBot((AbstractGameAction) new ApplyPowerAction((AbstractCreature) AbstractDungeon.player, (AbstractCreature) AbstractDungeon.player, (AbstractPower) new IntangiblePlayerPower((AbstractCreature) AbstractDungeon.player, 1), 1));
 
+    }
+
+    public void upgrade() {
     }
 }

@@ -2,10 +2,10 @@ package rosmod.relics;
 
 import basemod.abstracts.CustomRelic;
 import basemod.helpers.RelicType;
-import rosmod.util.GeneralUtils;
-import rosmod.util.TextureLoader;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+import rosmod.util.GeneralUtils;
+import rosmod.util.TextureLoader;
 
 import static rosmod.BasicMod.relicPath;
 
@@ -70,5 +70,9 @@ public abstract class BaseRelic extends CustomRelic {
                 this.pool = pool;
                 break;
         }
+    }
+
+    public String getUpdatedDescription() {
+        return this.DESCRIPTIONS[0];
     }
 }

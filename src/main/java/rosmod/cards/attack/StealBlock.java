@@ -28,7 +28,7 @@ public class StealBlock extends BaseCard {//偷盾，升级，抽一张牌
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        setDamage(abstractMonster.currentBlock);
+        setDamage(Math.max(abstractMonster.currentBlock, 5));
         addToBot(new DamageAction(abstractMonster, new DamageInfo(abstractPlayer, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_HEAVY));
         addToBot(new GainBlockAction(abstractPlayer, abstractPlayer, damage));
     }
