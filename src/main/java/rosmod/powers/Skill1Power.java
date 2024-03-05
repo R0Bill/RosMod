@@ -22,21 +22,27 @@ public class Skill1Power extends BasePower {
     //For a power to actually decrease/go away on its own they do it themselves.
     //Look at powers that do this like VulnerablePower and DoubleTapPower.
     private static int magic = 0;
+    private int limit = -1;
 
-    public Skill1Power(AbstractCreature owner) {
-        super(POWER_ID, TYPE, TURN_BASED, owner, -1);
+    public Skill1Power(AbstractCreature owner, int amount) {
+        super(POWER_ID, TYPE, TURN_BASED, owner, amount);
     }
+
     @Override
     public void updateDescription() {
         this.description = DESCRIPTIONS[0];
     }
 
     @Override
-    public void onUseCard(AbstractCard abstractCard, UseCardAction action){
-        if (!abstractCard.purgeOnUse && abstractCard.type == AbstractCard.CardType.ATTACK ) {
+    public void onUseCard(AbstractCard abstractCard, UseCardAction action) {
+        if (limit == -1)
+            limit = amount;
+        if (!abstractCard.purgeOnUse && abstractCard.type == AbstractCard.CardType.ATTACK) {
             magic++;
-            if(magic>=2 && abstractCard.upgraded){
-                magic=0;
+            if (magic >= limit && amount == 2) {
+                if (limit == amount)
+                    limit = amount + 1;
+                magic = 0;
                 flash();
                 AbstractMonster m = null;
                 if (action.target != null)
@@ -51,8 +57,10 @@ public class Skill1Power extends BasePower {
                     tmp.calculateCardDamage(m);
                 tmp.purgeOnUse = true;
                 AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(tmp, m, 0, true, true), true);
-            } else if (magic>=3&& !abstractCard.upgraded) {
-                magic=0;
+            } else if (amount == limit && magic == 3) {
+                if (limit == amount)
+                    limit = amount + 1;
+                magic = 0;
                 flash();
                 AbstractMonster m = null;
                 if (action.target != null)
@@ -70,9 +78,10 @@ public class Skill1Power extends BasePower {
             }
         }
     }
+
     @Override
-    public void atStartOfTurn(){
-        magic=0;
+    public void atStartOfTurn() {
+        magic = 0;
     }
 
 }

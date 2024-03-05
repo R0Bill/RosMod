@@ -22,6 +22,8 @@ import org.apache.logging.log4j.Logger;
 import org.scannotation.AnnotationDB;
 import rosmod.cards.BaseCard;
 import rosmod.character.Rosmontis;
+import rosmod.event.PickUp;
+import rosmod.event.RhodesIslandSafeHouse;
 import rosmod.relics.BaseRelic;
 import rosmod.relics.Terminal;
 import rosmod.util.GeneralUtils;
@@ -86,6 +88,8 @@ public class BasicMod implements
 
     @Override
     public void receivePostInitialize() {
+        BaseMod.addEvent(PickUp.ID, PickUp.class, "Exordium");
+        BaseMod.addEvent(RhodesIslandSafeHouse.ID, RhodesIslandSafeHouse.class, "Exordium");
         //This loads the image used as an icon in the in-game mods menu.
         Texture badgeTexture = TextureLoader.getTexture(imagePath("badge.png"));
         //Set up the mod information displayed in the in-game mods menu.
@@ -123,6 +127,7 @@ public class BasicMod implements
             }
         }
     }
+
 
     private void loadLocalization(String lang) {
         //While this does load every type of localization, most of these files are just outlines so that you can see how they're formatted.

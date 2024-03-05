@@ -43,18 +43,22 @@ public class PickUp extends AbstractImageEvent {
                     this.imageEventText.updateDialogOption(0, OPTIONS[5]);
                     this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
                     this.curScreen = CurrentScreen.FURTHER1;
+                    break;
                 } else if (buttonPressed == 1) {
-                    this.imageEventText.removeDialogOption(1);
                     this.imageEventText.removeDialogOption(2);
+                    this.imageEventText.removeDialogOption(1);
                     this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
                     this.imageEventText.updateDialogOption(0, OPTIONS[6]);
+                    AbstractDungeon.getCurrRoom().spawnRelicAndObtain(Settings.WIDTH * 0.5F, Settings.HEIGHT * 0.5F, (AbstractRelic) new JessicaWallet());
                     this.curScreen = CurrentScreen.COMPLETE;
+                    break;
                 } else if (buttonPressed == 2) {
-                    this.imageEventText.removeDialogOption(1);
                     this.imageEventText.removeDialogOption(2);
+                    this.imageEventText.removeDialogOption(1);
                     this.imageEventText.updateBodyText(DESCRIPTIONS[3]);
                     this.imageEventText.updateDialogOption(0, OPTIONS[6]);
                     this.curScreen = CurrentScreen.COMPLETE;
+                    break;
                 }
             case CHOSE1:
                 if (buttonPressed == 0) {
@@ -64,6 +68,7 @@ public class PickUp extends AbstractImageEvent {
                     AbstractDungeon.player.heal(999, true);
                     AbstractDungeon.player.increaseMaxHp(15, true);
                     this.curScreen = CurrentScreen.COMPLETE;
+                    break;
                 } else if (buttonPressed == 1) {
                     this.imageEventText.updateDialogOption(0, OPTIONS[6]);
                     this.imageEventText.updateBodyText(DESCRIPTIONS[6]);
@@ -71,6 +76,7 @@ public class PickUp extends AbstractImageEvent {
                     this.imageEventText.removeDialogOption(1);
                     AbstractDungeon.getCurrRoom().spawnRelicAndObtain(Settings.WIDTH * 0.5F, Settings.HEIGHT * 0.5F, (AbstractRelic) new StolenMiniCake());
                     this.curScreen = CurrentScreen.COMPLETE;
+                    break;
 
                 }
             case FURTHER1:
@@ -79,6 +85,7 @@ public class PickUp extends AbstractImageEvent {
                     this.imageEventText.setDialogOption(OPTIONS[4], new StolenMiniCake());
                     this.imageEventText.updateBodyText(DESCRIPTIONS[4]);
                     this.curScreen = CurrentScreen.CHOSE1;
+                    break;
                 }
             case COMPLETE:
                 openMap();
