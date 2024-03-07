@@ -31,7 +31,7 @@ import java.util.ArrayList;
 import static rosmod.BasicMod.characterPath;
 import static rosmod.BasicMod.makeID;
 
-public class Rosmontis extends CustomPlayer {
+public class Rosmontis extends CustomPlayer {//DES
     //Stats
     public static final int ENERGY_PER_TURN = 3;
     public static final int MAX_HP = 60;

@@ -35,7 +35,7 @@ public class Judgement extends BaseCard {
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {//斩杀加敏捷
         boolean temp = false;
-        if (abstractMonster.currentHealth <= damage + 3 && abstractMonster.currentBlock == 0)
+        if (abstractMonster.currentHealth + abstractMonster.currentBlock <= damage + 3)
             temp = true;
         addToBot(new DamageAction(abstractMonster, new DamageInfo(abstractPlayer, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_HEAVY));
         if (temp) {

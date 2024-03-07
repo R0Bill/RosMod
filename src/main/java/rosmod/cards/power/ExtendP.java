@@ -12,7 +12,7 @@ import rosmod.character.Rosmontis;
 import rosmod.powers.ExtendPower;
 import rosmod.util.CardStats;
 
-public class ExtendP extends BaseCard {
+public class ExtendP extends BaseCard {//bug
     public static final String ID = makeID("ExtendP");
 
     private static final CardStats info = new CardStats(

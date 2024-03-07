@@ -30,10 +30,22 @@ public class Skill1 extends BaseCard {
     }
 
     @Override
+    public boolean canUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
+        boolean powerExists = false;
+        for (AbstractPower pow : AbstractDungeon.player.powers) {
+            if (pow.ID.equals("rosmontis:Skill1Power") || pow.ID.equals("rosmontis:Skill2Power") || pow.ID.equals("rosmontis:Skill3Power")) {
+                powerExists = true;
+                break;
+            }
+        }
+        return !powerExists;
+    }
+
+    @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         boolean powerExists = false;
         for (AbstractPower pow : AbstractDungeon.player.powers) {
-            if (pow.ID.equals("Skill1Power")) {
+            if (pow.ID.equals("rosmontis:Skill1Power") || pow.ID.equals("rosmontis:Skill2Power") || pow.ID.equals("rosmontis:Skill3Power")) {
                 powerExists = true;
                 break;
             }

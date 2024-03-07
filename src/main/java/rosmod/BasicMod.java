@@ -88,8 +88,14 @@ public class BasicMod implements
 
     @Override
     public void receivePostInitialize() {
-        BaseMod.addEvent(PickUp.ID, PickUp.class, "Exordium");
+        BaseMod.addEvent(PickUp.ID, PickUp.class, "TheCity");
         BaseMod.addEvent(RhodesIslandSafeHouse.ID, RhodesIslandSafeHouse.class, "Exordium");
+        BaseMod.addEvent(RhodesIslandSafeHouse.ID, RhodesIslandSafeHouse.class, "TheCity");
+        BaseMod.addEvent(RhodesIslandSafeHouse.ID, RhodesIslandSafeHouse.class, "TheBeyond");
+
+        BaseMod.addEvent(RhodesIslandSafeHouse.ID, RhodesIslandSafeHouse.class, "Exordium");
+        BaseMod.addEvent(RhodesIslandSafeHouse.ID, RhodesIslandSafeHouse.class, "TheCity");
+        BaseMod.addEvent(RhodesIslandSafeHouse.ID, RhodesIslandSafeHouse.class, "TheBeyond");
         //This loads the image used as an icon in the in-game mods menu.
         Texture badgeTexture = TextureLoader.getTexture(imagePath("badge.png"));
         //Set up the mod information displayed in the in-game mods menu.
@@ -254,6 +260,6 @@ public class BasicMod implements
     }
 
     public static String MakePath(String id) {
-        return "Rosmontis:" + id;
+        return "rosmontis:" + id;
     }
 }

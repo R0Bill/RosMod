@@ -16,7 +16,7 @@ import rosmod.cards.BaseCard;
 import rosmod.character.Rosmontis;
 import rosmod.util.CardStats;
 
-public class LoseControl extends BaseCard {//-2hp，造成12点+3*力量的伤害，如果计算超过20点，获得一点力量
+public class LoseControl extends BaseCard {//DES
     public static final String ID = makeID("LoseControl"); //makeID adds the mod ID, so the final ID will be something like "modID:MyCard"
     private static final CardStats info = new CardStats(
             Rosmontis.Enums.CARD_COLOR, //The card color. If you're making your own character, it'll look something like this. Otherwise, it'll be CardColor.RED or something similar for a basegame character color.
@@ -29,6 +29,7 @@ public class LoseControl extends BaseCard {//-2hp，造成12点+3*力量的伤�
     public LoseControl() {
         super(ID, info);
         tags.add(AbstractCard.CardTags.STRIKE); //This tag marks it as a Strike card for the purposes of Perfected Strike and any similar modded effects
+        setDamage(12);
     }
 
     @Override

@@ -23,7 +23,7 @@ public class GiveBlockNextTurn extends BasePower {
 
     public void atStartOfTurn() {
         addToBot(new GainBlockAction(AbstractDungeon.player, null, amount));
-        addToBot((AbstractGameAction) new RemoveSpecificPowerAction(this.owner, this.owner, "GiveBlockNextTurn"));
+        addToBot((AbstractGameAction) new RemoveSpecificPowerAction(this.owner, this.owner, "rosmontis:GiveBlockNextTurn"));
     }
 
 }

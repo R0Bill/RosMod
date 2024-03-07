@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <properties>
-        <modID>Rosmontis</modID>
+        <modID>rosmontis</modID>
         <author>R0Bill</author>
 
         <!-- Change the path for your system to match your Steam installation. -->

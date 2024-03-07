@@ -4,12 +4,13 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import rosmod.cards.BaseCard;
 import rosmod.character.Rosmontis;
 import rosmod.util.CardStats;
 
-public class PsyStorm extends BaseCard {
+public class PsyStorm extends BaseCard {//强仔，全体共享
     public static final String ID = makeID("PsyStorm");
     private static final CardStats info = new CardStats(
             Rosmontis.Enums.CARD_COLOR, //The card color. If you're making your own character, it'll look something like this. Otherwise, it'll be CardColor.RED or something similar for a basegame character color.
@@ -32,12 +33,16 @@ public class PsyStorm extends BaseCard {
         abstractPlayer.state.setAnimation(0,"Skill_3_Begin",false);
         abstractPlayer.state.addAnimation(0,"Skill_3_Loop",true,0.3f);
         for(int i = 0 ; i < 1 + this.energyOnUse ; i++){
+            int monum = AbstractDungeon.getCurrRoom().monsters.monsters.size();
             int tempDamage = 2;
             for(int j = 0; j<i;j++){
                 int Ftemp = tempDamage;
                 tempDamage = Ftemp * 2;
             }
-            addToBot((AbstractGameAction)new DamageAllEnemiesAction(abstractPlayer, DamageInfo.createDamageMatrix(tempDamage, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+//            for(AbstractMonster mo: AbstractDungeon.getCurrRoom().monsters.monsters)
+//                addToBot(new DamageAction(mo,new DamageInfo(mo,(tempDamage/monum)+1),AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+
+            addToBot((AbstractGameAction) new DamageAllEnemiesAction(abstractPlayer, DamageInfo.createDamageMatrix(tempDamage / monum, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         }
         abstractPlayer.state.addAnimation(0,"Skill_3_End",false,(1+this.energyOnUse)*0.2f);
         abstractPlayer.state.addAnimation(0,"Idle",true,0.3f);

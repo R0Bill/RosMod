@@ -18,8 +18,38 @@
   {
     "PROPER_NAME": "恐惧",
     "NAMES": [
-      "恐惧"
+      "恐惧",
+      "Fear"
     ],
     "DESCRIPTION": "使收到的伤害增加该标记量，造成的伤害减少该标记量。"
+  },
+  {
+    "PROPER_NAME": "突破护盾",
+    "NAMES": [
+      "突破护盾",
+      "突破格挡"
+    ],
+    "DESCRIPTION": "对怪物造成的伤害减去怪物格挡量的伤害。"
+  },
+  {
+    "PROPER_NAME": "创想",
+    "NAMES": [
+      "创想"
+    ],
+    "DESCRIPTION": "在每回合的开始和现在将 #yN 张 *思维衍生 加入手牌。"
+  },
+  {
+    "PROPER_NAME": "唯一",
+    "NAMES": [
+      "唯一"
+    ],
+    "DESCRIPTION": "唯一效果，拥有该词条的能力是独一无二的，在已有同名能力时无法再获得。"
+  },
+  {
+    "PROPER_NAME": "斩杀",
+    "NAMES": [
+      "斩杀"
+    ],
+    "DESCRIPTION": "使用这张牌造成击杀"
   }
 ]

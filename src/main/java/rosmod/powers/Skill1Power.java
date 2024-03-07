@@ -1,11 +1,14 @@
 package rosmod.powers;
 
+import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardQueueItem;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
@@ -22,7 +25,8 @@ public class Skill1Power extends BasePower {
     //For a power to actually decrease/go away on its own they do it themselves.
     //Look at powers that do this like VulnerablePower and DoubleTapPower.
     private static int magic = 0;
-    private int limit = -1;
+    private Color greenColor = new Color(0.0F, 1.0F, 0.0F, 1.0F);
+    private Color redColor = new Color(1.0F, 0.0F, 0.0F, 1.0F);
 
     public Skill1Power(AbstractCreature owner, int amount) {
         super(POWER_ID, TYPE, TURN_BASED, owner, amount);
@@ -35,13 +39,9 @@ public class Skill1Power extends BasePower {
 
     @Override
     public void onUseCard(AbstractCard abstractCard, UseCardAction action) {
-        if (limit == -1)
-            limit = amount;
         if (!abstractCard.purgeOnUse && abstractCard.type == AbstractCard.CardType.ATTACK) {
             magic++;
-            if (magic >= limit && amount == 2) {
-                if (limit == amount)
-                    limit = amount + 1;
+            if (magic == amount && amount == 2) {
                 magic = 0;
                 flash();
                 AbstractMonster m = null;
@@ -57,9 +57,7 @@ public class Skill1Power extends BasePower {
                     tmp.calculateCardDamage(m);
                 tmp.purgeOnUse = true;
                 AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(tmp, m, 0, true, true), true);
-            } else if (amount == limit && magic == 3) {
-                if (limit == amount)
-                    limit = amount + 1;
+            } else if (amount == 3 && magic == 3) {
                 magic = 0;
                 flash();
                 AbstractMonster m = null;
@@ -78,6 +76,17 @@ public class Skill1Power extends BasePower {
             }
         }
     }
+
+    public void renderAmount(SpriteBatch sb, float x, float y, Color c) {
+        if (this.amount > 0) {
+            if (!this.isTurnBased) {
+                this.greenColor.a = c.a;
+                c = this.greenColor;
+            }
+            FontHelper.renderFontRightTopAligned(sb, FontHelper.powerAmountFont, Integer.toString(this.magic) + "/" + Integer.toString(this.amount), x, y, this.fontScale, c);
+        }
+    }
+
 
     @Override
     public void atStartOfTurn() {
