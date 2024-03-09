@@ -66,25 +66,25 @@
     "UPGRADE_DESCRIPTION": " ${modID}:唯一 ，固有。 格挡 不会消失，你造成的伤害增加你 格挡 量的一半。"
   },
   "${modID}:AddDefend": {
-    "NAME": "AddDefend",
-    "DESCRIPTION": "获得 !B!  格挡 。如果上一张打出的是技能牌，获得两次。"
+    "NAME": "连续格挡",
+    "DESCRIPTION": "获得 !B!  格挡 。 NL 如果上一张打出的是技能牌， NL 获得两次。"
   },
   "${modID}:EntrenchRos": {
-    "NAME": "EntrenchRos",
+    "NAME": "战线维持",
     "DESCRIPTION": "消耗。 格挡 翻倍"
   },
   "${modID}:CommandTerminal": {
-    "NAME": "CommandTerminal",
-    "DESCRIPTION": "${modID}:唯一。回合开始时，治疗1点生命，获得 [E]。",
-    "UPGRADE_DESCRIPTION": " *固有 ，${modID}:唯一。回合开始时，治疗1点生命，获得 [E]。"
+    "NAME": "指挥终端",
+    "DESCRIPTION": " ${modID}:唯一 。回合开始时，治疗1点生命，获得 [E] 。",
+    "UPGRADE_DESCRIPTION": " *固有 ， ${modID}:唯一 。回合开始时，治疗1点生命，获得 [E] 。"
   },
   "${modID}:Impulse": {
-    "NAME": "Impulse",
-    "DESCRIPTION": " *消耗 。造成 !D! 伤害，斩杀手牌加入此牌复制。"
+    "NAME": "突触脉冲",
+    "DESCRIPTION": " *消耗 。造成 !D! 伤害， ${modID}:斩杀 手牌加入此牌复制。"
   },
   "${modID}:Intimidate": {
-    "NAME": "Intimidate",
-    "DESCRIPTION": " *消耗 。给予所有敌人99层 易伤 和 虚弱 。"
+    "NAME": "喵喵！",
+    "DESCRIPTION": " *消耗 。给予所有敌人 NL 99层 易伤 和 虚弱 。"
   },
   "${modID}:Judgement": {
     "NAME": "在这立法典",
@@ -92,7 +92,7 @@
     "UPGRADE_DESCRIPTION": "造成 !D! 伤害， ${modID}:斩杀 永久加2敏捷1力量。"
   },
   "${modID}:StealBlock": {
-    "NAME": "StealBlock",
+    "NAME": "强力击",
     "DESCRIPTION": "造成敌人 格挡 量的伤害，获得造成伤害量的 格挡 。最低伤害为5。"
   },
   "${modID}:MilliaDisaster": {
@@ -101,8 +101,8 @@
   },
   "${modID}:Stable": {
     "NAME": "感知稳定",
-    "DESCRIPTION": "你造成伤害时额外造成20% ${modID}:真实伤害 。",
-    "UPGRADE_DESCRIPTION": " 固有 。你造成伤害时额外造成20% ${modID}:真实伤害 。"
+    "DESCRIPTION": "${modID}:唯一 。 你造成伤害时额外造成20% ${modID}:真实伤害 。",
+    "UPGRADE_DESCRIPTION": "${modID}:唯一 ， 固有 。你造成伤害时额外造成20% ${modID}:真实伤害 。"
   },
   "${modID}:Summon": {
     "NAME": "快速格挡",
@@ -134,7 +134,7 @@
   },
   "${modID}:StunSelf": {
     "NAME": "交叉防御",
-    "DESCRIPTION": "获得 !B!  格挡 。在下回合开始时，获得一半于该数值 格挡 "
+    "DESCRIPTION": "获得 !B!  格挡 。 NL 在下回合开始时， NL 获得一半于该数值 格挡 "
   },
   "${modID}:Infected": {
     "NAME": "感染",
@@ -142,7 +142,7 @@
   },
   "${modID}:MedBox": {
     "NAME": "应急医疗箱",
-    "DESCRIPTION": " 消耗 。治疗 !M! 点生命。"
+    "DESCRIPTION": " 消耗 。抽到此牌时治疗 !M! 点生命。"
   },
   "${modID}:AddAttack": {
     "NAME": "连击",
@@ -191,7 +191,7 @@
     "DESCRIPTION": "造成 !D! 点伤害 ，再追加一次造成的 ${modID}:突破格挡 的一半的 ${modID}:真实伤害 。"
   },
   "${modID}:Slay": {
-    "NAME": "Slay",
+    "NAME": "破碎",
     "DESCRIPTION": "造成 !D! 点伤害 ，获得等同于造成的 ${modID}:突破格挡 的 临时生命 。"
   }
 }
