@@ -1,7 +1,11 @@
 package rosmod.powers;
 
+import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import static rosmod.BasicMod.makeID;
@@ -13,6 +17,7 @@ public class FearPower extends BasePower {
 
     public FearPower(AbstractCreature owner, int amount) {
         super(POWER_ID, TYPE, TURN_BASED, owner, amount);
+        updateDescription();
     }
 
     public int onAttackedToChangeDamage(DamageInfo info, int damageAmount) {
@@ -24,8 +29,24 @@ public class FearPower extends BasePower {
     }
 
     public void atEndOfTurn(boolean isPlayer) {
-        if (!isPlayer)
-            this.amount -= Math.floor((float) this.amount / 2);
+        if (!isPlayer) {
+            if (this.amount > 1)
+                this.amount -= (int) Math.floor((float) this.amount / 2);
+            else
+                this.amount = 0;
+        }
+        updateDescription();
+        if (this.amount <= 0)
+            addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+    }
+
+    public void renderAmount(SpriteBatch sb, float x, float y, Color c) {
+        FontHelper.renderFontRightTopAligned(sb, FontHelper.powerAmountFont, Integer.toString(this.amount), x, y, this.fontScale, Color.valueOf("cd2626"));
+    }
+
+    @Override
+    public void updateDescription() {
+        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2];
     }
 
 }

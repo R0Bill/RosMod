@@ -9,7 +9,6 @@ import com.megacrit.cardcrawl.powers.EnergizedPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import rosmod.cards.BaseCard;
 import rosmod.character.Rosmontis;
-import rosmod.powers.AttachPower;
 import rosmod.powers.GiveBlockNextTurn;
 import rosmod.util.CardStats;
 
@@ -35,7 +34,7 @@ public class GetReady extends BaseCard {
         addToBot(new ApplyPowerAction(abstractPlayer, abstractPlayer, new EnergizedPower(abstractPlayer, (!this.upgraded ? 2 : 3))));
         addToBot(new ApplyPowerAction(abstractPlayer, abstractPlayer, new StrengthPower(abstractPlayer, (!this.upgraded ? 1 : 2))));
         addToBot(new ApplyPowerAction(abstractPlayer, abstractPlayer, new DrawCardNextTurnPower(abstractPlayer, (!this.upgraded ? 2 : 3))));
-        addToBot(new ApplyPowerAction(abstractPlayer, abstractPlayer, new AttachPower(abstractPlayer, (!this.upgraded ? 3 : 4))));
+//        addToBot(new ApplyPowerAction(abstractPlayer, abstractPlayer, new AttachPower(abstractPlayer, (!this.upgraded ? 3 : 4))));
     }
 
 }

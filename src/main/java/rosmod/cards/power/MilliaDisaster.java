@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import rosmod.cards.BaseCard;
@@ -33,17 +32,7 @@ public class MilliaDisaster extends BaseCard {
     }
 
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        boolean powerExists = false;
-        for (AbstractPower pow : AbstractDungeon.player.powers) {
-            if (pow.ID.equals("MilliaPower")) {
-                powerExists = true;
-                break;
-            }
-        }
-        if (!powerExists) {
-            addToBot((AbstractGameAction) new ApplyPowerAction((AbstractCreature) abstractPlayer, (AbstractCreature) abstractPlayer, (AbstractPower) new MilliaPower((AbstractCreature) abstractPlayer, 3)));
-            addToBot((AbstractGameAction) new MakeTempCardInHandAction((AbstractCard) new Infected(), 1));
-        }
-
+        addToBot((AbstractGameAction) new ApplyPowerAction((AbstractCreature) abstractPlayer, (AbstractCreature) abstractPlayer, (AbstractPower) new MilliaPower((AbstractCreature) abstractPlayer, 2)));
+        addToBot((AbstractGameAction) new MakeTempCardInHandAction((AbstractCard) new Infected(), 1));
     }
 }

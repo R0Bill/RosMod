@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.common.ReduceCostAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import rosmod.cards.BaseCard;
 import rosmod.character.Rosmontis;
@@ -18,16 +19,15 @@ public class TouchingStars extends BaseCard {//bug
             CardType.ATTACK, //The type. ATTACK/SKILL/POWER/CURSE/STATUS
             CardRarity.RARE, //Rarity. BASIC is for starting cards, then there's COMMON/UNCOMMON/RARE, and then SPECIAL and CURSE. SPECIAL is for cards you only get from events. Curse is for curses, except for special curses like Curse of the Bell and Necronomicurse.
             CardTarget.ENEMY, //The target. Single target is ENEMY, all enemies is ALL_ENEMY. Look at cards similar to what you want to see what to use.
-            10 //The card's base cost. -1 is X cost, -2 is no cost for unplayable cards like curses, or Reflex.
+            8 //The card's base cost. -1 is X cost, -2 is no cost for unplayable cards like curses, or Reflex.
     );
 
     private boolean firstTurn = true;
 
     public TouchingStars() {
         super(ID, info);
-        setDamage(188);
+        setDamage(99);
         setSelfRetain(true);
-        setCostUpgrade(8);
         setExhaust(true);
         setInnate(false, true);
     }
@@ -39,8 +39,8 @@ public class TouchingStars extends BaseCard {//bug
 
     @Override
     public void triggerOnGlowCheck() {
-        if (this.freeToPlay()) {
-            this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
+        if (AbstractDungeon.player.energy.energy >= this.energyOnUse) {
+            this.glowColor = com.badlogic.gdx.graphics.Color.valueOf("bacdbaff");
         } else
             this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
 

@@ -25,6 +25,7 @@ public class AttachPower extends BasePower {
 
     public AttachPower(AbstractCreature owner, int amount) {
         super(POWER_ID, TYPE, TURN_BASED, owner, amount);
+        updateDescription();
     }
 
     @Override
@@ -45,8 +46,14 @@ public class AttachPower extends BasePower {
             tmp.purgeOnUse = true;
             AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(tmp, m, 0, true, true), true);
             this.amount--;
+            updateDescription();
         }
         if (this.amount <= 0)
             addToBot((AbstractGameAction) new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
     }
+
+    public void updateDescription() {
+        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+    }
+
 }

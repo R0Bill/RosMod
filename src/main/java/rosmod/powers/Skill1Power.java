@@ -30,6 +30,7 @@ public class Skill1Power extends BasePower {
 
     public Skill1Power(AbstractCreature owner, int amount) {
         super(POWER_ID, TYPE, TURN_BASED, owner, amount);
+        magic = 0;
     }
 
     @Override

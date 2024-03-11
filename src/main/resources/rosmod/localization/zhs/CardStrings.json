@@ -19,8 +19,8 @@
   },
   "${modID}:Skill3": {
     "NAME": "如你所愿",
-    "DESCRIPTION": "${modID}:唯一 。所有攻击牌费用变为2倍，视为打出3次。每次打出有30%的概率 ${modID}:眩晕 目标。NL 失去3点 敏捷 。",
-    "UPGRADE_DESCRIPTION": "${modID}:唯一 ， 固有。所有攻击牌费用*2，视为打出3次。每次打出有30%的概率 ${modID}:眩晕 目标。 NL 失去3点 敏捷 。"
+    "DESCRIPTION": "${modID}:唯一 。 NL 所有攻击牌费用变为2倍，视为打出3次。每次打出有30%的概率 ${modID}:眩晕 目标。 NL 失去3点 敏捷 。",
+    "UPGRADE_DESCRIPTION": "${modID}:唯一 ， 固有。 NL 所有攻击牌费用*2，视为打出3次。每次打出有30%的概率 ${modID}:眩晕 目标。 NL 失去3点 敏捷 。"
   },
   "${modID}:Memory": {
     "NAME": "回忆",
@@ -43,8 +43,8 @@
   },
   "${modID}:PsyStorm": {
     "NAME": "念力风暴",
-    "DESCRIPTION": " 消耗 。对全体敌人造成2-4-8-16...点伤害。伤害段数取决于使用的能量。",
-    "UPGRADE_DESCRIPTION": " 消耗 ，保留。对全体敌人造成2-4-8-16...点伤害。伤害段数取决于使用的能量。"
+    "DESCRIPTION": " 消耗 。 NL 对全体敌人造成2-4-8-16...点伤害。伤害段数取决于使用的能量。",
+    "UPGRADE_DESCRIPTION": " 消耗 ，保留。 NL 对全体敌人造成2-4-8-16...点伤害。伤害段数取决于使用的能量。"
   },
   "${modID}:QuickAttack": {
     "NAME": "快速攻击",
@@ -62,8 +62,8 @@
   },
   "${modID}:Skill2": {
     "NAME": "末梢阻断",
-    "DESCRIPTION": " ${modID}:唯一 。 格挡 不会消失，你造成的伤害增加你 格挡 量的一半。",
-    "UPGRADE_DESCRIPTION": " ${modID}:唯一 ，固有。 格挡 不会消失，你造成的伤害增加你 格挡 量的一半。"
+    "DESCRIPTION": " ${modID}:唯一 。 格挡 不会消失，你造成的伤害增加你 格挡 量的三分之一。获得的 格挡 增加一半。",
+    "UPGRADE_DESCRIPTION": " ${modID}:唯一 ，固有。 格挡 不会消失，你造成的伤害增加你 格挡 量的三分之一。获得的 格挡 增加一半。"
   },
   "${modID}:AddDefend": {
     "NAME": "连续格挡",
@@ -92,12 +92,12 @@
     "UPGRADE_DESCRIPTION": "造成 !D! 伤害， ${modID}:斩杀 永久加2敏捷1力量。"
   },
   "${modID}:StealBlock": {
-    "NAME": "强力击",
+    "NAME": "破障",
     "DESCRIPTION": "造成敌人 格挡 量的伤害，获得造成伤害量的 格挡 。最低伤害为5。"
   },
   "${modID}:MilliaDisaster": {
     "NAME": "“米利亚的灾祸”",
-    "DESCRIPTION": "每使用一张技能牌对随机敌人施加 3 ${modID}:恐惧 ，获得一张感染。"
+    "DESCRIPTION": "每使用一张技能牌对随机敌人施加 2 ${modID}:恐惧 ，获得一张感染。"
   },
   "${modID}:Stable": {
     "NAME": "感知稳定",
@@ -125,7 +125,7 @@
   },
   "${modID}:DoublePre": {
     "NAME": "两手准备",
-    "DESCRIPTION": "获得 *快速攻击 ，*快速格挡 "
+    "DESCRIPTION": "获得 *快速攻击 ， *快速格挡 "
   },
   "${modID}:Deprive": {
     "NAME": "感知剥夺",
@@ -151,7 +151,7 @@
   },
   "${modID}:Accumulation": {
     "NAME": "训练",
-    "DESCRIPTION": " 消耗 。 NL 获得 !M!  力量 和 敏捷 。 NL 可被多次升级。"
+    "DESCRIPTION": " 消耗 。 NL 获得 !M! 力量 和 敏捷 。 NL 可被多次升级。"
   },
   "${modID}:Backpack": {
     "NAME": "行囊",
@@ -169,8 +169,8 @@
   },
   "${modID}:ExtendP": {
     "NAME": "创想",
-    "DESCRIPTION": "在每回合的开始和现在将 #y1 张 *思维衍生 加入手牌。",
-    "UPGRADE_DESCRIPTION": "在每回合的开始和现在将 #y2 张 *思维衍生 加入手牌。"
+    "DESCRIPTION": "在每回合的开始和现在将 1 张 *思维衍生 加入手牌。",
+    "UPGRADE_DESCRIPTION": "在每回合的开始和现在将 2 张 *思维衍生 加入手牌。"
   },
   "${modID}:GetReady": {
     "NAME": "准备就绪",
@@ -187,11 +187,19 @@
     "DESCRIPTION": "造成 !D! 点伤害 !M! 次"
   },
   "${modID}:Hunter": {
-    "NAME": "追猎",
-    "DESCRIPTION": "造成 !D! 点伤害 ，再追加一次造成的 ${modID}:突破格挡 的一半的 ${modID}:真实伤害 。"
+    "NAME": "在轨打击",
+    "DESCRIPTION": "造成 !D! 点伤害 ，再追加一次造成的 ${modID}:突破格挡 NL 的一半的 ${modID}:真实伤害 。"
   },
   "${modID}:Slay": {
-    "NAME": "破碎",
+    "NAME": "追猎",
     "DESCRIPTION": "造成 !D! 点伤害 ，获得等同于造成的 ${modID}:突破格挡 的 临时生命 。"
+  },
+  "${modID}:AfterShock": {
+    "NAME": "余震",
+    "DESCRIPTION": "下2次攻击牌将附带打出一张 *快速攻击 。"
+  },
+  "${modID}:FallOut": {
+    "NAME": "“辐射”",
+    "DESCRIPTION": "消耗 。对第一个敌人造成 !D! 伤害，弹跳伤害至身后的敌人，每次弹跳伤害-4，直到伤害小于等于0。"
   }
 }

@@ -30,10 +30,22 @@ public class Stable extends BaseCard {//比例真伤
     }
 
     @Override
+    public boolean canUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
+        boolean powerExists = false;
+        for (AbstractPower pow : AbstractDungeon.player.powers) {
+            if (pow.ID.equals("rosmontis:StablePower")) {
+                powerExists = true;
+                break;
+            }
+        }
+        return !powerExists;
+    }
+
+    @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         boolean powerExists = false;
         for (AbstractPower pow : AbstractDungeon.player.powers) {
-            if (pow.ID.equals("Skill2Power")) {
+            if (pow.ID.equals("rosmontis:StablePower")) {
                 powerExists = true;
                 break;
             }

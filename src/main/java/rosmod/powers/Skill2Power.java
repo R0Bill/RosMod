@@ -19,15 +19,28 @@ public class Skill2Power extends BasePower {
     }
     @Override
     public float atDamageGive(float d, DamageInfo.DamageType type){
-        float temp = (float) AbstractDungeon.player.currentBlock /2;
+        float temp = (float) AbstractDungeon.player.currentBlock / 3;
         if(type == DamageInfo.DamageType.NORMAL){
+            flash();
             temp += d;
             return temp;
         }
         else
             return d;
     }
+
+    @Override
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0];
+        this.description = DESCRIPTIONS[0] + AbstractDungeon.player.currentBlock / 3 + DESCRIPTIONS[1];
+    }
+
+    @Override
+    public float modifyBlockLast(float blockAmount) {
+        flash();
+        return (float) (blockAmount * 1.5);
+    }
+
+    public void onGainedBlock(float blockAmount) {
+        updateDescription();
     }
 }

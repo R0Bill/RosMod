@@ -21,4 +21,8 @@ public class ExtendPower extends BasePower {
     public ExtendPower(AbstractCreature owner, int amount) {
         super(POWER_ID, TYPE, TURN_BASED, owner, amount);
     }
+
+    public void updateDescription() {
+        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+    }
 }
