@@ -51,6 +51,13 @@ public class RhodesIslandSafeHouse extends AbstractImageEvent {
 
     }
 
+    private void upgACC() {
+        for (AbstractCard c : AbstractDungeon.player.masterDeck.group)
+            if (c.cardID.equals("rosmontis:Accumulation"))
+                c.upgrade();
+
+    }
+
     protected void buttonEffect(int buttonPressed) {
         switch (this.curScreen) {
             case INTRO:
@@ -101,6 +108,7 @@ public class RhodesIslandSafeHouse extends AbstractImageEvent {
                     break;
                 } else if (buttonPressed == 2) {
                     upgradeCards();
+                    upgACC();
 //                    AbstractDungeon.gridSelectScreen.open(AbstractDungeon.player.masterDeck.getUpgradableCards(), 1, OPTIONS[6], true, false, false, false);
 
                     this.imageEventText.removeDialogOption(2);

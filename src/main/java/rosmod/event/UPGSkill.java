@@ -34,6 +34,13 @@ public class UPGSkill extends AbstractImageEvent {
 
     private UPGSkill.CurrentScreen curScreen = UPGSkill.CurrentScreen.INTRO;
 
+    private void upgACC() {
+        for (AbstractCard c : AbstractDungeon.player.masterDeck.group)
+            if (c.cardID.equals("rosmontis:Accumulation"))
+                c.upgrade();
+
+    }
+
     private int DEC() {
         for (AbstractCard card : AbstractDungeon.player.masterDeck.group) {
             if (card.cardID.equals("rosmontis:Skill1"))
@@ -141,6 +148,7 @@ public class UPGSkill extends AbstractImageEvent {
                                 this.imageEventText.removeDialogOption(1);
                                 this.imageEventText.updateDialogOption(0, OPTIONS[3]);
                                 this.imageEventText.updateBodyText(DESCRIPTIONS[5]);
+                                upgACC();
                                 upgradeCards();
                                 this.curScreen = CurrentScreen.COMPLETE;
                                 break;

@@ -9,15 +9,15 @@ import rosmod.character.Rosmontis;
 import rosmod.ui.SkinSelectScreen;
 
 public class SkinSelectPatch {
-    public static boolean isKaltsitSelected() {
-        return (CardCrawlGame.chosenCharacter == Rosmontis.Enums.YOUR_CHARACTER && (
+    public static boolean isRosSelected() {
+        return (CardCrawlGame.chosenCharacter == Rosmontis.Enums.ROSMONTIS && (
                 (Boolean) ReflectionHacks.getPrivate(CardCrawlGame.mainMenuScreen.charSelectScreen, CharacterSelectScreen.class, "anySelected")).booleanValue());
     }
 
     @SpirePatch(clz = CharacterSelectScreen.class, method = "update")
     public static class UpdateButtonPatch {
         public static void Prefix(CharacterSelectScreen _inst) {
-            if (SkinSelectPatch.isKaltsitSelected())
+            if (SkinSelectPatch.isRosSelected())
                 SkinSelectScreen.Inst.update();
         }
     }
@@ -25,7 +25,7 @@ public class SkinSelectPatch {
     @SpirePatch(clz = CharacterSelectScreen.class, method = "render")
     public static class RenderButtonPatch {
         public static void Postfix(CharacterSelectScreen _inst, SpriteBatch sb) {
-            if (SkinSelectPatch.isKaltsitSelected())
+            if (SkinSelectPatch.isRosSelected())
                 SkinSelectScreen.Inst.render(sb);
         }
     }

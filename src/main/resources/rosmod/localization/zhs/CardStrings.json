@@ -211,5 +211,19 @@
     "NAME": "乳影随行",
     "DESCRIPTION": "消耗 。给予全体敌人3 ${modID}:恐惧 。",
     "UPGRADE_DESCRIPTION": "消耗 。给予全体敌人5 ${modID}:恐惧 。"
+  },
+  "${modID}:React": {
+    "NAME": "随机应变",
+    "DESCRIPTION": "如果敌人的意图是攻击， NL 给予 2 ${modID}:恐惧 ， NL 否则造成 !D! 伤害。",
+    "UPGRADE_DESCRIPTION": "如果敌人的意图是攻击， NL 给予 3 ${modID}:恐惧 ， NL 否则造成 !D! 伤害。"
+  },
+  "${modID}:Switching": {
+    "NAME": "适应性战术",
+    "DESCRIPTION": "消耗 。自动根据你所需要的属性， NL 将 力量 和 敏捷 相互转换。 NL 如果难以判断，获得 1 力量 和 敏捷 。",
+    "UPGRADE_DESCRIPTION": "消耗 ， 固有 。自动根据你所需要的属性， NL 将 力量 和 敏捷 相互转换。 NL 如果难以判断，获得 1 力量 和 敏捷 。"
+  },
+  "${modID}:Fitting": {
+    "NAME": "战场直觉",
+    "DESCRIPTION": "如果敌人的意图是攻击， NL 获得1 敏捷 ， NL 否则获得1 力量 。"
   }
 }

@@ -11,7 +11,7 @@ import rosmod.relics.Oath;
 
 public class RelicPatch {
     @SpirePatch(clz = AbstractPlayer.class, method = "damage")
-    public static class PlayerAttackedBeforeBlockPatch {
+    public static class PlayerDeadPatch {
         @SpireInsertPatch(rloc = 149, localvars = {"damageAmount"})
         public static SpireReturn<Void> Insert(AbstractPlayer _instance, DamageInfo info, @ByRef int[] damageAmount) {
             if (AbstractDungeon.player.hasRelic(Oath.ID)) {

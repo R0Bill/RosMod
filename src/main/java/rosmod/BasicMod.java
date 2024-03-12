@@ -237,7 +237,7 @@ public class BasicMod implements
     @Override
     public void receiveEditCharacters() {
         BaseMod.addCharacter(new Rosmontis(),
-                CHAR_SELECT_BUTTON, CHAR_SELECT_PORTRAIT, Rosmontis.Enums.YOUR_CHARACTER);
+                CHAR_SELECT_BUTTON, CHAR_SELECT_PORTRAIT, Rosmontis.Enums.ROSMONTIS);
     }
 
     @Override

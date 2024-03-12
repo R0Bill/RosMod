@@ -34,7 +34,7 @@ import static rosmod.BasicMod.makeID;
 public class Rosmontis extends CustomPlayer {//DES
     //Stats
     public static final int ENERGY_PER_TURN = 3;
-    public static final int MAX_HP = 60;
+    public static final int MAX_HP = 50;
     public static final int STARTING_GOLD = 99;
     public static final int CARD_DRAW = 5;
     public static final int ORB_SLOTS = 0;
@@ -58,7 +58,7 @@ public class Rosmontis extends CustomPlayer {//DES
         //These are used to identify your character, as well as your character's card color.
         //Library color is basically the same as card color, but you need both because that's how the game was made.
         @SpireEnum
-        public static AbstractPlayer.PlayerClass YOUR_CHARACTER;
+        public static AbstractPlayer.PlayerClass ROSMONTIS;
         @SpireEnum(name = "RBLUE") // These two MUST match. Change it to something unique for your character.
         public static AbstractCard.CardColor CARD_COLOR;
         @SpireEnum(name = "RBLUE") @SuppressWarnings("unused")
@@ -66,7 +66,7 @@ public class Rosmontis extends CustomPlayer {//DES
     }
 
     public Rosmontis() {
-        super(NAMES[0], Enums.YOUR_CHARACTER,
+        super(NAMES[0], Enums.ROSMONTIS,
                 new CustomEnergyOrb(ORB_URL, ORB_VFX, LAYER_SPEED), //Energy Orb
                 new SpineAnimation(SKIN.charPath + ".atlas", SKIN.charPath + ".json", 1F)); //Animation
 

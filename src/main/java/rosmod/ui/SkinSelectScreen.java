@@ -108,7 +108,7 @@ public class SkinSelectScreen implements ISubscriber, CustomSavable<Integer> {
     }
 
     private void updateInput() {
-        if (CardCrawlGame.chosenCharacter == Rosmontis.Enums.YOUR_CHARACTER) {
+        if (CardCrawlGame.chosenCharacter == Rosmontis.Enums.ROSMONTIS) {
             this.leftHb.update();
             this.rightHb.update();
             if (this.leftHb.clicked) {

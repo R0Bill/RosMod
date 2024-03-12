@@ -25,8 +25,8 @@ public class Skill1Power extends BasePower {
     //For a power to actually decrease/go away on its own they do it themselves.
     //Look at powers that do this like VulnerablePower and DoubleTapPower.
     private static int magic = 0;
-    private Color greenColor = new Color(0.0F, 1.0F, 0.0F, 1.0F);
-    private Color redColor = new Color(1.0F, 0.0F, 0.0F, 1.0F);
+    private final Color greenColor = new Color(0.0F, 1.0F, 0.0F, 1.0F);
+    private final Color redColor = new Color(1.0F, 0.0F, 0.0F, 1.0F);
 
     public Skill1Power(AbstractCreature owner, int amount) {
         super(POWER_ID, TYPE, TURN_BASED, owner, amount);

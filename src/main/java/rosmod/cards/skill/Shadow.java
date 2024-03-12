@@ -21,7 +21,6 @@ public class Shadow extends BaseCard {
 
     public Shadow() {
         super(ID, info);
-        tags.add(CardTags.STRIKE);
         setExhaust(true);
     }
 
