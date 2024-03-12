@@ -29,10 +29,22 @@ public class CommandTerminal extends BaseCard {
     }
 
     @Override
+    public boolean canUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
+        boolean powerExists = false;
+        for (AbstractPower pow : AbstractDungeon.player.powers) {
+            if (pow.ID.equals("rosmontis:CommandTerminal")) {
+                powerExists = true;
+                break;
+            }
+        }
+        return !powerExists;
+    }
+
+    @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         boolean powerExists = false;
         for (AbstractPower pow : AbstractDungeon.player.powers) {
-            if (pow.ID.equals("CommandTerminal")) {
+            if (pow.ID.equals("rosmontis:CommandTerminal")) {
                 powerExists = true;
                 break;
             }

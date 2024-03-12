@@ -134,15 +134,15 @@
   },
   "${modID}:StunSelf": {
     "NAME": "交叉防御",
-    "DESCRIPTION": "获得 !B!  格挡 。 NL 在下回合开始时， NL 获得一半于该数值 格挡 "
+    "DESCRIPTION": "获得 !M!  格挡 。 NL 在下回合开始时， NL 获得一半于该数值 格挡 "
   },
   "${modID}:Infected": {
     "NAME": "感染",
     "DESCRIPTION": " 保留 。抽到时获得1 力量 ，回合结束时失去1点生命。"
   },
   "${modID}:MedBox": {
-    "NAME": "应急医疗箱",
-    "DESCRIPTION": " 消耗 。抽到此牌时治疗 !M! 点生命。"
+    "NAME": "应急医疗",
+    "DESCRIPTION": " 消耗 。抽到此牌时 *立刻打出 。治疗 !M! 点生命。"
   },
   "${modID}:AddAttack": {
     "NAME": "连击",
@@ -160,8 +160,8 @@
   },
   "${modID}:TouchingStars": {
     "NAME": "触及星辰",
-    "DESCRIPTION": " 保留 ， 消耗 。造成 !D! 点真实伤害。每过一回合，此牌费用-1。",
-    "UPGRADE_DESCRIPTION": " 固有 ， 保留 ， 消耗 。造成 !D! 点真实伤害。每过一回合，此牌费用-1。"
+    "DESCRIPTION": " 保留 ， 消耗 ， ${modID}:独立 。 NL 造成 !D! 点真实伤害。每过一回合，此牌费用-1。",
+    "UPGRADE_DESCRIPTION": " 固有 ， 保留 ， 消耗 ， ${modID}:独立 。 NL 造成 !D! 点真实伤害。每过一回合，此牌费用-1。"
   },
   "${modID}:Extend": {
     "NAME": "思维衍生",
@@ -187,7 +187,7 @@
     "DESCRIPTION": "造成 !D! 点伤害 !M! 次"
   },
   "${modID}:Hunter": {
-    "NAME": "在轨打击",
+    "NAME": "“猎人”",
     "DESCRIPTION": "造成 !D! 点伤害 ，再追加一次造成的 ${modID}:突破格挡 NL 的一半的 ${modID}:真实伤害 。"
   },
   "${modID}:Slay": {
@@ -201,5 +201,15 @@
   "${modID}:FallOut": {
     "NAME": "“辐射”",
     "DESCRIPTION": "消耗 。对第一个敌人造成 !D! 伤害，弹跳伤害至身后的敌人，每次弹跳伤害-4，直到伤害小于等于0。"
+  },
+  "${modID}:ForgetMeNot": {
+    "NAME": "“勿忘我”",
+    "DESCRIPTION": "消耗 ， ${modID}:独立 。造成敌人已损失生命值的百分之30的 ${modID}:真实伤害 。",
+    "UPGRADE_DESCRIPTION": "消耗 ， ${modID}:独立 。造成敌人已损失生命值的百分之40的 ${modID}:真实伤害 。"
+  },
+  "${modID}:Shadow": {
+    "NAME": "乳影随行",
+    "DESCRIPTION": "消耗 。给予全体敌人3 ${modID}:恐惧 。",
+    "UPGRADE_DESCRIPTION": "消耗 。给予全体敌人5 ${modID}:恐惧 。"
   }
 }

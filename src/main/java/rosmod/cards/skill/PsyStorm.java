@@ -10,7 +10,7 @@ import rosmod.cards.BaseCard;
 import rosmod.character.Rosmontis;
 import rosmod.util.CardStats;
 
-public class PsyStorm extends BaseCard {//强仔，全体共享
+public class PsyStorm extends BaseCard {
     public static final String ID = makeID("PsyStorm");
     private static final CardStats info = new CardStats(
             Rosmontis.Enums.CARD_COLOR, //The card color. If you're making your own character, it'll look something like this. Otherwise, it'll be CardColor.RED or something similar for a basegame character color.
@@ -22,7 +22,6 @@ public class PsyStorm extends BaseCard {//强仔，全体共享
     public PsyStorm(){
         super(ID,info);
         this.isMultiDamage = true;
-        tags.add(CardTags.STRIKE);
         setExhaust(true);
         setSelfRetain(false,true);
     }

@@ -82,7 +82,7 @@ public class RhodesIslandSafeHouse extends AbstractImageEvent {
                 openMap();
             case ROOM:
                 if (buttonPressed == 0 && curScreen == CurrentScreen.ROOM) {
-                    AbstractDungeon.player.heal(AbstractDungeon.player.maxHealth / 2, true);
+                    AbstractDungeon.player.heal(2 * (AbstractDungeon.player.maxHealth) / 5, true);
 
                     this.imageEventText.removeDialogOption(2);
                     this.imageEventText.removeDialogOption(1);
@@ -91,7 +91,6 @@ public class RhodesIslandSafeHouse extends AbstractImageEvent {
                     this.curScreen = CurrentScreen.COMPLETE;
                     break;
                 } else if (buttonPressed == 1) {
-                    AbstractDungeon.getCurrRoom().spawnRelicAndObtain((Settings.WIDTH / 2), (Settings.HEIGHT / 2), getr());
                     AbstractDungeon.getCurrRoom().spawnRelicAndObtain((Settings.WIDTH / 2), (Settings.HEIGHT / 2), getr());
 
                     this.imageEventText.removeDialogOption(2);
@@ -102,7 +101,7 @@ public class RhodesIslandSafeHouse extends AbstractImageEvent {
                     break;
                 } else if (buttonPressed == 2) {
                     upgradeCards();
-                    AbstractDungeon.gridSelectScreen.open(AbstractDungeon.player.masterDeck.getUpgradableCards(), 1, OPTIONS[6], true, false, false, false);
+//                    AbstractDungeon.gridSelectScreen.open(AbstractDungeon.player.masterDeck.getUpgradableCards(), 1, OPTIONS[6], true, false, false, false);
 
                     this.imageEventText.removeDialogOption(2);
                     this.imageEventText.removeDialogOption(1);

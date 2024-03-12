@@ -2,6 +2,8 @@ package rosmod;
 
 import basemod.AutoAdd;
 import basemod.BaseMod;
+import basemod.ModImage;
+import basemod.ModPanel;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
@@ -24,6 +26,7 @@ import rosmod.cards.BaseCard;
 import rosmod.character.Rosmontis;
 import rosmod.event.PickUp;
 import rosmod.event.RhodesIslandSafeHouse;
+import rosmod.event.UPGSkill;
 import rosmod.relics.BaseRelic;
 import rosmod.relics.Terminal;
 import rosmod.util.GeneralUtils;
@@ -93,14 +96,16 @@ public class BasicMod implements
         BaseMod.addEvent(RhodesIslandSafeHouse.ID, RhodesIslandSafeHouse.class, "TheCity");
         BaseMod.addEvent(RhodesIslandSafeHouse.ID, RhodesIslandSafeHouse.class, "TheBeyond");
 
-        BaseMod.addEvent(RhodesIslandSafeHouse.ID, RhodesIslandSafeHouse.class, "Exordium");
-        BaseMod.addEvent(RhodesIslandSafeHouse.ID, RhodesIslandSafeHouse.class, "TheCity");
-        BaseMod.addEvent(RhodesIslandSafeHouse.ID, RhodesIslandSafeHouse.class, "TheBeyond");
+        BaseMod.addEvent(UPGSkill.ID, UPGSkill.class, "Exordium");
+        BaseMod.addEvent(UPGSkill.ID, UPGSkill.class, "TheCity");
+        BaseMod.addEvent(UPGSkill.ID, UPGSkill.class, "TheBeyond");
         //This loads the image used as an icon in the in-game mods menu.
         Texture badgeTexture = TextureLoader.getTexture(imagePath("badge.png"));
         //Set up the mod information displayed in the in-game mods menu.
         //The information used is taken from your pom.xml file.
-        BaseMod.registerModBadge(badgeTexture, info.Name, GeneralUtils.arrToString(info.Authors), info.Description, null);
+        ModPanel modPanel = new ModPanel();
+        modPanel.addUIElement(new ModImage(400F, 400F, "rosmod/images/ui/modpanel/114514.jpg"));
+        BaseMod.registerModBadge(badgeTexture, info.Name, GeneralUtils.arrToString(info.Authors), info.Description, modPanel);
     }
 
     /*----------Localization----------*/

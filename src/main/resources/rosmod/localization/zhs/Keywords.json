@@ -51,5 +51,12 @@
       "斩杀"
     ],
     "DESCRIPTION": "使用这张牌造成击杀"
+  },
+  {
+    "PROPER_NAME": "独立",
+    "NAMES": [
+      "独立"
+    ],
+    "DESCRIPTION": "不会被 #y“如你所愿” 响应。"
   }
 ]
