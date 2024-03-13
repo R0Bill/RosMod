@@ -10,7 +10,7 @@ import rosmod.cards.BaseCard;
 import rosmod.character.Rosmontis;
 import rosmod.util.CardStats;
 
-public class ShieldStrike extends BaseCard {
+public class ShieldStrike extends BaseCard {//DES，upg
     public static final String ID = makeID("ShieldStrike");
 
     private static final CardStats info = new CardStats(

@@ -9,7 +9,7 @@ import rosmod.cards.BaseCard;
 import rosmod.character.Rosmontis;
 import rosmod.util.CardStats;
 
-public class QuickAttack extends BaseCard {
+public class QuickAttack extends BaseCard {//
     public static final String ID = makeID("QuickAttack"); //makeID adds the mod ID, so the final ID will be something like "modID:MyCard"
     private static final CardStats info = new CardStats(
             Rosmontis.Enums.CARD_COLOR, //The card color. If you're making your own character, it'll look something like this. Otherwise, it'll be CardColor.RED or something similar for a basegame character color.
@@ -24,6 +24,7 @@ public class QuickAttack extends BaseCard {
     public QuickAttack(){
         super(ID,info);
         setDamage(DAMAGE, UPG_DAMAGE);
+        setExhaust(true);
         tags.add(CardTags.STRIKE); //This tag marks it as a Strike card for the purposes of Perfected Strike and any similar modded effects
     }
 

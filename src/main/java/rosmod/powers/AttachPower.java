@@ -30,11 +30,13 @@ public class AttachPower extends BasePower {
 
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (!card.purgeOnUse && this.amount >= 1) {
+        if (!card.purgeOnUse && this.amount >= 1 && card.type == AbstractCard.CardType.ATTACK) {
             flash();
             AbstractMonster m = null;
             if (action.target != null)
                 m = (AbstractMonster) action.target;
+            if (m == null)
+                m = AbstractDungeon.getCurrRoom().monsters.getRandomMonster(true);
             AbstractCard tmp = new QuickAttack();
             AbstractDungeon.player.limbo.addToBottom(tmp);
             tmp.current_x = card.current_x;

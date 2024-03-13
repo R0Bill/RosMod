@@ -20,7 +20,7 @@
   "${modID}:Skill3": {
     "NAME": "如你所愿",
     "DESCRIPTION": "${modID}:唯一 。 NL 所有攻击牌费用变为2倍，视为打出3次。每次打出有30%的概率 ${modID}:眩晕 目标。 NL 失去3点 敏捷 。",
-    "UPGRADE_DESCRIPTION": "${modID}:唯一 ， 固有。 NL 所有攻击牌费用*2，视为打出3次。每次打出有30%的概率 ${modID}:眩晕 目标。 NL 失去3点 敏捷 。"
+    "UPGRADE_DESCRIPTION": "${modID}:唯一 ， 固有 。 NL 所有攻击牌费用*2，视为打出3次。每次打出有30%的概率 ${modID}:眩晕 目标。 NL 失去3点 敏捷 。"
   },
   "${modID}:Memory": {
     "NAME": "回忆",
@@ -29,7 +29,7 @@
   },
   "${modID}:ConcentrateRos": {
     "NAME": "集中",
-    "DESCRIPTION": "随机 消耗 一张牌，获得3点 临时生命 。",
+    "DESCRIPTION": "消耗 。 随机 消耗 一张牌，获得3点 临时生命 。",
     "UPGRADE_DESCRIPTION": " 消耗 一张牌，获得5点 临时生命 。"
   },
   "${modID}:FlyRos": {
@@ -43,17 +43,16 @@
   },
   "${modID}:PsyStorm": {
     "NAME": "念力风暴",
-    "DESCRIPTION": " 消耗 。 NL 对全体敌人造成2-4-8-16...点伤害。伤害段数取决于使用的能量。",
-    "UPGRADE_DESCRIPTION": " 消耗 ，保留。 NL 对全体敌人造成2-4-8-16...点伤害。伤害段数取决于使用的能量。"
+    "DESCRIPTION": " 消耗 。 NL 对全体敌人造成共享的2-4-8-16...点伤害。伤害段数取决于使用的能量。",
+    "UPGRADE_DESCRIPTION": " 消耗 ，保留 。 NL 对全体敌人造成共享的2-4-8-16...点伤害。伤害段数取决于使用的能量。"
   },
   "${modID}:QuickAttack": {
     "NAME": "快速攻击",
-    "DESCRIPTION": "造成 !D! 点伤害。"
+    "DESCRIPTION": "消耗 。造成 !D! 点伤害。"
   },
   "${modID}:ShieldStrike": {
     "NAME": "盾击",
-    "DESCRIPTION": "造成你当前 格挡 量的伤害（受伤害判定影响），目前为 !D! ",
-    "UPGRADE_DESCRIPTION": "造成你当前 格挡 量的伤害（受伤害判定影响），目前为 !D!"
+    "DESCRIPTION": "获得 !B! 格挡 ， 造成你当前 格挡 量的伤害（受伤害判定影响）"
   },
   "${modID}:Skill1": {
     "NAME": "思维膨大",
@@ -63,7 +62,7 @@
   "${modID}:Skill2": {
     "NAME": "末梢阻断",
     "DESCRIPTION": " ${modID}:唯一 。 格挡 不会消失，你造成的伤害增加你 格挡 量的三分之一。获得的 格挡 增加一半。",
-    "UPGRADE_DESCRIPTION": " ${modID}:唯一 ，固有。 格挡 不会消失，你造成的伤害增加你 格挡 量的三分之一。获得的 格挡 增加一半。"
+    "UPGRADE_DESCRIPTION": " ${modID}:唯一 ， 固有 。 格挡 不会消失，你造成的伤害增加你 格挡 量的三分之一。获得的 格挡 增加一半。"
   },
   "${modID}:AddDefend": {
     "NAME": "连续格挡",
@@ -88,8 +87,8 @@
   },
   "${modID}:Judgement": {
     "NAME": "在这立法典",
-    "DESCRIPTION": "造成 !D! 伤害， ${modID}:斩杀 永久加1敏捷0.5力量。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 伤害， ${modID}:斩杀 永久加2敏捷1力量。"
+    "DESCRIPTION": "消耗 。造成 !D! 伤害， ${modID}:斩杀 永久加1敏捷0.5力量。",
+    "UPGRADE_DESCRIPTION": "消耗 。造成 !D! 伤害， ${modID}:斩杀 永久加2敏捷1力量。"
   },
   "${modID}:StealBlock": {
     "NAME": "破障",
@@ -125,7 +124,8 @@
   },
   "${modID}:DoublePre": {
     "NAME": "两手准备",
-    "DESCRIPTION": "获得 *快速攻击 ， *快速格挡 "
+    "DESCRIPTION": "消耗 。获得 *快速攻击 ， *快速格挡 ",
+    "UPGRADE_DESCRIPTION": "获得 *快速攻击 ， *快速格挡 "
   },
   "${modID}:Deprive": {
     "NAME": "感知剥夺",
@@ -196,7 +196,8 @@
   },
   "${modID}:AfterShock": {
     "NAME": "余震",
-    "DESCRIPTION": "下2次攻击牌将附带打出一张 *快速攻击 。"
+    "DESCRIPTION": "消耗 。 NL 下2次攻击牌将附带打出一张 *快速攻击 。",
+    "UPGRADE_DESCRIPTION": "消耗 。 NL 下4次攻击牌将附带打出一张 *快速攻击 。"
   },
   "${modID}:FallOut": {
     "NAME": "“辐射”",
@@ -225,5 +226,9 @@
   "${modID}:Fitting": {
     "NAME": "战场直觉",
     "DESCRIPTION": "如果敌人的意图是攻击， NL 获得1 敏捷 ， NL 否则获得1 力量 。"
+  },
+  "${modID}:Refresh": {
+    "NAME": "褪生",
+    "DESCRIPTION": "移除你当前的所有负面效果"
   }
 }

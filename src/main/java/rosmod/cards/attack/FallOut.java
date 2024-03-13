@@ -24,13 +24,13 @@ public class FallOut extends BaseCard {
     public FallOut() {
         super(ID, info);
         setExhaust(true);
-        setDamage(16, 20);
+        setDamage(16, 4);
     }
 
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         boolean i = true;
         int temp = damage;
-        abstractPlayer.state.setAnimation(0, "Skill_2", false);
+//        abstractPlayer.state.setAnimation(0, "Skill_2", false);
         while (i) {
             for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
                 if (!i)
@@ -42,7 +42,7 @@ public class FallOut extends BaseCard {
                     temp -= 4;
                 }
             }
-            abstractPlayer.state.addAnimation(0, "Idle", true, 3.15f);
+//            abstractPlayer.state.addAnimation(0, "Idle", true, 3.15f);
         }
     }
 

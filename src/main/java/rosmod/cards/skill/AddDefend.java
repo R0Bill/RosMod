@@ -29,9 +29,9 @@ public class AddDefend extends BaseCard {
 
     @Override
     public void triggerOnGlowCheck() {
-        if (!AbstractDungeon.actionManager.cardsPlayedThisCombat.isEmpty() && ((AbstractCard) AbstractDungeon.actionManager.cardsPlayedThisCombat
+        if (AbstractDungeon.actionManager.cardsPlayedThisCombat.size() >= 2 && ((AbstractCard) AbstractDungeon.actionManager.cardsPlayedThisCombat
                 .get(AbstractDungeon.actionManager.cardsPlayedThisCombat
-                        .size() - 1)).type == CardType.SKILL) {
+                        .size() - 2)).type == AbstractCard.CardType.SKILL) {
             this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
         } else {
             this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
@@ -40,9 +40,9 @@ public class AddDefend extends BaseCard {
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        if (!AbstractDungeon.actionManager.cardsPlayedThisCombat.isEmpty() && ((AbstractCard) AbstractDungeon.actionManager.cardsPlayedThisCombat
+        if (AbstractDungeon.actionManager.cardsPlayedThisCombat.size() >= 2 && ((AbstractCard) AbstractDungeon.actionManager.cardsPlayedThisCombat
                 .get(AbstractDungeon.actionManager.cardsPlayedThisCombat
-                        .size() - 1)).type == CardType.SKILL) {
+                        .size() - 2)).type == AbstractCard.CardType.SKILL) {
             addToBot(new GainBlockAction(abstractPlayer, abstractPlayer, block));
             addToBot(new GainBlockAction(abstractPlayer, abstractPlayer, block));
         } else {

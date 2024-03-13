@@ -21,12 +21,12 @@ public class Slay extends BaseCard {
             CardTarget.ENEMY, //The target. Single target is ENEMY, all enemies is ALL_ENEMY. Look at cards similar to what you want to see what to use.
             2 //The card's base cost. -1 is X cost, -2 is no cost for unplayable cards like curses, or Reflex.
     );
-    private static final int DAMAGE = 30;
+    private static final int DAMAGE = 20;
 
 
     public Slay() {
         super(ID, info);
-        setDamage(DAMAGE);
+        setDamage(DAMAGE, 10);
         tags.add(CardTags.STARTER_STRIKE); //This tag marks it as a basic Strike
         tags.add(CardTags.STRIKE); //This tag marks it as a Strike card for the purposes of Perfected Strike and any similar modded effects
     }

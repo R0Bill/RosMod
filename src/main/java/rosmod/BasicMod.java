@@ -1,9 +1,6 @@
 package rosmod;
 
-import basemod.AutoAdd;
-import basemod.BaseMod;
-import basemod.ModImage;
-import basemod.ModPanel;
+import basemod.*;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
@@ -33,8 +30,12 @@ import rosmod.util.GeneralUtils;
 import rosmod.util.KeywordInfo;
 import rosmod.util.TextureLoader;
 
+import java.awt.*;
+import java.io.IOException;
+import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
+import java.util.function.Consumer;
 
 import static basemod.BaseMod.addRelicToCustomPool;
 
@@ -82,6 +83,7 @@ public class BasicMod implements
                 BG_ATTACK, BG_SKILL, BG_POWER, ENERGY_ORB,
                 BG_ATTACK_P, BG_SKILL_P, BG_POWER_P, ENERGY_ORB_P,
                 SMALL_ORB);
+        Properties defaults = new Properties();
     }
 
     public BasicMod() {
@@ -103,9 +105,54 @@ public class BasicMod implements
         Texture badgeTexture = TextureLoader.getTexture(imagePath("badge.png"));
         //Set up the mod information displayed in the in-game mods menu.
         //The information used is taken from your pom.xml file.
+        try {
+            modpanel();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private void modpanel() throws IOException {
+//        SpireConfig config = new SpireConfig("rosmontis","common");
         ModPanel modPanel = new ModPanel();
-        modPanel.addUIElement(new ModImage(400F, 400F, "rosmod/images/ui/modpanel/114514.jpg"));
+//        config.setInt("MaxHp",60);
+//        try{config.save();}
+//        catch (IOException e){
+//            throw new RuntimeException(e);
+//        }
+
+//        Consumer<ModMinMaxSlider> fuck = (val)->{
+//            config.setInt("MaxHp",(int) val.getValue());
+//
+//            try{config.save();}
+//            catch (IOException e){
+//                throw new RuntimeException(e);
+//            }
+//
+
+
+        Consumer BUT = (UIBUT) -> {
+            ModImage a = new ModImage(400, 500F, "rosmod/images/ui/modpanel/114514.jpg");
+            modPanel.addUIElement(a);
+            modPanel.update();
+            try {
+                Desktop.getDesktop().browse((new URL("https://github.com/R0Bill/RosMod")).toURI());
+            } catch (Exception e) {
+//                    e.printStackTrace();
+            }
+        };
+        modPanel.addUIElement(new ModButton(400F, 670F/*,new Texture("rosmod/images/missing.png")*/, modPanel, BUT));
+//
+//        };
+//        modPanel.addUIElement(new ModMinMaxSlider("MaxHp",460F,770F,1F,100F,60F,"really wanna do that?",modPanel,fuck));
+//
+        Consumer<ModLabel> not = (justnull) -> {
+        };
+        modPanel.addUIElement(new ModLabel("Github", 400F, 700F, Color.valueOf("bacdbaff"), modPanel, not));
+
+        Texture badgeTexture = TextureLoader.getTexture(imagePath("badge.png"));
         BaseMod.registerModBadge(badgeTexture, info.Name, GeneralUtils.arrToString(info.Authors), info.Description, modPanel);
+
     }
 
     /*----------Localization----------*/

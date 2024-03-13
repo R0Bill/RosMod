@@ -32,7 +32,10 @@ public class PsyStorm extends BaseCard {
         abstractPlayer.state.setAnimation(0,"Skill_3_Begin",false);
         abstractPlayer.state.addAnimation(0,"Skill_3_Loop",true,0.3f);
         for(int i = 0 ; i < 1 + this.energyOnUse ; i++){
-            int monum = AbstractDungeon.getCurrRoom().monsters.monsters.size();
+            int monum = 0;
+            for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters)
+                if (!mo.isDead)
+                    monum++;
             int tempDamage = 2;
             for(int j = 0; j<i;j++){
                 int Ftemp = tempDamage;

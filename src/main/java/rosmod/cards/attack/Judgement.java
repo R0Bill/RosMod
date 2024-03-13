@@ -23,20 +23,19 @@ public class Judgement extends BaseCard {
             CardTarget.ENEMY, //The target. Single target is ENEMY, all enemies is ALL_ENEMY. Look at cards similar to what you want to see what to use.
             2 //The card's base cost. -1 is X cost, -2 is no cost for unplayable cards like curses, or Reflex.
     );
-    private static final int DAMAGE = 15;
-    private static final int UPG_DAMAGE = 10;
+    private static final int DAMAGE = 7;
+    private static final int UPG_DAMAGE = 1;
 
     public Judgement() {
         super(ID, info);
         setDamage(DAMAGE, UPG_DAMAGE);
+        setExhaust(true);
         tags.add(CardTags.STRIKE); //This tag marks it as a Strike card for the purposes of Perfected Strike and any similar modded effects
     }
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {//斩杀加敏捷
-        boolean temp = false;
-        if (abstractMonster.currentHealth + abstractMonster.currentBlock <= damage + 3)
-            temp = true;
+        boolean temp = abstractMonster.currentHealth + abstractMonster.currentBlock <= damage + 3;
         addToBot(new DamageAction(abstractMonster, new DamageInfo(abstractPlayer, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_HEAVY));
         if (temp) {
             if (!abstractPlayer.hasRelic(JudgeCount.ID)) {
