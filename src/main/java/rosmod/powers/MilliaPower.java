@@ -23,46 +23,58 @@ public class MilliaPower extends BasePower {
     }
 
     @Override
+    public void updateDescription() {
+        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+    }
+
+    @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
         boolean u = true;
         if (!card.purgeOnUse && card.type == AbstractCard.CardType.SKILL) {
+            AbstractMonster mo = AbstractDungeon.getCurrRoom().monsters.getRandomMonster(true);
+/*
             for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
                 for (AbstractPower pow : mo.powers) {
                     if (pow.ID.equals("rosmontis:FearPower") && !mo.isDead && u) {
                         u = false;
-                        addToBot((AbstractGameAction) new ApplyPowerAction((AbstractCreature) mo, (AbstractCreature) AbstractDungeon.player, (AbstractPower) new FearPower((AbstractCreature) mo, this.amount)));
-                    }
-                }
-            }
+*/
+            addToBot((AbstractGameAction) new ApplyPowerAction((AbstractCreature) mo, (AbstractCreature) AbstractDungeon.player, (AbstractPower) new FearPower((AbstractCreature) mo, this.amount)));
+
+//                    }    }
+        }
+/*
             if (u) {
                 AbstractMonster mo = AbstractDungeon.getCurrRoom().monsters.getRandomMonster();
                 while (!mo.isDead)
                     mo = AbstractDungeon.getCurrRoom().monsters.getRandomMonster();
                 addToBot((AbstractGameAction) new ApplyPowerAction((AbstractCreature) mo, (AbstractCreature) AbstractDungeon.player, (AbstractPower) new FearPower((AbstractCreature) mo, this.amount)));
             }
+*/
 
-        }
-
-
-//        if (!card.purgeOnUse && card.type == AbstractCard.CardType.SKILL) {
-//            boolean used = false;
-//            for (AbstractMonster mo : (AbstractDungeon.getCurrRoom()).monsters.monsters) {
-//                boolean temp = true;
-//                for (AbstractPower pow : mo.powers) {
-//                    if (pow.ID.equals("rosmontis:FearPower")) {
-//                        temp = false;
-//                    }
-//                }
-//                if (temp && !used) {
-//                    used =true;
-//                    addToBot((AbstractGameAction) new ApplyPowerAction((AbstractCreature) mo, (AbstractCreature) AbstractDungeon.player, (AbstractPower) new FearPower((AbstractCreature) mo, this.amount)));
-//                    break;
-//                }
-//            }
-//            if (!used) {
-//                AbstractMonster mo = AbstractDungeon.getCurrRoom().monsters.getRandomMonster();
-//                addToBot((AbstractGameAction) new ApplyPowerAction((AbstractCreature) mo, (AbstractCreature) AbstractDungeon.player, (AbstractPower) new FearPower((AbstractCreature) mo, this.amount)));
-//            }
-//        }
     }
+
+
+/*
+        if (!card.purgeOnUse && card.type == AbstractCard.CardType.SKILL) {
+            boolean used = false;
+            for (AbstractMonster mo : (AbstractDungeon.getCurrRoom()).monsters.monsters) {
+                boolean temp = true;
+                for (AbstractPower pow : mo.powers) {
+                    if (pow.ID.equals("rosmontis:FearPower")) {
+                        temp = false;
+                    }
+                }
+                if (temp && !used) {
+                    used =true;
+                    addToBot((AbstractGameAction) new ApplyPowerAction((AbstractCreature) mo, (AbstractCreature) AbstractDungeon.player, (AbstractPower) new FearPower((AbstractCreature) mo, this.amount)));
+                    break;
+                }
+            }
+            if (!used) {
+                AbstractMonster mo = AbstractDungeon.getCurrRoom().monsters.getRandomMonster();
+                addToBot((AbstractGameAction) new ApplyPowerAction((AbstractCreature) mo, (AbstractCreature) AbstractDungeon.player, (AbstractPower) new FearPower((AbstractCreature) mo, this.amount)));
+            }
+        }
+*/
+
 }

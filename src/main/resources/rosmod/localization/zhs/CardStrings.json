@@ -15,7 +15,7 @@
   },
   "${modID}:DefendRos": {
     "NAME": "防御",
-    "DESCRIPTION": " 格挡 !B! 伤害。"
+    "DESCRIPTION": "获得 !B! 格挡 。"
   },
   "${modID}:Skill3": {
     "NAME": "如你所愿",
@@ -52,7 +52,7 @@
   },
   "${modID}:ShieldStrike": {
     "NAME": "盾击",
-    "DESCRIPTION": "获得 !B! 格挡 ， 造成你当前 格挡 量的伤害（受伤害判定影响）"
+    "DESCRIPTION": "获得 !B! 格挡 ， 造成你当前 格挡 量的伤害（受伤害判定影响）。"
   },
   "${modID}:Skill1": {
     "NAME": "思维膨大",
@@ -70,7 +70,7 @@
   },
   "${modID}:EntrenchRos": {
     "NAME": "战线维持",
-    "DESCRIPTION": "消耗。 格挡 翻倍"
+    "DESCRIPTION": "消耗。 格挡 翻倍。"
   },
   "${modID}:CommandTerminal": {
     "NAME": "指挥终端",
@@ -124,8 +124,8 @@
   },
   "${modID}:DoublePre": {
     "NAME": "两手准备",
-    "DESCRIPTION": "消耗 。获得 *快速攻击 ， *快速格挡 ",
-    "UPGRADE_DESCRIPTION": "获得 *快速攻击 ， *快速格挡 "
+    "DESCRIPTION": "消耗 。获得 *快速攻击 ， *快速格挡 。",
+    "UPGRADE_DESCRIPTION": "获得 *快速攻击 ， *快速格挡 。"
   },
   "${modID}:Deprive": {
     "NAME": "感知剥夺",
@@ -134,7 +134,8 @@
   },
   "${modID}:StunSelf": {
     "NAME": "交叉防御",
-    "DESCRIPTION": "获得 !M!  格挡 。 NL 在下回合开始时， NL 获得一半于该数值 格挡 "
+    "DESCRIPTION": "获得12倍于使用能量 格挡 。 NL 在下回合开始时， NL 获得一半于该数值 格挡 。",
+    "UPGRADE_DESCRIPTION": "获得16倍于使用能量 格挡 。 NL 在下回合开始时， NL 获得一半于该数值 格挡 。"
   },
   "${modID}:Infected": {
     "NAME": "感染",
@@ -184,7 +185,7 @@
   },
   "${modID}:ExpressStrike": {
     "NAME": "无缝连击",
-    "DESCRIPTION": "造成 !D! 点伤害 !M! 次"
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。"
   },
   "${modID}:Hunter": {
     "NAME": "“猎人”",
@@ -229,6 +230,6 @@
   },
   "${modID}:Refresh": {
     "NAME": "褪生",
-    "DESCRIPTION": "移除你当前的所有负面效果"
+    "DESCRIPTION": "移除你当前的所有负面效果。"
   }
 }

@@ -25,7 +25,8 @@ public class MedBox extends BaseCard {
     public MedBox() {
         super(ID, info);
         setExhaust(true);
-        setMagic(6, 3);
+        setMagic(5, 3);
+        this.isInAutoplay = true;
     }
 
     @Override

@@ -21,7 +21,9 @@
   "${modID}:Skill1Power": {
     "NAME": "Skill1Power",
     "DESCRIPTIONS": [
-      "每回合第3张攻击牌视为打出两次。"
+      "每回合第",
+      "张攻击牌视为打出两次。"
+
     ]
   },
   "${modID}:CommandTerminalPower": {
@@ -33,7 +35,8 @@
   "${modID}:MilliaPower": {
     "NAME": "“米利亚的灾祸”",
     "DESCRIPTIONS": [
-      "使用技能牌时，随机对没有被恐惧的敌人造成 3恐惧 。如果所有敌人都被恐惧了，随机加深 3恐惧。"
+      "使用技能牌时，随机对敌人造成",
+      " #y恐惧 "
     ]
   },
   "${modID}:StablePower": {

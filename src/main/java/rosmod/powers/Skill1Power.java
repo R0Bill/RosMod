@@ -35,12 +35,12 @@ public class Skill1Power extends BasePower {
 
     @Override
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0];
+        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
     }
 
     @Override
     public void onUseCard(AbstractCard abstractCard, UseCardAction action) {
-        if (!abstractCard.purgeOnUse && abstractCard.type == AbstractCard.CardType.ATTACK) {
+        if (!abstractCard.purgeOnUse && abstractCard.type == AbstractCard.CardType.ATTACK && !abstractCard.cardID.equals("rosmontis.TouchingStars") && !abstractCard.cardID.equals("rosmontis:ForgetMeNot")) {
             magic++;
             if (magic == amount && amount == 2) {
                 magic = 0;
@@ -57,6 +57,8 @@ public class Skill1Power extends BasePower {
                 if (m != null)
                     tmp.calculateCardDamage(m);
                 tmp.purgeOnUse = true;
+                if (m.isDead)
+                    m = AbstractDungeon.getCurrRoom().monsters.getRandomMonster(true);
                 AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(tmp, m, 0, true, true), true);
             } else if (amount == 3 && magic == 3) {
                 magic = 0;
@@ -73,6 +75,7 @@ public class Skill1Power extends BasePower {
                 if (m != null)
                     tmp.calculateCardDamage(m);
                 tmp.purgeOnUse = true;
+                m = AbstractDungeon.getCurrRoom().monsters.getRandomMonster(true);
                 AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(tmp, m, 0, true, true), true);
             }
         }

@@ -26,10 +26,18 @@ public class TouchingStars extends BaseCard {//bug
 
     public TouchingStars() {
         super(ID, info);
+        setMagic(8);
         setDamage(99);
         setSelfRetain(true);
         setExhaust(true);
         setInnate(false, true);
+        this.dontTriggerOnUseCard = true;
+    }
+
+    public void setCostForTurn(int amt) {
+        if (amt == this.magicNumber - 1) {
+            this.costForTurn = amt;
+        }
     }
 
     @Override
@@ -64,11 +72,42 @@ public class TouchingStars extends BaseCard {//bug
         if (this.firstTurn) {
             this.firstTurn = false;
         } else {
-            addToBot((AbstractGameAction) new ReduceCostAction((AbstractCard) this));
+            if (this.costForTurn >= 0) {
+                magicNumber--;
+                addToBot((AbstractGameAction) new ReduceCostAction((AbstractCard) this));
+            }
         }
     }
     public void triggerOnEndOfTurnForPlayingCard() {
         if (this.firstTurn)
             this.firstTurn = false;
+    }
+
+    public AbstractCard makeStatEquivalentCopy() {
+        AbstractCard card = this.makeCopy();
+
+        for (int i = 0; i < this.timesUpgraded; ++i) {
+            card.upgrade();
+        }
+
+        card.name = this.name;
+        card.target = this.target;
+        card.upgraded = this.upgraded;
+        card.timesUpgraded = this.timesUpgraded;
+        card.baseDamage = this.baseDamage;
+        card.baseBlock = this.baseBlock;
+        card.baseMagicNumber = this.baseMagicNumber;
+        card.cost = this.cost;
+        card.costForTurn = this.costForTurn;
+        card.isCostModified = this.isCostModified;
+        card.isCostModifiedForTurn = this.isCostModifiedForTurn;
+        card.inBottleLightning = this.inBottleLightning;
+        card.inBottleFlame = this.inBottleFlame;
+        card.inBottleTornado = this.inBottleTornado;
+        card.isSeen = this.isSeen;
+        card.isLocked = this.isLocked;
+        card.misc = this.misc;
+        card.freeToPlayOnce = false;
+        return card;
     }
 }

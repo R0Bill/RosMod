@@ -26,16 +26,31 @@ public class ConcentrateRos extends BaseCard {//
         tags.add(CardTags.HEALING);
     }
 
-    public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster){
-        int temp = this.upgraded ? UPG_Healnumber + Healnumber : Healnumber;
-        if (abstractPlayer.hand.isEmpty())
+    public void HEAL(AbstractPlayer abstractPlayer) {
+
+        addToBot((AbstractGameAction) new AddTemporaryHPAction((AbstractPlayer) abstractPlayer, (AbstractPlayer) abstractPlayer, this.upgraded ? UPG_Healnumber + Healnumber : Healnumber));
+    }
+
+    public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
+        HEAL(abstractPlayer);
+        if (abstractPlayer.hand.group.size() == 1 && abstractPlayer.hand != null) {
+            abstractPlayer.hand.moveToExhaustPile(abstractPlayer.hand.getTopCard());
+        } else if (abstractPlayer.hand.group.size() > 1 && !abstractPlayer.hand.isEmpty()) {
+            if (this.upgraded) {
+                addToBot((AbstractGameAction) new ExhaustAction(1, false));
+
+            } else {
+                addToBot((AbstractGameAction) new ExhaustAction(1, true, false, false));
+            }
+
+        }
+        /*if (abstractPlayer.hand.getTopCard()==null) {
             addToBot((AbstractGameAction) new AddTemporaryHPAction((AbstractPlayer) abstractPlayer, (AbstractPlayer) abstractPlayer, this.upgraded ? UPG_Healnumber + Healnumber : Healnumber));
-        else if (abstractPlayer.hand.size() == 1) {
+        } else if (abstractPlayer.hand.size() == 1) {
             abstractPlayer.hand.moveToExhaustPile(abstractPlayer.hand.getBottomCard());
             addToBot((AbstractGameAction) new AddTemporaryHPAction((AbstractPlayer) abstractPlayer, (AbstractPlayer) abstractPlayer, this.upgraded ? UPG_Healnumber + Healnumber : Healnumber));
-        }//**********************
+        }
         else if(abstractPlayer.hand.size()>1){
-//            abstractPlayer.hand.moveToExhaustPile((AbstractCard) abstractPlayer.hand.getRandomCard());
             if (this.upgraded) {
                 addToBot((AbstractGameAction)new ExhaustAction(1, false));
 
@@ -43,10 +58,6 @@ public class ConcentrateRos extends BaseCard {//
                 addToBot((AbstractGameAction) new ExhaustAction(1, true, false, false));
             }
             addToBot((AbstractGameAction) new AddTemporaryHPAction((AbstractPlayer) abstractPlayer, (AbstractPlayer) abstractPlayer, this.upgraded ? UPG_Healnumber + Healnumber : Healnumber));
-        }
-//        addToBot((AbstractGameAction) new AddTemporaryHPAction((AbstractPlayer)abstractPlayer,(AbstractPlayer)abstractPlayer,this.upgraded?UPG_Healnumber+Healnumber:Healnumber));
-//        if(this.upgraded){
-//            addToBot((AbstractGameAction) new RemoveDebuffsAction((AbstractCreature) abstractPlayer));
-//        }
+        }*/
     }
 }

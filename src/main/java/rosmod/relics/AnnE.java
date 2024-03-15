@@ -27,7 +27,7 @@ public class AnnE extends BaseRelic {
         if (targetCard.type == AbstractCard.CardType.ATTACK){
             flash();
             addToBot((AbstractGameAction)new RelicAboveCreatureAction((AbstractCreature)AbstractDungeon.player, this));
-            addToBot((AbstractGameAction)new DamageAllEnemiesAction(null, DamageInfo.createDamageMatrix(3, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+            addToBot((AbstractGameAction) new DamageAllEnemiesAction(null, DamageInfo.createDamageMatrix(3, false), DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.NONE));
         }
     }
 

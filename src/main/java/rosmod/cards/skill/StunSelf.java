@@ -31,11 +31,11 @@ public class StunSelf extends BaseCard {
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         if (!this.upgraded) {
-            addToBot(new GainBlockAction(abstractPlayer, abstractPlayer, this.energyOnUse * 10));
-            addToBot((AbstractGameAction) new ApplyPowerAction((AbstractCreature) abstractPlayer, (AbstractCreature) abstractPlayer, (AbstractPower) new GiveBlockNextTurn((AbstractCreature) abstractPlayer, (this.energyOnUse * 10) / 2)));
+            addToBot(new GainBlockAction(abstractPlayer, abstractPlayer, this.energyOnUse * 12));
+            addToBot((AbstractGameAction) new ApplyPowerAction((AbstractCreature) abstractPlayer, (AbstractCreature) abstractPlayer, (AbstractPower) new GiveBlockNextTurn((AbstractCreature) abstractPlayer, (this.energyOnUse * 12) / 2)));
         } else {
-            addToBot(new GainBlockAction(abstractPlayer, abstractPlayer, (this.energyOnUse * 12) + 24));
-            addToBot((AbstractGameAction) new ApplyPowerAction((AbstractCreature) abstractPlayer, (AbstractCreature) abstractPlayer, (AbstractPower) new GiveBlockNextTurn((AbstractCreature) abstractPlayer, ((this.energyOnUse * 12) / 2) + 12)));
+            addToBot(new GainBlockAction(abstractPlayer, abstractPlayer, (this.energyOnUse * 16)));
+            addToBot((AbstractGameAction) new ApplyPowerAction((AbstractCreature) abstractPlayer, (AbstractCreature) abstractPlayer, (AbstractPower) new GiveBlockNextTurn((AbstractCreature) abstractPlayer, ((this.energyOnUse * 16) / 2))));
         }
         addToBot((AbstractGameAction) new PressEndTurnButtonAction());
     }
