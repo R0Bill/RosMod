@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.ConfusionPower;
+import com.megacrit.cardcrawl.powers.DoubleTapPower;
 import com.megacrit.cardcrawl.powers.DuplicationPower;
 import com.megacrit.cardcrawl.relics.MummifiedHand;
 
@@ -63,6 +64,7 @@ public class TouchingStarBalancePatches {
         }
     }
 
+
     @SpirePatch(clz = MadnessAction.class, method = "findAndModifyCard")
     public static class ReplaceMad {
         @SpirePrefixPatch
@@ -98,6 +100,16 @@ public class TouchingStarBalancePatches {
     public static class StopDupPower {
         @SpirePrefixPatch
         public static SpireReturn<Void> Prefix(DuplicationPower _inst, AbstractCard c, UseCardAction action) {
+            if (c.cardID.equals("rosmontis:TouchingStars") || c.cardID.equals("rosmontis:ForgetMeNot"))
+                return SpireReturn.Return();
+            return SpireReturn.Continue();
+        }
+    }
+
+    @SpirePatch(clz = DoubleTapPower.class, method = "onUseCard")
+    public static class StopDTPower {
+        @SpirePrefixPatch
+        public static SpireReturn<Void> Prefix(DoubleTapPower _inst, AbstractCard c, UseCardAction action) {
             if (c.cardID.equals("rosmontis:TouchingStars") || c.cardID.equals("rosmontis:ForgetMeNot"))
                 return SpireReturn.Return();
             return SpireReturn.Continue();

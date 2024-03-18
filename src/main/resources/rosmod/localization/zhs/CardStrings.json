@@ -29,8 +29,8 @@
   },
   "${modID}:ConcentrateRos": {
     "NAME": "集中",
-    "DESCRIPTION": "消耗 。 随机 消耗 一张牌，获得3点 临时生命 。",
-    "UPGRADE_DESCRIPTION": " 消耗 一张牌，获得5点 临时生命 。"
+    "DESCRIPTION": "消耗 。抽一张牌。随机 消耗 一张牌，获得3点 临时生命 。",
+    "UPGRADE_DESCRIPTION": "抽一张牌。 消耗 一张牌，获得5点 临时生命 。"
   },
   "${modID}:FlyRos": {
     "NAME": "战术飞行躲避",
@@ -220,9 +220,9 @@
     "UPGRADE_DESCRIPTION": "如果敌人的意图是攻击， NL 给予 3 ${modID}:恐惧 ， NL 否则造成 !D! 伤害。"
   },
   "${modID}:Switching": {
-    "NAME": "适应性战术",
-    "DESCRIPTION": "消耗 。自动根据你所需要的属性， NL 将 力量 和 敏捷 相互转换。 NL 如果难以判断，获得 1 力量 和 敏捷 。",
-    "UPGRADE_DESCRIPTION": "消耗 ， 固有 。自动根据你所需要的属性， NL 将 力量 和 敏捷 相互转换。 NL 如果难以判断，获得 1 力量 和 敏捷 。"
+    "NAME": "战术交会",
+    "DESCRIPTION": "消耗 。自主选择将 力量 和 敏捷 相互转换。",
+    "UPGRADE_DESCRIPTION": "消耗 ， 固有 。自主选择将 力量 和 敏捷 相互转换。"
   },
   "${modID}:Fitting": {
     "NAME": "战场直觉",
@@ -231,5 +231,28 @@
   "${modID}:Refresh": {
     "NAME": "褪生",
     "DESCRIPTION": "移除你当前的所有负面效果。"
+  },
+  "${modID}:STD": {
+    "NAME": "战术：防守",
+    "DESCRIPTION": "将 力量 转换为 敏捷 。"
+  },
+  "${modID}:DTS": {
+    "NAME": "战术：进攻",
+    "DESCRIPTION": "将 敏捷 转换为 力量 。"
+  },
+  "${modID}:SolidifyMind": {
+    "NAME": "固化情绪",
+    "DESCRIPTION": "消耗 。将三分之一的格挡转换为 临时生命 。",
+    "UPGRADE_DESCRIPTION": "消耗 。将二分之一的格挡转换为 临时生命 。"
+  },
+  "${modID}:Lullaby": {
+    "NAME": "“摇篮曲”",
+    "DESCRIPTION": "眩晕 所有敌人。",
+    "UPGRADE_DESCRIPTION": "眩晕 所有敌人两回合。"
+  },
+  "${modID}:FaceYourSin": {
+    "NAME": "直面汝罪",
+    "DESCRIPTION": "对敌人造成它当前的攻击意图的伤害， NL 视为该怪物的伤害， NL 如果意图不是攻击， NL 给予 2 ${modID}:恐惧。",
+    "UPGRADE_DESCRIPTION": "对敌人造成它当前的攻击意图的伤害， NL 视为该怪物的伤害， NL 如果意图不是攻击， NL 给予 3 ${modID}:恐惧。"
   }
 }

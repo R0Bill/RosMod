@@ -41,9 +41,9 @@ public class Infected extends BaseCard {
 
     public void triggerWhenDrawn() {
         addToBot((AbstractGameAction) new ApplyPowerAction((AbstractCreature) AbstractDungeon.player, (AbstractCreature) AbstractDungeon.player, (AbstractPower) new IntangiblePlayerPower((AbstractCreature) AbstractDungeon.player, 1), 1));
-
     }
 
-    public void upgrade() {
+    public boolean canUpgrade() {
+        return false;
     }
 }

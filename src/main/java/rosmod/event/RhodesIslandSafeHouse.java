@@ -1,8 +1,6 @@
 package rosmod.event;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -10,6 +8,7 @@ import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
+import rosmod.cards.other.Infected;
 import rosmod.relics.Terminal;
 
 import java.util.ArrayList;
@@ -74,7 +73,12 @@ public class RhodesIslandSafeHouse extends AbstractImageEvent {
                     this.imageEventText.updateDialogOption(1, OPTIONS[5]);
                     this.imageEventText.updateDialogOption(2, OPTIONS[6]);
                     this.curScreen = CurrentScreen.ROOM;
-                    AbstractDungeon.player.damage(new DamageInfo((AbstractCreature) AbstractDungeon.player, 20));
+                    AbstractCard c = new Infected();
+                    for (AbstractRelic r : AbstractDungeon.player.relics)
+                        r.onObtainCard(c);
+                    AbstractDungeon.player.masterDeck.addToTop(c);
+                    for (AbstractRelic r : AbstractDungeon.player.relics)
+                        r.onMasterDeckChange();
                     break;
                 } else if (buttonPressed == 2) {
                     this.imageEventText.removeDialogOption(2);

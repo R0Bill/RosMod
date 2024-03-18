@@ -101,6 +101,9 @@ public class BasicMod implements
         BaseMod.addEvent(UPGSkill.ID, UPGSkill.class, "Exordium");
         BaseMod.addEvent(UPGSkill.ID, UPGSkill.class, "TheCity");
         BaseMod.addEvent(UPGSkill.ID, UPGSkill.class, "TheBeyond");
+        BaseMod.addEvent(UPGSkill.ID, UPGSkill.class, "Exordium");
+        BaseMod.addEvent(UPGSkill.ID, UPGSkill.class, "TheCity");
+        BaseMod.addEvent(UPGSkill.ID, UPGSkill.class, "TheBeyond");
         //This loads the image used as an icon in the in-game mods menu.
         Texture badgeTexture = TextureLoader.getTexture(imagePath("badge.png"));
         //Set up the mod information displayed in the in-game mods menu.
@@ -142,13 +145,9 @@ public class BasicMod implements
             }
         };
         modPanel.addUIElement(new ModButton(400F, 670F/*,new Texture("rosmod/images/missing.png")*/, modPanel, BUT));
-//
-//        };
-//        modPanel.addUIElement(new ModMinMaxSlider("MaxHp",460F,770F,1F,100F,60F,"really wanna do that?",modPanel,fuck));
-//
         Consumer<ModLabel> not = (justnull) -> {
         };
-        modPanel.addUIElement(new ModLabel("Github", 400F, 700F, Color.valueOf("bacdbaff"), modPanel, not));
+        modPanel.addUIElement(new ModLabel("Github", 400F, 720F, Color.valueOf("bacdbaff"), modPanel, not));
 
         Texture badgeTexture = TextureLoader.getTexture(imagePath("badge.png"));
         BaseMod.registerModBadge(badgeTexture, info.Name, GeneralUtils.arrToString(info.Authors), info.Description, modPanel);

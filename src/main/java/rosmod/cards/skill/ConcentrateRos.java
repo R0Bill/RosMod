@@ -32,10 +32,12 @@ public class ConcentrateRos extends BaseCard {//
     }
 
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
+        abstractPlayer.draw(1);
+//        addToTop((AbstractGameAction)new DrawCardAction((AbstractCreature)abstractPlayer, 1));
         HEAL(abstractPlayer);
-        if (abstractPlayer.hand.group.size() == 1 && abstractPlayer.hand != null) {
+        if (abstractPlayer.hand.group.size() == 1) {
             abstractPlayer.hand.moveToExhaustPile(abstractPlayer.hand.getTopCard());
-        } else if (abstractPlayer.hand.group.size() > 1 && !abstractPlayer.hand.isEmpty()) {
+        } else if (abstractPlayer.hand.group.size() > 1) {
             if (this.upgraded) {
                 addToBot((AbstractGameAction) new ExhaustAction(1, false));
 
