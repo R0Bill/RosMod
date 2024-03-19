@@ -24,6 +24,6 @@ public class CommandTerminalPower extends BasePower {
     public void onEnergyRecharge() {
         this.flash();
         AbstractDungeon.player.gainEnergy(1);
-        addToBot(new HealAction((AbstractCreature) AbstractDungeon.player, (AbstractCreature) AbstractDungeon.player, 1));
+        addToBot(new HealAction(AbstractDungeon.player, AbstractDungeon.player, 1));
     }
 }

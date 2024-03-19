@@ -1,6 +1,5 @@
 package rosmod.powers;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -23,7 +22,12 @@ public class GiveBlockNextTurn extends BasePower {
 
     public void atStartOfTurn() {
         addToBot(new GainBlockAction(AbstractDungeon.player, null, amount));
-        addToBot((AbstractGameAction) new RemoveSpecificPowerAction(this.owner, this.owner, "rosmontis:GiveBlockNextTurn"));
+        addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, "rosmontis:GiveBlockNextTurn"));
+    }
+
+    @Override
+    public void updateDescription() {
+        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
     }
 
 }

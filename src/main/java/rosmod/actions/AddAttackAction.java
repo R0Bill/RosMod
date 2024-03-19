@@ -8,10 +8,10 @@ import rosmod.cards.attack.QuickAttack;
 
 public class AddAttackAction extends AbstractGameAction {
     public void update() {
-        if (AbstractDungeon.actionManager.cardsPlayedThisCombat.size() >= 2 && ((AbstractCard)AbstractDungeon.actionManager.cardsPlayedThisCombat
+        if (AbstractDungeon.actionManager.cardsPlayedThisCombat.size() >= 2 && AbstractDungeon.actionManager.cardsPlayedThisCombat
                 .get(AbstractDungeon.actionManager.cardsPlayedThisCombat
-                        .size() - 2)).type == AbstractCard.CardType.ATTACK) {
-            addToBot((AbstractGameAction)new MakeTempCardInHandAction((AbstractCard)new QuickAttack(), 2));
+                        .size() - 2).type == AbstractCard.CardType.ATTACK) {
+            addToBot(new MakeTempCardInHandAction(new QuickAttack(), 2));
         }
         this.isDone = true;
     }

@@ -50,7 +50,7 @@ public class Rosmontis extends CustomPlayer {//DES
 
     //Image file paths
     private static final String CORPSE = characterPath("corpse.png"); //Corpse is when you die.
-    private static SkinSelectScreen.Skin SKIN = SkinSelectScreen.getSkin();
+    private static final SkinSelectScreen.Skin SKIN = SkinSelectScreen.getSkin();
     private static final String ORB_VFX = "rosmod/images/ui/orb/vfx.png";
     private static final String[] ORB_URL = new String[]{"rosmod/images/ui/orb/layer5.png", "rosmod/images/ui/orb/layer4.png", "rosmod/images/ui/orb/layer3.png", "rosmod/images/ui/orb/layer2.png", "rosmod/images/ui/orb/layer1.png", "rosmod/images/ui/orb/layer6.png", "rosmod/images/ui/orb/layer5d.png", "rosmod/images/ui/orb/layer4d.png", "rosmod/images/ui/orb/layer3d.png", "rosmod/images/ui/orb/layer2d.png", "rosmod/images/ui/orb/layer1d.png"};
 

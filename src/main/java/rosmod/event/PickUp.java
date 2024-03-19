@@ -5,7 +5,6 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.localization.EventStrings;
-import com.megacrit.cardcrawl.relics.AbstractRelic;
 import rosmod.relics.JessicaWallet;
 import rosmod.relics.StolenMiniCake;
 
@@ -49,7 +48,7 @@ public class PickUp extends AbstractImageEvent {
                     this.imageEventText.removeDialogOption(1);
                     this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
                     this.imageEventText.updateDialogOption(0, OPTIONS[6]);
-                    AbstractDungeon.getCurrRoom().spawnRelicAndObtain(Settings.WIDTH * 0.5F, Settings.HEIGHT * 0.5F, (AbstractRelic) new JessicaWallet());
+                    AbstractDungeon.getCurrRoom().spawnRelicAndObtain(Settings.WIDTH * 0.5F, Settings.HEIGHT * 0.5F, new JessicaWallet());
                     this.curScreen = CurrentScreen.COMPLETE;
                     break;
                 } else if (buttonPressed == 2) {
@@ -74,7 +73,7 @@ public class PickUp extends AbstractImageEvent {
                     this.imageEventText.updateBodyText(DESCRIPTIONS[6]);
                     this.imageEventText.updateBodyText(DESCRIPTIONS[5]);
                     this.imageEventText.removeDialogOption(1);
-                    AbstractDungeon.getCurrRoom().spawnRelicAndObtain(Settings.WIDTH * 0.5F, Settings.HEIGHT * 0.5F, (AbstractRelic) new StolenMiniCake());
+                    AbstractDungeon.getCurrRoom().spawnRelicAndObtain(Settings.WIDTH * 0.5F, Settings.HEIGHT * 0.5F, new StolenMiniCake());
                     this.curScreen = CurrentScreen.COMPLETE;
                     break;
 

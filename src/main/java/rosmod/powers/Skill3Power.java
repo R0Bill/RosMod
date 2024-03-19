@@ -1,7 +1,6 @@
 package rosmod.powers;
 
 import com.evacipated.cardcrawl.mod.stslib.actions.common.StunMonsterAction;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardQueueItem;
@@ -22,11 +21,7 @@ public class Skill3Power extends BasePower {
     public Skill3Power(AbstractCreature owner) {
         super(POWER_ID, TYPE, TURN_BASED, owner, -1);
     }
-    @Override
-    public void updateDescription() {
-            this.description = DESCRIPTIONS[0];
 
-    }
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if (!card.purgeOnUse && card.type == AbstractCard.CardType.ATTACK && !card.cardID.equals("rosmontis:TouchingStars")) {
@@ -75,10 +70,10 @@ public class Skill3Power extends BasePower {
             if (Ran >= 0.69) {
                 if (card.target == AbstractCard.CardTarget.ALL_ENEMY) {
                     for (AbstractMonster mo : (AbstractDungeon.getCurrRoom()).monsters.monsters) {
-                        addToBot((AbstractGameAction) new StunMonsterAction((AbstractMonster) mo, (AbstractCreature) AbstractDungeon.player));
+                        addToBot(new StunMonsterAction(mo, AbstractDungeon.player));
                     }
                 } else {
-                    addToBot((AbstractGameAction) new StunMonsterAction((AbstractMonster) action.target, (AbstractCreature) AbstractDungeon.player));
+                    addToBot(new StunMonsterAction((AbstractMonster) action.target, AbstractDungeon.player));
                 }
             }
         }

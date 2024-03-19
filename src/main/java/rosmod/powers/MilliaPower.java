@@ -1,6 +1,5 @@
 package rosmod.powers;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -38,7 +37,7 @@ public class MilliaPower extends BasePower {
                     if (pow.ID.equals("rosmontis:FearPower") && !mo.isDead && u) {
                         u = false;
 */
-            addToBot((AbstractGameAction) new ApplyPowerAction((AbstractCreature) mo, (AbstractCreature) AbstractDungeon.player, (AbstractPower) new FearPower((AbstractCreature) mo, this.amount)));
+            addToBot(new ApplyPowerAction(mo, AbstractDungeon.player, new FearPower(mo, this.amount)));
 
 //                    }    }
         }

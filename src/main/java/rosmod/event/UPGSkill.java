@@ -176,19 +176,19 @@ public class UPGSkill extends AbstractImageEvent {
         Collections.shuffle(upgradableCards, new Random(AbstractDungeon.miscRng.randomLong()));
         if (!upgradableCards.isEmpty())
             if (upgradableCards.size() == 1) {
-                ((AbstractCard) upgradableCards.get(0)).upgrade();
-                cardMetrics.add(((AbstractCard) upgradableCards.get(0)).cardID);
+                upgradableCards.get(0).upgrade();
+                cardMetrics.add(upgradableCards.get(0).cardID);
                 AbstractDungeon.player.bottledCardUpgradeCheck(upgradableCards.get(0));
-                AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(((AbstractCard) upgradableCards.get(0)).makeStatEquivalentCopy()));
+                AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(upgradableCards.get(0).makeStatEquivalentCopy()));
             } else {
-                ((AbstractCard) upgradableCards.get(0)).upgrade();
-                ((AbstractCard) upgradableCards.get(1)).upgrade();
-                cardMetrics.add(((AbstractCard) upgradableCards.get(0)).cardID);
-                cardMetrics.add(((AbstractCard) upgradableCards.get(1)).cardID);
+                upgradableCards.get(0).upgrade();
+                upgradableCards.get(1).upgrade();
+                cardMetrics.add(upgradableCards.get(0).cardID);
+                cardMetrics.add(upgradableCards.get(1).cardID);
                 AbstractDungeon.player.bottledCardUpgradeCheck(upgradableCards.get(0));
                 AbstractDungeon.player.bottledCardUpgradeCheck(upgradableCards.get(1));
-                AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(((AbstractCard) upgradableCards.get(0)).makeStatEquivalentCopy(), Settings.WIDTH / 2.0F - 190.0F * Settings.scale, Settings.HEIGHT / 2.0F));
-                AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(((AbstractCard) upgradableCards.get(1)).makeStatEquivalentCopy(), Settings.WIDTH / 2.0F + 190.0F * Settings.scale, Settings.HEIGHT / 2.0F));
+                AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(upgradableCards.get(0).makeStatEquivalentCopy(), Settings.WIDTH / 2.0F - 190.0F * Settings.scale, Settings.HEIGHT / 2.0F));
+                AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(upgradableCards.get(1).makeStatEquivalentCopy(), Settings.WIDTH / 2.0F + 190.0F * Settings.scale, Settings.HEIGHT / 2.0F));
             }
     }
 }

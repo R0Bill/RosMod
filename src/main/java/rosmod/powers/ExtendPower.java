@@ -1,6 +1,5 @@
 package rosmod.powers;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.powers.AbstractPower;
@@ -15,7 +14,7 @@ public class ExtendPower extends BasePower {
     private static final boolean TURN_BASED = false;
 
     public void atStartOfTurn() {
-        addToBot((AbstractGameAction) new MakeTempCardInHandAction(new Extend(), this.amount));
+        addToBot(new MakeTempCardInHandAction(new Extend(), this.amount));
     }
 
     public ExtendPower(AbstractCreature owner, int amount) {

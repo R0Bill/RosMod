@@ -1,10 +1,7 @@
 package rosmod.relics;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import rosmod.character.Rosmontis;
 
@@ -23,6 +20,6 @@ public class TargetHand extends BaseRelic {
 
     @Override
     public void atBattleStart() {
-        addToBot((AbstractGameAction) new ApplyPowerAction((AbstractCreature) AbstractDungeon.player, (AbstractCreature) null, (AbstractPower) new StrengthPower((AbstractCreature) AbstractDungeon.player, AbstractDungeon.getCurrRoom().monsters.monsters.size() * 2)));
+        addToBot(new ApplyPowerAction(AbstractDungeon.player, null, new StrengthPower(AbstractDungeon.player, AbstractDungeon.getCurrRoom().monsters.monsters.size() * 2)));
     }
 }

@@ -15,22 +15,22 @@ import rosmod.relics.JudgeCount;
 import rosmod.util.CardStats;
 
 public class Judgement extends BaseCard {
-    public static final String ID = makeID("Judgement"); //makeID adds the mod ID, so the final ID will be something like "modID:MyCard"
+    public static final String ID = makeID("Judgement");
     private static final CardStats info = new CardStats(
-            Rosmontis.Enums.CARD_COLOR, //The card color. If you're making your own character, it'll look something like this. Otherwise, it'll be CardColor.RED or something similar for a basegame character color.
-            CardType.ATTACK, //The type. ATTACK/SKILL/POWER/CURSE/STATUS
-            CardRarity.RARE, //Rarity. BASIC is for starting cards, then there's COMMON/UNCOMMON/RARE, and then SPECIAL and CURSE. SPECIAL is for cards you only get from events. Curse is for curses, except for special curses like Curse of the Bell and Necronomicurse.
-            CardTarget.ENEMY, //The target. Single target is ENEMY, all enemies is ALL_ENEMY. Look at cards similar to what you want to see what to use.
-            2 //The card's base cost. -1 is X cost, -2 is no cost for unplayable cards like curses, or Reflex.
+            Rosmontis.Enums.CARD_COLOR,
+            CardType.ATTACK,
+            CardRarity.RARE,
+            CardTarget.ENEMY,
+            2
     );
     private static final int DAMAGE = 7;
-    private static final int UPG_DAMAGE = 1;
+    private static final int UPG_DAMAGE = 5;
 
     public Judgement() {
         super(ID, info);
         setDamage(DAMAGE, UPG_DAMAGE);
         setExhaust(true);
-        tags.add(CardTags.STRIKE); //This tag marks it as a Strike card for the purposes of Perfected Strike and any similar modded effects
+        tags.add(CardTags.STRIKE);
     }
 
     @Override
@@ -40,21 +40,15 @@ public class Judgement extends BaseCard {
         if (temp) {
             if (!abstractPlayer.hasRelic(JudgeCount.ID)) {
                 JudgeCount judgeCount = new JudgeCount();
-                AbstractDungeon.getCurrRoom().spawnRelicAndObtain((Settings.WIDTH / 2), (Settings.HEIGHT / 2), (AbstractRelic) judgeCount);
+                AbstractDungeon.getCurrRoom().spawnRelicAndObtain(((float) Settings.WIDTH / 2), ((float) Settings.HEIGHT / 2), judgeCount);
                 CardCrawlGame.screenShake.mildRumble(5.0F);
                 AbstractRelic jg = AbstractDungeon.player.getRelic(JudgeCount.ID);
-                if (this.upgraded)
-                    jg.counter += 2;
-                else
-                    jg.counter++;
+                jg.counter += 1;
 
             } else {
                 AbstractRelic jg = AbstractDungeon.player.getRelic(JudgeCount.ID);
                 jg.flash();
-                if (this.upgraded)
-                    jg.counter += 2;
-                else
-                    jg.counter++;
+                jg.counter += 1;
             }
         }
     }

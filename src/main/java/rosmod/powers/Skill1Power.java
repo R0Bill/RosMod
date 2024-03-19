@@ -48,35 +48,28 @@ public class Skill1Power extends BasePower {
                 AbstractMonster m = null;
                 if (action.target != null)
                     m = (AbstractMonster) action.target;
-                AbstractCard tmp = abstractCard;
-                AbstractDungeon.player.limbo.addToBottom(tmp);
-                tmp.current_x = abstractCard.current_x;
-                tmp.current_y = abstractCard.current_y;
-                tmp.target_x = Settings.WIDTH / 2.0F - 300.0F * Settings.scale;
-                tmp.target_y = Settings.HEIGHT / 2.0F;
+                AbstractDungeon.player.limbo.addToBottom(abstractCard);
+                abstractCard.target_x = Settings.WIDTH / 2.0F - 300.0F * Settings.scale;
+                abstractCard.target_y = Settings.HEIGHT / 2.0F;
                 if (m != null)
-                    tmp.calculateCardDamage(m);
-                tmp.purgeOnUse = true;
-                if (m.isDead)
-                    m = AbstractDungeon.getCurrRoom().monsters.getRandomMonster(true);
-                AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(tmp, m, 0, true, true), true);
+                    abstractCard.calculateCardDamage(m);
+                abstractCard.purgeOnUse = true;
+                if (m != null && m.isDead) m = AbstractDungeon.getCurrRoom().monsters.getRandomMonster(true);
+                AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(abstractCard, m, 0, true, true), true);
             } else if (amount == 3 && magic == 3) {
                 magic = 0;
                 flash();
                 AbstractMonster m = null;
                 if (action.target != null)
                     m = (AbstractMonster) action.target;
-                AbstractCard tmp = abstractCard;
-                AbstractDungeon.player.limbo.addToBottom(tmp);
-                tmp.current_x = abstractCard.current_x;
-                tmp.current_y = abstractCard.current_y;
-                tmp.target_x = Settings.WIDTH / 2.0F - 300.0F * Settings.scale;
-                tmp.target_y = Settings.HEIGHT / 2.0F;
+                AbstractDungeon.player.limbo.addToBottom(abstractCard);
+                abstractCard.target_x = Settings.WIDTH / 2.0F - 300.0F * Settings.scale;
+                abstractCard.target_y = Settings.HEIGHT / 2.0F;
                 if (m != null)
-                    tmp.calculateCardDamage(m);
-                tmp.purgeOnUse = true;
+                    abstractCard.calculateCardDamage(m);
+                abstractCard.purgeOnUse = true;
                 m = AbstractDungeon.getCurrRoom().monsters.getRandomMonster(true);
-                AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(tmp, m, 0, true, true), true);
+                AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(abstractCard, m, 0, true, true), true);
             }
         }
     }
@@ -87,7 +80,7 @@ public class Skill1Power extends BasePower {
                 this.greenColor.a = c.a;
                 c = this.greenColor;
             }
-            FontHelper.renderFontRightTopAligned(sb, FontHelper.powerAmountFont, Integer.toString(this.magic) + "/" + Integer.toString(this.amount), x, y, this.fontScale, c);
+            FontHelper.renderFontRightTopAligned(sb, FontHelper.powerAmountFont, magic + "/" + this.amount, x, y, this.fontScale, c);
         }
     }
 

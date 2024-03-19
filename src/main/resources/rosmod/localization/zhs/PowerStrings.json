@@ -12,14 +12,14 @@
     ]
   },
   "${modID}:Skill2Power": {
-    "NAME": "Skill2Power",
+    "NAME": "末梢阻断",
     "DESCRIPTIONS": [
-      "格挡不会消失，你造成的伤害增加",
-      "。你获得的格挡增加一半。"
+      "格挡不会消失，歼灭战装备造成的伤害增加格挡数的四分之一",
+      "。你获得的格挡增加三分之一。"
     ]
   },
   "${modID}:Skill1Power": {
-    "NAME": "Skill1Power",
+    "NAME": "思维膨大",
     "DESCRIPTIONS": [
       "每回合第",
       "张攻击牌视为打出两次。"
@@ -75,6 +75,13 @@
       " #y正在充能。",
       " #g可用。",
       " #r不可用，充能次数耗尽。"
+    ]
+  },
+  "${modID}:GiveBlockNextTurn": {
+    "NAME": "强化防御",
+    "DESCRIPTIONS": [
+      "下回合开始时，获得",
+      " 格挡 。"
     ]
   }
 }

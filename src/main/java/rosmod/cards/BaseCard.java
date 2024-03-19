@@ -333,7 +333,7 @@ public abstract class BaseCard extends CustomCard {
         return var.base;
     }
     public int customVar(String key) {
-        LocalVarInfo var = cardVariables == null ? null : cardVariables.get(key); //Prevents crashing when used with dynamic text
+        LocalVarInfo var = cardVariables.get(key); //Prevents crashing when used with dynamic text
         if (var == null)
             return -1;
         return var.value;

@@ -1,6 +1,5 @@
 package rosmod.powers;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -51,7 +50,7 @@ public class AttachPower extends BasePower {
             updateDescription();
         }
         if (this.amount <= 0)
-            addToBot((AbstractGameAction) new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
+            addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
     }
 
     public void updateDescription() {

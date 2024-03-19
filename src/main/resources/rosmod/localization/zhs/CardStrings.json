@@ -29,8 +29,8 @@
   },
   "${modID}:ConcentrateRos": {
     "NAME": "集中",
-    "DESCRIPTION": "消耗 。抽一张牌。随机 消耗 一张牌，获得3点 临时生命 。",
-    "UPGRADE_DESCRIPTION": "抽一张牌。 消耗 一张牌，获得5点 临时生命 。"
+    "DESCRIPTION": "消耗 。抽一张牌。 *随机 消耗 一张牌，获得3点 临时生命 。",
+    "UPGRADE_DESCRIPTION": "消耗 。抽一张牌。 消耗 一张牌，获得5点 临时生命 。"
   },
   "${modID}:FlyRos": {
     "NAME": "战术飞行躲避",
@@ -87,8 +87,7 @@
   },
   "${modID}:Judgement": {
     "NAME": "在这立法典",
-    "DESCRIPTION": "消耗 。造成 !D! 伤害， ${modID}:斩杀 永久加1敏捷0.5力量。",
-    "UPGRADE_DESCRIPTION": "消耗 。造成 !D! 伤害， ${modID}:斩杀 永久加2敏捷1力量。"
+    "DESCRIPTION": "消耗 。造成 !D! 伤害， ${modID}:斩杀 永久加0.5敏捷0.5力量。"
   },
   "${modID}:StealBlock": {
     "NAME": "破障",
@@ -143,7 +142,7 @@
   },
   "${modID}:MedBox": {
     "NAME": "应急医疗",
-    "DESCRIPTION": " 消耗 。抽到此牌时 *立刻打出 。治疗 !M! 点生命。"
+    "DESCRIPTION": " 消耗 。抽到此牌时 *立刻打出 。治疗 !M! 点生命。 NL 不可升级。"
   },
   "${modID}:AddAttack": {
     "NAME": "连击",
@@ -211,8 +210,8 @@
   },
   "${modID}:Shadow": {
     "NAME": "乳影随行",
-    "DESCRIPTION": "消耗 。给予全体敌人3 ${modID}:恐惧 。",
-    "UPGRADE_DESCRIPTION": "消耗 。给予全体敌人5 ${modID}:恐惧 。"
+    "DESCRIPTION": "消耗 。给予全体敌人4 ${modID}:恐惧 。",
+    "UPGRADE_DESCRIPTION": "消耗 。给予全体敌人7 ${modID}:恐惧 。"
   },
   "${modID}:React": {
     "NAME": "随机应变",
@@ -242,8 +241,8 @@
   },
   "${modID}:SolidifyMind": {
     "NAME": "固化情绪",
-    "DESCRIPTION": "消耗 。将三分之一的格挡转换为 临时生命 。",
-    "UPGRADE_DESCRIPTION": "消耗 。将二分之一的格挡转换为 临时生命 。"
+    "DESCRIPTION": "消耗 。增加三分之一的 格挡 的 临时生命 。",
+    "UPGRADE_DESCRIPTION": "消耗 。增加二分之一的 格挡 的 临时生命 。"
   },
   "${modID}:Lullaby": {
     "NAME": "“摇篮曲”",
@@ -252,7 +251,16 @@
   },
   "${modID}:FaceYourSin": {
     "NAME": "直面汝罪",
-    "DESCRIPTION": "对敌人造成它当前的攻击意图的伤害， NL 视为该怪物的伤害， NL 如果意图不是攻击， NL 给予 2 ${modID}:恐惧。",
-    "UPGRADE_DESCRIPTION": "对敌人造成它当前的攻击意图的伤害， NL 视为该怪物的伤害， NL 如果意图不是攻击， NL 给予 3 ${modID}:恐惧。"
+    "DESCRIPTION": "对敌人造成它当前的攻击意图的伤害， NL 伤害来源视为该敌人， NL 如果意图不是攻击， NL 给予 2 ${modID}:恐惧 。",
+    "UPGRADE_DESCRIPTION": "对敌人造成它当前的攻击意图的伤害， NL 伤害来源视为该敌人， NL 如果意图不是攻击， NL 给予 4 ${modID}:恐惧 。"
+  },
+  "${modID}:Sleepy": {
+    "NAME": "睡意朦胧",
+    "DESCRIPTION": "虚无 。 NL 当此卡被消耗时，下一回合开始时获得 [E] 。 NL 不可升级。"
+  },
+  "${modID}:Endophobia": {
+    "NAME": "内源性恐慌",
+    "DESCRIPTION": "获得一张 *感染， NL 对所有敌人给予 2 ${modID}:恐惧 ， NL 然后造成 !D! 伤害。",
+    "UPGRADE_DESCRIPTION": "获得一张 *感染， NL 对所有敌人给予 3 ${modID}:恐惧 ， NL 然后造成 !D! 伤害。"
   }
 }

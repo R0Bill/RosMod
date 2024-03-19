@@ -1,8 +1,6 @@
 package rosmod.relics;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import rosmod.character.Rosmontis;
 
@@ -27,7 +25,7 @@ public class Oath extends BaseRelic {
 
     public void onTrigger() {
         flash();
-        addToTop((AbstractGameAction) new RelicAboveCreatureAction((AbstractCreature) AbstractDungeon.player, this));
+        addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
         int healAmt = AbstractDungeon.player.maxHealth / 2;
         if (healAmt < 30)
             healAmt = 30;

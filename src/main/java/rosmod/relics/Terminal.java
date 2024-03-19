@@ -2,7 +2,6 @@ package rosmod.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.evacipated.cardcrawl.mod.stslib.relics.ClickableRelic;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -30,7 +29,7 @@ public class Terminal extends CustomRelic implements ClickableRelic {
                 AbstractCard card = AbstractDungeon.player.exhaustPile.getTopCard();
 //                if (AbstractDungeon.player.hand.size() < BaseMod.MAX_HAND_SIZE) {
 
-                    addToBot((AbstractGameAction) new MakeTempCardInHandAction(card, 1));
+                addToBot(new MakeTempCardInHandAction(card, 1));
                     //AbstractDungeon.player.hand.addToHand(card);
                     AbstractDungeon.player.exhaustPile.removeCard(card);
 //                }

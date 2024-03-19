@@ -35,7 +35,7 @@ public class StablePower extends BasePower {
         } else if (target != null && cardTarget == AbstractCard.CardTarget.ALL_ENEMY) {
             target = null;
             cardTarget = null;
-            addToBot((AbstractGameAction) new DamageAllEnemiesAction(null, DamageInfo.createDamageMatrix(temp, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+            addToBot(new DamageAllEnemiesAction(null, DamageInfo.createDamageMatrix(temp, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         }
         return d;
     }

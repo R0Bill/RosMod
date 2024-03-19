@@ -43,7 +43,7 @@ public class RhodesIslandSafeHouse extends AbstractImageEvent {
         if (hasterminal()) {
             this.imageEventText.setDialogOption(OPTIONS[0]);
         } else {
-            this.imageEventText.setDialogOption(OPTIONS[1], true, (AbstractRelic) new Terminal());
+            this.imageEventText.setDialogOption(OPTIONS[1], true, new Terminal());
         }
         this.imageEventText.setDialogOption(OPTIONS[2]);
         this.imageEventText.setDialogOption(OPTIONS[3]);
@@ -102,7 +102,7 @@ public class RhodesIslandSafeHouse extends AbstractImageEvent {
                     this.curScreen = CurrentScreen.COMPLETE;
                     break;
                 } else if (buttonPressed == 1) {
-                    AbstractDungeon.getCurrRoom().spawnRelicAndObtain((Settings.WIDTH / 2), (Settings.HEIGHT / 2), getr());
+                    AbstractDungeon.getCurrRoom().spawnRelicAndObtain(((float) Settings.WIDTH / 2), ((float) Settings.HEIGHT / 2), getr());
 
                     this.imageEventText.removeDialogOption(2);
                     this.imageEventText.removeDialogOption(1);
@@ -140,19 +140,19 @@ public class RhodesIslandSafeHouse extends AbstractImageEvent {
         Collections.shuffle(upgradableCards, new Random(AbstractDungeon.miscRng.randomLong()));
         if (!upgradableCards.isEmpty())
             if (upgradableCards.size() == 1) {
-                ((AbstractCard) upgradableCards.get(0)).upgrade();
-                cardMetrics.add(((AbstractCard) upgradableCards.get(0)).cardID);
+                upgradableCards.get(0).upgrade();
+                cardMetrics.add(upgradableCards.get(0).cardID);
                 AbstractDungeon.player.bottledCardUpgradeCheck(upgradableCards.get(0));
-                AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(((AbstractCard) upgradableCards.get(0)).makeStatEquivalentCopy()));
+                AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(upgradableCards.get(0).makeStatEquivalentCopy()));
             } else {
-                ((AbstractCard) upgradableCards.get(0)).upgrade();
-                ((AbstractCard) upgradableCards.get(1)).upgrade();
-                cardMetrics.add(((AbstractCard) upgradableCards.get(0)).cardID);
-                cardMetrics.add(((AbstractCard) upgradableCards.get(1)).cardID);
+                upgradableCards.get(0).upgrade();
+                upgradableCards.get(1).upgrade();
+                cardMetrics.add(upgradableCards.get(0).cardID);
+                cardMetrics.add(upgradableCards.get(1).cardID);
                 AbstractDungeon.player.bottledCardUpgradeCheck(upgradableCards.get(0));
                 AbstractDungeon.player.bottledCardUpgradeCheck(upgradableCards.get(1));
-                AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(((AbstractCard) upgradableCards.get(0)).makeStatEquivalentCopy(), Settings.WIDTH / 2.0F - 190.0F * Settings.scale, Settings.HEIGHT / 2.0F));
-                AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(((AbstractCard) upgradableCards.get(1)).makeStatEquivalentCopy(), Settings.WIDTH / 2.0F + 190.0F * Settings.scale, Settings.HEIGHT / 2.0F));
+                AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(upgradableCards.get(0).makeStatEquivalentCopy(), Settings.WIDTH / 2.0F - 190.0F * Settings.scale, Settings.HEIGHT / 2.0F));
+                AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(upgradableCards.get(1).makeStatEquivalentCopy(), Settings.WIDTH / 2.0F + 190.0F * Settings.scale, Settings.HEIGHT / 2.0F));
             }
     }
 

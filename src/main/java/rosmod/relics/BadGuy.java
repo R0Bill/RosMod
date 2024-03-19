@@ -13,7 +13,7 @@ public class BadGuy extends BaseRelic {
     public static final String ID = makeID(NAME); //This adds the mod's prefix to the relic ID, resulting in modID:MyRelic
     private static final RelicTier RARITY = RelicTier.UNCOMMON; //The relic's rarity.
     private static final LandingSound SOUND = LandingSound.CLINK; //The sound played when the relic is clicked.
-    private boolean CANUSE = true;
+    private final boolean CANUSE = true;
 
     public BadGuy() {
         super(ID, NAME, Rosmontis.Enums.CARD_COLOR, RARITY, SOUND);

@@ -2,7 +2,6 @@ package rosmod.ui;
 
 import basemod.BaseMod;
 import basemod.abstracts.CustomSavable;
-import basemod.abstracts.CustomSavableRaw;
 import basemod.interfaces.ISubscriber;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -64,7 +63,7 @@ public class SkinSelectScreen implements ISubscriber, CustomSavable<Integer> {
         this.leftHb = new Hitbox(70.0F * Settings.scale, 70.0F * Settings.scale);
         this.rightHb = new Hitbox(70.0F * Settings.scale, 70.0F * Settings.scale);
         BaseMod.subscribe(this);
-        BaseMod.addSaveField(BasicMod.MakePath("skin"), (CustomSavableRaw) this);
+        BaseMod.addSaveField(BasicMod.MakePath("skin"), this);
     }
 
     public void loadAnimation(String atlasUrl, String skeletonUrl, float scale) {
@@ -84,7 +83,7 @@ public class SkinSelectScreen implements ISubscriber, CustomSavable<Integer> {
         Skin skin = SKINS.get(this.index);
         this.curName = skin.name;
         loadAnimation(skin.charPath + ".atlas", skin.charPath + ".json", 1.5F);
-        this.nextName = ((Skin) SKINS.get(nextIndex())).name;
+        this.nextName = SKINS.get(nextIndex()).name;
         if (AbstractDungeon.player instanceof Rosmontis) {
             Rosmontis k = (Rosmontis) AbstractDungeon.player;
             // k.refreshSkin();

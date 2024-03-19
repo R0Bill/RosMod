@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import rosmod.character.Rosmontis;
 
@@ -26,8 +25,8 @@ public class AnnE extends BaseRelic {
     public void onUseCard(AbstractCard targetCard, UseCardAction useCardAction) {
         if (targetCard.type == AbstractCard.CardType.ATTACK){
             flash();
-            addToBot((AbstractGameAction)new RelicAboveCreatureAction((AbstractCreature)AbstractDungeon.player, this));
-            addToBot((AbstractGameAction) new DamageAllEnemiesAction(null, DamageInfo.createDamageMatrix(3, false), DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.NONE));
+            addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+            addToBot(new DamageAllEnemiesAction(null, DamageInfo.createDamageMatrix(AbstractDungeon.player.hasPower("rosmontis:Skill2") ? (3 + (AbstractDungeon.player.currentBlock / 4)) : 3, false), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.NONE));
         }
     }
 
