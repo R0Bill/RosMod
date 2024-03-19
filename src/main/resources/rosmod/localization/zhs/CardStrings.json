@@ -133,8 +133,8 @@
   },
   "${modID}:StunSelf": {
     "NAME": "交叉防御",
-    "DESCRIPTION": "获得12倍于使用能量 格挡 。 NL 在下回合开始时， NL 获得一半于该数值 格挡 。",
-    "UPGRADE_DESCRIPTION": "获得16倍于使用能量 格挡 。 NL 在下回合开始时， NL 获得一半于该数值 格挡 。"
+    "DESCRIPTION": "获得12倍于使用能量 格挡 。 立刻结束你的回合。 NL 在下回合开始时， NL 获得一半于该数值 格挡 。",
+    "UPGRADE_DESCRIPTION": "获得16倍于使用能量 格挡 。 立刻结束你的回合。 NL 在下回合开始时， NL 获得一半于该数值 格挡 。"
   },
   "${modID}:Infected": {
     "NAME": "感染",
@@ -262,5 +262,33 @@
     "NAME": "内源性恐慌",
     "DESCRIPTION": "获得一张 *感染， NL 对所有敌人给予 2 ${modID}:恐惧 ， NL 然后造成 !D! 伤害。",
     "UPGRADE_DESCRIPTION": "获得一张 *感染， NL 对所有敌人给予 3 ${modID}:恐惧 ， NL 然后造成 !D! 伤害。"
+  },
+  "${modID}:OptionBlock": {
+    "NAME": "源石剑：格挡",
+    "DESCRIPTION": "获得10 格挡 。"
+  },
+  "${modID}:OptionDefend": {
+    "NAME": "源石剑：防御",
+    "DESCRIPTION": "获得4 金属化 。"
+  },
+  "${modID}:OptionAttack": {
+    "NAME": "源石剑：攻击",
+    "DESCRIPTION": "对随机敌人造成 !D! 伤害。"
+  },
+  "${modID}:OptionStrike": {
+    "NAME": "源石剑：打击",
+    "DESCRIPTION": "对全体敌人造成 !D! 伤害。"
+  },
+  "${modID}:AMOS": {
+    "NAME": "A.M.O.S",
+    "DESCRIPTION": "消耗 。将2张 NL *先驱者 和 *后继者 NL 加入抽牌堆。"
+  },
+  "${modID}:Inheritors": {
+    "NAME": "后继者",
+    "DESCRIPTION": "在 *源石剑：防御 和 *源石剑：打击 中选择一项触发。"
+  },
+  "${modID}:Outriders": {
+    "NAME": "先驱者",
+    "DESCRIPTION": "在 *源石剑：格挡 和 *源石剑：攻击 中选择一项触发。"
   }
 }

@@ -2,19 +2,19 @@
 
 # Arknights Rosmontis Character mod is keep updating!
 
-## 1个角色，2张皮肤，70张卡，12遗物，3事件
+## 1个角色，2种皮肤，64张卡，12个遗物，3个事件
 
-## 1 char, 2 skins, 70 cards, 12 relices and 3 events
+## 1 char, 2 skins, 64 cards, 12 relics and 3 events
 
-### 该项目仍处于测试阶段，如有bug或游戏体验反馈，请在该github项目上提交issue
+### 该项目仍处于开发测试阶段，如有bug或游戏体验反馈，请在该github项目上提交issue
 
-### This mod still in testing, if you run into any issues in this mod, please feedback at github!
+### This mod still in testing, if you run into any issues in this mod, please feed back at GitHub!
 
-gtihub项目地址：[R0Bill/RosMod: Arknights Rosmontis Mod for Slay The Spire (github.com)](https://github.com/R0Bill/RosMod)
+Github项目地址：[R0Bill/RosMod: Arknights Rosmontis Mod for Slay The Spire (GitHub.com)](https://github.com/R0Bill/RosMod)
 
 #### 警告：本mod修改了多处游戏本体以实现功能，可能导致模组兼容性不佳！
 
-Warning: This mod modifies several parts of the STS to implement features that may result in poor mod compatibility
+#### Warning: This mod modifies several parts of the STS to implement features that may result in poor mod compatibility
 
 作者：R0Bill
 
@@ -33,7 +33,16 @@ This mod has no commercial use and no commercial intention. If you obtain this m
 The images in this mod are all from pixiv, bilibili video screenshots, and Hypergryph Network , **and they are all NOT** **authorized**. If there is any infringement, please contact the author. I sincerely apologize to you.
 
 以下是图片来源公示：
+pixiv：
+102701450 113880131 107055161 97272648_ 113844795 116410854 116092383 111688782
+109920912 108939569 85458137 98750066 109992946 96889646 116771696 115935056 89668712
+98832885 91129271 113987162 113641465 92086346 114048823 102593440 92406881 99110385
+114603914 116410854 106766031 105285288 89888862 89600956 110998596 89510223 102622717
+111849441 102153360 85699499 88617920 94627231 101338651 114900764 94563458 103437119
+94021356 89573579 109131573 89736459 90083634 100411906 102603633
 
+B站：
+BV1Ti4y1p7oX
 
 
 ---
