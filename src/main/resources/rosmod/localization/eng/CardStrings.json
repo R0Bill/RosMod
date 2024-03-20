@@ -11,188 +11,282 @@
   },
   "${modID}:StrikeRos": {
     "NAME": "Strike",
-    "DESCRIPTION": "Deal !D! damage.",
-    "EXTENDED_DESCRIPTION": [
-      "Her brothers handle the sword.",
-      "They strike with her order.",
-      "--Script Caster KK"
-    ]
+    "DESCRIPTION": "Deal !D! damage."
   },
   "${modID}:DefendRos": {
     "NAME": "Defend",
-    "DESCRIPTION": "Block !B! .",
-    "EXTENDED_DESCRIPTION": [
-      "Her brothers handle the sword.",
-      "They strike with her order."
-    ]
+    "DESCRIPTION": "Gain !B! Block ."
   },
   "${modID}:Skill3": {
-    "NAME": "with your wishes",
-    "DESCRIPTION": "Being fully attack. *Double all attack cards cost and they will play 3 times. Moreover, attack cards have 50% to Stun target. Lost 3 Dexterity.",
-    "UPGRADE_DESCRIPTION": "Innate.Being fully attack. *Double all attack cards cost and they will play 3 times. Moreover, attack cards have 50% to Stun target. Lost 3 Dexterity.",
-    "EXTENDED_DESCRIPTION": [
-      "\"I'm here..",
-      "for watching you die\""
-    ]
+    "NAME": "As You Wish",
+    "DESCRIPTION": "${modID}:Unique . NL Double all attack cards cost, played as if played 3 times. Each play has a 10% chance to ${modID}:Stun the target. NL Lose 3 Dexterity.",
+    "UPGRADE_DESCRIPTION": "${modID}:Unique , Innate . NL Double all attack cards cost, played as if played 3 times. Each play has a 10% chance to ${modID}:Stun the target. NL Lose 3 Dexterity."
   },
   "${modID}:Memory": {
     "NAME": "Memory",
-    "DESCRIPTION": "Gain [E] [E] in next turn.",
-    "UPGRADE_DESCRIPTION": "Retain. Gain [E] [E] in next turn.",
-    "EXTENDED_DESCRIPTION": [
-      "You can put more text in here.",
-      "If you need to use it for stuff.",
-      "Blizzard is a good example for this."
-    ]
+    "DESCRIPTION": "Gain [E] [E] next turn.",
+    "UPGRADE_DESCRIPTION": "Retain. Gain [E] [E] next turn."
   },
   "${modID}:ConcentrateRos": {
     "NAME": "Concentrate",
-    "DESCRIPTION": "Description.",
-    "UPGRADE_DESCRIPTION": "This will automatically be used if the card is upgraded. Remove it if unneeded.",
-    "EXTENDED_DESCRIPTION": [
-      "You can put more text in here.",
-      "If you need to use it for stuff.",
-      "Blizzard is a good example for this."
-    ]
+    "DESCRIPTION": "Exhaust . Draw a card. *Random Exhaust a card, gain 3 Temporary HP.",
+    "UPGRADE_DESCRIPTION": "Exhaust . Draw a card. Exhaust a card, gain 5 Temporary HP."
   },
   "${modID}:FlyRos": {
-    "NAME": "fly",
-    "DESCRIPTION": "Description.",
-    "UPGRADE_DESCRIPTION": "This will automatically be used if the card is upgraded. Remove it if unneeded.",
-    "EXTENDED_DESCRIPTION": [
-      "You can put more text in here.",
-      "If you need to use it for stuff.",
-      "Blizzard is a good example for this."
-    ]
+    "NAME": "Tactical Flight Evasion",
+    "DESCRIPTION": "Exhaust . Gain 1 turn Intangible . Gain 2 Dexterity ."
   },
   "${modID}:HeavyAttackRos": {
-    "NAME": "HeavyAttack",
-    "DESCRIPTION": "Description.",
-    "UPGRADE_DESCRIPTION": "This will automatically be used if the card is upgraded. Remove it if unneeded.",
-    "EXTENDED_DESCRIPTION": [
-      "You can put more text in here.",
-      "If you need to use it for stuff.",
-      "Blizzard is a good example for this."
-    ]
+    "NAME": "Heavy Attack",
+    "DESCRIPTION": "Deal 2 sets of !D! single-target damage and 3 points of AoE ${modID}:TrueDamage ."
   },
   "${modID}:PsyStorm": {
-    "NAME": "PsyStorm",
-    "DESCRIPTION": "Description.",
-    "UPGRADE_DESCRIPTION": "This will automatically be used if the card is upgraded. Remove it if unneeded.",
-    "EXTENDED_DESCRIPTION": [
-      "You can put more text in here.",
-      "If you need to use it for stuff.",
-      "Blizzard is a good example for this."
-    ]
+    "NAME": "Psy Storm",
+    "DESCRIPTION": "Exhaust . NL Deal 2-4-8-16... shared damage to all enemies. Number of hits depends on energy used.",
+    "UPGRADE_DESCRIPTION": "Exhaust , Retain . NL Deal 2-4-8-16... shared damage to all enemies. Number of hits depends on energy used."
   },
   "${modID}:QuickAttack": {
-    "NAME": "Name",
-    "DESCRIPTION": "Description.",
-    "UPGRADE_DESCRIPTION": "This will automatically be used if the card is upgraded. Remove it if unneeded.",
-    "EXTENDED_DESCRIPTION": [
-      "You can put more text in here.",
-      "If you need to use it for stuff.",
-      "Blizzard is a good example for this."
-    ]
+    "NAME": "Quick Attack",
+    "DESCRIPTION": "Exhaust . Deal !D! damage."
   },
   "${modID}:ShieldStrike": {
-    "NAME": "ShieldStrike",
-    "DESCRIPTION": "Description.",
-    "UPGRADE_DESCRIPTION": "This will automatically be used if the card is upgraded. Remove it if unneeded.",
-    "EXTENDED_DESCRIPTION": [
-      "You can put more text in here.",
-      "If you need to use it for stuff.",
-      "Blizzard is a good example for this."
-    ]
+    "NAME": "Shield Strike",
+    "DESCRIPTION": "Gain !B! Block , deal damage equal to your current Block (affected by damage modifiers)."
   },
   "${modID}:Skill1": {
-    "NAME": "Skill1",
-    "DESCRIPTION": "Description.",
-    "UPGRADE_DESCRIPTION": "This will automatically be used if the card is upgraded. Remove it if unneeded.",
-    "EXTENDED_DESCRIPTION": [
-      "You can put more text in here.",
-      "If you need to use it for stuff.",
-      "Blizzard is a good example for this."
-    ]
+    "NAME": "Mind Expansion",
+    "DESCRIPTION": "${modID}:Unique . Every 3rd attack played each turn is played twice.",
+    "UPGRADE_DESCRIPTION": "${modID}:Unique , Innate. Every 2nd attack played each turn is played twice."
   },
   "${modID}:Skill2": {
-    "NAME": "Skill2",
-    "DESCRIPTION": "Description.",
-    "UPGRADE_DESCRIPTION": "This will automatically be used if the card is upgraded. Remove it if unneeded.",
-    "EXTENDED_DESCRIPTION": [
-      "You can put more text in here.",
-      "If you need to use it for stuff.",
-      "Blizzard is a good example for this."
-    ]
+    "NAME": "Peripheral Blockade",
+    "DESCRIPTION": "${modID}:Unique . Block does not expire, Annihilation Equipment damage is increased by one-fourth of your Block . Gains of Block are increased by one-third.",
+    "UPGRADE_DESCRIPTION": "${modID}:Unique , Innate . Block does not expire, Annihilation Equipment damage is increased by one-fourth of your Block . Gains of Block are increased by one-third."
   },
   "${modID}:AddDefend": {
-    "NAME": "AddDefend",
-    "DESCRIPTION": "Description.",
-    "UPGRADE_DESCRIPTION": "This will automatically be used if the card is upgraded. Remove it if unneeded.",
-    "EXTENDED_DESCRIPTION": [
-      "You can put more text in here.",
-      "If you need to use it for stuff.",
-      "Blizzard is a good example for this."
-    ]
+    "NAME": "Consecutive Block",
+    "DESCRIPTION": "Gain !B! Block . NL If the previous card played was a Skill, NL gain it twice."
   },
   "${modID}:EntrenchRos": {
-    "NAME": "EntrenchRos",
-    "DESCRIPTION": "Description.",
-    "UPGRADE_DESCRIPTION": "This will automatically be used if the card is upgraded. Remove it if unneeded.",
-    "EXTENDED_DESCRIPTION": [
-      "You can put more text in here.",
-      "If you need to use it for stuff.",
-      "Blizzard is a good example for this."
-    ]
+    "NAME": "Frontline Maintain",
+    "DESCRIPTION": "Exhaust . Double your Block ."
   },
   "${modID}:CommandTerminal": {
-    "NAME": "EntrenchRos",
-    "DESCRIPTION": "Description.",
-    "UPGRADE_DESCRIPTION": "This will automatically be used if the card is upgraded. Remove it if unneeded.",
-    "EXTENDED_DESCRIPTION": [
-      "You can put more text in here.",
-      "If you need to use it for stuff.",
-      "Blizzard is a good example for this."
-    ]
+    "NAME": "Command Terminal",
+    "DESCRIPTION": "${modID}:Unique . At the start of your turn, heal 1 HP, gain [E] .",
+    "UPGRADE_DESCRIPTION": "*Innate , ${modID}:Unique . At the start of your turn, heal 1 HP, gain [E] ."
   },
   "${modID}:Impulse": {
-    "NAME": "EntrenchRos",
-    "DESCRIPTION": "Description.",
-    "UPGRADE_DESCRIPTION": "This will automatically be used if the card is upgraded. Remove it if unneeded.",
-    "EXTENDED_DESCRIPTION": [
-      "You can put more text in here.",
-      "If you need to use it for stuff.",
-      "Blizzard is a good example for this."
-    ]
+    "NAME": "Synaptic Pulse",
+    "DESCRIPTION": "Exhaust . Deal !D! damage. Add a copy of this card to hand when killing a card with it."
   },
   "${modID}:Intimidate": {
-    "NAME": "EntrenchRos",
-    "DESCRIPTION": "Description.",
-    "UPGRADE_DESCRIPTION": "This will automatically be used if the card is upgraded. Remove it if unneeded.",
-    "EXTENDED_DESCRIPTION": [
-      "You can put more text in here.",
-      "If you need to use it for stuff.",
-      "Blizzard is a good example for this."
-    ]
+    "NAME": "\"Give me war face\"",
+    "DESCRIPTION": "Exhaust . Apply 99 stacks of Vulnerable and Weak to all enemies."
   },
   "${modID}:Judgement": {
-    "NAME": "EntrenchRos",
-    "DESCRIPTION": "Description.",
-    "UPGRADE_DESCRIPTION": "This will automatically be used if the card is upgraded. Remove it if unneeded.",
-    "EXTENDED_DESCRIPTION": [
-      "You can put more text in here.",
-      "If you need to use it for stuff.",
-      "Blizzard is a good example for this."
-    ]
+    "NAME": "Judgement",
+    "DESCRIPTION": "Exhaust . Deal !D! damage. ${modID}:Execute permanently adds 0.5 Dexterity and 0.5 Strength."
   },
   "${modID}:StealBlock": {
-    "NAME": "EntrenchRos",
-    "DESCRIPTION": "Description.",
-    "UPGRADE_DESCRIPTION": "This will automatically be used if the card is upgraded. Remove it if unneeded.",
-    "EXTENDED_DESCRIPTION": [
-      "You can put more text in here.",
-      "If you need to use it for stuff.",
-      "Blizzard is a good example for this."
-    ]
+    "NAME": "Breakthrough",
+    "DESCRIPTION": "Deal damage equal to the enemy's Block. Gain Block equal to the damage dealt. Minimum damage is 5."
+  },
+  "${modID}:MilliaDisaster": {
+    "NAME": "Millia's Disaster",
+    "DESCRIPTION": "Apply 2 ${modID}:Fear to a random enemy each time a Skill is played. Gain an *Infected ."
+  },
+  "${modID}:Stable": {
+    "NAME": "Stable Perception",
+    "DESCRIPTION": "${modID}:Unique . When you deal damage, deal an additional 20% ${modID}:TrueDamage .",
+    "UPGRADE_DESCRIPTION": "${modID}:Unique , Innate. When you deal damage, deal an additional 20% ${modID}:TrueDamage ."
+  },
+  "${modID}:Summon": {
+    "NAME": "Quick Block",
+    "DESCRIPTION": "Exhaust . Gain two layers of *PlatedArmor ."
+  },
+  "${modID}:Extrasensory": {
+    "NAME": "Extrasensory",
+    "DESCRIPTION": "Exhaust . Gain *Quick *Block based on the number of enemies.",
+    "UPGRADE_DESCRIPTION": "Exhaust . Gain double *Quick *Block based on the number of enemies."
+  },
+  "${modID}:LoseControl": {
+    "NAME": "Lose Control",
+    "DESCRIPTION": "Lose 2 HP. Deal !D! damage (benefits from 3 times *Strength multiplier). If the damage calculated is more than 18, gain 1 *Strength.",
+    "UPGRADE_DESCRIPTION": "Lose 2 HP. Deal !D! damage (benefits from 3 times *Strength multiplier). If the damage calculated is more than 16, gain 1 *Strength."
+  },
+  "${modID}:ThrowAway": {
+    "NAME": "Throw",
+    "DESCRIPTION": "Deal 5 damage, draw 1 card.",
+    "UPGRADE_DESCRIPTION": "Deal 5 damage, draw 2 cards."
+  },
+  "${modID}:DoublePre": {
+    "NAME": "Double Preparedness",
+    "DESCRIPTION": "Exhaust . Gain *Quick *Attack, *Quick *Block.",
+    "UPGRADE_DESCRIPTION": "Gain *Quick *Attack, *Quick *Block."
+  },
+  "${modID}:Deprive": {
+    "NAME": "Perceptive Deprivation",
+    "DESCRIPTION": "Apply 5 Weak , 5 ${modID}:Fear .",
+    "UPGRADE_DESCRIPTION": "Apply 5 Weak ,  10 ${modID}:Fear ."
+  },
+  "${modID}:StunSelf": {
+    "NAME": "Cross Defense",
+    "DESCRIPTION": "Gain 12 times the energy used as Block. End your turn immediately. NL At the start of your next turn, NL gain half of the Block amount."
+  },
+  "${modID}:Infected": {
+    "NAME": "Infected",
+    "DESCRIPTION": "Retain . Gain 1 Strength when drawn, lose 1 HP at the end of turn."
+  },
+  "${modID}:MedBox": {
+    "NAME": "Emergency Medical",
+    "DESCRIPTION": "Exhaust . Play immediately upon draw. Heal !M! HP. NL Cannot be upgraded."
+  },
+  "${modID}:AddAttack": {
+    "NAME": "Combo",
+    "DESCRIPTION": "Deal !D! damage. If the previous card played was an attack card, gain 1 *Quick *Attack.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. If the previous card played was an attack card, gain 2 *Quick *Attack."
+  },
+  "${modID}:Accumulation": {
+    "NAME": "Accumulation",
+    "DESCRIPTION": "Exhaust . NL Gain !M! Strength and Dexterity . NL Can be upgraded multiple times."
+  },
+  "${modID}:Backpack": {
+    "NAME": "Backpack",
+    "DESCRIPTION": "Exhaust . Draw until hand is full.",
+    "UPGRADE_DESCRIPTION": "Exhaust . Draw until hand is full. Gain 1 [E] ."
+  },
+  "${modID}:TouchingStars": {
+    "NAME": "Touching Stars",
+    "DESCRIPTION": "Innate , Retain , Exhaust , ${modID}:Unique . NL Deal !D! ${modID}:TrueDamage. Reduce cost by 1 each turn.",
+    "UPGRADE_DESCRIPTION": "Innate , Retain , Exhaust , ${modID}:Unique . NL Deal !D! ${modID}:TrueDamage. Reduce cost by 1 each turn."
+  },
+  "${modID}:Extend": {
+    "NAME": "Mind Extension",
+    "DESCRIPTION": "Retain , Exhaust . Deal !D! damage. Damage increases by twice the number of identical cards in hand each turn."
+  },
+  "${modID}:ExtendP": {
+    "NAME": "Inception",
+    "DESCRIPTION": "Add 1 *Mind *Extension to hand at the start of each turn and now.",
+    "UPGRADE_DESCRIPTION": "Add 2 *Mind *Extension to hand at the start of each turn and now."
+  },
+  "${modID}:GetReady": {
+    "NAME": "Get Ready",
+    "DESCRIPTION": "Gain 1 Strength , 3 ${modID}:Inception . NL Gain [E] [E] at the start of next turn, 10 Block, NL and draw 2 additional cards.",
+    "UPGRADE_DESCRIPTION": "Gain 2 Strength , 3 ${modID}:Inception . NL Gain [E] [E] [E] at the start of next turn, 20 Block, NL and draw 3 additional cards."
+  },
+  "${modID}:TacticalGuide": {
+    "NAME": "Tactical Guidance",
+    "DESCRIPTION": "Exhaust . NL Exhaust all your cards and draw that many +1 cards.",
+    "UPGRADE_DESCRIPTION": "Exhaust all your cards and draw that many +1 cards."
+  },
+  "${modID}:ExpressStrike": {
+    "NAME": "Seamless Strikes",
+    "DESCRIPTION": "Deal !D! damage !M! times."
+  },
+  "${modID}:Hunter": {
+    "NAME": "Hunter",
+    "DESCRIPTION": "Deal !D! damage, then deal half the ${modID}:TrueDamage bypassing Block."
+  },
+  "${modID}:Slay": {
+    "NAME": "Prey",
+    "DESCRIPTION": "Deal !D! damage, gain Temporary HP equal to half the ${modID}:TrueDamage bypassing Block."
+  },
+  "${modID}:AfterShock": {
+    "NAME": "AfterShock",
+    "DESCRIPTION": "Exhaust . NL Next 2 Attack cards played also play *Quick *Attack .",
+    "UPGRADE_DESCRIPTION": "Exhaust . NL Next 4 Attack cards played also play *Quick *Attack ."
+  },
+  "${modID}:FallOut": {
+    "NAME": "Fallout",
+    "DESCRIPTION": "Exhaust . Deal !D! damage to the first enemy, bouncing damage to enemies behind. Damage reduces by 4 each bounce until it reaches 0 or less."
+  },
+  "${modID}:ForgetMeNot": {
+    "NAME": "Forget Me Not",
+    "DESCRIPTION": "Exhaust , ${modID}:Unique . NL Deal ${modID}:TrueDamage equal to 30% of the enemy's missing HP to all enemies.",
+    "UPGRADE_DESCRIPTION": "Exhaust , ${modID}:Unique . NL Deal ${modID}:TrueDamage equal to 40% of the enemy's missing HP to all enemies."
+  },
+  "${modID}:Shadow": {
+    "NAME": "Shadow",
+    "DESCRIPTION": "Exhaust . Apply 4 ${modID}:Fear to all enemies.",
+    "UPGRADE_DESCRIPTION": "Exhaust . Apply 7 ${modID}:Fear to all enemies."
+  },
+  "${modID}:React": {
+    "NAME": "Adaptability",
+    "DESCRIPTION": "If the enemy's intent is to attack, give 2 ${modID}:Fear . Otherwise, deal !D! damage.",
+    "UPGRADE_DESCRIPTION": "If the enemy's intent is to attack, give 3 ${modID}:Fear . Otherwise, deal !D! damage."
+  },
+  "${modID}:Switching": {
+    "NAME": "Tactical Exchange",
+    "DESCRIPTION": "Exhaust . Choose to swap Strength and Dexterity.",
+    "UPGRADE_DESCRIPTION": "Exhaust , Innate . Choose to swap Strength and Dexterity."
+  },
+  "${modID}:Fitting": {
+    "NAME": "Battle Instinct",
+    "DESCRIPTION": "If the enemy's intent is to attack, gain 1 Dexterity , otherwise gain 1 Strength ."
+  },
+  "${modID}:Refresh": {
+    "NAME": "Revitalize",
+    "DESCRIPTION": "Remove all your current negative effects."
+  },
+  "${modID}:STD": {
+    "NAME": "Tactical Discipline",
+    "DESCRIPTION": "Convert Strength into Dexterity ."
+  },
+  "${modID}:DTS": {
+    "NAME": "Tactical Surge",
+    "DESCRIPTION": "Convert Dexterity into Strength ."
+  },
+  "${modID}:SolidifyMind": {
+    "NAME": "Emotional Fortification",
+    "DESCRIPTION": "Exhaust . Gain temporary HP equal to one-third of your current Block .",
+    "UPGRADE_DESCRIPTION": "Exhaust . Gain temporary HP equal to one-half of your current Block ."
+  },
+  "${modID}:Lullaby": {
+    "NAME": "Lullaby",
+    "DESCRIPTION": "Stun all enemies.",
+    "UPGRADE_DESCRIPTION": "Stun all enemies for two turns."
+  },
+  "${modID}:FaceYourSin": {
+    "NAME": "FaceYourSin",
+    "DESCRIPTION": "Deal damage to the enemy equal to its current intent's damage. Damage source is considered the enemy. If intent is not an attack, give 2 ${modID}:Fear .",
+    "UPGRADE_DESCRIPTION": "Deal damage to the enemy equal to its current intent's damage. Damage source is considered the enemy. If intent is not an attack, give 4 ${modID}:Fear ."
+  },
+  "${modID}:Sleepy": {
+    "NAME": "Sleepy",
+    "DESCRIPTION": "Ethereal . Upon being exhausted, gain [E] next turn. Unupgradable."
+  },
+  "${modID}:Endophobia": {
+    "NAME": "Endophobia",
+    "DESCRIPTION": "Gain one *Infection , give all enemies 2 ${modID}:Fear , then deal !D! damage.",
+    "UPGRADE_DESCRIPTION": "Gain one *Infection , give all enemies 3 ${modID}:Fear , then deal !D! damage."
+  },
+  "${modID}:OptionBlock": {
+    "NAME": "Originiums Blade: Block",
+    "DESCRIPTION": "Gain 10 Block ."
+  },
+  "${modID}:OptionDefend": {
+    "NAME": "Originiums Blade: Defend",
+    "DESCRIPTION": "Gain 4 Metallicize ."
+  },
+  "${modID}:OptionAttack": {
+    "NAME": "Originiums Blade: Attack",
+    "DESCRIPTION": "Deal !D! damage to a random enemy."
+  },
+  "${modID}:OptionStrike": {
+    "NAME": "Originiums Blade: Siege",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies."
+  },
+  "${modID}:AMOS": {
+    "NAME": "A.M.O.S",
+    "DESCRIPTION": "Exhaust . Add 2 *Inheritors and *Outriders to the draw pile."
+  },
+  "${modID}:Inheritors": {
+    "NAME": "Outriders",
+    "DESCRIPTION": "Trigger either *Primordial Blade: Defend or *Primordial Blade: Strike."
+  },
+  "${modID}:Outriders": {
+    "NAME": "Inheritors",
+    "DESCRIPTION": "Trigger either *Primordial Blade: Block or *Primordial Blade: Attack."
   }
 }

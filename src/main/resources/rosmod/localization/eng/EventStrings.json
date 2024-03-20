@@ -17,5 +17,67 @@
       "[Leave]",
       "Select card to remove. (You can also stick extra text like this in here.)"
     ]
+  },
+  "${modID}:PickUp": {
+    "NAME": "Pick Up",
+    "DESCRIPTIONS": [
+      "You suddenly find yourself back on Rhodes Island's promenade. You spot #y a wallet at your feet.",
+      "You wait a while in place, and from a distance, you see a Filin coming your way.",
+      "You pick up the wallet, feeling the weight of coins inside through the leather. Best to leave quickly.",
+      "A wallet lying conspicuously on the ground? Too suspicious, better act like you didn't see it.",
+      "Jessica expresses her gratitude to you and invites you for afternoon tea.",
+      "You join Jessica for her lavish afternoon tea, delightful. (Restore all life, increase maximum life by 15)",
+      "You decline the invitation; there are more important matters at hand. As you leave, she hands you a gift from the Doctor."
+    ],
+    "OPTIONS": [
+      "Wait for someone.",
+      "No one around, pick it up.",
+      "Best not to meddle.",
+      "Accept graciously.",
+      "Politely decline and leave.",
+      "Seems to belong to Jessica.",
+      "[Leave]"
+    ]
+  },
+  "${modID}:RhodesIslandSafeHouse": {
+    "NAME": "Rhodes Island Safe House",
+    "DESCRIPTIONS": [
+      "You turn a corner, and before you is a familiar door. Behind the door seems to be a commonly seen backup safe house from Rhodes Island's various locations. Do you want to check it out?",
+      "You use the terminal to unlock the safe house. Inside, though a bit rudimentary, it has all the basic amenities and can serve as a temporary rest stop.",
+      "You try to forcefully break into the safe house and accidentally scratch your arm on a sharp piece of metal. Despite being a bit rudimentary inside, the safe house has all the basic amenities and can serve as a temporary rest stop.",
+      "Better to keep moving, slip away.",
+      "You use the medical kit on the wall and rest on the bed for a while. Feeling much better, it's time to leave.",
+      "You search the room and find a #y relic! It's time to leave.",
+      "You upgrade your equipment with the tools left behind in the room; it's time to go."
+    ],
+    "OPTIONS": [
+      "Use the terminal to unlock.",
+      "[Need Relic: Rosemary's Terminal]",
+      "[Cursed: #rInfection] Forcefully break in.",
+      "[Leave]",
+      "Restore 40% of max HP.",
+      "Obtain 1 #y relic.",
+      "Randomly upgrade two cards. If the deck has *Training, upgrade once.",
+      ""
+    ]
+  },
+  "${modID}:UPGSkill": {
+    "NAME": "Rhodes Island Training Room",
+    "DESCRIPTIONS": [
+      "You suddenly find yourself back in the Rhodes Island training room, the equipment in front of you so familiar. Do you want to practice your skills?",
+      "You start from scratch and gain #ySkill1.",
+      "You advance your skills, losing #ySkill1 and gaining #ySkill2.",
+      "You advance your skills, losing #ySkill1 and gaining #ySkill3.",
+      "Nothing new to learn, slip away.",
+      "You practice your existing skills.",
+      "This also works in card text! But not on keywords."
+    ],
+    "OPTIONS": [
+      "[Practice] Gain #ySkill1",
+      "[Advance] #rLose #ySkill1 and gain #ySkill2",
+      "[Advance] #rLose #ySkill1 and gain #ySkill3",
+      "[Leave]",
+      "[Nothing more to learn] Upgrade one card. If the deck has *Training, upgrade once."
+    ]
   }
 }

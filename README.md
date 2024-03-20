@@ -10,6 +10,13 @@
 
 ### This mod still in testing, if you run into any issues in this mod, please feed back at GitHub!
 
+steam workshop current version: 0.9.1
+
+v0.9.1
+fix knowen bugs on steam, English supported!
+v0.9.0
+first public version
+
 Github项目地址：[R0Bill/RosMod: Arknights Rosmontis Mod for Slay The Spire (GitHub.com)](https://github.com/R0Bill/RosMod)
 
 #### 警告：本mod修改了多处游戏本体以实现功能，可能导致模组兼容性不佳！
@@ -30,7 +37,8 @@ This mod has no commercial use and no commercial intention. If you obtain this m
 
 本mod的图像均来自于pixiv，bilibili视频截图，鹰角网络**且均为未获得授权**，如有侵权请联系作者，珍重向您致歉。
 
-The images in this mod are all from pixiv, bilibili video screenshots, and Hypergryph Network , **and they are all NOT** **authorized**. If there is any infringement, please contact the author. I sincerely apologize to you.
+The images in this mod are all from pixiv, bilibili video screenshots, and Hypergryph Network , **and they are all NOT
+authorized**. If there is any infringement, please contact the author. I sincerely apologize to you.
 
 以下是图片来源公示：
 pixiv：

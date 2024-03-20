@@ -55,7 +55,8 @@ public class Skill1Power extends BasePower {
                     abstractCard.calculateCardDamage(m);
                 abstractCard.purgeOnUse = true;
                 if (m != null && m.isDead) m = AbstractDungeon.getCurrRoom().monsters.getRandomMonster(true);
-                AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(abstractCard, m, 0, true, true), true);
+                AbstractCard card = abstractCard.makeSameInstanceOf();
+                AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(card, m, 0, true, true), true);
             } else if (amount == 3 && magic == 3) {
                 magic = 0;
                 flash();
@@ -69,7 +70,8 @@ public class Skill1Power extends BasePower {
                     abstractCard.calculateCardDamage(m);
                 abstractCard.purgeOnUse = true;
                 m = AbstractDungeon.getCurrRoom().monsters.getRandomMonster(true);
-                AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(abstractCard, m, 0, true, true), true);
+                AbstractCard card = abstractCard.makeSameInstanceOf();
+                AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(card, m, 0, true, true), true);
             }
         }
     }

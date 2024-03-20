@@ -6,27 +6,81 @@
     ]
   },
   "${modID}:Skill3Power": {
-    "NAME": "with your wishes",
+    "NAME": "As You Wish",
     "DESCRIPTIONS": [
-      "Double any attack cards cost and will play 3 times. Lost 3 Dexterity. 50% to stun target."
+      "All attack cards cost #y2 times more and are considered to be played #y3 times. Each play has a #b50% chance to #yStun the target. #rLose 3 Dexterity."
     ]
   },
   "${modID}:Skill2Power": {
-    "NAME": "Ultimate Power",
+    "NAME": "Peripheral Blockade",
     "DESCRIPTIONS": [
-      "You are Very Cool and Strong."
+      "Block does not decay, damage caused by annihilation battle gear increases by one quarter of the block value",
+      ". You gain one third of the block."
     ]
   },
   "${modID}:Skill1Power": {
-    "NAME": "Ultimate Power",
+    "NAME": "Mind Expansion",
     "DESCRIPTIONS": [
-      "You are Very Cool and Strong."
+      "Every",
+      "th attack card played each turn is played twice."
     ]
   },
   "${modID}:CommandTerminalPower": {
-    "NAME": "Ultimate Power",
+    "NAME": "Command Terminal",
     "DESCRIPTIONS": [
-      "You are Very Cool and Strong."
+      "At the start of your turn, heal 1 HP, gain [E]."
+    ]
+  },
+  "${modID}:MilliaPower": {
+    "NAME": "Millia's Disaster",
+    "DESCRIPTIONS": [
+      "When playing a skill card, randomly inflict",
+      " #yFear "
+    ]
+  },
+  "${modID}:StablePower": {
+    "NAME": "Stable Perception",
+    "DESCRIPTIONS": [
+      "Deals 20% additional True Damage when dealing damage."
+    ]
+  },
+  "${modID}:FearPower": {
+    "NAME": "Fear",
+    "DESCRIPTIONS": [
+      "Increases damage taken by",
+      ". Decreases damage dealt by",
+      ". Halves at the end of each turn."
+    ]
+  },
+  "${modID}:ExtendPower": {
+    "NAME": "Inception",
+    "DESCRIPTIONS": [
+      "At the start of your turn, add",
+      " #yThought Echos to your hand."
+    ]
+  },
+  "${modID}:AttachPower": {
+    "NAME": "Combo",
+    "DESCRIPTIONS": [
+      "The next",
+      " cards will also play an additional #yQuick Attack."
+    ]
+  },
+  "${modID}:EmergencyPower": {
+    "NAME": "Regenerative Shield",
+    "DESCRIPTIONS": [
+      "A regenerative energy shield that can absorb life loss and recharge",
+      " times. Requires one turn to recharge after each use.",
+      " #yRecharging.",
+      " #gAvailable.",
+      " #rUnavailable, charges depleted."
+    ]
+  },
+  "${modID}:GiveBlockNextTurn": {
+    "NAME": "Fortified Defense",
+    "DESCRIPTIONS": [
+      "At the start of your next turn, gain",
+      " Block."
     ]
   }
 }

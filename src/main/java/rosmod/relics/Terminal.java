@@ -1,5 +1,6 @@
 package rosmod.relics;
 
+import basemod.BaseMod;
 import basemod.abstracts.CustomRelic;
 import com.evacipated.cardcrawl.mod.stslib.relics.ClickableRelic;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
@@ -7,16 +8,21 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
+import org.apache.logging.log4j.Logger;
+import rosmod.BasicMod;
 
 import static rosmod.BasicMod.makeID;
 import static rosmod.BasicMod.relicPath;
 
 public class Terminal extends CustomRelic implements ClickableRelic {
 
-    private static final String NAME = "Terminal"; //The name will be used for determining the image file as well as the ID.
-    public static final String ID = makeID(NAME); //This adds the mod's prefix to the relic ID, resulting in modID:MyRelic
-    private static final RelicTier RARITY = RelicTier.COMMON; //The relic's rarity.
-    private static final LandingSound SOUND = LandingSound.CLINK; //The sound played when the relic is clicked.
+    private static final String NAME = "Terminal";
+    public static final String ID = makeID(NAME);
+    private static final RelicTier RARITY = RelicTier.COMMON;
+    private static final LandingSound SOUND = LandingSound.CLINK;
+    private Logger logger = BasicMod.logger;
+
 
     public Terminal() {
         super(ID, ImageMaster.loadImage(relicPath("Terminal.png")), ImageMaster.loadImage(relicPath("Terminal.png")), AbstractRelic.RelicTier.COMMON, AbstractRelic.LandingSound.FLAT);
@@ -24,16 +30,11 @@ public class Terminal extends CustomRelic implements ClickableRelic {
     }
 
     public void onRightClick() {
-        if (AbstractDungeon.player.energy.energy >= 1) {
-            if (!AbstractDungeon.player.exhaustPile.isEmpty()) {
-                AbstractCard card = AbstractDungeon.player.exhaustPile.getTopCard();
-//                if (AbstractDungeon.player.hand.size() < BaseMod.MAX_HAND_SIZE) {
-
-                addToBot(new MakeTempCardInHandAction(card, 1));
-                    //AbstractDungeon.player.hand.addToHand(card);
-                    AbstractDungeon.player.exhaustPile.removeCard(card);
-//                }
-            }
+//        logger.info(EnergyPanel.getCurrentEnergy());
+        if (EnergyPanel.getCurrentEnergy() >= 1 && !AbstractDungeon.player.exhaustPile.isEmpty() && AbstractDungeon.player.hand.size() < BaseMod.MAX_HAND_SIZE) {
+            AbstractCard card = AbstractDungeon.player.exhaustPile.getTopCard();
+            addToBot(new MakeTempCardInHandAction(card, 1));
+            AbstractDungeon.player.exhaustPile.removeCard(card);
             AbstractDungeon.player.hand.refreshHandLayout();
             AbstractDungeon.player.hand.glowCheck();
             AbstractDungeon.player.energy.use(1);

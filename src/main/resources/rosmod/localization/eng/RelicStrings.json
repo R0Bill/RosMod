@@ -8,43 +8,89 @@
   },
   "${modID}:AnnE": {
     "NAME": "Annihilation Equipment",
-    "FLAVOR": "Rosmontis own these tactical equipment. Only she can use these tonnage sword",
+    "FLAVOR": "Rosemary holds these heavy swords, swords that only she can use.",
     "DESCRIPTIONS": [
-      "When you use an attack card, deal 2 damage 2 times to all enemies"
+      "When you play an Attack card, deal 3 damage to ALL enemies."
     ]
-  },"${modID}:StolenMiniCake": {
-  "NAME": "Good Relic",
-  "FLAVOR": "Flavor text displayed in detailed relic view.",
-  "DESCRIPTIONS": [
-    "Gain [E] at the start of your turn. [E] is an energy icon."
-  ]
+  },
+  "${modID}:StolenMiniCake": {
+    "NAME": "Stolen Mini Cake",
+    "FLAVOR": "A small cake returned by the Doctor. Clearly, Rosemary forgot about this.",
+    "DESCRIPTIONS": [
+      "At the start of each turn, gain [E] ."
+    ]
   },
   "${modID}:ShoesFromAmiya": {
-    "NAME": "ShoesFromAmiya",
-    "FLAVOR": "Flavor text displayed in detailed relic view.",
+    "NAME": "Black Shoes",
+    "FLAVOR": "Shoes given by Amiya, they fit perfectly.",
     "DESCRIPTIONS": [
-      "Gain [E] at the start of your turn. [E] is an energy icon."
+      "At the start of combat, gain 3 Dexterity."
     ]
   },
   "${modID}:Terminal": {
-    "NAME": "Terminal",
-    "FLAVOR": "Flavor text displayed in detailed relic view.",
+    "NAME": "Rosemary's Terminal",
+    "FLAVOR": "A Rhodes Island customized portable terminal, mainly used for note-taking.",
     "DESCRIPTIONS": [
-      "Gain [E] at the start of your turn. [E] is an energy icon."
+      "Right-click to consume [E] and recall the last card Exhausted."
     ]
   },
   "${modID}:Plant": {
-    "NAME": "Terminal",
-    "FLAVOR": "Flavor text displayed in detailed relic view.",
+    "NAME": "Plant Specimen",
+    "FLAVOR": "An amateur plant specimen, seems like it hasn't been delivered yet.",
     "DESCRIPTIONS": [
-      "Gain [E] at the start of your turn. [E] is an energy icon."
+      "At the start of each turn, gain 5 Shield."
     ]
   },
   "${modID}:JudgeCount": {
-    "NAME": "Terminal",
-    "FLAVOR": "Flavor text displayed in detailed relic view.",
+    "NAME": "Hannibal's Codex",
+    "FLAVOR": "\"I will hold the punishment.\"",
     "DESCRIPTIONS": [
-      "Gain [E] at the start of your turn. [E] is an energy icon."
+      "At the start of combat, gain ",
+      " Dexterity and ",
+      " Strength .",
+      "At the start of combat, gain Dexterity equal to the stacks and half of the stacks as Strength."
+    ]
+  },
+  "${modID}:AncientCoin": {
+    "NAME": "Ancient Coin",
+    "FLAVOR": "Rusted ancient coin, impossible to tell its age. These are seen everywhere in Terra Firma.",
+    "DESCRIPTIONS": [
+      "Gain 150 gold immediately."
+    ]
+  },
+  "${modID}:TheHug": {
+    "NAME": "Perceptual Fusion Apparatus",
+    "FLAVOR": "Ensuring Rosemary's abilities to the body remain within controllable ranges.",
+    "DESCRIPTIONS": [
+      "At the start of combat, all enemies lose 30% HP."
+    ]
+  },
+  "${modID}:TargetHand": {
+    "NAME": "Broken Targeting Hand",
+    "FLAVOR": "Targets, not just for consecutive bullseyes anymore.",
+    "DESCRIPTIONS": [
+      "At the start of combat, gain twice the Strength of enemies."
+    ]
+  },
+  "${modID}:Oath": {
+    "NAME": "Finger Pledge",
+    "FLAVOR": "\"We believe in you. We believe in your pledge, little kitten.\"",
+    "DESCRIPTIONS": [
+      "When Rosemary takes fatal damage, Guardian assists, restoring half of her maximum HP (at least 30) and providing 300 Shield."
+    ]
+  },
+  "${modID}:JessicaWallet": {
+    "NAME": "Jessica's Spare Change",
+    "FLAVOR": "(;´༎ຶД༎ຶ`)",
+    "DESCRIPTIONS": [
+      "Upon pick-up, gain 300 *Gold*."
+    ]
+  },
+  "${modID}:BadGuy": {
+    "NAME": "\"Bad Guy\" is Here!",
+    "FLAVOR": "This transport flyer, which incorporates all of Rhodes Island's elite technology, guarantees everything for your journey, making your trip as smooth as a field trip in the wild.",
+    "DESCRIPTIONS": [
+      "At the start of combat, gain a regenerating shield that can absorb three #y${modID}:Breakthrough Shield hits. Requires one turn to recharge after each use."
     ]
   }
 }

@@ -23,7 +23,7 @@ public class OptionAttack extends BaseCard {
 
     public OptionAttack() {
         super(ID, info);
-        setDamage(10);
+        setDamage(7);
     }
 
     public void onChoseThisOption() {

@@ -1,13 +1,15 @@
 package rosmod.powers;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
+import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import org.apache.logging.log4j.Logger;
+import rosmod.BasicMod;
 
 import static rosmod.BasicMod.makeID;
 
@@ -23,29 +25,34 @@ public class StablePower extends BasePower {
     }
 
     private AbstractCreature target = null;
+    private AbstractCreature source = null;
     private AbstractCard.CardTarget cardTarget = null;
+    private Logger logger = BasicMod.logger;
 
     @Override
-    public float atDamageGive(float d, DamageInfo.DamageType type) {
-        int temp = (int) Math.ceil(d / 5);
-        if (target != null && cardTarget != AbstractCard.CardTarget.ALL_ENEMY) {
-            target = null;
-            cardTarget = null;
-            addToBot(new DamageAction(target, new DamageInfo(null, temp, DamageInfo.DamageType.HP_LOSS), AbstractGameAction.AttackEffect.SLASH_HEAVY));
-        } else if (target != null && cardTarget == AbstractCard.CardTarget.ALL_ENEMY) {
-            target = null;
-            cardTarget = null;
-            addToBot(new DamageAllEnemiesAction(null, DamageInfo.createDamageMatrix(temp, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+    public float atDamageFinalGive(float damage, DamageInfo.DamageType type) {
+//        logger.info("target:"+this.target+"  cardt:"+this.cardTarget+"  sou:"+this.source+"  da:"+damage);
+        if (this.target != null && !target.isDead && this.cardTarget == AbstractCard.CardTarget.ENEMY && damage != -1) {
+            addToBot(new LoseHPAction(target, (AbstractCreature) null, (int) damage / 5));
+            this.target = null;
+            this.source = null;
+            this.cardTarget = null;
+        } else if (this.target != null && !target.isDead && this.cardTarget == AbstractCard.CardTarget.ALL_ENEMY && damage != -1) {
+            for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters)
+                if (!mo.isDead)
+                    addToBot(new LoseHPAction(mo, (AbstractCreature) null, (int) damage / 5));
+            this.target = null;
+            this.source = null;
+            this.cardTarget = null;
+
         }
-        return d;
+        return damage;
     }
 
     @Override
     public void onUseCard(AbstractCard abstractCard, UseCardAction action) {
-        if (!abstractCard.purgeOnUse && abstractCard.target != AbstractCard.CardTarget.NONE && abstractCard.target != AbstractCard.CardTarget.SELF && abstractCard.target != AbstractCard.CardTarget.SELF_AND_ENEMY) {
-            target = action.target;
-            cardTarget = abstractCard.target;
-        }
-
+        this.target = action.target;
+        this.cardTarget = abstractCard.target;
+        this.source = action.source;
     }
 }

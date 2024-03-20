@@ -28,7 +28,7 @@ public class Deprive extends BaseCard {//
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        addToBot(new ApplyPowerAction(abstractMonster, abstractPlayer, new FearPower(abstractMonster, (this.upgraded ? 10 : 5))));
+        addToBot(new ApplyPowerAction(abstractMonster, abstractPlayer, new FearPower(abstractMonster, (this.upgraded ? 7 : 3))));
         addToBot(new ApplyPowerAction(abstractMonster, abstractPlayer, new WeakPower(abstractMonster, 5, false), 5));
     }
 }

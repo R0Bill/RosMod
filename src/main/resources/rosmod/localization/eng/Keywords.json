@@ -1,23 +1,61 @@
 [
   {
-    "PROPER_NAME": "This is displayed in the tooltip.",
+    "PROPER_NAME": "True Damage",
     "NAMES": [
-      "these",
-      "are",
-      "detected",
-      "in",
-      "the",
-      "text"
+      "TrueDamage",
+      "DirectDamage"
     ],
-    "DESCRIPTION": "This is displayed in the tooltip. Spaces should not be used be avoided in NAMES, with the exception of multi-word keywords (see next entry)."
+    "DESCRIPTION": "Direct reduction of health."
   },
   {
-    "PROPER_NAME": "Multiword Keyword",
+    "PROPER_NAME": "Stun",
     "NAMES": [
-      "multiword keyword",
-      "multiword_keyword",
-      "multiword_keywords"
+      "Stun",
+      "Daze"
     ],
-    "DESCRIPTION": "Make sure the first element in NAMES has no underscores. The rest should use _ in the place of spaces. In card text, you'll use the underscore versions."
+    "DESCRIPTION": "Unable to act for one turn."
+  },
+  {
+    "PROPER_NAME": "Fear",
+    "NAMES": [
+      "Fear"
+    ],
+    "DESCRIPTION": "Increases damage received by the amount of this mark, reduces damage dealt by the amount of this mark."
+  },
+  {
+    "PROPER_NAME": "Piercing Shield",
+    "NAMES": [
+      "Piercing Shield",
+      "Breaking Block"
+    ],
+    "DESCRIPTION": "Damage dealt to monsters subtracts damage blocked by the monster's block amount."
+  },
+  {
+    "PROPER_NAME": "Inception",
+    "NAMES": [
+      "Inception"
+    ],
+    "DESCRIPTION": "Adds #yN copies of *Thought Derivative to your hand at the beginning of each turn and now."
+  },
+  {
+    "PROPER_NAME": "Unique",
+    "NAMES": [
+      "Unique"
+    ],
+    "DESCRIPTION": "Unique effect, the ability possessed by this keyword is unique, cannot be obtained again when there are existing abilities with the same name."
+  },
+  {
+    "PROPER_NAME": "Execute",
+    "NAMES": [
+      "Execute"
+    ],
+    "DESCRIPTION": "Using this card results in a kill."
+  },
+  {
+    "PROPER_NAME": "Independent",
+    "NAMES": [
+      "Independent"
+    ],
+    "DESCRIPTION": "Not affected by #y“As You Wish” responses and not easily affected by combo and energy changes."
   }
 ]

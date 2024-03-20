@@ -1,21 +1,20 @@
 package rosmod.relics;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
-import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import rosmod.character.Rosmontis;
 
 import static rosmod.BasicMod.makeID;
 
 public class AnnE extends BaseRelic {
-    private static final String NAME = "AnnE"; //The name will be used for determining the image file as well as the ID.
-    public static final String ID = makeID(NAME); //This adds the mod's prefix to the relic ID, resulting in modID:MyRelic
-    private static final RelicTier RARITY = RelicTier.STARTER; //The relic's rarity.
-    private static final LandingSound SOUND = LandingSound.CLINK; //The sound played when the relic is clicked.
+    private static final String NAME = "AnnE";
+    public static final String ID = makeID(NAME);
+    private static final RelicTier RARITY = RelicTier.STARTER;
+    private static final LandingSound SOUND = LandingSound.CLINK;
 
     public AnnE() {
         super(ID, NAME, Rosmontis.Enums.CARD_COLOR, RARITY, SOUND);
@@ -25,8 +24,11 @@ public class AnnE extends BaseRelic {
     public void onUseCard(AbstractCard targetCard, UseCardAction useCardAction) {
         if (targetCard.type == AbstractCard.CardType.ATTACK){
             flash();
-            addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-            addToBot(new DamageAllEnemiesAction(null, DamageInfo.createDamageMatrix(AbstractDungeon.player.hasPower("rosmontis:Skill2") ? (3 + (AbstractDungeon.player.currentBlock / 4)) : 3, false), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.NONE));
+            for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
+                if (!mo.isDead)
+                    addToBot(new DamageAction(mo, new DamageInfo(mo, AbstractDungeon.player.hasPower("rosmontis:Skill2Power") ? (3 + (AbstractDungeon.player.currentBlock / 4)) : 3)));
+            }
+//            addToBot(new DamageAllEnemiesAction(null, DamageInfo.createDamageMatrix(AbstractDungeon.player.hasPower("rosmontis:Skill2") ? (3 + (AbstractDungeon.player.currentBlock / 4)) : 3, false), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.NONE));
         }
     }
 

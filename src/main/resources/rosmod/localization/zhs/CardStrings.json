@@ -34,8 +34,7 @@
   },
   "${modID}:FlyRos": {
     "NAME": "战术飞行躲避",
-    "DESCRIPTION": " 消耗 。获得1回合 无实体 。获得2 敏捷 。",
-    "UPGRADE_DESCRIPTION": "获得1回合 无实体 。获得2 敏捷 。"
+    "DESCRIPTION": " 消耗 。获得1回合 无实体 。获得2 敏捷 。"
   },
   "${modID}:HeavyAttackRos": {
     "NAME": "重击",
@@ -57,12 +56,12 @@
   "${modID}:Skill1": {
     "NAME": "思维膨大",
     "DESCRIPTION": "${modID}:唯一 。每回合第3张攻击牌视为打出两次。",
-    "UPGRADE_DESCRIPTION": "${modID}:唯一 ， 固有 。每回合第3张攻击牌视为打出两次。"
+    "UPGRADE_DESCRIPTION": "${modID}:唯一 ， 固有 。每回合第2张攻击牌视为打出两次。"
   },
   "${modID}:Skill2": {
     "NAME": "末梢阻断",
-    "DESCRIPTION": " ${modID}:唯一 。 格挡 不会消失，你造成的伤害增加你 格挡 量的三分之一。获得的 格挡 增加一半。",
-    "UPGRADE_DESCRIPTION": " ${modID}:唯一 ， 固有 。 格挡 不会消失，你造成的伤害增加你 格挡 量的三分之一。获得的 格挡 增加一半。"
+    "DESCRIPTION": " ${modID}:唯一 。 格挡 不会消失，歼灭战装备造成的伤害增加你 格挡 量的四分之一。获得的 格挡 增加三分之一。",
+    "UPGRADE_DESCRIPTION": " ${modID}:唯一 ， 固有 。 格挡 不会消失，歼灭战装备造成的伤害增加你 格挡 量的四分之一。获得的 格挡 增加三分之一。"
   },
   "${modID}:AddDefend": {
     "NAME": "连续格挡",
@@ -118,8 +117,8 @@
   },
   "${modID}:ThrowAway": {
     "NAME": "挥袖",
-    "DESCRIPTION": "造成5点伤害，抽1张牌。",
-    "UPGRADE_DESCRIPTION": "造成5点伤害，抽2张牌。"
+    "DESCRIPTION": "造成 !D! 点伤害，抽1张牌。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害，抽2张牌。"
   },
   "${modID}:DoublePre": {
     "NAME": "两手准备",
@@ -156,7 +155,7 @@
   "${modID}:Backpack": {
     "NAME": "行囊",
     "DESCRIPTION": " 消耗 。抽至手牌上限。",
-    "UPGRADE_DESCRIPTION": " 消耗 。抽至手牌上限。获得1点能量。"
+    "UPGRADE_DESCRIPTION": " 消耗 。抽至手牌上限。获得1 [E] 。"
   },
   "${modID}:TouchingStars": {
     "NAME": "触及星辰",

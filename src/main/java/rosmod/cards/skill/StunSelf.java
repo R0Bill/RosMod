@@ -34,6 +34,8 @@ public class StunSelf extends BaseCard {
             addToBot(new GainBlockAction(abstractPlayer, abstractPlayer, (this.energyOnUse * 16)));
             addToBot(new ApplyPowerAction(abstractPlayer, abstractPlayer, new GiveBlockNextTurn(abstractPlayer, ((this.energyOnUse * 16) / 2))));
         }
+        if (!this.freeToPlayOnce)
+            abstractPlayer.energy.use(this.energyOnUse);
         addToBot(new PressEndTurnButtonAction());
     }
 

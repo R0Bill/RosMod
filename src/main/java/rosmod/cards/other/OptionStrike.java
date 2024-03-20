@@ -24,7 +24,7 @@ public class OptionStrike extends BaseCard {
 
     public OptionStrike() {
         super(ID, info);
-        setDamage(5);
+        setDamage(4);
     }
 
     public void onChoseThisOption() {

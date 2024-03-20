@@ -16,12 +16,11 @@ public class Lullaby extends BaseCard {
             CardType.SKILL,
             CardRarity.RARE,
             CardTarget.ALL_ENEMY,
-            2
+            3
     );
 
     public Lullaby() {
         super(ID, info);
-        setExhaust(true);
     }
 
     @Override

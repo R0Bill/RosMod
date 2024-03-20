@@ -18,8 +18,8 @@ public class StrikeRos extends BaseCard {
             CardTarget.ENEMY,
             1
     );
-    private static final int DAMAGE = 6;
-    private static final int UPG_DAMAGE = 6;
+    private static final int DAMAGE = 5;
+    private static final int UPG_DAMAGE = 5;
 
     public  StrikeRos(){
         super(ID,info);
