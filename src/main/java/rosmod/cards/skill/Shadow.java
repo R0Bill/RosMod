@@ -26,7 +26,7 @@ public class Shadow extends BaseCard {
 
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-            addToBot(new ApplyPowerAction(mo, abstractPlayer, new FearPower(mo, this.upgraded ? 7 : 4)));
+            addToBot(new ApplyPowerAction(mo, abstractPlayer, new FearPower(mo, this.upgraded ? 7 : 5)));
         }
     }
 

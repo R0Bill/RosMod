@@ -8,8 +8,6 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import rosmod.cards.BaseCard;
-import rosmod.cards.attack.Inheritors;
-import rosmod.cards.attack.Outriders;
 import rosmod.character.Rosmontis;
 import rosmod.util.CardStats;
 

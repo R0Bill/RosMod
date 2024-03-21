@@ -24,7 +24,7 @@ public class Skill3Power extends BasePower {
 
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (!card.purgeOnUse && card.type == AbstractCard.CardType.ATTACK && !card.cardID.equals("rosmontis:TouchingStars")) {
+        if (!card.purgeOnUse && card.type == AbstractCard.CardType.ATTACK && !card.cardID.equals("rosmontis:TouchingStars") && !card.cardID.equals("rosmontis:ForgetMeNot")) {
             this.flash();
             //attack 3 times
             AbstractMonster m = null;

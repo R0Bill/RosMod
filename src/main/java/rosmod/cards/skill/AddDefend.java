@@ -27,11 +27,15 @@ public class AddDefend extends BaseCard {
         setBlock(BLOCK, UPG_BLOCK); //Sets the card's Block and how much it changes when upgraded.
     }
 
+    public void triggerOnOtherCardPlayed(AbstractCard c) {
+        triggerOnGlowCheck();
+    }
+
     @Override
     public void triggerOnGlowCheck() {
-        if (AbstractDungeon.actionManager.cardsPlayedThisCombat.size() >= 2 && AbstractDungeon.actionManager.cardsPlayedThisCombat
+        if (!AbstractDungeon.actionManager.cardsPlayedThisCombat.isEmpty() && AbstractDungeon.actionManager.cardsPlayedThisCombat
                 .get(AbstractDungeon.actionManager.cardsPlayedThisCombat
-                        .size() - 2).type == AbstractCard.CardType.SKILL) {
+                        .size() - 1).type == AbstractCard.CardType.SKILL) {
             this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
         } else {
             this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();

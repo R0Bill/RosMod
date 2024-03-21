@@ -18,7 +18,7 @@ public class QuickAttack extends BaseCard {
             CardTarget.ENEMY,
             0
     );
-    private static final int DAMAGE = 3;
+    private static final int DAMAGE = 2;
     private static final int UPG_DAMAGE = 2;
 
     public QuickAttack(){

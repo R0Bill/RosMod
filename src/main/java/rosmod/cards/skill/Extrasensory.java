@@ -30,9 +30,6 @@ public class Extrasensory extends BaseCard {
         for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters)
             if (!mo.isDead)
                 monum++;
-        if (this.upgraded) {
-            addToBot(new MakeTempCardInHandAction(new Summon(), monum));
-        }
-        addToBot(new MakeTempCardInHandAction(new Summon(), monum));
+        addToBot(new MakeTempCardInHandAction(new Summon(), this.upgraded ? 2 * monum : monum));
     }
 }

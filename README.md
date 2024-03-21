@@ -10,16 +10,20 @@
 
 ### This mod still in testing, if you run into any issues in this mod, please feed back at GitHub!
 
-steam workshop current version: 0.9.1-beta
+steam workshop current version: 0.9.2
 
+v0.9.2
+fix keyword Unique didn't work on ForgetMeNot. balance other cards.
 v0.9.1-beta
 fix starter relic damage type to thorns. fix Skill1 trigger card into its counts. balance some defend cards
 v0.9.1-alpha
 emergency fix card:Extend cannot use bug. balance some cards.
 v0.9.1
-fix knowen bugs on steam, English supported!
+fix known bugs on steam, English supported!
 v0.9.0
 first public version
+
+--- 
 
 Github项目地址：[R0Bill/RosMod: Arknights Rosmontis Mod for Slay The Spire (GitHub.com)](https://github.com/R0Bill/RosMod)
 

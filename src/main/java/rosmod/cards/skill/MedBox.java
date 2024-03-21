@@ -39,4 +39,8 @@ public class MedBox extends BaseCard {
         addToTop(new ExhaustSpecificCardAction(this, AbstractDungeon.player.hand));
     }
 
+    public boolean canUpgrade() {
+        return false;
+    }
+
 }

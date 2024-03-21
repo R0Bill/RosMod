@@ -1,4 +1,4 @@
-package rosmod.cards.attack;
+package rosmod.cards.skill;
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.watcher.ChooseOneAction;
@@ -20,7 +20,7 @@ public class Outriders extends BaseCard {
     public static final String ID = makeID("Outriders");
     private static final CardStats info = new CardStats(
             Rosmontis.Enums.CARD_COLOR,
-            CardType.ATTACK,
+            CardType.SKILL,
             AbstractCard.CardRarity.SPECIAL,
             AbstractCard.CardTarget.NONE,
             0

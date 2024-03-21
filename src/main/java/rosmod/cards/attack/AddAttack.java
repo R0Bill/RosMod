@@ -45,9 +45,9 @@ public class AddAttack extends BaseCard {
         addToBot(new DamageAction(abstractMonster, new DamageInfo(abstractPlayer, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_HEAVY));
 //        addToBot(new AddAttackAction());//maybe we don't need this action... it should be fit in this class.
         //anyway, it works, then let it go
-        if (AbstractDungeon.actionManager.cardsPlayedThisCombat.size() >= 2 && AbstractDungeon.actionManager.cardsPlayedThisCombat
+        if (!AbstractDungeon.actionManager.cardsPlayedThisCombat.isEmpty() && AbstractDungeon.actionManager.cardsPlayedThisCombat
                 .get(AbstractDungeon.actionManager.cardsPlayedThisCombat
-                        .size() - 2).type == AbstractCard.CardType.ATTACK) {
+                        .size() - 1).type == AbstractCard.CardType.ATTACK) {
             addToBot(new MakeTempCardInHandAction(new QuickAttack(), this.upgraded ? 2 : 1));
         }
     }
