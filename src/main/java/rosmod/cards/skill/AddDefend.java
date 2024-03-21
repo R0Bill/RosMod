@@ -18,7 +18,7 @@ public class AddDefend extends BaseCard {
             CardTarget.SELF,
             1
     );
-    private static final int BLOCK = 6;
+    private static final int BLOCK = 5;
     private static final int UPG_BLOCK = 3;
 
     //    private static final int DEX = 1;

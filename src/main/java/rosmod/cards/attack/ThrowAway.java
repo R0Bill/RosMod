@@ -15,11 +15,11 @@ public class ThrowAway extends BaseCard {
     private static final CardStats info = new CardStats(
             Rosmontis.Enums.CARD_COLOR,
             CardType.ATTACK,
-            CardRarity.COMMON,
+            CardRarity.UNCOMMON,
             CardTarget.ENEMY,
             0
     );
-    private static final int DAMAGE = 5;
+    private static final int DAMAGE = 3;
 
     public ThrowAway() {
         super(ID, info);

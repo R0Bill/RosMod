@@ -24,7 +24,8 @@ public class FallOut extends BaseCard {
     public FallOut() {
         super(ID, info);
         setExhaust(true);
-        setDamage(16, 4);
+        setCostUpgrade(2);
+        setDamage(12, 4);
     }
 
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {

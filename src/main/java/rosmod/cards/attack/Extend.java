@@ -30,10 +30,6 @@ public class Extend extends BaseCard {
         setMagic(5);
     }
 
-    public boolean canUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        return false;
-    }
-
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         addToBot(new DamageAction(abstractMonster, new DamageInfo(abstractPlayer, this.damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_HEAVY));
     }

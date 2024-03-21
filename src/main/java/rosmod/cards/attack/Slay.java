@@ -25,7 +25,7 @@ public class Slay extends BaseCard {
 
     public Slay() {
         super(ID, info);
-        setDamage(15, 10);
+        setDamage(15, 5);
         tags.add(CardTags.STRIKE);
     }
 

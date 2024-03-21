@@ -30,7 +30,7 @@ public class CommandTerminal extends BaseCard {
     public boolean canUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         boolean powerExists = false;
         for (AbstractPower pow : abstractPlayer.powers) {
-            if (pow.ID.equals("rosmontis:CommandTerminal")) {
+            if (pow.ID.equals("rosmontis:CommandTerminalPower")) {
                 powerExists = true;
                 break;
             }
@@ -42,7 +42,7 @@ public class CommandTerminal extends BaseCard {
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         boolean powerExists = false;
         for (AbstractPower pow : AbstractDungeon.player.powers) {
-            if (pow.ID.equals("rosmontis:CommandTerminal")) {
+            if (pow.ID.equals("rosmontis:CommandTerminalPower")) {
                 powerExists = true;
                 break;
             }

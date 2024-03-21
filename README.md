@@ -12,6 +12,8 @@
 
 steam workshop current version: 0.9.1
 
+v0.9.1-alpha
+emergency fix card:Extend cannot use bug. balance some cards.
 v0.9.1
 fix knowen bugs on steam, English supported!
 v0.9.0

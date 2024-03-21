@@ -19,7 +19,7 @@ public class Impulse extends BaseCard {
             CardTarget.ENEMY,
             1
     );
-    private static final int DAMAGE = 16;
+    private static final int DAMAGE = 15;
 
     public Impulse() {
         super(ID, info);
