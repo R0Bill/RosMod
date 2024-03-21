@@ -26,7 +26,7 @@ public class FlyRos extends BaseCard {
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster){
-        addToBot(new ApplyPowerAction(abstractPlayer, abstractPlayer, new IntangiblePlayerPower(abstractPlayer, 1), 1));
-        addToBot(new ApplyPowerAction(abstractPlayer, abstractPlayer, new DexterityPower(abstractPlayer, 2), 2));
+        addToBot(new ApplyPowerAction(abstractPlayer, abstractPlayer, new IntangiblePlayerPower(abstractPlayer, 1)));
+        addToBot(new ApplyPowerAction(abstractPlayer, abstractPlayer, new DexterityPower(abstractPlayer, this.upgraded ? 2 : 1)));
     }
 }

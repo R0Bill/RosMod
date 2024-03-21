@@ -10,8 +10,10 @@
 
 ### This mod still in testing, if you run into any issues in this mod, please feed back at GitHub!
 
-steam workshop current version: 0.9.1
+steam workshop current version: 0.9.1-beta
 
+v0.9.1-beta
+fix starter relic damage type to thorns. balance some defend cards
 v0.9.1-alpha
 emergency fix card:Extend cannot use bug. balance some cards.
 v0.9.1

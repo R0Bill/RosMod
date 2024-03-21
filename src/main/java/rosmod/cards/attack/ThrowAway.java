@@ -17,22 +17,22 @@ public class ThrowAway extends BaseCard {
             CardType.ATTACK,
             CardRarity.UNCOMMON,
             CardTarget.ENEMY,
-            0
+            1
     );
     private static final int DAMAGE = 3;
 
     public ThrowAway() {
         super(ID, info);
-        setDamage(DAMAGE);
+        setDamage(DAMAGE, 2);
         setCostUpgrade(0);
     }
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         addToBot(new DamageAction(abstractMonster, new DamageInfo(abstractPlayer, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_HEAVY));
-        if (this.upgraded)
-            addToBot(new DrawCardAction(abstractPlayer, 2));
-        else
+//        if (this.upgraded)
+//            addToBot(new DrawCardAction(abstractPlayer, 2));
+//        else
             addToBot(new DrawCardAction(abstractPlayer, 1));
     }
 

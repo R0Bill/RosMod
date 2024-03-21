@@ -23,16 +23,14 @@ public class StunSelf extends BaseCard {
 
     public StunSelf() {
         super(ID, info);
+        setMagic(10, 14);
     }
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         if (!this.upgraded) {
-            addToBot(new GainBlockAction(abstractPlayer, abstractPlayer, this.energyOnUse * 12));
-            addToBot(new ApplyPowerAction(abstractPlayer, abstractPlayer, new GiveBlockNextTurn(abstractPlayer, (this.energyOnUse * 12) / 2)));
-        } else {
-            addToBot(new GainBlockAction(abstractPlayer, abstractPlayer, (this.energyOnUse * 16)));
-            addToBot(new ApplyPowerAction(abstractPlayer, abstractPlayer, new GiveBlockNextTurn(abstractPlayer, ((this.energyOnUse * 16) / 2))));
+            addToBot(new GainBlockAction(abstractPlayer, abstractPlayer, this.energyOnUse * this.magicNumber));
+            addToBot(new ApplyPowerAction(abstractPlayer, abstractPlayer, new GiveBlockNextTurn(abstractPlayer, (this.energyOnUse * this.magicNumber) / 2)));
         }
         if (!this.freeToPlayOnce)
             abstractPlayer.energy.use(this.energyOnUse);

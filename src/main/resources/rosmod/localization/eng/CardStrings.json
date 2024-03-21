@@ -132,7 +132,7 @@
   },
   "${modID}:StunSelf": {
     "NAME": "Cross Defense",
-    "DESCRIPTION": "Gain 12 times the energy used as Block. End your turn immediately. NL At the start of your next turn, NL gain half of the Block amount."
+    "DESCRIPTION": "Gain !M! times the energy used as Block. End your turn immediately. NL At the start of your next turn, NL gain half of the Block amount."
   },
   "${modID}:Infected": {
     "NAME": "Infected",
@@ -153,8 +153,7 @@
   },
   "${modID}:Backpack": {
     "NAME": "Backpack",
-    "DESCRIPTION": "Exhaust . Draw until hand is full.",
-    "UPGRADE_DESCRIPTION": "Exhaust . Draw until hand is full. Gain 1 [E] ."
+    "DESCRIPTION": "Exhaust . Draw !M! cards."
   },
   "${modID}:TouchingStars": {
     "NAME": "Touching Stars",
@@ -239,8 +238,8 @@
   },
   "${modID}:SolidifyMind": {
     "NAME": "Emotional Fortification",
-    "DESCRIPTION": "Exhaust . Gain temporary HP equal to one-third of your current Block .",
-    "UPGRADE_DESCRIPTION": "Exhaust . Gain temporary HP equal to one-half of your current Block ."
+    "DESCRIPTION": "Exhaust . Convert one-third of your current Block to Temporary HP.",
+    "UPGRADE_DESCRIPTION": "Exhaust . Convert one-half of your current Block to Temporary HP."
   },
   "${modID}:Lullaby": {
     "NAME": "Lullaby",

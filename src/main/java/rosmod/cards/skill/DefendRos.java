@@ -16,7 +16,7 @@ public class DefendRos extends BaseCard {
             CardTarget.SELF,
             1
     );
-    private static final int BLOCK = 7;
+    private static final int BLOCK = 5;
     private static final int UPG_BLOCK = 3;
 
 //    private static final int DEX = 1;

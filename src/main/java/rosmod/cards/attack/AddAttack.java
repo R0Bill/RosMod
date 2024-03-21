@@ -2,12 +2,12 @@ package rosmod.cards.attack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import rosmod.actions.AddAttackAction;
 import rosmod.cards.BaseCard;
 import rosmod.character.Rosmontis;
 import rosmod.util.CardStats;
@@ -43,7 +43,12 @@ public class AddAttack extends BaseCard {
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster){
         addToBot(new DamageAction(abstractMonster, new DamageInfo(abstractPlayer, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_HEAVY));
-        addToBot(new AddAttackAction());//maybe we don't need this action... it should be fit in this class.
+//        addToBot(new AddAttackAction());//maybe we don't need this action... it should be fit in this class.
         //anyway, it works, then let it go
+        if (AbstractDungeon.actionManager.cardsPlayedThisCombat.size() >= 2 && AbstractDungeon.actionManager.cardsPlayedThisCombat
+                .get(AbstractDungeon.actionManager.cardsPlayedThisCombat
+                        .size() - 2).type == AbstractCard.CardType.ATTACK) {
+            addToBot(new MakeTempCardInHandAction(new QuickAttack(), this.upgraded ? 2 : 1));
+        }
     }
 }

@@ -1,6 +1,7 @@
 package rosmod.cards.skill;
 
-import com.megacrit.cardcrawl.actions.unique.CalculatedGambleAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.ExhaustAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import rosmod.cards.BaseCard;
@@ -19,7 +20,9 @@ public class TacticalGuide extends BaseCard {
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        addToBot(new CalculatedGambleAction(true));
+        int count = abstractPlayer.hand.size();
+        addToBot(new ExhaustAction(abstractPlayer, abstractPlayer, count, true));
+        addToBot(new DrawCardAction(abstractPlayer, count));
     }
 
 }

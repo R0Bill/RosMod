@@ -48,7 +48,7 @@ public class TouchingStars extends BaseCard {
     @Override
     public void triggerOnGlowCheck() {
         if (AbstractDungeon.player.energy.energy >= this.energyOnUse) {
-            this.glowColor = com.badlogic.gdx.graphics.Color.valueOf("bacdbaff");
+            this.glowColor = com.badlogic.gdx.graphics.Color.valueOf("ddeff0");
         } else
             this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
 

@@ -1,10 +1,7 @@
 package rosmod.cards.skill;
 
-import basemod.BaseMod;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import rosmod.cards.BaseCard;
 import rosmod.character.Rosmontis;
@@ -24,12 +21,11 @@ public class Backpack extends BaseCard {
     public Backpack() {
         super(ID, info);
         setExhaust(true);
+        setMagic(1, 2);
     }
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        addToBot(new DrawCardAction(abstractPlayer, BaseMod.MAX_HAND_SIZE - AbstractDungeon.player.hand.size()));
-        if (this.upgraded)
-            addToBot(new GainEnergyAction(1));
+        addToBot(new DrawCardAction(abstractPlayer, this.magicNumber));
     }
 }

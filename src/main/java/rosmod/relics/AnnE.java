@@ -26,7 +26,7 @@ public class AnnE extends BaseRelic {
             flash();
             for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
                 if (!mo.isDead)
-                    addToBot(new DamageAction(mo, new DamageInfo(mo, AbstractDungeon.player.hasPower("rosmontis:Skill2Power") ? (3 + (AbstractDungeon.player.currentBlock / 4)) : 3)));
+                    addToBot(new DamageAction(mo, new DamageInfo(AbstractDungeon.player, AbstractDungeon.player.hasPower("rosmontis:Skill2Power") ? (3 + (AbstractDungeon.player.currentBlock / 4)) : 3, DamageInfo.DamageType.THORNS)));
             }
 //            addToBot(new DamageAllEnemiesAction(null, DamageInfo.createDamageMatrix(AbstractDungeon.player.hasPower("rosmontis:Skill2") ? (3 + (AbstractDungeon.player.currentBlock / 4)) : 3, false), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.NONE));
         }

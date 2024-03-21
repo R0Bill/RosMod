@@ -34,7 +34,8 @@
   },
   "${modID}:FlyRos": {
     "NAME": "战术飞行躲避",
-    "DESCRIPTION": " 消耗 。获得1回合 无实体 。获得2 敏捷 。"
+    "DESCRIPTION": " 消耗 。获得1回合 无实体 。获得1 敏捷 。",
+    "UPGRADE_DESCRIPTION": "消耗 。获得1回合 无实体 。获得2 敏捷 。"
   },
   "${modID}:HeavyAttackRos": {
     "NAME": "重击",
@@ -107,8 +108,8 @@
   },
   "${modID}:Extrasensory": {
     "NAME": "超感",
-    "DESCRIPTION": "*消耗 。根据敌人数量获得 *快速格挡 。",
-    "UPGRADE_DESCRIPTION": "*消耗 。根据敌人数量两倍获得 *快速格挡 。"
+    "DESCRIPTION": "*消耗 。获得等同于敌人数量的 *快速格挡 。",
+    "UPGRADE_DESCRIPTION": "*消耗 。获得等同于两倍敌人数量的 *快速格挡 。"
   },
   "${modID}:LoseControl": {
     "NAME": "失控",
@@ -154,8 +155,7 @@
   },
   "${modID}:Backpack": {
     "NAME": "行囊",
-    "DESCRIPTION": " 消耗 。抽至手牌上限。",
-    "UPGRADE_DESCRIPTION": " 消耗 。抽至手牌上限。获得1 [E] 。"
+    "DESCRIPTION": " 消耗 。抽 !M! 张牌。"
   },
   "${modID}:TouchingStars": {
     "NAME": "触及星辰",
@@ -240,8 +240,8 @@
   },
   "${modID}:SolidifyMind": {
     "NAME": "固化情绪",
-    "DESCRIPTION": "消耗 。增加三分之一的 格挡 的 临时生命 。",
-    "UPGRADE_DESCRIPTION": "消耗 。增加二分之一的 格挡 的 临时生命 。"
+    "DESCRIPTION": "消耗 。转换三分之一的 格挡 到 临时生命 。",
+    "UPGRADE_DESCRIPTION": "消耗 。转换二分之一的 格挡 到 临时生命 。"
   },
   "${modID}:Lullaby": {
     "NAME": "“摇篮曲”",
