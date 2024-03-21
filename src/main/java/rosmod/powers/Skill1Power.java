@@ -11,6 +11,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import org.apache.logging.log4j.Logger;
+import rosmod.BasicMod;
 
 import static rosmod.BasicMod.makeID;
 
@@ -20,17 +22,14 @@ public class Skill1Power extends BasePower {
 
     private static final AbstractPower.PowerType TYPE = AbstractPower.PowerType.BUFF;
     private static final boolean TURN_BASED = false;
-    //The only thing this controls is the color of the number on the power icon.
-    //Turn based powers are white, non-turn based powers are red or green depending on if their amount is positive or negative.
-    //For a power to actually decrease/go away on its own they do it themselves.
-    //Look at powers that do this like VulnerablePower and DoubleTapPower.
     private static int magic = 0;
     private final Color greenColor = new Color(0.0F, 1.0F, 0.0F, 1.0F);
     private final Color redColor = new Color(1.0F, 0.0F, 0.0F, 1.0F);
+    private final Logger logger = BasicMod.logger;
 
     public Skill1Power(AbstractCreature owner, int amount) {
         super(POWER_ID, TYPE, TURN_BASED, owner, amount);
-        magic = 0;
+        magic = 1;
     }
 
     @Override
@@ -38,11 +37,40 @@ public class Skill1Power extends BasePower {
         this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
     }
 
+    private void CUStrigger(AbstractCard abstractCard, UseCardAction action) {
+        magic = 1;
+        flash();
+        AbstractMonster m = null;
+        if (action.target != null)
+            m = (AbstractMonster) action.target;
+        AbstractDungeon.player.limbo.addToBottom(abstractCard);
+        abstractCard.target_x = Settings.WIDTH / 2.0F - 300.0F * Settings.scale;
+        abstractCard.target_y = Settings.HEIGHT / 2.0F;
+        if (m != null)
+            abstractCard.calculateCardDamage(m);
+        abstractCard.purgeOnUse = true;
+        if (m != null && m.isDead) m = AbstractDungeon.getCurrRoom().monsters.getRandomMonster(true);
+        AbstractCard card = abstractCard.makeSameInstanceOf();
+        AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(card, m, 0, true, true), true);
+    }
+/*    public void onUseCard(AbstractCard abstractCard, UseCardAction action) {
+        logger.info("magic:"+magic+" amount:"+amount+" limit:"+limit+" TF"+ISPOWERCARD);
+        logger.info("card:"+abstractCard+" action:"+action);
+        if (!abstractCard.purgeOnUse && abstractCard.type == AbstractCard.CardType.ATTACK && !abstractCard.cardID.equals("rosmontis.TouchingStars") && !abstractCard.cardID.equals("rosmontis:ForgetMeNot")&&ISPOWERCARD) {
+            ISPOWERCARD=false;
+            logger.info("trigger:IsPowerCard");
+        }
+        else if(!abstractCard.purgeOnUse && abstractCard.type == AbstractCard.CardType.ATTACK && !abstractCard.cardID.equals("rosmontis.TouchingStars") && !abstractCard.cardID.equals("rosmontis:ForgetMeNot")){
+            logger.info("trigger:active");
+            magic++;
+        }
+    }*/
+
     @Override
     public void onUseCard(AbstractCard abstractCard, UseCardAction action) {
         if (!abstractCard.purgeOnUse && abstractCard.type == AbstractCard.CardType.ATTACK && !abstractCard.cardID.equals("rosmontis.TouchingStars") && !abstractCard.cardID.equals("rosmontis:ForgetMeNot")) {
             magic++;
-            if (magic == amount && amount == 2) {
+            if (magic == 3 && amount == 2) {
                 magic = 0;
                 flash();
                 AbstractMonster m = null;
@@ -57,7 +85,7 @@ public class Skill1Power extends BasePower {
                 if (m != null && m.isDead) m = AbstractDungeon.getCurrRoom().monsters.getRandomMonster(true);
                 AbstractCard card = abstractCard.makeSameInstanceOf();
                 AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(card, m, 0, true, true), true);
-            } else if (amount == 3 && magic == 3) {
+            } else if (amount == 3 && magic == 4) {
                 magic = 0;
                 flash();
                 AbstractMonster m = null;
@@ -74,6 +102,7 @@ public class Skill1Power extends BasePower {
                 AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(card, m, 0, true, true), true);
             }
         }
+
     }
 
     public void renderAmount(SpriteBatch sb, float x, float y, Color c) {
@@ -82,14 +111,14 @@ public class Skill1Power extends BasePower {
                 this.greenColor.a = c.a;
                 c = this.greenColor;
             }
-            FontHelper.renderFontRightTopAligned(sb, FontHelper.powerAmountFont, magic + "/" + this.amount, x, y, this.fontScale, c);
+            FontHelper.renderFontRightTopAligned(sb, FontHelper.powerAmountFont, magic == 0 ? ("0/" + this.amount) : (magic - 1 + "/" + this.amount), x, y, this.fontScale, c);
         }
     }
 
 
     @Override
     public void atStartOfTurn() {
-        magic = 0;
+        magic = 1;
     }
 
 }

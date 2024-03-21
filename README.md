@@ -13,7 +13,7 @@
 steam workshop current version: 0.9.1-beta
 
 v0.9.1-beta
-fix starter relic damage type to thorns. balance some defend cards
+fix starter relic damage type to thorns. fix Skill1 trigger card into its counts. balance some defend cards
 v0.9.1-alpha
 emergency fix card:Extend cannot use bug. balance some cards.
 v0.9.1
