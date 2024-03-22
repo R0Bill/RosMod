@@ -38,6 +38,18 @@ public class Inheritors extends BaseCard {
     public void upgrade() {
     }
 
+    public void renderCardPreviewInSingleView(SpriteBatch sb) {
+        this.cardsToPreview.current_x = 1435.0F * Settings.scale;
+        this.cardsToPreview.current_y = 795.0F * Settings.scale;
+        this.cardsToPreview.drawScale = 0.6F;
+        this.cardsToPreview.render(sb);
+        AbstractCard previewS = new OptionDefend();
+        previewS.current_x = 1435.0F * Settings.scale;
+        previewS.current_y = this.cardsToPreview.current_y + (IMG_HEIGHT / 2.0F + IMG_HEIGHT / 2.0F * 0.6F + 16.0F) * 0.6F;
+        previewS.drawScale = 0.6F;
+        previewS.render(sb);
+    }
+
     public void renderCardPreview(SpriteBatch sb) {
         if (AbstractDungeon.player == null || !AbstractDungeon.player.isDraggingCard) {
             float tmpScale = this.drawScale * 0.6F;

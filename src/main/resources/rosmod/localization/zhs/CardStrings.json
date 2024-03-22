@@ -19,8 +19,8 @@
   },
   "${modID}:Skill3": {
     "NAME": "如你所愿",
-    "DESCRIPTION": "${modID}:唯一 。 NL 所有攻击牌费用变为2倍，视为打出3次。每次打出有30%的概率 ${modID}:眩晕 目标。 NL 失去3点 敏捷 。",
-    "UPGRADE_DESCRIPTION": "${modID}:唯一 ， 固有 。 NL 所有攻击牌费用*2，视为打出3次。每次打出有30%的概率 ${modID}:眩晕 目标。 NL 失去3点 敏捷 。"
+    "DESCRIPTION": "${modID}:唯一 。 NL 所有攻击牌费用变为2倍，视为打出3次。每次打出有10%的概率 ${modID}:眩晕 目标。 NL 失去3点 敏捷 。",
+    "UPGRADE_DESCRIPTION": "${modID}:唯一 ， 固有 。 NL 所有攻击牌费用*2，视为打出3次。每次打出有10%的概率 ${modID}:眩晕 目标。 NL 失去3点 敏捷 。"
   },
   "${modID}:Memory": {
     "NAME": "回忆",
@@ -87,7 +87,8 @@
   },
   "${modID}:Judgement": {
     "NAME": "在这立法典",
-    "DESCRIPTION": "消耗 。造成 !D! 伤害， ${modID}:斩杀 永久加0.5敏捷0.5力量。"
+    "DESCRIPTION": "消耗 ， 保留 。造成 !D! 伤害， ${modID}:斩杀 永久加0.5敏捷0.5力量。",
+    "UPGRADE_DESCRIPTION": "保留 。造成 !D! 伤害， ${modID}:斩杀 永久加0.5敏捷0.5力量。"
   },
   "${modID}:StealBlock": {
     "NAME": "破障",
@@ -155,7 +156,7 @@
   },
   "${modID}:Backpack": {
     "NAME": "行囊",
-    "DESCRIPTION": " 消耗 。抽 !M! 张牌。"
+    "DESCRIPTION": " 消耗 。抽 2 张牌。 不可升级。"
   },
   "${modID}:TouchingStars": {
     "NAME": "触及星辰",
@@ -204,8 +205,8 @@
   },
   "${modID}:ForgetMeNot": {
     "NAME": "“勿忘我”",
-    "DESCRIPTION": "消耗 ， ${modID}:独立 。造成敌人已损失生命值的百分之30的 ${modID}:真实伤害 。",
-    "UPGRADE_DESCRIPTION": "消耗 ， ${modID}:独立 。造成敌人已损失生命值的百分之40的 ${modID}:真实伤害 。"
+    "DESCRIPTION": "消耗 ， ${modID}:独立 。造成敌人已损失生命值的百分之40的 ${modID}:真实伤害 。",
+    "UPGRADE_DESCRIPTION": "消耗 ， ${modID}:独立 。造成敌人已损失生命值的百分之50的 ${modID}:真实伤害 。"
   },
   "${modID}:Shadow": {
     "NAME": "乳影随行",

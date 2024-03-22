@@ -21,11 +21,16 @@ public class Backpack extends BaseCard {
     public Backpack() {
         super(ID, info);
         setExhaust(true);
-        setMagic(1, 2);
+        setMagic(2);
     }
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        addToBot(new DrawCardAction(abstractPlayer, this.magicNumber));
+        addToBot(new DrawCardAction(abstractPlayer, 2));
     }
+
+    public boolean canUpgrade() {
+        return false;
+    }
+
 }

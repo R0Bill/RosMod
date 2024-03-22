@@ -16,7 +16,7 @@ public class Lullaby extends BaseCard {
             CardType.SKILL,
             CardRarity.RARE,
             CardTarget.ALL_ENEMY,
-            3
+            2
     );
 
     public Lullaby() {

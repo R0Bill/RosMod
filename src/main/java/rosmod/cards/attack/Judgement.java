@@ -23,14 +23,14 @@ public class Judgement extends BaseCard {
             CardTarget.ENEMY,
             2
     );
-    private static final int DAMAGE = 7;
+    private static final int DAMAGE = 10;
     private static final int UPG_DAMAGE = 5;
 
     public Judgement() {
         super(ID, info);
+        setSelfRetain(true);
+        setExhaust(true, false);
         setDamage(DAMAGE, UPG_DAMAGE);
-        setExhaust(true);
-        tags.add(CardTags.STRIKE);
     }
 
     @Override

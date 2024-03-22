@@ -67,7 +67,7 @@ public class Skill3Power extends BasePower {
 
             //stun by StSLib
             double Ran = Math.random();
-            if (Ran >= 0.69) {
+            if (Ran >= 0.59) {
                 if (card.target == AbstractCard.CardTarget.ALL_ENEMY) {
                     for (AbstractMonster mo : (AbstractDungeon.getCurrRoom()).monsters.monsters) {
                         addToBot(new StunMonsterAction(mo, AbstractDungeon.player));

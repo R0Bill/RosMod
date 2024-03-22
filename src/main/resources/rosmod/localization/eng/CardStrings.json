@@ -86,7 +86,8 @@
   },
   "${modID}:Judgement": {
     "NAME": "Judgement",
-    "DESCRIPTION": "Exhaust . Deal !D! damage. ${modID}:Execute permanently adds 0.5 Dexterity and 0.5 Strength."
+    "DESCRIPTION": "Exhaust , Retain . Deal !D! damage. ${modID}:Execute permanently adds 0.5 Dexterity and 0.5 Strength.",
+    "UPGRADE_DESCRIPTION": "Retain . Deal !D! damage. ${modID}:Execute permanently adds 0.5 Dexterity and 0.5 Strength."
   },
   "${modID}:StealBlock": {
     "NAME": "Breakthrough",
@@ -117,8 +118,8 @@
   },
   "${modID}:ThrowAway": {
     "NAME": "Throw",
-    "DESCRIPTION": "Deal 5 damage, draw 1 card.",
-    "UPGRADE_DESCRIPTION": "Deal 5 damage, draw 2 cards."
+    "DESCRIPTION": "Deal !D! damage, draw 1 card.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage, draw 2 cards."
   },
   "${modID}:DoublePre": {
     "NAME": "Double Preparedness",
@@ -153,7 +154,7 @@
   },
   "${modID}:Backpack": {
     "NAME": "Backpack",
-    "DESCRIPTION": "Exhaust . Draw !M! cards."
+    "DESCRIPTION": "Exhaust . Draw 2 cards. NL Cannot be upgrade."
   },
   "${modID}:TouchingStars": {
     "NAME": "Touching Stars",
@@ -202,8 +203,8 @@
   },
   "${modID}:ForgetMeNot": {
     "NAME": "Forget Me Not",
-    "DESCRIPTION": "Exhaust , ${modID}:Unique . NL Deal ${modID}:TrueDamage equal to 30% of the enemy's missing HP to all enemies.",
-    "UPGRADE_DESCRIPTION": "Exhaust , ${modID}:Unique . NL Deal ${modID}:TrueDamage equal to 40% of the enemy's missing HP to all enemies."
+    "DESCRIPTION": "Exhaust , ${modID}:Unique . NL Deal ${modID}:TrueDamage equal to 40% of the enemy's missing HP to all enemies.",
+    "UPGRADE_DESCRIPTION": "Exhaust , ${modID}:Unique . NL Deal ${modID}:TrueDamage equal to 50% of the enemy's missing HP to all enemies."
   },
   "${modID}:Shadow": {
     "NAME": "Shadow",

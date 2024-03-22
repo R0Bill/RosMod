@@ -23,17 +23,13 @@ public class ThrowAway extends BaseCard {
 
     public ThrowAway() {
         super(ID, info);
-        setDamage(DAMAGE, 2);
-        setCostUpgrade(0);
+        setDamage(DAMAGE);
     }
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         addToBot(new DamageAction(abstractMonster, new DamageInfo(abstractPlayer, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_HEAVY));
-//        if (this.upgraded)
-//            addToBot(new DrawCardAction(abstractPlayer, 2));
-//        else
-            addToBot(new DrawCardAction(abstractPlayer, 1));
+        addToBot(new DrawCardAction(abstractPlayer, this.upgraded ? 2 : 1));
     }
 
 }

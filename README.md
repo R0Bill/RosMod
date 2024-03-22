@@ -10,8 +10,10 @@
 
 ### This mod still in testing, if you run into any issues in this mod, please feed back at GitHub!
 
-steam workshop current version: 0.9.2
+steam workshop current version: 0.9.2-alpha
 
+v0.9.2-alpha
+fix cards descriptions and image bugs. balance some weak cards.
 v0.9.2
 fix keyword Unique didn't work on ForgetMeNot. balance other cards.
 v0.9.1-beta
@@ -25,7 +27,7 @@ first public version
 
 --- 
 
-Github项目地址：[R0Bill/RosMod: Arknights Rosmontis Mod for Slay The Spire (GitHub.com)](https://github.com/R0Bill/RosMod)
+[//]: # (Github项目地址：[R0Bill/RosMod: Arknights Rosmontis Mod for Slay The Spire &#40;GitHub.com&#41;]&#40;https://github.com/R0Bill/RosMod&#41;)
 
 #### 警告：本mod修改了多处游戏本体以实现功能，可能导致模组兼容性不佳！
 
@@ -57,9 +59,8 @@ pixiv：
 111849441 102153360 85699499 88617920 94627231 101338651 114900764 94563458 103437119
 94021356 89573579 109131573 89736459 90083634 100411906 102603633
 
-B站：
+B站视频截图：
 BV1Ti4y1p7oX
-
 
 ---
 迷迭香的人物著作权归属上海鹰角网络科技有限公司
