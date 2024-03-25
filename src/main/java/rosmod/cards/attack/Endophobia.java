@@ -3,7 +3,7 @@ package rosmod.cards.attack;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -32,7 +32,7 @@ public class Endophobia extends BaseCard {
     }
 
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        addToBot(new MakeTempCardInHandAction(new Infected(), 1));
+        addToBot(new MakeTempCardInDrawPileAction(new Infected(), 1, true, false, false));
         for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters)
             addToBot(new ApplyPowerAction(mo, abstractPlayer, new FearPower(mo, this.upgraded ? 3 : 2)));
         addToBot(new DamageAllEnemiesAction(abstractPlayer, DamageInfo.createDamageMatrix(damage), DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.SLASH_HEAVY));

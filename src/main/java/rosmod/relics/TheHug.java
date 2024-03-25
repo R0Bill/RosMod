@@ -8,10 +8,10 @@ import rosmod.character.Rosmontis;
 import static rosmod.BasicMod.makeID;
 
 public class TheHug extends BaseRelic {
-    private static final String NAME = "TheHug"; //The name will be used for determining the image file as well as the ID.
-    public static final String ID = makeID(NAME); //This adds the mod's prefix to the relic ID, resulting in modID:MyRelic
-    private static final RelicTier RARITY = RelicTier.BOSS; //The relic's rarity.
-    private static final LandingSound SOUND = LandingSound.CLINK; //The sound played when the relic is clicked.
+    private static final String NAME = "TheHug";
+    public static final String ID = makeID(NAME);
+    private static final RelicTier RARITY = RelicTier.BOSS;
+    private static final LandingSound SOUND = LandingSound.CLINK;
 
     public TheHug() {
         super(ID, NAME, Rosmontis.Enums.CARD_COLOR, RARITY, SOUND);
@@ -20,7 +20,7 @@ public class TheHug extends BaseRelic {
     @Override
     public void atBattleStart() {
         for (AbstractMonster m : (AbstractDungeon.getCurrRoom()).monsters.monsters) {
-            float MODIFIER_AMT = 0.3F;
+            float MODIFIER_AMT = 0.25F;
             if (m.currentHealth > (int) (m.maxHealth * (1.0F - MODIFIER_AMT))) {
                 m.currentHealth = (int) (m.maxHealth * (1.0F - MODIFIER_AMT));
                 m.healthBarUpdatedEvent();

@@ -10,7 +10,7 @@ import static rosmod.BasicMod.makeID;
 public class ExtendPower extends BasePower {
 
     public static final String POWER_ID = makeID("ExtendPower");
-    private static final AbstractPower.PowerType TYPE = AbstractPower.PowerType.DEBUFF;
+    private static final AbstractPower.PowerType TYPE = AbstractPower.PowerType.BUFF;
     private static final boolean TURN_BASED = false;
 
     public void atStartOfTurn() {

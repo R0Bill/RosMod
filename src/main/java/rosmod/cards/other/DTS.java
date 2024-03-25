@@ -27,8 +27,10 @@ public class DTS extends BaseCard {
 
     public void onChoseThisOption() {
         AbstractPlayer player = AbstractDungeon.player;
-        addToBot(new ApplyPowerAction(player, player, new StrengthPower(player, player.getPower(DexterityPower.POWER_ID).amount)));
-        addToBot(new RemoveSpecificPowerAction(player, player, player.getPower(DexterityPower.POWER_ID)));
+        if (player.hasPower(DexterityPower.POWER_ID)) {
+            addToBot(new ApplyPowerAction(player, player, new StrengthPower(player, player.getPower(DexterityPower.POWER_ID).amount)));
+            addToBot(new RemoveSpecificPowerAction(player, player, player.getPower(DexterityPower.POWER_ID)));
+        }
     }
 
     public boolean canUpgrade() {

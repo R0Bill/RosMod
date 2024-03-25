@@ -10,6 +10,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
+import java.util.ArrayList;
+
 import static rosmod.BasicMod.makeID;
 
 public class Skill3Power extends BasePower {
@@ -46,24 +48,25 @@ public class Skill3Power extends BasePower {
             AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(tmp, m, card.energyOnUse, true, true), true);
 
             //cost++
-//            ArrayList<AbstractCard> groupCopy = new ArrayList<>();//new hand card copy
-//            for (AbstractCard abstractCard : AbstractDungeon.player.hand.group) {//read hand
-//                if (abstractCard.cost > 0 && abstractCard.costForTurn > 0 && !abstractCard.freeToPlayOnce && abstractCard.type == AbstractCard.CardType.ATTACK) {
-//                    groupCopy.add(abstractCard);
-//                    continue;
-//                }
-//            }
-//            for (AbstractCard abstractCard : groupCopy){
-//                if (!abstractCard.cardID.equals("rosmontis:TouchingStars")) {
-//                    int tempa = abstractCard.cost;
-//                    abstractCard.setCostForTurn(tempa * 2);
-//                }
-//            }
-            for (AbstractCard ccard : AbstractDungeon.player.hand.group) {
-                if (ccard.cost > 0 && ccard.costForTurn > 0 && !ccard.freeToPlayOnce && ccard.type == AbstractCard.CardType.ATTACK && !ccard.cardID.equals("rosmontis:TouchingStars")) {
-                    ccard.setCostForTurn(card.cost * 2);
+            ArrayList<AbstractCard> groupCopy = new ArrayList<>();//new hand card copy
+            for (AbstractCard abstractCard : AbstractDungeon.player.hand.group) {//read hand
+                if (abstractCard.cost > 0 && abstractCard.costForTurn > 0 && !abstractCard.freeToPlayOnce && abstractCard.type == AbstractCard.CardType.ATTACK) {
+                    groupCopy.add(abstractCard);
+                    continue;
                 }
             }
+            for (AbstractCard abstractCard : groupCopy) {
+                if (!abstractCard.cardID.equals("rosmontis:TouchingStars") && !abstractCard.cardID.equals("rosmontis:ForgetMeNot")) {
+                    int tempa = abstractCard.cost;
+                    abstractCard.setCostForTurn(tempa * 2);
+                }
+            }
+
+//            for (AbstractCard ccard : AbstractDungeon.player.hand.group) {
+//                if (ccard.cost > 0 && ccard.costForTurn > 0 && !ccard.freeToPlayOnce && ccard.type == AbstractCard.CardType.ATTACK && !ccard.cardID.equals("rosmontis:TouchingStars")) {
+//                    ccard.setCostForTurn(card.cost * 2);
+//                }
+//            }
 
             //stun by StSLib
             double Ran = Math.random();
@@ -92,22 +95,22 @@ public class Skill3Power extends BasePower {
     public void onCardDraw(AbstractCard notOnUse) {
 //      bullshit code, optimize it
         //cost++
-//        ArrayList<AbstractCard> groupCopy = new ArrayList<>();//new hand card copy
-//        for (AbstractCard abstractCard : AbstractDungeon.player.hand.group) {//read hand
-//            if (abstractCard.cost > 0 && abstractCard.costForTurn > 0 && !abstractCard.freeToPlayOnce && abstractCard.type == AbstractCard.CardType.ATTACK) {
-//                groupCopy.add(abstractCard);
-//                continue;
-//            }
-//        }
-//        for (AbstractCard abstractCard : groupCopy) {
-//            if (!abstractCard.cardID.equals("rosmontis:TouchingStars")) {
-//                int tempa = abstractCard.cost;
-//                abstractCard.setCostForTurn(tempa * 2);
-//            }
-//        }
+        ArrayList<AbstractCard> groupCopy = new ArrayList<>();//new hand card copy
+        for (AbstractCard abstractCard : AbstractDungeon.player.hand.group) {//read hand
+            if (abstractCard.cost > 0 && abstractCard.costForTurn > 0 && !abstractCard.freeToPlayOnce && abstractCard.type == AbstractCard.CardType.ATTACK) {
+                groupCopy.add(abstractCard);
+                continue;
+            }
+        }
+        for (AbstractCard abstractCard : groupCopy) {
+            if (!abstractCard.cardID.equals("rosmontis:TouchingStars") && !abstractCard.cardID.equals("rosmontis:ForgetMeNot")) {
+                int tempa = abstractCard.cost;
+                abstractCard.setCostForTurn(tempa * 2);
+            }
+        }
 
-        for (AbstractCard card : AbstractDungeon.player.hand.group)
-            if (card.cost > 0 && card.costForTurn > 0 && !card.freeToPlayOnce && card.type == AbstractCard.CardType.ATTACK && !card.cardID.equals("rosmontis:TouchingStars"))
-                card.setCostForTurn(card.cost * 2);
+//        for (AbstractCard card : AbstractDungeon.player.hand.group)
+//            if (card.cost > 0 && card.costForTurn > 0 && !card.freeToPlayOnce && card.type == AbstractCard.CardType.ATTACK && !card.cardID.equals("rosmontis:TouchingStars"))
+//                card.setCostForTurn(card.cost * 2);
     }
 }

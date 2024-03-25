@@ -28,7 +28,6 @@ public class Skill3 extends BaseCard {
     public Skill3() {
         super(ID, info);
         setInnate(false, true);
-        setCostUpgrade(2);
     }
 
     @Override
@@ -64,7 +63,7 @@ public class Skill3 extends BaseCard {
                 }
             }
             for (AbstractCard abstractCard : groupCopy) {
-                if (!abstractCard.cardID.equals("TouchingStars")) {
+                if (!abstractCard.cardID.equals("TouchingStars") && !abstractCard.cardID.equals("rosmontis:ForgetMeNot")) {
                     int tempa = abstractCard.cost;
                     abstractCard.setCostForTurn(tempa * 2);
                 }

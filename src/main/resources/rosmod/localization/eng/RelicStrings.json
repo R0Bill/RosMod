@@ -38,7 +38,7 @@
     "NAME": "Plant Specimen",
     "FLAVOR": "An amateur plant specimen, seems like it hasn't been delivered yet.",
     "DESCRIPTIONS": [
-      "At the start of each turn, gain 5 Shield."
+      "At the start of each turn, gain 8 Shield."
     ]
   },
   "${modID}:JudgeCount": {
@@ -62,7 +62,7 @@
     "NAME": "Perceptual Fusion Apparatus",
     "FLAVOR": "Ensuring Rosemary's abilities to the body remain within controllable ranges.",
     "DESCRIPTIONS": [
-      "At the start of combat, all enemies lose 30% HP."
+      "At the start of combat, all enemies lose 25% HP."
     ]
   },
   "${modID}:TargetHand": {
@@ -91,6 +91,13 @@
     "FLAVOR": "This transport flyer, which incorporates all of Rhodes Island's elite technology, guarantees everything for your journey, making your trip as smooth as a field trip in the wild.",
     "DESCRIPTIONS": [
       "At the start of combat, gain a regenerating shield that can absorb three #y${modID}:Breakthrough Shield hits. Requires one turn to recharge after each use."
+    ]
+  },
+  "${modID}:DarkMask": {
+    "NAME": "Bizarre Mask",
+    "FLAVOR": "A peculiar mask that does not belong to any known culture, causing individuals to lose their will to fight... and inadvertently fall into deep contemplation.",
+    "DESCRIPTIONS": [
+      "#y${modID}:Fear No longer lose stacks."
     ]
   }
 }

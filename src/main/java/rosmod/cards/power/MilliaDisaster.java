@@ -1,7 +1,7 @@
 package rosmod.cards.power;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -30,6 +30,6 @@ public class MilliaDisaster extends BaseCard {
 
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         addToBot(new ApplyPowerAction(abstractPlayer, abstractPlayer, new MilliaPower(abstractPlayer, 2)));
-        addToBot(new MakeTempCardInHandAction(new Infected(), 1));
+        addToBot(new MakeTempCardInDrawPileAction(new Infected(), 1, true, false, false));
     }
 }

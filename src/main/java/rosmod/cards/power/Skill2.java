@@ -23,7 +23,6 @@ public class Skill2 extends BaseCard {
 
     public Skill2() {
         super(ID, info);
-        setCostUpgrade(1);
         setInnate(false, true);
     }
 

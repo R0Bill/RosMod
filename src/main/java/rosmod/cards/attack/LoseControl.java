@@ -43,9 +43,9 @@ public class LoseControl extends BaseCard {
         if (strength != null) {
             temp += strength.amount;
         }
-        if (temp >= 18 && !this.upgraded) {
+        if (temp >= 16 && !this.upgraded) {
             addToBot(new ApplyPowerAction(abstractPlayer, abstractPlayer, new StrengthPower(abstractPlayer, 1)));
-        } else if (temp >= 16 && this.upgraded) {
+        } else if (temp >= 14 && this.upgraded) {
             addToBot(new ApplyPowerAction(abstractPlayer, abstractPlayer, new StrengthPower(abstractPlayer, 2)));
         }
     }

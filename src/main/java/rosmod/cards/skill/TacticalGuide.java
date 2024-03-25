@@ -15,14 +15,14 @@ public class TacticalGuide extends BaseCard {
     public TacticalGuide() {
         super(ID, info);
         setCostUpgrade(0);
-        setExhaust(true, false);
+        setExhaust(true);
     }
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         int count = abstractPlayer.hand.size();
         addToBot(new ExhaustAction(abstractPlayer, abstractPlayer, count, true));
-        addToBot(new DrawCardAction(abstractPlayer, count));
+        addToBot(new DrawCardAction(abstractPlayer, count + 1));
     }
 
 }

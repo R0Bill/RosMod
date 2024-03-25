@@ -47,9 +47,10 @@
   "${modID}:FearPower": {
     "NAME": "Fear",
     "DESCRIPTIONS": [
-      "Increases damage taken by",
+      "Increases incoming damage by",
       ". Decreases damage dealt by",
-      ". Halves at the end of each turn."
+      ". Halves at the end of each turn.",
+      ". No longer halves at the end of each turn."
     ]
   },
   "${modID}:ExtendPower": {

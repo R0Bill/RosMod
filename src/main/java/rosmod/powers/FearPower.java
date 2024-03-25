@@ -5,8 +5,10 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import rosmod.relics.DarkMask;
 
 import static rosmod.BasicMod.makeID;
 
@@ -29,15 +31,20 @@ public class FearPower extends BasePower {
     }
 
     public void atEndOfTurn(boolean isPlayer) {
-        if (!isPlayer) {
-            if (this.amount > 1)
-                this.amount -= (int) Math.floor((float) this.amount / 2);
-            else
-                this.amount = 0;
+        if (!AbstractDungeon.player.hasRelic("rosmontis:DarkMask")) {
+            if (!isPlayer) {
+                if (this.amount > 1)
+                    this.amount -= (int) Math.floor((float) this.amount / 2);
+                else
+                    this.amount = 0;
+            }
+            updateDescription();
+            if (this.amount <= 0)
+                addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+        } else {
+            DarkMask d = (DarkMask) AbstractDungeon.player.getRelic("rosmontis:DarkMask");
+            d.trigger(this.owner);
         }
-        updateDescription();
-        if (this.amount <= 0)
-            addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
     }
 
     public void renderAmount(SpriteBatch sb, float x, float y, Color c) {
@@ -46,7 +53,7 @@ public class FearPower extends BasePower {
 
     @Override
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2];
+        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + this.amount + (AbstractDungeon.player.hasRelic("rosmontis:DarkMask") ? DESCRIPTIONS[3] : DESCRIPTIONS[2]);
     }
 
 }

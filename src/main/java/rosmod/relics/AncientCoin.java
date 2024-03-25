@@ -8,10 +8,10 @@ import rosmod.character.Rosmontis;
 import static rosmod.BasicMod.makeID;
 
 public class AncientCoin extends BaseRelic {
-    private static final String NAME = "AncientCoin"; //The name will be used for determining the image file as well as the ID.
-    public static final String ID = makeID(NAME); //This adds the mod's prefix to the relic ID, resulting in modID:MyRelic
-    private static final RelicTier RARITY = RelicTier.COMMON; //The relic's rarity.
-    private static final LandingSound SOUND = LandingSound.CLINK; //The sound played when the relic is clicked.
+    private static final String NAME = "AncientCoin";
+    public static final String ID = makeID(NAME);
+    private static final RelicTier RARITY = RelicTier.COMMON;
+    private static final LandingSound SOUND = LandingSound.CLINK;
 
     public AncientCoin() {
         super(ID, NAME, Rosmontis.Enums.CARD_COLOR, RARITY, SOUND);
@@ -19,7 +19,7 @@ public class AncientCoin extends BaseRelic {
 
     public void onEquip() {
         CardCrawlGame.sound.play("GOLD_GAIN");
-        AbstractDungeon.player.gainGold(150);
+        AbstractDungeon.player.gainGold(130);
     }
 
     public boolean canSpawn() {

@@ -28,8 +28,10 @@ public class STD extends BaseCard {
 
     public void onChoseThisOption() {
         AbstractPlayer player = AbstractDungeon.player;
-        addToBot(new ApplyPowerAction(player, player, new DexterityPower(player, player.getPower(StrengthPower.POWER_ID).amount)));
-        addToBot(new RemoveSpecificPowerAction(player, player, player.getPower(StrengthPower.POWER_ID)));
+        if (player.hasPower(StrengthPower.POWER_ID)) {
+            addToBot(new ApplyPowerAction(player, player, new DexterityPower(player, player.getPower(StrengthPower.POWER_ID).amount)));
+            addToBot(new RemoveSpecificPowerAction(player, player, player.getPower(StrengthPower.POWER_ID)));
+        }
     }
 
     public boolean canUpgrade() {

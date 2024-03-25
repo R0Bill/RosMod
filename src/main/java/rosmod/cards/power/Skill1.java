@@ -24,7 +24,6 @@ public class Skill1 extends BaseCard {
     public Skill1() {
         super(ID, info);
         setInnate(false,true);
-        setCostUpgrade(0);
     }
 
     @Override

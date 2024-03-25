@@ -21,6 +21,7 @@ public class Lullaby extends BaseCard {
 
     public Lullaby() {
         super(ID, info);
+        setExhaust(true);
     }
 
     @Override

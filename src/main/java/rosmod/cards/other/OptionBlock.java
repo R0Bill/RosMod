@@ -26,7 +26,7 @@ public class OptionBlock extends BaseCard {
 
     public void onChoseThisOption() {
         AbstractPlayer player = AbstractDungeon.player;
-        addToBot(new GainBlockAction(player, 10));
+        addToBot(new GainBlockAction(player, player, 10));
     }
 
     public boolean canUpgrade() {

@@ -95,7 +95,7 @@
   },
   "${modID}:MilliaDisaster": {
     "NAME": "Millia's Disaster",
-    "DESCRIPTION": "Apply 2 ${modID}:Fear to a random enemy each time a Skill is played. Gain an *Infected ."
+    "DESCRIPTION": "Apply 2 ${modID}:Fear to a random enemy each time a Skill is played. Add one *Infected to draw pile."
   },
   "${modID}:Stable": {
     "NAME": "Stable Perception",
@@ -128,8 +128,8 @@
   },
   "${modID}:Deprive": {
     "NAME": "Perceptive Deprivation",
-    "DESCRIPTION": "Apply 5 Weak , 5 ${modID}:Fear .",
-    "UPGRADE_DESCRIPTION": "Apply 5 Weak ,  10 ${modID}:Fear ."
+    "DESCRIPTION": "Apply 5 Weak , 3 ${modID}:Fear .",
+    "UPGRADE_DESCRIPTION": "Apply 5 Weak ,  5 ${modID}:Fear ."
   },
   "${modID}:StunSelf": {
     "NAME": "Cross Defense",
@@ -172,8 +172,8 @@
   },
   "${modID}:GetReady": {
     "NAME": "Get Ready",
-    "DESCRIPTION": "Gain 1 Strength , 3 ${modID}:Inception . NL Gain [E] [E] at the start of next turn, 10 Block, NL and draw 2 additional cards.",
-    "UPGRADE_DESCRIPTION": "Gain 2 Strength , 3 ${modID}:Inception . NL Gain [E] [E] [E] at the start of next turn, 20 Block, NL and draw 3 additional cards."
+    "DESCRIPTION": "Gain 1 Strength . NL Gain [E] [E] and 10 Block at the start of next turn, NL and draw 2 additional cards.",
+    "UPGRADE_DESCRIPTION": "Gain 2 Strength . NL Gain [E] [E] [E] and 20 Block at the start of next turn,  NL and draw 3 additional cards."
   },
   "${modID}:TacticalGuide": {
     "NAME": "Tactical Guidance",
@@ -244,8 +244,8 @@
   },
   "${modID}:Lullaby": {
     "NAME": "Lullaby",
-    "DESCRIPTION": "Stun all enemies.",
-    "UPGRADE_DESCRIPTION": "Stun all enemies for two turns."
+    "DESCRIPTION": "Exhaust . Stun all enemies.",
+    "UPGRADE_DESCRIPTION": "Exhaust . Stun all enemies for two turns."
   },
   "${modID}:FaceYourSin": {
     "NAME": "FaceYourSin",
@@ -258,8 +258,8 @@
   },
   "${modID}:Endophobia": {
     "NAME": "Endophobia",
-    "DESCRIPTION": "Gain one *Infection , give all enemies 2 ${modID}:Fear , then deal !D! damage.",
-    "UPGRADE_DESCRIPTION": "Gain one *Infection , give all enemies 3 ${modID}:Fear , then deal !D! damage."
+    "DESCRIPTION": "Add one *Infected to draw pile, give all enemies 2 ${modID}:Fear , then deal !D! damage.",
+    "UPGRADE_DESCRIPTION": "Add one *Infected to draw pile, give all enemies 3 ${modID}:Fear , then deal !D! damage."
   },
   "${modID}:OptionBlock": {
     "NAME": "Originiums Blade: Block",

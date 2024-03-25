@@ -96,7 +96,7 @@
   },
   "${modID}:MilliaDisaster": {
     "NAME": "“米利亚的灾祸”",
-    "DESCRIPTION": "每使用一张技能牌对随机敌人施加 2 ${modID}:恐惧 ，获得一张感染。"
+    "DESCRIPTION": "每使用一张技能牌对随机敌人施加 2 ${modID}:恐惧 ，将一张 *感染 加入抽牌堆。"
   },
   "${modID}:Stable": {
     "NAME": "感知稳定",
@@ -114,8 +114,8 @@
   },
   "${modID}:LoseControl": {
     "NAME": "失控",
-    "DESCRIPTION": "失去2生命，造成 !D! 点伤害（受益3倍 *力量 加成）。如果计算力量时伤害大于18点，获得1 *力量 。",
-    "UPGRADE_DESCRIPTION": "失去2生命，造成 !D! 点伤害（受益3倍 *力量 加成）。如果计算力量时伤害大于16点，获得1 *力量 。"
+    "DESCRIPTION": "失去2生命，造成 !D! 点伤害（受益3倍 *力量 加成）。如果计算力量时伤害大于16点，获得1 *力量 。",
+    "UPGRADE_DESCRIPTION": "失去2生命，造成 !D! 点伤害（受益3倍 *力量 加成）。如果计算力量时伤害大于14点，获得1 *力量 。"
   },
   "${modID}:ThrowAway": {
     "NAME": "挥袖",
@@ -129,8 +129,8 @@
   },
   "${modID}:Deprive": {
     "NAME": "感知剥夺",
-    "DESCRIPTION": "给予 5 虚弱 ，5 ${modID}:恐惧 。",
-    "UPGRADE_DESCRIPTION": "给予 5 虚弱 ，10 ${modID}:恐惧 。"
+    "DESCRIPTION": "给予 5 虚弱 ，3 ${modID}:恐惧 。",
+    "UPGRADE_DESCRIPTION": "给予 5 虚弱 ，5 ${modID}:恐惧 。"
   },
   "${modID}:StunSelf": {
     "NAME": "交叉防御",
@@ -174,13 +174,12 @@
   },
   "${modID}:GetReady": {
     "NAME": "准备就绪",
-    "DESCRIPTION": "获得1点 力量 ，3点 ${modID}:创想 ，在下回合开始时获得 [E]  [E] ，10 格挡 ， NL 额外抽2张手牌。",
-    "UPGRADE_DESCRIPTION": "获得2点 力量 ，3点 ${modID}:创想 ，在下回合开始时获得 [E]  [E]  [E] ，20 格挡 ， NL 额外抽3张手牌。"
+    "DESCRIPTION": "消耗 。获得1点 力量 ，在下回合开始时获得 [E]  [E] 和10 格挡 ， NL 额外抽2张手牌。",
+    "UPGRADE_DESCRIPTION": "消耗 。获得2点 力量 ，在下回合开始时获得 [E]  [E]  [E] 和20 格挡 ， NL 额外抽3张手牌。"
   },
   "${modID}:TacticalGuide": {
     "NAME": "战术指导",
-    "DESCRIPTION": " 消耗 。 消耗 你的所有手牌，抽 消耗 的数量+1的牌。",
-    "UPGRADE_DESCRIPTION": " 消耗 你的所有手牌，抽 消耗 的数量+1的牌。"
+    "DESCRIPTION": " 消耗 。 消耗 你的所有手牌，抽 消耗 的数量+1的牌。"
   },
   "${modID}:ExpressStrike": {
     "NAME": "无缝连击",
@@ -246,8 +245,8 @@
   },
   "${modID}:Lullaby": {
     "NAME": "“摇篮曲”",
-    "DESCRIPTION": "眩晕 所有敌人。",
-    "UPGRADE_DESCRIPTION": "眩晕 所有敌人两回合。"
+    "DESCRIPTION": "消耗 。 眩晕 所有敌人。",
+    "UPGRADE_DESCRIPTION": "消耗 。 眩晕 所有敌人两回合。"
   },
   "${modID}:FaceYourSin": {
     "NAME": "直面汝罪",
@@ -260,8 +259,8 @@
   },
   "${modID}:Endophobia": {
     "NAME": "内源性恐慌",
-    "DESCRIPTION": "获得一张 *感染， NL 对所有敌人给予 2 ${modID}:恐惧 ， NL 然后造成 !D! 伤害。",
-    "UPGRADE_DESCRIPTION": "获得一张 *感染， NL 对所有敌人给予 3 ${modID}:恐惧 ， NL 然后造成 !D! 伤害。"
+    "DESCRIPTION": "将一张 *感染 加入抽牌堆， NL 对所有敌人给予 2 ${modID}:恐惧 ， NL 然后造成 !D! 伤害。",
+    "UPGRADE_DESCRIPTION": "将一张 *感染 加入抽牌堆， NL 对所有敌人给予 3 ${modID}:恐惧 ， NL 然后造成 !D! 伤害。"
   },
   "${modID}:OptionBlock": {
     "NAME": "源石剑：格挡",

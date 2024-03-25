@@ -10,8 +10,12 @@
 
 ### This mod still in testing, if you run into any issues in this mod, please feed back at GitHub!
 
-steam workshop current version: 0.9.2-alpha
+steam workshop current version: 0.9.3-beta
 
+v0.9.3-beta
+fix all known bugs on steam. all(OceanCat shout
+v0.9.3
+add new relic:DarkMask. balance Skill cards. fix some bugs.
 v0.9.2-alpha
 fix cards descriptions and image bugs. balance some weak cards.
 v0.9.2

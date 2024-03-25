@@ -7,10 +7,10 @@ import rosmod.character.Rosmontis;
 import static rosmod.BasicMod.makeID;
 
 public class Oath extends BaseRelic {
-    private static final String NAME = "Oath"; //The name will be used for determining the image file as well as the ID.
-    public static final String ID = makeID(NAME); //This adds the mod's prefix to the relic ID, resulting in modID:MyRelic
-    private static final RelicTier RARITY = RelicTier.RARE; //The relic's rarity.
-    private static final LandingSound SOUND = LandingSound.CLINK; //The sound played when the relic is clicked.
+    private static final String NAME = "Oath";
+    public static final String ID = makeID(NAME);
+    private static final RelicTier RARITY = RelicTier.RARE;
+    private static final LandingSound SOUND = LandingSound.CLINK;
 
     public Oath() {
         super(ID, NAME, Rosmontis.Enums.CARD_COLOR, RARITY, SOUND);
