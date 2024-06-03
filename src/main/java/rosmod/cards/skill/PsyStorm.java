@@ -4,7 +4,6 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import rosmod.cards.BaseCard;
 import rosmod.character.Rosmontis;
@@ -32,10 +31,6 @@ public class PsyStorm extends BaseCard {
         abstractPlayer.state.setAnimation(0,"Skill_3_Begin",false);
         abstractPlayer.state.addAnimation(0,"Skill_3_Loop",true,0.3f);
         for(int i = 0 ; i < 1 + this.energyOnUse ; i++){
-            int monum = 0;
-            for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters)
-                if (!mo.isDead)
-                    monum++;
             int tempDamage = 2;
             for(int j = 0; j<i;j++){
                 int Ftemp = tempDamage;
@@ -44,7 +39,7 @@ public class PsyStorm extends BaseCard {
 //            for(AbstractMonster mo: AbstractDungeon.getCurrRoom().monsters.monsters)
 //                addToBot(new DamageAction(mo,new DamageInfo(mo,(tempDamage/monum)+1),AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
 
-            addToBot(new DamageAllEnemiesAction(abstractPlayer, DamageInfo.createDamageMatrix(tempDamage / monum, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+            addToBot(new DamageAllEnemiesAction(abstractPlayer, DamageInfo.createDamageMatrix(tempDamage, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         }
         abstractPlayer.state.addAnimation(0,"Skill_3_End",false,(1+this.energyOnUse)*0.2f);
         abstractPlayer.state.addAnimation(0,"Idle",true,0.3f);

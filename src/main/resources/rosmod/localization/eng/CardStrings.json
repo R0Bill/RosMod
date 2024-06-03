@@ -56,7 +56,7 @@
   "${modID}:Skill1": {
     "NAME": "Mind Expansion",
     "DESCRIPTION": "${modID}:Unique . Every 3rd attack played each turn is played twice.",
-    "UPGRADE_DESCRIPTION": "${modID}:Unique , Innate. Every 2nd attack played each turn is played twice."
+    "UPGRADE_DESCRIPTION": "${modID}:Unique , Innate. Every 3rd attack played each turn is played twice."
   },
   "${modID}:Skill2": {
     "NAME": "Peripheral Blockade",
@@ -172,8 +172,8 @@
   },
   "${modID}:GetReady": {
     "NAME": "Get Ready",
-    "DESCRIPTION": "Gain 1 Strength . NL Gain [E] [E] and 10 Block at the start of next turn, NL and draw 2 additional cards.",
-    "UPGRADE_DESCRIPTION": "Gain 2 Strength . NL Gain [E] [E] [E] and 20 Block at the start of next turn,  NL and draw 3 additional cards."
+    "DESCRIPTION": "Gain 2 Strength . NL Gain [E] [E] and 10 Block at the start of next turn, NL and draw 2 additional cards.",
+    "UPGRADE_DESCRIPTION": "Gain 3 Strength . NL Gain [E] [E] [E] and 20 Block at the start of next turn,  NL and draw 3 additional cards."
   },
   "${modID}:TacticalGuide": {
     "NAME": "Tactical Guidance",
@@ -288,5 +288,9 @@
   "${modID}:Outriders": {
     "NAME": "Inheritors",
     "DESCRIPTION": "Trigger either *Primordial Blade: Block or *Primordial Blade: Attack."
+  },
+  "${modID}:Spiritualization": {
+    "NAME": "Latelean purification ticket.",
+    "DESCRIPTION": "Exhaust , Retain . Exhaust all State and Course in your hand. Each provide [E] and draw 1 card."
   }
 }

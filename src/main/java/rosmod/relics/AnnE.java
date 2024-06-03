@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import rosmod.character.Rosmontis;
+import rosmod.powers.BombPower;
 
 import static rosmod.BasicMod.makeID;
 
@@ -25,8 +26,14 @@ public class AnnE extends BaseRelic {
         if (targetCard.type == AbstractCard.CardType.ATTACK){
             flash();
             for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-                if (!mo.isDead)
+                if (!mo.isDead) {
                     addToBot(new DamageAction(mo, new DamageInfo(AbstractDungeon.player, AbstractDungeon.player.hasPower("rosmontis:Skill2Power") ? (3 + (AbstractDungeon.player.currentBlock / 4)) : 3, DamageInfo.DamageType.THORNS)));
+                    if (mo.hasPower("rosmontis:BombPower")) {
+                        BombPower pow = (BombPower) mo.getPower("rosmontis:BombPower");
+                        pow.trigger();
+                    }
+
+                }
             }
 //            addToBot(new DamageAllEnemiesAction(null, DamageInfo.createDamageMatrix(AbstractDungeon.player.hasPower("rosmontis:Skill2") ? (3 + (AbstractDungeon.player.currentBlock / 4)) : 3, false), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.NONE));
         }

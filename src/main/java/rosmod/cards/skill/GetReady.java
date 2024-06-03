@@ -32,9 +32,8 @@ public class GetReady extends BaseCard {
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         addToBot(new ApplyPowerAction(abstractPlayer, abstractPlayer, new GiveBlockNextTurn(abstractPlayer, (!this.upgraded ? 10 : 20))));
         addToBot(new ApplyPowerAction(abstractPlayer, abstractPlayer, new EnergizedPower(abstractPlayer, (!this.upgraded ? 2 : 3))));
-        addToBot(new ApplyPowerAction(abstractPlayer, abstractPlayer, new StrengthPower(abstractPlayer, (!this.upgraded ? 1 : 2))));
+        addToBot(new ApplyPowerAction(abstractPlayer, abstractPlayer, new StrengthPower(abstractPlayer, (!this.upgraded ? 2 : 3))));
         addToBot(new ApplyPowerAction(abstractPlayer, abstractPlayer, new DrawCardNextTurnPower(abstractPlayer, (!this.upgraded ? 2 : 3))));
-//        addToBot(new ApplyPowerAction(abstractPlayer, abstractPlayer, new AttachPower(abstractPlayer, (!this.upgraded ? 3 : 4))));
     }
 
 }

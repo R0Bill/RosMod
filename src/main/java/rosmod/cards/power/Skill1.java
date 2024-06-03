@@ -48,10 +48,7 @@ public class Skill1 extends BaseCard {
             }
         }
         if (!powerExists) {
-            if (!this.upgraded)
-                addToBot(new ApplyPowerAction(abstractPlayer, abstractPlayer, new Skill1Power(abstractPlayer, 3)));
-            else
-                addToBot(new ApplyPowerAction(abstractPlayer, abstractPlayer, new Skill1Power(abstractPlayer, 2)));
+            addToBot(new ApplyPowerAction(abstractPlayer, abstractPlayer, new Skill1Power(abstractPlayer, 3)));
         }
     }
 }

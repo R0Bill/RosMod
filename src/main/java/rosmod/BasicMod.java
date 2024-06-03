@@ -178,7 +178,7 @@ public class BasicMod implements
 
 
         Consumer BUT = (UIBUT) -> {
-            ModImage a = new ModImage(400, 500F, "rosmod/images/ui/modpanel/114514.jpg");
+            ModImage a = new ModImage(600F, 150F, "rosmod/images/ui/modpanel/aha.png");
             modPanel.addUIElement(a);
             modPanel.update();
             try {
@@ -188,7 +188,12 @@ public class BasicMod implements
             }
         };
         modPanel.addUIElement(new ModButton(400F, 670F/*,new Texture("rosmod/images/missing.png")*/, modPanel, BUT));
+
         Consumer<ModLabel> not = (justnull) -> {
+//            try {
+//                Desktop.getDesktop().browse((new URL("https://github.com/R0Bill/RosMod")).toURI());
+//            } catch (Exception e) {
+//            }
         };
         modPanel.addUIElement(new ModLabel("Github", 400F, 720F, Color.valueOf("bacdbaff"), modPanel, not));
 

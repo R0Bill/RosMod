@@ -57,7 +57,7 @@
   "${modID}:Skill1": {
     "NAME": "思维膨大",
     "DESCRIPTION": "${modID}:唯一 。每回合第3张攻击牌视为打出两次。",
-    "UPGRADE_DESCRIPTION": "${modID}:唯一 ， 固有 。每回合第2张攻击牌视为打出两次。"
+    "UPGRADE_DESCRIPTION": "${modID}:唯一 ， 固有 。每回合第3张攻击牌视为打出两次。"
   },
   "${modID}:Skill2": {
     "NAME": "末梢阻断",
@@ -109,8 +109,8 @@
   },
   "${modID}:Extrasensory": {
     "NAME": "超感",
-    "DESCRIPTION": "*消耗 。获得等同于敌人数量的 *快速格挡 。",
-    "UPGRADE_DESCRIPTION": "*消耗 。获得等同于两倍敌人数量的 *快速格挡 。"
+    "DESCRIPTION": "*消耗 。为所有敌人给予一次余震强化。",
+    "UPGRADE_DESCRIPTION": "*消耗 。为所有敌人给予持续一回合余震强化。"
   },
   "${modID}:LoseControl": {
     "NAME": "失控",
@@ -174,8 +174,8 @@
   },
   "${modID}:GetReady": {
     "NAME": "准备就绪",
-    "DESCRIPTION": "消耗 。获得1点 力量 ，在下回合开始时获得 [E]  [E] 和10 格挡 ， NL 额外抽2张手牌。",
-    "UPGRADE_DESCRIPTION": "消耗 。获得2点 力量 ，在下回合开始时获得 [E]  [E]  [E] 和20 格挡 ， NL 额外抽3张手牌。"
+    "DESCRIPTION": "消耗 。获得2点 力量 ，在下回合开始时获得 [E]  [E] 和10 格挡 ， NL 额外抽2张手牌。",
+    "UPGRADE_DESCRIPTION": "消耗 。获得3 力量 ，在下回合开始时获得 [E]  [E]  [E] 和20 格挡 ， NL 额外抽3张手牌。"
   },
   "${modID}:TacticalGuide": {
     "NAME": "战术指导",
@@ -289,5 +289,9 @@
   "${modID}:Outriders": {
     "NAME": "先驱者",
     "DESCRIPTION": "在 *源石剑：格挡 和 *源石剑：攻击 中选择一项触发。"
+  },
+  "${modID}:Spiritualization": {
+    "NAME": "“拉特兰净化券”",
+    "DESCRIPTION": "消耗 ， 保留 。 消耗 掉你手牌中的所有 状态牌 和 诅咒 。 每消耗一张，获得 [E] ，抽一张牌。"
   }
 }

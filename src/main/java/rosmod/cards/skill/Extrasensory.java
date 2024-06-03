@@ -1,11 +1,12 @@
 package rosmod.cards.skill;
 
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import rosmod.cards.BaseCard;
 import rosmod.character.Rosmontis;
+import rosmod.powers.BombPower;
 import rosmod.util.CardStats;
 
 public class Extrasensory extends BaseCard {
@@ -21,15 +22,19 @@ public class Extrasensory extends BaseCard {
     public Extrasensory() {
         super(ID, info);
         setExhaust(true);
-        this.cardsToPreview = new Summon();
+        setMagic(3);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int monum = 0;
-        for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters)
-            if (!mo.isDead)
-                monum++;
-        addToBot(new MakeTempCardInHandAction(new Summon(), this.upgraded ? 2 * monum : monum));
+        for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
+            if (!mo.isDead) {
+                if (mo.hasPower("rosmontis:BombPower")) {
+                    mo.getPower("rosmontis:BombPower").amount += this.magicNumber;
+                } else {
+                    addToBot(new ApplyPowerAction(mo, p, new BombPower(mo, this.magicNumber, !this.upgraded)));
+                }
+            }
+        }
     }
 }

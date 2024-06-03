@@ -8,8 +8,6 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import org.apache.logging.log4j.Logger;
-import rosmod.BasicMod;
 
 import static rosmod.BasicMod.makeID;
 
@@ -27,7 +25,6 @@ public class StablePower extends BasePower {
     private AbstractCreature target = null;
     private AbstractCreature source = null;
     private AbstractCard.CardTarget cardTarget = null;
-    private Logger logger = BasicMod.logger;
 
     @Override
     public float atDamageFinalGive(float damage, DamageInfo.DamageType type) {

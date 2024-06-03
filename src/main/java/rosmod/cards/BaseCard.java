@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import org.apache.logging.log4j.Logger;
 import rosmod.BasicMod;
 import rosmod.util.CardStats;
 
@@ -23,6 +24,7 @@ import static rosmod.util.TextureLoader.getCardTextureString;
 
 
 public abstract class BaseCard extends CustomCard {
+    protected static final Logger logger = BasicMod.logger;
     final private static Map<String, DynamicVariable> customVars = new HashMap<>();
 
     public static String makeID(String name) { return BasicMod.makeID(name); }

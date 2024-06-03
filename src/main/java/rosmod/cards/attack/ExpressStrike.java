@@ -21,8 +21,8 @@ public class ExpressStrike extends BaseCard {
     );
 
     private static final int DAMAGE = 1;
-    private static final int MAGIC = 4;
-    private static final int UPG_MAGIC = 4;
+    private static final int MAGIC = 5;
+    private static final int UPG_MAGIC = 5;
 
     public ExpressStrike() {
         super(ID, info);

@@ -37,35 +37,6 @@ public class Skill1Power extends BasePower {
         this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
     }
 
-    private void CUStrigger(AbstractCard abstractCard, UseCardAction action) {
-        magic = 1;
-        flash();
-        AbstractMonster m = null;
-        if (action.target != null)
-            m = (AbstractMonster) action.target;
-        AbstractDungeon.player.limbo.addToBottom(abstractCard);
-        abstractCard.target_x = Settings.WIDTH / 2.0F - 300.0F * Settings.scale;
-        abstractCard.target_y = Settings.HEIGHT / 2.0F;
-        if (m != null)
-            abstractCard.calculateCardDamage(m);
-        abstractCard.purgeOnUse = true;
-        if (m != null && m.isDead) m = AbstractDungeon.getCurrRoom().monsters.getRandomMonster(true);
-        AbstractCard card = abstractCard.makeSameInstanceOf();
-        AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(card, m, 0, true, true), true);
-    }
-/*    public void onUseCard(AbstractCard abstractCard, UseCardAction action) {
-        logger.info("magic:"+magic+" amount:"+amount+" limit:"+limit+" TF"+ISPOWERCARD);
-        logger.info("card:"+abstractCard+" action:"+action);
-        if (!abstractCard.purgeOnUse && abstractCard.type == AbstractCard.CardType.ATTACK && !abstractCard.cardID.equals("rosmontis.TouchingStars") && !abstractCard.cardID.equals("rosmontis:ForgetMeNot")&&ISPOWERCARD) {
-            ISPOWERCARD=false;
-            logger.info("trigger:IsPowerCard");
-        }
-        else if(!abstractCard.purgeOnUse && abstractCard.type == AbstractCard.CardType.ATTACK && !abstractCard.cardID.equals("rosmontis.TouchingStars") && !abstractCard.cardID.equals("rosmontis:ForgetMeNot")){
-            logger.info("trigger:active");
-            magic++;
-        }
-    }*/
-
     @Override
     public void onUseCard(AbstractCard abstractCard, UseCardAction action) {
         if (!abstractCard.purgeOnUse && abstractCard.type == AbstractCard.CardType.ATTACK && !abstractCard.cardID.equals("rosmontis.TouchingStars") && !abstractCard.cardID.equals("rosmontis:ForgetMeNot")) {
@@ -83,8 +54,7 @@ public class Skill1Power extends BasePower {
                     abstractCard.calculateCardDamage(m);
                 abstractCard.purgeOnUse = true;
                 if (m != null && m.isDead) m = AbstractDungeon.getCurrRoom().monsters.getRandomMonster(true);
-                AbstractCard card = abstractCard.makeSameInstanceOf();
-                AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(card, m, 0, true, true), true);
+                AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(abstractCard.makeSameInstanceOf(), m, 0, true, true), true);
             } else if (amount == 3 && magic == 4) {
                 magic = 0;
                 flash();
@@ -98,8 +68,7 @@ public class Skill1Power extends BasePower {
                     abstractCard.calculateCardDamage(m);
                 abstractCard.purgeOnUse = true;
                 m = AbstractDungeon.getCurrRoom().monsters.getRandomMonster(true);
-                AbstractCard card = abstractCard.makeSameInstanceOf();
-                AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(card, m, 0, true, true), true);
+                AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(abstractCard.makeSameInstanceOf(), m, 0, true, true), true);
             }
         }
 
