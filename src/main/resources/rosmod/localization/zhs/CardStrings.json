@@ -109,8 +109,8 @@
   },
   "${modID}:Extrasensory": {
     "NAME": "超感",
-    "DESCRIPTION": "*消耗 。为所有敌人给予一次余震强化。",
-    "UPGRADE_DESCRIPTION": "*消耗 。为所有敌人给予持续一回合余震强化。"
+    "DESCRIPTION": "*消耗 。为你给予一次余震强化。",
+    "UPGRADE_DESCRIPTION": "*消耗 。为你给予持续一回合余震强化。"
   },
   "${modID}:LoseControl": {
     "NAME": "失控",

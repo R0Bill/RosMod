@@ -108,8 +108,8 @@
   },
   "${modID}:Extrasensory": {
     "NAME": "Extrasensory",
-    "DESCRIPTION": "Exhaust . Gain *Quick *Block based on the number of enemies.",
-    "UPGRADE_DESCRIPTION": "Exhaust . Gain double *Quick *Block based on the number of enemies."
+    "DESCRIPTION": "Exhaust . Gain *AfterShock *Boost for once.",
+    "UPGRADE_DESCRIPTION": "Exhaust . Gain *AfterShock *Boost for this turn."
   },
   "${modID}:LoseControl": {
     "NAME": "Lose Control",

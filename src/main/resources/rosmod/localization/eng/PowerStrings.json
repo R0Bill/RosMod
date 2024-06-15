@@ -83,5 +83,15 @@
       "At the start of your next turn, gain",
       " Block."
     ]
+  },
+  "${modID}:BombPower": {
+    "NAME": "AfterShock Boost",
+    "DESCRIPTIONS": [
+      "Your attack cards have more powerful aftershock for ",
+      "",
+      " times.",
+      " turns.",
+      ""
+    ]
   }
 }

@@ -10,24 +10,7 @@
 
 ### This mod still in testing, if you run into any issues in this mod, please feed back at GitHub!
 
-steam workshop current version: 0.9.3-beta
-
-v0.9.3-beta
-fix all known bugs on steam. all(OceanCat shout
-v0.9.3
-add new relic:DarkMask. balance Skill cards. fix some bugs.
-v0.9.2-alpha
-fix cards descriptions and image bugs. balance some weak cards.
-v0.9.2
-fix keyword Unique didn't work on ForgetMeNot. balance other cards.
-v0.9.1-beta
-fix starter relic damage type to thorns. fix Skill1 trigger card into its counts. balance some defend cards
-v0.9.1-alpha
-emergency fix card:Extend cannot use bug. balance some cards.
-v0.9.1
-fix known bugs on steam, English supported!
-v0.9.0
-first public version
+steam workshop current version: 0.9.4
 
 --- 
 
