@@ -292,5 +292,14 @@
   "${modID}:Spiritualization": {
     "NAME": "Latelean purification ticket.",
     "DESCRIPTION": "Exhaust , Retain . Exhaust all State and Course in your hand. Each provide [E] and draw 1 card."
+  },
+  "${modID}:WhoAreYou": {
+    "NAME": "WhoAreYou",
+    "DESCRIPTION": "Innate . [#19FFF9]Who am I???[] NL Gain Confusion.",
+    "EXTENDED_DESCRIPTION": [
+      "I always get 'he' and 'she' mixed up. In Chinese, it's just 'ta' – so simple.",
+      "I still want to say, in another life, I really enjoyed doing laundry and taxes with you.",
+      "Yours sincerely, to the unstoppable heartbeat and the original you."
+    ]
   }
 }

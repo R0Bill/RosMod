@@ -22,7 +22,7 @@ public class MedBox extends BaseCard {
     public MedBox() {
         super(ID, info);
         setExhaust(true);
-        setMagic(5, 2);
+        setMagic(5);
         this.isInAutoplay = true;
     }
 
@@ -38,6 +38,5 @@ public class MedBox extends BaseCard {
         addToTop(new HealAction(AbstractDungeon.player, AbstractDungeon.player, this.magicNumber));
         addToTop(new ExhaustSpecificCardAction(this, AbstractDungeon.player.hand));
     }
-
 
 }

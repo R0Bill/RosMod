@@ -2,7 +2,7 @@
 
 # Arknights Rosmontis Character mod is keep updating!
 
-## 1个角色，2种皮肤，64张卡，12个遗物，3个事件
+## 1个角色，2种皮肤，65张卡，13个遗物，3个事件
 
 ## 1 char, 2 skins, 64 cards, 12 relics and 3 events
 
@@ -10,7 +10,7 @@
 
 ### This mod still in testing, if you run into any issues in this mod, please feed back at GitHub!
 
-steam workshop current version: 0.9.4
+steam workshop current version: 0.9.5
 
 --- 
 

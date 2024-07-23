@@ -17,6 +17,7 @@ import com.megacrit.cardcrawl.powers.DuplicationPower;
 import com.megacrit.cardcrawl.relics.MummifiedHand;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class TouchingStarBalancePatches {
 
@@ -69,20 +70,31 @@ public class TouchingStarBalancePatches {
     public static class ReplaceMad {
         @SpirePrefixPatch
         public static SpireReturn<Void> Prefix(MadnessAction _inst, boolean better) {
+            ArrayList<AbstractCard> list = new ArrayList<>();
             for (AbstractCard c : AbstractDungeon.player.hand.group) {
                 if (!c.cardID.equals("rosmontis:TouchingStars") && !c.cardID.equals("rosmontis:ForgetMeNot")) {
                     if (c.costForTurn > 0) {
-                        c.cost = 0;
+                        /*c.cost = 0;
                         c.costForTurn = 0;
                         c.isCostModified = true;
-                        c.superFlash(Color.GOLD.cpy());
+                        c.superFlash(Color.GOLD.cpy());*/
+                        list.add(c);
                     } else if (c.cost > 0) {
-                        c.cost = 0;
+                        /*c.cost = 0;
                         c.costForTurn = 0;
                         c.isCostModified = true;
-                        c.superFlash(Color.GOLD.cpy());
+                        c.superFlash(Color.GOLD.cpy());*/
+                        list.add(c);
                     }
                 }
+            }
+            if (!list.isEmpty()) {
+                Random r = new Random();
+                int n = r.nextInt(list.size());
+                AbstractCard card = list.get(n);
+                card.costForTurn = 0;
+                card.isCostModified = true;
+                card.superFlash(Color.GOLD.cpy());
             }
             return SpireReturn.Return();
         }
