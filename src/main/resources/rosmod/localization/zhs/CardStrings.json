@@ -170,7 +170,7 @@
   "${modID}:ExtendP": {
     "NAME": "创想",
     "DESCRIPTION": "在每回合的开始和现在将 1 张 *思维衍生 加入手牌。",
-    "UPGRADE_DESCRIPTION": "在每回合的开始和现在将 2 张 *思维衍生 加入手牌。"
+    "UPGRADE_DESCRIPTION": "固有 。在每回合的开始和现在将 2 张 *思维衍生 加入手牌。"
   },
   "${modID}:GetReady": {
     "NAME": "准备就绪",

@@ -168,7 +168,7 @@
   "${modID}:ExtendP": {
     "NAME": "Inception",
     "DESCRIPTION": "Add 1 *Mind *Extension to hand at the start of each turn and now.",
-    "UPGRADE_DESCRIPTION": "Add 2 *Mind *Extension to hand at the start of each turn and now."
+    "UPGRADE_DESCRIPTION": "Innate . Add 2 *Mind *Extension to hand at the start of each turn and now."
   },
   "${modID}:GetReady": {
     "NAME": "Get Ready",

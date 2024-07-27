@@ -71,7 +71,6 @@ public class PickUp extends AbstractImageEvent {
                 } else if (buttonPressed == 1) {
                     this.imageEventText.updateDialogOption(0, OPTIONS[6]);
                     this.imageEventText.updateBodyText(DESCRIPTIONS[6]);
-                    this.imageEventText.updateBodyText(DESCRIPTIONS[5]);
                     this.imageEventText.removeDialogOption(1);
                     AbstractDungeon.getCurrRoom().spawnRelicAndObtain(Settings.WIDTH * 0.5F, Settings.HEIGHT * 0.5F, new StolenMiniCake());
                     this.curScreen = CurrentScreen.COMPLETE;
