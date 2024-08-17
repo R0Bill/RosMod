@@ -4,7 +4,7 @@
 
 ## 1个角色，2种皮肤，65张卡，13个遗物，3个事件
 
-## 1 char, 2 skins, 64 cards, 12 relics and 3 events
+## 1 char, 2 skins, 65 cards, 13 relics and 3 events
 
 ### 该项目仍处于开发测试阶段，如有bug或游戏体验反馈，请在该github项目上提交issue
 
