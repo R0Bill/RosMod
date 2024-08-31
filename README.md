@@ -6,11 +6,11 @@
 
 ## 1 char, 2 skins, 65 cards, 13 relics and 3 events
 
-### 该项目仍处于开发测试阶段，如有bug或游戏体验反馈，请在该github项目上提交issue
+### 如有bug或游戏体验反馈，请在该github项目上提交issue
 
-### This mod still in testing, if you run into any issues in this mod, please feed back at GitHub!
+### If you run into any issues in this mod, please feed back at GitHub!
 
-steam workshop current version: 0.9.5
+steam workshop current version: 1.0.0
 
 --- 
 

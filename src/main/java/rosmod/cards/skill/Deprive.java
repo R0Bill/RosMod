@@ -22,7 +22,6 @@ public class Deprive extends BaseCard {//
 
     public Deprive() {
         super(ID, info);
-        setExhaust(true);
         setCostUpgrade(1);
     }
 

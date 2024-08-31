@@ -23,7 +23,7 @@ public class Judgement extends BaseCard {
             CardTarget.ENEMY,
             2
     );
-    private static final int DAMAGE = 10;
+    private static final int DAMAGE = 12;
     private static final int UPG_DAMAGE = 5;
 
     public Judgement() {
@@ -35,9 +35,9 @@ public class Judgement extends BaseCard {
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {//斩杀加敏捷
-        boolean temp = abstractMonster.currentHealth + abstractMonster.currentBlock <= damage + 3;
+        boolean temp = abstractMonster.currentHealth + abstractMonster.currentBlock <= damage + (AbstractDungeon.player.hasPower("rosmontis:Skill2Power") ? (3 + (AbstractDungeon.player.currentBlock / 4)) : 3) + (AbstractDungeon.player.hasPower("rosmontis:BombPower") ? 3 : 0);
         addToBot(new DamageAction(abstractMonster, new DamageInfo(abstractPlayer, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_HEAVY));
-        if (temp) {
+        if (temp && !abstractMonster.isDead) {
             if (!abstractPlayer.hasRelic(JudgeCount.ID)) {
                 JudgeCount judgeCount = new JudgeCount();
                 AbstractDungeon.getCurrRoom().spawnRelicAndObtain(((float) Settings.WIDTH / 2), ((float) Settings.HEIGHT / 2), judgeCount);

@@ -25,16 +25,14 @@ public class Slay extends BaseCard {
 
     public Slay() {
         super(ID, info);
-        setDamage(15, 5);
+        setDamage(17, 5);
         tags.add(CardTags.STRIKE);
     }
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        Consumer<Integer> CB = (Integer num) -> {
-            addToTop(new AddTemporaryHPAction(abstractPlayer, abstractPlayer, num));
-        };
-        addToBot(new DamageCallbackAction(abstractMonster, new DamageInfo(abstractPlayer, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.FIRE, CB));
+        Consumer<Integer> CB = (Integer num) -> addToTop(new AddTemporaryHPAction(abstractPlayer, abstractPlayer, num));
+        addToBot(new DamageCallbackAction(abstractMonster, new DamageInfo(abstractPlayer, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_HEAVY, CB));
 //        addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_HEAVY));
     }
 

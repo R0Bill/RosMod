@@ -92,11 +92,13 @@
   },
   "${modID}:StealBlock": {
     "NAME": "破障",
-    "DESCRIPTION": "造成敌人 格挡 量的伤害，获得造成伤害量的 格挡 。最低伤害为5。"
+    "DESCRIPTION": "造成敌人 格挡 量的伤害，获得造成伤害量的 格挡 。最低伤害为5。",
+    "UPGRADE_DESCRIPTION": "造成双倍敌人 格挡 量的伤害，获得造成伤害量的 格挡 。最低伤害为10。"
   },
   "${modID}:MilliaDisaster": {
     "NAME": "“米利亚的灾祸”",
-    "DESCRIPTION": "每使用一张技能牌对随机敌人施加 2 ${modID}:恐惧 ，将一张 *感染 加入抽牌堆。"
+    "DESCRIPTION": "每使用一张技能牌对随机敌人施加 2 ${modID}:恐惧 ，将一张 *感染 加入抽牌堆。",
+    "UPGRADE_DESCRIPTION": "每使用一张技能牌对随机敌人施加 3 ${modID}:恐惧 ，将一张 *感染 加入抽牌堆。"
   },
   "${modID}:Stable": {
     "NAME": "感知稳定",

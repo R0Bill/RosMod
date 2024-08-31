@@ -14,7 +14,7 @@ public class MedBox extends BaseCard {
     private static final CardStats info = new CardStats(
             Rosmontis.Enums.CARD_COLOR,
             CardType.SKILL,
-            CardRarity.COMMON,
+            CardRarity.UNCOMMON,
             CardTarget.SELF,
             -2
     );
@@ -22,7 +22,7 @@ public class MedBox extends BaseCard {
     public MedBox() {
         super(ID, info);
         setExhaust(true);
-        setMagic(5);
+        setMagic(7);
         this.isInAutoplay = true;
     }
 

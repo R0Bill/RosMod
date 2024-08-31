@@ -91,11 +91,13 @@
   },
   "${modID}:StealBlock": {
     "NAME": "Breakthrough",
-    "DESCRIPTION": "Deal damage equal to the enemy's Block. Gain Block equal to the damage dealt. Minimum damage is 5."
+    "DESCRIPTION": "Deal damage equal to the enemy's Block. Gain Block equal to the damage dealt. Minimum damage is 5.",
+    "UPGRADE_DESCRIPTION": "Deal damage equal to *double enemy's Block. Gain Block equal to the damage dealt. Minimum damage is 10."
   },
   "${modID}:MilliaDisaster": {
     "NAME": "Millia's Disaster",
-    "DESCRIPTION": "Apply 2 ${modID}:Fear to a random enemy each time a Skill is played. Add one *Infected to draw pile."
+    "DESCRIPTION": "Apply 2 ${modID}:Fear to a random enemy each time a Skill is played. Add one *Infected to draw pile.",
+    "UPGRADE_DESCRIPTION": "Apply 3 ${modID}:Fear to a random enemy each time a Skill is played. Add one *Infected to draw pile."
   },
   "${modID}:Stable": {
     "NAME": "Stable Perception",

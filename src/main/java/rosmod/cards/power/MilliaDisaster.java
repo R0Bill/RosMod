@@ -29,7 +29,7 @@ public class MilliaDisaster extends BaseCard {
     }
 
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        addToBot(new ApplyPowerAction(abstractPlayer, abstractPlayer, new MilliaPower(abstractPlayer, 2)));
+        addToBot(new ApplyPowerAction(abstractPlayer, abstractPlayer, new MilliaPower(abstractPlayer, this.upgraded ? 3 : 2)));
         addToBot(new MakeTempCardInDrawPileAction(new Infected(), 1, true, false, false));
     }
 }

@@ -16,7 +16,7 @@ public class FallOut extends BaseCard {
     private static final CardStats info = new CardStats(
             Rosmontis.Enums.CARD_COLOR,
             CardType.ATTACK,
-            CardRarity.UNCOMMON,
+            CardRarity.RARE,
             CardTarget.ALL_ENEMY,
             3
     );
@@ -25,7 +25,7 @@ public class FallOut extends BaseCard {
         super(ID, info);
         setExhaust(true);
         setCostUpgrade(2);
-        setDamage(12, 4);
+        setDamage(16, 4);
     }
 
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {

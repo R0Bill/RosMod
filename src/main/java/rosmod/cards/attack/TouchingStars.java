@@ -26,8 +26,8 @@ public class TouchingStars extends BaseCard {
 
     public TouchingStars() {
         super(ID, info);
-        setMagic(8);
-        setDamage(99);
+        setMagic(7);
+        setDamage(999);
         setSelfRetain(true);
         setExhaust(true);
         setInnate(false, true);

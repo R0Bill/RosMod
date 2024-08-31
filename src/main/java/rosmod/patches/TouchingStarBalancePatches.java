@@ -93,7 +93,6 @@ public class TouchingStarBalancePatches {
                 int n = r.nextInt(list.size());
                 AbstractCard card = list.get(n);
                 card.costForTurn = 0;
-                card.isCostModified = true;
                 card.superFlash(Color.GOLD.cpy());
             }
             return SpireReturn.Return();

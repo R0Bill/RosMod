@@ -31,7 +31,7 @@ public class Impulse extends BaseCard {
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        if (abstractMonster.currentHealth <= damage + 3 && abstractMonster.currentBlock == 0)
+        if (abstractMonster.currentHealth + abstractMonster.currentBlock <= damage + (abstractPlayer.hasPower("rosmontis:Skill2Power") ? (3 + (abstractPlayer.currentBlock / 4)) : 3) + (abstractMonster.hasPower("rosmontis:BombPower") ? 3 : 0) && !abstractMonster.isDead)
             addToBot(new MakeTempCardInHandAction(this, 1));
         addToBot(new DamageAction(abstractMonster, new DamageInfo(abstractPlayer, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_HEAVY));
     }
