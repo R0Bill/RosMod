@@ -58,6 +58,10 @@ public class SkinSelectScreen implements ISubscriber, CustomSavable<Integer> {
         return SKINS.get(Inst.index);
     }
 
+    public static int getIndex() {
+        return Inst.index;
+    }
+
     public SkinSelectScreen() {
         this.index = 0;
         refresh();
@@ -76,7 +80,7 @@ public class SkinSelectScreen implements ISubscriber, CustomSavable<Integer> {
         this.skeleton.setColor(Color.WHITE);
         this.stateData = new AnimationStateData(skeletonData);
         this.state = new AnimationState(this.stateData);
-        AnimationState.TrackEntry e = this.state.setAnimation(0, (this.index == 2 ? "A_Attack" : "Idle"), true);
+        AnimationState.TrackEntry e = this.state.setAnimation(0, (this.index == 2 ? "C_Idle" : "Idle"), true);
         //need to initialize the animation to prevent bones error
 
         e.setTimeScale(1.0F);

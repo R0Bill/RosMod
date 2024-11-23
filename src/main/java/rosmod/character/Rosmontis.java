@@ -85,15 +85,21 @@ public class Rosmontis extends CustomPlayer {//DES
         dialogY = (drawY + 220.0F * Settings.scale);
 
         //loadAnimation(characterPath(SKIN.charPath+".atlas"),characterPath(SKIN.charPath+".json"),1F);
-        this.stateData.setMix("Idle", "Die", 0.1F);
-        this.state.setAnimation(0, "Start", false);
-        this.state.setAnimation(0, "Idle", true);
+        if (SkinSelectScreen.getIndex() == 2) {
+            this.stateData.setMix("C_Idle", "C_Die", 0.1F);
+            this.state.setAnimation(0, "BtoC", false);
+            this.state.setAnimation(0, "C_Idle", true);
+        } else {
+            this.stateData.setMix("Idle", "Die", 0.1F);
+            this.state.setAnimation(0, "Start", false);
+            this.state.setAnimation(0, "Idle", true);
+        }
     }
 
     public void refreshSkin() {
         SkinSelectScreen.Skin skin = SkinSelectScreen.getSkin();
         loadAnimation(skin.charPath + ".atlas", skin.charPath + ".json", 0.9F);
-        AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);
+        AnimationState.TrackEntry e = this.state.setAnimation(0, (SkinSelectScreen.getIndex() == 2 ? "C_Idle" : "Idle"), true);
         e.setTime(e.getEndTime() * MathUtils.random());
         e.setTimeScale(1F);
     }
@@ -140,23 +146,23 @@ public class Rosmontis extends CustomPlayer {//DES
     }
     @Override
     public void playDeathAnimation() {
-        this.state.setAnimation(0, "Die", false);
+        this.state.setAnimation(0, (SkinSelectScreen.getIndex() == 2 ? "C_Die" : "Die"), false);
     }
     @Override
     public void useFastAttackAnimation() {
         if (ATTACK_BOOL) {
-            this.state.setAnimation(0, "Attack_A", false);
+            this.state.setAnimation(0, (SkinSelectScreen.getIndex() == 2 ? "A_Attack" : "Attack_A"), false);
             ATTACK_BOOL = false;
         } else {
-            this.state.setAnimation(0, "Attack_B", false);
+            this.state.setAnimation(0, (SkinSelectScreen.getIndex() == 2 ? "A_Attack" : "Attack_B"), false);
             ATTACK_BOOL = true;
         }
-        this.state.addAnimation(0, "Idle", true, 0.0F);
+        this.state.addAnimation(0, (SkinSelectScreen.getIndex() == 2 ? "C_Idle" : "Idle"), true, 0.0F);
     }
     @Override
     public void useSlowAttackAnimation() {
-        this.state.setAnimation(0, "Skill_2", false);
-        this.state.addAnimation(0, "Idle", true, 0.0F);
+        this.state.setAnimation(0, (SkinSelectScreen.getIndex() == 2 ? "C_Attack" : "Skill_2"), false);
+        this.state.addAnimation(0, (SkinSelectScreen.getIndex() == 2 ? "C_Idle" : "Idle"), true, 0.0F);
     }
 
     @Override
