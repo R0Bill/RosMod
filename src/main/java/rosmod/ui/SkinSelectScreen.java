@@ -50,6 +50,7 @@ public class SkinSelectScreen implements ISubscriber, CustomSavable<Integer> {
         TEXT = (CardCrawlGame.languagePack.getUIString(BasicMod.MakePath(SkinSelectScreen.class.getSimpleName()))).TEXT;
         SKINS.add(new Skin(0, ""));
         SKINS.add(new Skin(1, "_epoque_17"));
+        SKINS.add(new Skin(2, "enemy_8007_eltrsm"));
         Inst = new SkinSelectScreen();
     }
 
@@ -75,8 +76,10 @@ public class SkinSelectScreen implements ISubscriber, CustomSavable<Integer> {
         this.skeleton.setColor(Color.WHITE);
         this.stateData = new AnimationStateData(skeletonData);
         this.state = new AnimationState(this.stateData);
-        AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);
-        e.setTimeScale(1.2F);
+        AnimationState.TrackEntry e = this.state.setAnimation(0, (this.index == 2 ? "A_Attack" : "Idle"), true);
+        //need to initialize the animation to prevent bones error
+
+        e.setTimeScale(1.0F);
     }
 
     public void refresh() {
@@ -86,7 +89,7 @@ public class SkinSelectScreen implements ISubscriber, CustomSavable<Integer> {
         this.nextName = SKINS.get(nextIndex()).name;
         if (AbstractDungeon.player instanceof Rosmontis) {
             Rosmontis k = (Rosmontis) AbstractDungeon.player;
-            // k.refreshSkin();
+            k.refreshSkin();
         }
     }
 
@@ -139,7 +142,6 @@ public class SkinSelectScreen implements ISubscriber, CustomSavable<Integer> {
         FontHelper.renderFontCentered(sb, FontHelper.cardTitleFont, TEXT[0], centerX, centerY + 250.0F * Settings.scale, Color.WHITE, 1.25F);
         Color color = Settings.GOLD_COLOR.cpy();
         color.a /= 2.0F;
-        float dist = 100.0F * Settings.scale;
         FontHelper.renderFontCentered(sb, FontHelper.cardTitleFont, this.curName, centerX, centerY, RC);
         if (this.leftHb.hovered) {
             sb.setColor(Color.LIGHT_GRAY);
@@ -180,8 +182,13 @@ public class SkinSelectScreen implements ISubscriber, CustomSavable<Integer> {
         public String name;
 
         public Skin(int index, String charPath) {
-            this.charPath = "rosmod/images/character/animation/char_391_rosmon" + charPath;
-            this.shoulder = "rosmod/images/character/shoulder" + charPath + ".png";
+            if (index == 2) {
+                this.charPath = "rosmod/images/character/animation/enemy_8007_eltrsm";
+                this.shoulder = "rosmod/images/character/shoulder.png";
+            } else {
+                this.charPath = "rosmod/images/character/animation/char_391_rosmon" + charPath;
+                this.shoulder = "rosmod/images/character/shoulder" + charPath + ".png";
+            }
             this.name = SkinSelectScreen.TEXT[index + 1];
         }
     }
