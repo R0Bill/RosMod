@@ -32,9 +32,8 @@ public class ShieldStrike extends BaseCard {
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster){
-        int temp = 0;
+        int temp = abstractPlayer.currentBlock + block;
         addToBot(new GainBlockAction(abstractPlayer, abstractPlayer, block));
-        temp += abstractPlayer.currentBlock;
         addToBot(new DamageAction(abstractMonster, new DamageInfo(abstractPlayer, temp, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_HEAVY));
     }
 }

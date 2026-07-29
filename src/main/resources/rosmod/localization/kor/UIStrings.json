@@ -1,0 +1,24 @@
+{
+  "${modID}:Example": {
+    "TEXT": [
+      "This is",
+      "an array of Strings."
+    ],
+    "EXTRA_TEXT": [
+      "This is another",
+      "array of Strings."
+    ],
+    "TEXT_DICT": {
+      "This": "Contains pairs of Strings, used to get values based on keys.",
+      "This is a key": "This is a value."
+    }
+  },
+  "${modID}:SkinSelectScreen": {
+    "TEXT": [
+      "스킨 선택",
+      "로도스 아일랜드 오퍼레이터 제복",
+      "새 삶",
+      "8007"
+    ]
+  }
+}

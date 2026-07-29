@@ -22,7 +22,6 @@ public class Sleepy extends BaseCard {
     public Sleepy() {
         super(ID, info);
         setEthereal(true);
-        setExhaust(true);
     }
 
     public boolean canUpgrade() {

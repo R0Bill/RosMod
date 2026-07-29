@@ -30,6 +30,10 @@ public class MedBox extends BaseCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
     }
 
+    public boolean canUpgrade() {
+        return false;
+    }
+
     public boolean canUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         return false;
     }

@@ -61,6 +61,8 @@ public class BasicMod implements
     private static final String CHAR_SELECT_PORTRAIT = characterPath("select/portrait.png");
     private static final Color cardColor = new Color(89f / 255f, 218f / 255f, 224f / 255f, 1f);
     private static final String defaultLanguage = "zhs";
+    // Supported languages: zhs (Chinese Simplified, default), eng (English), kor (Korean)
+    // Language files are loaded from rosmod/localization/{lang}/
     public static ModInfo info;
     public static String modID; //Edit your pom.xml to change this
     //red, green, blue, alpha. alpha is transparency, which should just be 1.

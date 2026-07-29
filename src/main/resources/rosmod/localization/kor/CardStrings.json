@@ -1,0 +1,309 @@
+{
+  "${modID}:ExampleCard": {
+    "NAME": "Name",
+    "DESCRIPTION": "Description.",
+    "UPGRADE_DESCRIPTION": "This will automatically be used if the card is upgraded. Remove it if unneeded.",
+    "EXTENDED_DESCRIPTION": [
+      "You can put more text in here.",
+      "If you need to use it for stuff.",
+      "Blizzard is a good example for this."
+    ]
+  },
+  "${modID}:StrikeRos": {
+    "NAME": "타격",
+    "DESCRIPTION": "!D! 피해를 입힙니다."
+  },
+  "${modID}:DefendRos": {
+    "NAME": "방어",
+    "DESCRIPTION": "!B! 방어도를 획득합니다."
+  },
+  "${modID}:Skill3": {
+    "NAME": "원하시는 대로",
+    "DESCRIPTION": "${modID}:고유 。 NL 모든 공격 카드의 비용이 2배가 되고, 3회 사용한 것으로 간주합니다. 사용 시마다 41% 확률로 ${modID}:기절 을 적용합니다。 NL 민첩을 3 잃습니다。",
+    "UPGRADE_DESCRIPTION": "${modID}:고유 , 선천적 。 NL 모든 공격 카드의 비용이 2배가 되고, 3회 사용한 것으로 간주합니다. 사용 시마다 41% 확률로 ${modID}:기절 을 적용합니다。 NL 민첩을 3 잃습니다。"
+  },
+  "${modID}:Memory": {
+    "NAME": "추억",
+    "DESCRIPTION": "다음 턴에 [E] [E] 를 획득합니다.",
+    "UPGRADE_DESCRIPTION": "보존 。다음 턴에 [E] [E] 를 획득합니다."
+  },
+  "${modID}:ConcentrateRos": {
+    "NAME": "집중",
+    "DESCRIPTION": "소멸 。카드를 1장 뽑습니다。 *무작위 로 카드 1장을 소멸시키고, 임시 생명력 3을 획득합니다。",
+    "UPGRADE_DESCRIPTION": "소멸 。카드를 1장 뽑습니다。 카드 1장을 소멸시키고, 임시 생명력 5를 획득합니다。"
+  },
+  "${modID}:FlyRos": {
+    "NAME": "전술 비행 회피",
+    "DESCRIPTION": "소멸 。무형 을 1턴 획득합니다。민첩 1을 획득합니다。",
+    "UPGRADE_DESCRIPTION": "소멸 。무형 을 1턴 획득합니다。민첩 2를 획득합니다。"
+  },
+  "${modID}:HeavyAttackRos": {
+    "NAME": "강타",
+    "DESCRIPTION": "!D! 의 단일 피해를 2회, 전체 ${modID}:고정 피해 3을 입힙니다."
+  },
+  "${modID}:PsyStorm": {
+    "NAME": "염력 폭풍",
+    "DESCRIPTION": "소멸 。 NL 모든 적에게 공유 2-4-8-16... 피해를 입힙니다. 피해 횟수는 사용한 에너지에 따라 결정됩니다.",
+    "UPGRADE_DESCRIPTION": "소멸 , 보존 。 NL 모든 적에게 공유 2-4-8-16... 피해를 입힙니다. 피해 횟수는 사용한 에너지에 따라 결정됩니다."
+  },
+  "${modID}:QuickAttack": {
+    "NAME": "쾌속 공격",
+    "DESCRIPTION": "소멸 。!D! 피해를 입힙니다."
+  },
+  "${modID}:ShieldStrike": {
+    "NAME": "방패 타격",
+    "DESCRIPTION": "!B! 방어도를 획득하고, 현재 방어도만큼 피해를 입힙니다(피해 판정의 영향)."
+  },
+  "${modID}:Skill1": {
+    "NAME": "사고 팽창",
+    "DESCRIPTION": "${modID}:고유 。매 턴 3번째 공격 카드를 두 번 사용한 것으로 간주합니다.",
+    "UPGRADE_DESCRIPTION": "${modID}:고유 , 선천적 。매 턴 3번째 공격 카드를 두 번 사용한 것으로 간주합니다."
+  },
+  "${modID}:Skill2": {
+    "NAME": "말초 차단",
+    "DESCRIPTION": "${modID}:고유 。방어도가 사라지지 않으며, 섬멸전 장비의 피해량이 방어도의 4분의 1만큼 증가합니다. 획득하는 방어도가 3분의 1 증가합니다.",
+    "UPGRADE_DESCRIPTION": "${modID}:고유 , 선천적 。방어도가 사라지지 않으며, 섬멸전 장비의 피해량이 방어도의 4분의 1만큼 증가합니다. 획득하는 방어도가 3분의 1 증가합니다."
+  },
+  "${modID}:AddDefend": {
+    "NAME": "연속 방어",
+    "DESCRIPTION": "!B! 방어도를 획득합니다。 NL 직전에 사용한 카드가 스킬 카드였다면, NL 두 번 획득합니다."
+  },
+  "${modID}:EntrenchRos": {
+    "NAME": "전선 유지",
+    "DESCRIPTION": "소멸。방어도가 두 배가 됩니다."
+  },
+  "${modID}:CommandTerminal": {
+    "NAME": "지휘 터미널",
+    "DESCRIPTION": "${modID}:고유 。턴 시작 시, 생명력을 1 회복하고 [E] 를 획득합니다.",
+    "UPGRADE_DESCRIPTION": "선천적 , ${modID}:고유 。턴 시작 시, 생명력을 1 회복하고 [E] 를 획득합니다."
+  },
+  "${modID}:Impulse": {
+    "NAME": "시냅스 펄스",
+    "DESCRIPTION": "소멸 。!D! 피해를 입힙니다。 ${modID}:처형 시 손패에 이 카드의 복사본을 추가합니다."
+  },
+  "${modID}:Intimidate": {
+    "NAME": "야옹야옹!",
+    "DESCRIPTION": "소멸 。모든 적에게 NL 취약 99중첩과 약화 99중첩을 부여합니다."
+  },
+  "${modID}:Judgement": {
+    "NAME": "이곳에 법전을 세우노라",
+    "DESCRIPTION": "*소멸 , 보존 。!D! 피해를 입힙니다。 ${modID}:처형 시 영구적으로 민첩 0.5, 힘 0.5를 획득합니다.",
+    "UPGRADE_DESCRIPTION": "보존 。!D! 피해를 입힙니다。 ${modID}:처형 시 영구적으로 민첩 0.5, 힘 0.5를 획득합니다."
+  },
+  "${modID}:StealBlock": {
+    "NAME": "장벽 파괴",
+    "DESCRIPTION": "적의 방어도만큼 피해를 입히고, 입힌 피해량만큼 방어도를 획득합니다. 최소 피해는 5입니다.",
+    "UPGRADE_DESCRIPTION": "적의 방어도의 두 배만큼 피해를 입히고, 입힌 피해량만큼 방어도를 획득합니다. 최소 피해는 10입니다."
+  },
+  "${modID}:MilliaDisaster": {
+    "NAME": "\"밀리아의 재앙\"",
+    "DESCRIPTION": "*감염 1장을 뽑을 카드 더미에 추가합니다. NL 스킬 카드를 사용할 때마다 무작위 적에게 ${modID}:공포 2를 부여합니다.",
+    "UPGRADE_DESCRIPTION": "*감염 1장을 뽑을 카드 더미에 추가합니다. NL 스킬 카드를 사용할 때마다 무작위 적에게 ${modID}:공포 3을 부여합니다."
+  },
+  "${modID}:Stable": {
+    "NAME": "지각 안정",
+    "DESCRIPTION": "${modID}:고유 。피해를 입힐 때 추가로 20% ${modID}:고정 피해 를 입힙니다.",
+    "UPGRADE_DESCRIPTION": "${modID}:고유 , 선천적 。피해를 입힐 때 추가로 20% ${modID}:고정 피해 를 입힙니다."
+  },
+  "${modID}:Summon": {
+    "NAME": "쾌속 방어",
+    "DESCRIPTION": "소멸 。*도금 갑옷 2중첩을 획득합니다."
+  },
+  "${modID}:Extrasensory": {
+    "NAME": "초감각",
+    "DESCRIPTION": "소멸 。1회의 여진 강화를 부여합니다.",
+    "UPGRADE_DESCRIPTION": "소멸 。1턴 동안 지속되는 여진 강화를 부여합니다."
+  },
+  "${modID}:LoseControl": {
+    "NAME": "통제 상실",
+    "DESCRIPTION": "생명력 2를 잃습니다。!D! 피해를 입힙니다(*힘 2배 보너스). 최종 피해가 16 이상이면 *힘 1을 획득합니다.",
+    "UPGRADE_DESCRIPTION": "생명력 2를 잃습니다。!D! 피해를 입힙니다(*힘 2배 보너스). 최종 피해가 14 이상이면 *힘 2를 획득합니다."
+  },
+  "${modID}:ThrowAway": {
+    "NAME": "소매 휘두르기",
+    "DESCRIPTION": "!D! 피해를 입히고, 카드 1장을 뽑습니다.",
+    "UPGRADE_DESCRIPTION": "!D! 피해를 입히고, 카드 2장을 뽑습니다."
+  },
+  "${modID}:DoublePre": {
+    "NAME": "양손 준비",
+    "DESCRIPTION": "소멸 。*쾌속 공격 과 *쾌속 방어 를 획득합니다.",
+    "UPGRADE_DESCRIPTION": "*쾌속 공격 과 *쾌속 방어 를 획득합니다."
+  },
+  "${modID}:Deprive": {
+    "NAME": "지각 박탈",
+    "DESCRIPTION": "약화 5, ${modID}:공포 3을 부여합니다.",
+    "UPGRADE_DESCRIPTION": "약화 5, ${modID}:공포 5를 부여합니다."
+  },
+  "${modID}:StunSelf": {
+    "NAME": "교차 방어",
+    "DESCRIPTION": "사용한 에너지의 10배만큼 방어도를 획득합니다。즉시 턴을 종료합니다。 NL 다음 턴 시작 시, NL 해당 수치의 절반을 방어도로 획득합니다.",
+    "UPGRADE_DESCRIPTION": "사용한 에너지의 14배만큼 방어도를 획득합니다。즉시 턴을 종료합니다。 NL 다음 턴 시작 시, NL 해당 수치의 절반을 방어도로 획득합니다."
+  },
+  "${modID}:Infected": {
+    "NAME": "감염",
+    "DESCRIPTION": "보존 。뽑을 때 힘 1을 획득합니다. 턴 종료 시 생명력 1을 잃습니다."
+  },
+  "${modID}:MedBox": {
+    "NAME": "응급 의료",
+    "DESCRIPTION": "소멸 。뽑을 때 *즉시 사용 됩니다。생명력 !M! 을 회복합니다。 NL 강화 불가。"
+  },
+  "${modID}:AddAttack": {
+    "NAME": "연격",
+    "DESCRIPTION": "!D! 피해를 입힙니다. 직전에 사용한 카드가 공격 카드였다면, *쾌속 공격 1장을 획득합니다.",
+    "UPGRADE_DESCRIPTION": "!D! 피해를 입힙니다. 직전에 사용한 카드가 공격 카드였다면, *쾌속 공격 2장을 획득합니다."
+  },
+  "${modID}:Accumulation": {
+    "NAME": "훈련",
+    "DESCRIPTION": "소멸 。 NL !M! 힘과 민첩을 획득합니다。 NL 여러 번 강화 가능。",
+    "UPGRADE_DESCRIPTION": "소멸 。 NL !M! 힘과 민첩을 획득합니다。 NL 여러 번 강화 가능。"
+  },
+  "${modID}:Backpack": {
+    "NAME": "배낭",
+    "DESCRIPTION": "소멸 。카드 2장을 뽑습니다。 강화 불가。"
+  },
+  "${modID}:TouchingStars": {
+    "NAME": "별에 닿다",
+    "DESCRIPTION": "보존 , 소멸 , ${modID}:독립 。 NL !D! ${modID}:고정 피해 를 입힙니다. 매 턴 비용이 1 감소합니다.",
+    "UPGRADE_DESCRIPTION": "선천적 , 보존 , 소멸 , ${modID}:독립 。 NL !D! ${modID}:고정 피해 를 입힙니다. 매 턴 비용이 1 감소합니다."
+  },
+  "${modID}:Extend": {
+    "NAME": "사고 파생",
+    "DESCRIPTION": "보존 , 소멸 。!D! 피해를 입힙니다。매 턴, 손패에 있는 동명 카드 수의 2배만큼 이 카드의 피해가 증가합니다."
+  },
+  "${modID}:ExtendP": {
+    "NAME": "창상",
+    "DESCRIPTION": "매 턴 시작 시와 지금 *사고 파생 1장을 손패에 추가합니다.",
+    "UPGRADE_DESCRIPTION": "선천적 。매 턴 시작 시와 지금 *사고 파생 2장을 손패에 추가합니다."
+  },
+  "${modID}:GetReady": {
+    "NAME": "준비 완료",
+    "DESCRIPTION": "힘 2를 획득합니다。다음 턴 시작 시 [E] [E] 와 방어도 10을 획득하고, NL 카드 2장을 추가로 뽑습니다.",
+    "UPGRADE_DESCRIPTION": "힘 3을 획득합니다。다음 턴 시작 시 [E] [E] [E] 와 방어도 20을 획득하고, NL 카드 3장을 추가로 뽑습니다."
+  },
+  "${modID}:TacticalGuide": {
+    "NAME": "전술 지도",
+    "DESCRIPTION": "소멸 。손패의 모든 카드를 소멸시키고, 소멸시킨 수+1만큼 카드를 뽑습니다."
+  },
+  "${modID}:ExpressStrike": {
+    "NAME": "무간 연격",
+    "DESCRIPTION": "!D! 피해를 !M! 회 입힙니다."
+  },
+  "${modID}:Hunter": {
+    "NAME": "\"헌터\"",
+    "DESCRIPTION": "!D! 피해를 입히고, 입힌 방어도 돌파량의 절반만큼 추가 피해를 입힙니다."
+  },
+  "${modID}:Slay": {
+    "NAME": "추격",
+    "DESCRIPTION": "!D! 피해를 입히고, 입힌 피해량만큼 임시 생명력을 획득합니다."
+  },
+  "${modID}:AfterShock": {
+    "NAME": "여진",
+    "DESCRIPTION": "소멸 。 NL 다음 2회의 공격 카드 사용 시 *쾌속 공격 이 함께 사용됩니다.",
+    "UPGRADE_DESCRIPTION": "소멸 。 NL 다음 4회의 공격 카드 사용 시 *쾌속 공격 이 함께 사용됩니다."
+  },
+  "${modID}:FallOut": {
+    "NAME": "\"방사능\"",
+    "DESCRIPTION": "소멸 。모든 적에게 !D! 피해를 입히고, 매 회마다 4씩 감소하는 피해를 반복해서 입힙니다. 피해가 0 이하가 되면 종료됩니다."
+  },
+  "${modID}:ForgetMeNot": {
+    "NAME": "\"물망초\"",
+    "DESCRIPTION": "소멸 , ${modID}:독립 。적이 잃은 생명력의 40%만큼 ${modID}:고정 피해 를 입힙니다.",
+    "UPGRADE_DESCRIPTION": "소멸 , ${modID}:독립 。적이 잃은 생명력의 50%만큼 ${modID}:고정 피해 를 입힙니다."
+  },
+  "${modID}:Shadow": {
+    "NAME": "그림자처럼",
+    "DESCRIPTION": "소멸 。모든 적에게 ${modID}:공포 5를 부여합니다.",
+    "UPGRADE_DESCRIPTION": "소멸 。모든 적에게 ${modID}:공포 7을 부여합니다."
+  },
+  "${modID}:React": {
+    "NAME": "임기응변",
+    "DESCRIPTION": "적의 의도가 공격이면, NL ${modID}:공포 2를 부여합니다。 NL 그렇지 않으면 !D! 피해를 입힙니다.",
+    "UPGRADE_DESCRIPTION": "적의 의도가 공격이면, NL ${modID}:공포 3을 부여합니다。 NL 그렇지 않으면 !D! 피해를 입힙니다."
+  },
+  "${modID}:Switching": {
+    "NAME": "전술 교차",
+    "DESCRIPTION": "소멸 。힘과 민첩을 상호 변환할지 선택합니다.",
+    "UPGRADE_DESCRIPTION": "소멸 , 선천적 。힘과 민첩을 상호 변환할지 선택합니다."
+  },
+  "${modID}:Fitting": {
+    "NAME": "전장 직감",
+    "DESCRIPTION": "적의 의도가 공격이면, NL 민첩 1을 획득합니다。 NL 그렇지 않으면 힘 1을 획득합니다."
+  },
+  "${modID}:Refresh": {
+    "NAME": "탈피",
+    "DESCRIPTION": "현재 가지고 있는 모든 해로운 효과를 제거합니다."
+  },
+  "${modID}:STD": {
+    "NAME": "전술: 수비",
+    "DESCRIPTION": "힘을 민첩으로 변환합니다."
+  },
+  "${modID}:DTS": {
+    "NAME": "전술: 공세",
+    "DESCRIPTION": "민첩을 힘으로 변환합니다."
+  },
+  "${modID}:SolidifyMind": {
+    "NAME": "감정 고착",
+    "DESCRIPTION": "소멸 。현재 방어도의 3분의 1을 임시 생명력으로 변환합니다.",
+    "UPGRADE_DESCRIPTION": "소멸 。현재 방어도의 2분의 1을 임시 생명력으로 변환합니다."
+  },
+  "${modID}:Lullaby": {
+    "NAME": "\"자장가\"",
+    "DESCRIPTION": "소멸 。모든 적을 기절시킵니다.",
+    "UPGRADE_DESCRIPTION": "소멸 。모든 적을 두 턴 동안 기절시킵니다."
+  },
+  "${modID}:FaceYourSin": {
+    "NAME": "그대의 죄를 마주하라",
+    "DESCRIPTION": "적의 현재 공격 의도만큼 피해를 입힙니다。 NL 피해의 근원은 해당 적으로 간주합니다。 NL 의도가 공격이 아니라면, NL ${modID}:공포 2를 부여합니다.",
+    "UPGRADE_DESCRIPTION": "적의 현재 공격 의도만큼 피해를 입힙니다。 NL 피해의 근원은 해당 적으로 간주합니다。 NL 의도가 공격이 아니라면, NL ${modID}:공포 4를 부여합니다."
+  },
+  "${modID}:Sleepy": {
+    "NAME": "졸음",
+    "DESCRIPTION": "허무 。 NL 이 카드가 소멸될 때, 다음 턴 시작 시 [E] 를 획득합니다。 NL 강화 불가。"
+  },
+  "${modID}:Endophobia": {
+    "NAME": "내인성 공황",
+    "DESCRIPTION": "*감염 1장을 뽑을 카드 더미에 추가합니다。 NL 모든 적에게 ${modID}:공포 2를 부여합니다。 NL 그 후 !D! 피해를 입힙니다.",
+    "UPGRADE_DESCRIPTION": "*감염 1장을 뽑을 카드 더미에 추가합니다。 NL 모든 적에게 ${modID}:공포 3을 부여합니다。 NL 그 후 !D! 피해를 입힙니다."
+  },
+  "${modID}:OptionBlock": {
+    "NAME": "오리지늄 블레이드: 방어",
+    "DESCRIPTION": "방어도 10을 획득합니다."
+  },
+  "${modID}:OptionDefend": {
+    "NAME": "오리지늄 블레이드: 수비",
+    "DESCRIPTION": "금속화 4를 획득합니다."
+  },
+  "${modID}:OptionAttack": {
+    "NAME": "오리지늄 블레이드: 공격",
+    "DESCRIPTION": "무작위 적에게 !D! 피해를 입힙니다."
+  },
+  "${modID}:OptionStrike": {
+    "NAME": "오리지늄 블레이드: 강타",
+    "DESCRIPTION": "모든 적에게 !D! 피해를 입힙니다."
+  },
+  "${modID}:AMOS": {
+    "NAME": "A.M.O.S",
+    "DESCRIPTION": "소멸 。각각 2장의 *선구자 와 *계승자 를 뽑을 카드 더미에 추가합니다."
+  },
+  "${modID}:Inheritors": {
+    "NAME": "계승자",
+    "DESCRIPTION": "*오리지늄 블레이드: 수비 와 *오리지늄 블레이드: 강타 중 하나를 선택하여 발동합니다."
+  },
+  "${modID}:Outriders": {
+    "NAME": "선구자",
+    "DESCRIPTION": "*오리지늄 블레이드: 방어 와 *오리지늄 블레이드: 공격 중 하나를 선택하여 발동합니다."
+  },
+  "${modID}:Spiritualization": {
+    "NAME": "\"라테라노 정화권\"",
+    "DESCRIPTION": "소멸 , 보존 。손패의 모든 상태 카드 와 저주 를 소멸시킵니다。소멸된 카드 한 장당 [E] 를 획득하고 카드 한 장을 뽑습니다."
+  },
+  "${modID}:WhoAreYou": {
+    "NAME": "너는 누구???",
+    "DESCRIPTION": "선천적 。 [#19FFF9]나는 누구???[] NL 혼란 을 획득합니다.",
+    "EXTENDED_DESCRIPTION": [
+      "나는 항상 '그'와 '그녀'를 헷갈려. 중국어로는 전부 'ta'라고 발음하니까—참 간단해.",
+      "그래도 말하고 싶어, 또 다른 삶에서는 너와 함께 빨래하고 세금 신고하는 게 정말 좋았어.",
+      "고이 전하노니, 멈출 수 없는 심장 박동과 처음의 너에게."
+    ]
+  }
+}

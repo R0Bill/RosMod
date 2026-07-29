@@ -1,0 +1,96 @@
+{
+  "${modID}:PowerID": {
+    "NAME": "Ultimate Power",
+    "DESCRIPTIONS": [
+      "You are Very Cool and Strong."
+    ]
+  },
+  "${modID}:Skill3Power": {
+    "NAME": "\"원하시는 대로\"",
+    "DESCRIPTIONS": [
+      "모든 공격 카드의 비용이 #y2배 가 되고, #y3회 사용한 것으로 간주합니다. 사용 시마다 #b50% 확률로 대상을 #y기절 시킵니다. #r민첩을 3 잃습니다."
+    ]
+  },
+  "${modID}:Skill2Power": {
+    "NAME": "말초 차단",
+    "DESCRIPTIONS": [
+      "방어도가 사라지지 않으며, 섬멸전 장비의 피해량이 방어도의 4분의 1만큼 증가합니다",
+      "。획득하는 방어도가 3분의 1 증가합니다."
+    ]
+  },
+  "${modID}:Skill1Power": {
+    "NAME": "사고 팽창",
+    "DESCRIPTIONS": [
+      "매 턴 ",
+      "번째 공격 카드를 두 번 사용한 것으로 간주합니다."
+    ]
+  },
+  "${modID}:CommandTerminalPower": {
+    "NAME": "지휘 터미널",
+    "DESCRIPTIONS": [
+      "턴 시작 시, 생명력을 1 회복하고 [E] 를 획득합니다."
+    ]
+  },
+  "${modID}:MilliaPower": {
+    "NAME": "\"밀리아의 재앙\"",
+    "DESCRIPTIONS": [
+      "스킬 카드를 사용할 때, 무작위 적에게 ",
+      " ${modID}:공포 를 부여합니다."
+    ]
+  },
+  "${modID}:StablePower": {
+    "NAME": "사고 안정",
+    "DESCRIPTIONS": [
+      "피해를 입힐 때 추가로 20% ${modID}:고정 피해 를 입힙니다."
+    ]
+  },
+  "${modID}:FearPower": {
+    "NAME": "공포",
+    "DESCRIPTIONS": [
+      "받는 피해가 ",
+      " 증가합니다. 주는 피해가 ",
+      " 감소합니다. 턴 종료 시 절반으로 감소합니다.",
+      "。턴 종료 시 더 이상 감소하지 않습니다."
+    ]
+  },
+  "${modID}:ExtendPower": {
+    "NAME": "창상",
+    "DESCRIPTIONS": [
+      "턴 시작 시, 손패에 ",
+      "장의 #y사고 파생 을 추가합니다."
+    ]
+  },
+  "${modID}:AttachPower": {
+    "NAME": "연격",
+    "DESCRIPTIONS": [
+      "다음 ",
+      "장의 카드를 사용할 때 추가로 #y쾌속 공격 을 1회 사용합니다."
+    ]
+  },
+  "${modID}:EmergencyPower": {
+    "NAME": "재생 가능 보호막",
+    "DESCRIPTIONS": [
+      "재생 충전 보호막으로, 생명력 손실을 막아줍니다. ",
+      "회 충전 가능합니다. 사용 후 1턴의 충전 시간이 필요합니다.",
+      " #y충전 중。",
+      " #g사용 가능。",
+      " #r사용 불가, 충전 횟수 소진。"
+    ]
+  },
+  "${modID}:GiveBlockNextTurn": {
+    "NAME": "강화 방어",
+    "DESCRIPTIONS": [
+      "다음 턴 시작 시, ",
+      " 방어도를 획득합니다."
+    ]
+  },
+  "${modID}:BombPower": {
+    "NAME": "여진 강화",
+    "DESCRIPTIONS": [
+      "섬멸전 장비가 피해를 입힐 때 추가 피해를 입힙니다。",
+      "회만 발동합니다。",
+      "턴 종료 시 효과가 사라집니다。",
+      ""
+    ]
+  }
+}

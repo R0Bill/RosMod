@@ -1,0 +1,103 @@
+{
+  "${modID}:RelicID": {
+    "NAME": "Good Relic",
+    "FLAVOR": "Flavor text displayed in detailed relic view.",
+    "DESCRIPTIONS": [
+      "Gain [E] at the start of your turn. [E] is an energy icon."
+    ]
+  },
+  "${modID}:AnnE": {
+    "NAME": "섬멸전 장비",
+    "FLAVOR": "로즈몬티스가 소지한 중검, 오직 그녀만이 사용할 수 있는 검",
+    "DESCRIPTIONS": [
+      "공격 카드를 사용할 때, 모든 적에게 3의 피해를 입힙니다"
+    ]
+  },
+  "${modID}:StolenMiniCake": {
+    "NAME": "작은 케이크",
+    "FLAVOR": "박사에게 돌려받은 작은 케이크. 로즈몬티스는 이 일을 분명히 잊고 있었다.",
+    "DESCRIPTIONS": [
+      "매 턴 시작 시, [E] 를 획득합니다."
+    ]
+  },
+  "${modID}:ShoesFromAmiya": {
+    "NAME": "검은 구두",
+    "FLAVOR": "아미야가 선물한 신발, 아주 잘 맞는다.",
+    "DESCRIPTIONS": [
+      "전투 시작 시, 민첩을 3 획득합니다"
+    ]
+  },
+  "${modID}:Terminal": {
+    "NAME": "로즈몬티스의 터미널",
+    "FLAVOR": "로도스 아일랜드 맞춤형 휴대 터미널, 현재는 주로 메모용으로 사용",
+    "DESCRIPTIONS": [
+      "우클릭 시, [E] 를 소모하여 직전에 소멸된 카드를 다시 가져옵니다."
+    ]
+  },
+  "${modID}:Plant": {
+    "NAME": "식물 표본",
+    "FLAVOR": "아마추어 식물 표본, 아직 전달되지 못한 듯하다.",
+    "DESCRIPTIONS": [
+      "매 턴 시작 시, 방어도를 8 획득합니다"
+    ]
+  },
+  "${modID}:JudgeCount": {
+    "NAME": "향모라비 법전",
+    "FLAVOR": "\"내가 형벌을 집행하리라.\"",
+    "DESCRIPTIONS": [
+      "전투 시작 시, 민첩을 ",
+      " 획득하고 힘을 ",
+      " 획득합니다.",
+      "전투 시작 시, 중첩 수만큼의 민첩과 중첩 수의 절반만큼의 힘을 획득합니다."
+    ]
+  },
+  "${modID}:AncientCoin": {
+    "NAME": "고대 주화",
+    "FLAVOR": "녹슨 고대 주화, 연대를 확인할 수 없다. 이런 물건은 테라 황야 어디에서나 볼 수 있다.",
+    "DESCRIPTIONS": [
+      "즉시 150 골드를 획득합니다."
+    ]
+  },
+  "${modID}:TheHug": {
+    "NAME": "감지 유제기",
+    "FLAVOR": "로즈몬티스의 능력이 신체에 미치는 영향을 통제 가능한 범위로 유지한다.",
+    "DESCRIPTIONS": [
+      "전투 시작 시, 모든 적이 25%의 생명력을 잃습니다."
+    ]
+  },
+  "${modID}:TargetHand": {
+    "NAME": "파쇄의 손",
+    "FLAVOR": "목표란, 단순히 과녁을 연속으로 맞추는 것만이 아니다",
+    "DESCRIPTIONS": [
+      "전투 시작 시, 적 수의 두 배만큼 힘을 획득합니다."
+    ]
+  },
+  "${modID}:Oath": {
+    "NAME": "새끼손가락 맹세",
+    "FLAVOR": "\"우리는 너를 믿는다. 우리는 너의 맹세를 믿어, 작은 고양이.\"",
+    "DESCRIPTIONS": [
+      "로즈몬티스가 치명적인 피해를 받을 때 보호막이 발동하여, 최대 생명력의 절반(최소 30)까지 회복하고 300의 방어도를 제공합니다."
+    ]
+  },
+  "${modID}:JessicaWallet": {
+    "NAME": "제시카의 동전 지갑",
+    "FLAVOR": "(;´༎ຶД༎ຶ`)",
+    "DESCRIPTIONS": [
+      "획득 시 300 *골드 를 얻습니다."
+    ]
+  },
+  "${modID}:BadGuy": {
+    "NAME": "\"나쁜 녀석\"이 왔다!",
+    "FLAVOR": "로도스 아일랜드의 모든 정예 기술이 집약된 이 수송 비행선이 모든 것을 보장하며, 당신의 여정을 야외 봄소풍처럼 순조롭게 만들어 준다.",
+    "DESCRIPTIONS": [
+      "전투 시작 시 재생 충전 보호막을 획득하여, 세 번의 #y${modID}:방어도 돌파 피해를 막습니다. 사용 후 1턴의 충전 시간이 필요합니다."
+    ]
+  },
+  "${modID}:DarkMask": {
+    "NAME": "기연 가면",
+    "FLAVOR": "알려진 어떤 문화에도 속하지 않는 기이한 가면. 전투 의욕을 상실하게 하고...... 무의식적으로 깊은 사색에 빠지게 한다.",
+    "DESCRIPTIONS": [
+      "#y${modID}:공포 의 중첩이 더 이상 감소하지 않습니다."
+    ]
+  }
+}

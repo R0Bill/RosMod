@@ -44,9 +44,9 @@ public class AddDefend extends BaseCard {
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        if (AbstractDungeon.actionManager.cardsPlayedThisCombat.size() >= 2 && AbstractDungeon.actionManager.cardsPlayedThisCombat
+        if (!AbstractDungeon.actionManager.cardsPlayedThisCombat.isEmpty() && AbstractDungeon.actionManager.cardsPlayedThisCombat
                 .get(AbstractDungeon.actionManager.cardsPlayedThisCombat
-                        .size() - 2).type == AbstractCard.CardType.SKILL) {
+                        .size() - 1).type == AbstractCard.CardType.SKILL) {
             addToBot(new GainBlockAction(abstractPlayer, abstractPlayer, block));
             addToBot(new GainBlockAction(abstractPlayer, abstractPlayer, block));
         } else {
