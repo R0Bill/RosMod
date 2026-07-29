@@ -19,8 +19,8 @@
   },
   "${modID}:Skill3": {
     "NAME": "As You Wish",
-    "DESCRIPTION": "${modID}:Unique . NL Double all attack cards cost, played as if played 3 times. Each play has a 10% chance to ${modID}:Stun the target. NL Lose 3 Dexterity.",
-    "UPGRADE_DESCRIPTION": "${modID}:Unique , Innate . NL Double all attack cards cost, played as if played 3 times. Each play has a 10% chance to ${modID}:Stun the target. NL Lose 3 Dexterity."
+    "DESCRIPTION": "${modID}:Unique . NL Double all attack cards cost, played as if played 3 times. Each play has a 41% chance to ${modID}:Stun the target. NL Lose 3 Dexterity.",
+    "UPGRADE_DESCRIPTION": "${modID}:Unique , Innate . NL Double all attack cards cost, played as if played 3 times. Each play has a 41% chance to ${modID}:Stun the target. NL Lose 3 Dexterity."
   },
   "${modID}:Memory": {
     "NAME": "Memory",
@@ -74,7 +74,7 @@
   "${modID}:CommandTerminal": {
     "NAME": "Command Terminal",
     "DESCRIPTION": "${modID}:Unique . At the start of your turn, heal 1 HP, gain [E] .",
-    "UPGRADE_DESCRIPTION": "*Innate , ${modID}:Unique . At the start of your turn, heal 1 HP, gain [E] ."
+    "UPGRADE_DESCRIPTION": "Innate , ${modID}:Unique . At the start of your turn, heal 1 HP, gain [E] ."
   },
   "${modID}:Impulse": {
     "NAME": "Synaptic Pulse",
@@ -92,12 +92,12 @@
   "${modID}:StealBlock": {
     "NAME": "Breakthrough",
     "DESCRIPTION": "Deal damage equal to the enemy's Block. Gain Block equal to the damage dealt. Minimum damage is 5.",
-    "UPGRADE_DESCRIPTION": "Deal damage equal to *double enemy's Block. Gain Block equal to the damage dealt. Minimum damage is 10."
+    "UPGRADE_DESCRIPTION": "Deal damage equal to double enemy's Block. Gain Block equal to the damage dealt. Minimum damage is 10."
   },
   "${modID}:MilliaDisaster": {
     "NAME": "Millia's Disaster",
-    "DESCRIPTION": "Apply 2 ${modID}:Fear to a random enemy each time a Skill is played. Add one *Infected to draw pile.",
-    "UPGRADE_DESCRIPTION": "Apply 3 ${modID}:Fear to a random enemy each time a Skill is played. Add one *Infected to draw pile."
+    "DESCRIPTION": "Add one *Infected to draw pile. NL Apply 2 ${modID}:Fear to a random enemy each time a Skill is played.",
+    "UPGRADE_DESCRIPTION": "Add one *Infected to draw pile. NL Apply 3 ${modID}:Fear to a random enemy each time a Skill is played."
   },
   "${modID}:Stable": {
     "NAME": "Stable Perception",
@@ -115,8 +115,8 @@
   },
   "${modID}:LoseControl": {
     "NAME": "Lose Control",
-    "DESCRIPTION": "Lose 2 HP. Deal !D! damage (benefits from 3 times *Strength multiplier). If the damage calculated is more than 18, gain 1 *Strength.",
-    "UPGRADE_DESCRIPTION": "Lose 2 HP. Deal !D! damage (benefits from 3 times *Strength multiplier). If the damage calculated is more than 16, gain 1 *Strength."
+    "DESCRIPTION": "Lose 2 HP. Deal !D! damage (benefits from 2 times *Strength multiplier). If the damage calculated is 16 or more, gain 1 *Strength.",
+    "UPGRADE_DESCRIPTION": "Lose 2 HP. Deal !D! damage (benefits from 2 times *Strength multiplier). If the damage calculated is 14 or more, gain 2 *Strength."
   },
   "${modID}:ThrowAway": {
     "NAME": "Throw",
@@ -152,15 +152,16 @@
   },
   "${modID}:Accumulation": {
     "NAME": "Accumulation",
-    "DESCRIPTION": "Exhaust . NL Gain !M! Strength and Dexterity . NL Can be upgraded multiple times."
+    "DESCRIPTION": "Exhaust . NL Gain !M! Strength and Dexterity . NL Can be upgraded multiple times.",
+    "UPGRADE_DESCRIPTION": "Exhaust . NL Gain !M! Strength and Dexterity . NL Can be upgraded multiple times."
   },
   "${modID}:Backpack": {
     "NAME": "Backpack",
-    "DESCRIPTION": "Exhaust . Draw 2 cards. NL Cannot be upgrade."
+    "DESCRIPTION": "Exhaust . Draw 2 cards. NL Cannot be upgraded."
   },
   "${modID}:TouchingStars": {
     "NAME": "Touching Stars",
-    "DESCRIPTION": "Innate , Retain , Exhaust , ${modID}:Unique . NL Deal !D! ${modID}:TrueDamage. Reduce cost by 1 each turn.",
+    "DESCRIPTION": "Retain , Exhaust , ${modID}:Unique . NL Deal !D! ${modID}:TrueDamage. Reduce cost by 1 each turn.",
     "UPGRADE_DESCRIPTION": "Innate , Retain , Exhaust , ${modID}:Unique . NL Deal !D! ${modID}:TrueDamage. Reduce cost by 1 each turn."
   },
   "${modID}:Extend": {
@@ -180,7 +181,7 @@
   "${modID}:TacticalGuide": {
     "NAME": "Tactical Guidance",
     "DESCRIPTION": "Exhaust . NL Exhaust all your cards and draw that many +1 cards.",
-    "UPGRADE_DESCRIPTION": "Exhaust all your cards and draw that many +1 cards."
+    "UPGRADE_DESCRIPTION": "Exhaust . NL Exhaust all your cards and draw that many +1 cards."
   },
   "${modID}:ExpressStrike": {
     "NAME": "Seamless Strikes",
@@ -188,11 +189,11 @@
   },
   "${modID}:Hunter": {
     "NAME": "Hunter",
-    "DESCRIPTION": "Deal !D! damage, then deal half the ${modID}:TrueDamage bypassing Block."
+    "DESCRIPTION": "Deal !D! damage, then deal additional damage equal to half the unblocked damage dealt."
   },
   "${modID}:Slay": {
     "NAME": "Prey",
-    "DESCRIPTION": "Deal !D! damage, gain Temporary HP equal to half the ${modID}:TrueDamage bypassing Block."
+    "DESCRIPTION": "Deal !D! damage, gain Temporary HP equal to the damage dealt."
   },
   "${modID}:AfterShock": {
     "NAME": "AfterShock",
@@ -201,7 +202,7 @@
   },
   "${modID}:FallOut": {
     "NAME": "Fallout",
-    "DESCRIPTION": "Exhaust . Deal !D! damage to the first enemy, bouncing damage to enemies behind. Damage reduces by 4 each bounce until it reaches 0 or less."
+    "DESCRIPTION": "Exhaust . Deal !D! damage to all enemies, repeatedly dealing damage reduced by 4 each hit until damage reaches 0 or less."
   },
   "${modID}:ForgetMeNot": {
     "NAME": "Forget Me Not",
@@ -210,7 +211,7 @@
   },
   "${modID}:Shadow": {
     "NAME": "Shadow",
-    "DESCRIPTION": "Exhaust . Apply 4 ${modID}:Fear to all enemies.",
+    "DESCRIPTION": "Exhaust . Apply 5 ${modID}:Fear to all enemies.",
     "UPGRADE_DESCRIPTION": "Exhaust . Apply 7 ${modID}:Fear to all enemies."
   },
   "${modID}:React": {
@@ -250,7 +251,7 @@
     "UPGRADE_DESCRIPTION": "Exhaust . Stun all enemies for two turns."
   },
   "${modID}:FaceYourSin": {
-    "NAME": "FaceYourSin",
+    "NAME": "Face Your Sin",
     "DESCRIPTION": "Deal damage to the enemy equal to its current intent's damage. Damage source is considered the enemy. If intent is not an attack, give 2 ${modID}:Fear .",
     "UPGRADE_DESCRIPTION": "Deal damage to the enemy equal to its current intent's damage. Damage source is considered the enemy. If intent is not an attack, give 4 ${modID}:Fear ."
   },
@@ -284,16 +285,16 @@
     "DESCRIPTION": "Exhaust . Add 2 *Inheritors and *Outriders to the draw pile."
   },
   "${modID}:Inheritors": {
-    "NAME": "Outriders",
+    "NAME": "Inheritors",
     "DESCRIPTION": "Trigger either *Primordial Blade: Defend or *Primordial Blade: Strike."
   },
   "${modID}:Outriders": {
-    "NAME": "Inheritors",
+    "NAME": "Outriders",
     "DESCRIPTION": "Trigger either *Primordial Blade: Block or *Primordial Blade: Attack."
   },
   "${modID}:Spiritualization": {
-    "NAME": "Latelean purification ticket.",
-    "DESCRIPTION": "Exhaust , Retain . Exhaust all State and Course in your hand. Each provide [E] and draw 1 card."
+    "NAME": "Latelean purification ticket",
+    "DESCRIPTION": "Exhaust , Retain . Exhaust all Status and Curse cards in your hand. Each provides [E] and draws 1 card."
   },
   "${modID}:WhoAreYou": {
     "NAME": "WhoAreYou",
