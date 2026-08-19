@@ -16,7 +16,8 @@ public class JudgeCount extends BaseRelic {
 
     public JudgeCount() {
         super(ID, NAME, Rosmontis.Enums.CARD_COLOR, RARITY, SOUND);
-        this.counter = 1;
+        // 修复：原为 1，配合 Judgement 首次获得时的 +1 导致首杀双计
+        this.counter = 0;
     }
 
     @Override

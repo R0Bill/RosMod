@@ -6,7 +6,7 @@
         <author>R0Bill</author>
 
         <!-- Change the path for your system to match your Steam installation. -->
-        <steam.windows>E:/steam/steamapps</steam.windows>
+        <steam.windows>D:/Steam/steamapps</steam.windows>
         <steam.mac>${user.home}/Library/Application Support/Steam/steamapps</steam.mac>
 
         <!-- These don't have to be up to date, it's just nice if they are. -->

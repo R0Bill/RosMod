@@ -1,12 +1,23 @@
 {
-  "${modID}:OrbID": {
-    "NAME": "Orb Name",
+  "rosmontis:BarrierBlade": {
+    "NAME": "Barrier Rig",
     "DESCRIPTION": [
-      "#yPassive: At the start of your turn, draw #b",
-      " card.",
-      " cards.",
-      " NL #yEvoke: Deal #b",
-      " damage to all enemies."
+      "Passive: At the start of your turn, gain #b3 Block.",
+      "Evoke: Gain #b7 Block."
+    ]
+  },
+  "rosmontis:AssaultBlade": {
+    "NAME": "Assault Rig",
+    "DESCRIPTION": [
+      "Passive: At the start of your turn, deal #b3 damage to a random enemy.",
+      "Evoke: Deal #b9 damage to a random enemy."
+    ]
+  },
+  "rosmontis:ThornBlade": {
+    "NAME": "Spike Rig",
+    "DESCRIPTION": [
+      "Passive: At the start of your turn, gain #b1 Thorns.",
+      "Evoke: Deal #b5 True Damage to ALL enemies."
     ]
   }
 }

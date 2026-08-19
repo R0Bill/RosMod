@@ -1,6 +1,7 @@
 package rosmod.cards.skill;
 
 import com.evacipated.cardcrawl.mod.stslib.actions.tempHp.AddTemporaryHPAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -31,7 +32,7 @@ public class ConcentrateRos extends BaseCard {//
     }
 
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        abstractPlayer.draw(1);
+        addToBot(new DrawCardAction(abstractPlayer, 1));
         HEAL(abstractPlayer);
         if (abstractPlayer.hand.group.size() == 1) {
             abstractPlayer.hand.moveToExhaustPile(abstractPlayer.hand.getTopCard());

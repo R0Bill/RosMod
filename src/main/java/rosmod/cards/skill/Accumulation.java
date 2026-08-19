@@ -37,6 +37,7 @@ public class Accumulation extends BaseCard {
 
     public void upgrade() {
         upgradeMagicNumber(1);
+        this.upgraded = true;
         this.timesUpgraded++;
         this.name = cardStrings.NAME + "+" + this.timesUpgraded;
         initializeTitle();

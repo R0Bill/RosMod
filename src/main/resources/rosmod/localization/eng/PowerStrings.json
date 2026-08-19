@@ -8,7 +8,7 @@
   "${modID}:Skill3Power": {
     "NAME": "As You Wish",
     "DESCRIPTIONS": [
-      "All attack cards cost #y2 times more and are considered to be played #y3 times. Each play has a #b50% chance to #yStun the target. #rLose 3 Dexterity."
+      "All attack cards cost #y2 times more and are considered to be played #y3 times. Each play has a #b41% chance to #yStun the target. #rLose 3 Dexterity."
     ]
   },
   "${modID}:Skill2Power": {
@@ -41,7 +41,7 @@
   "${modID}:StablePower": {
     "NAME": "Stable Perception",
     "DESCRIPTIONS": [
-      "Deals 20% additional True Damage when dealing damage."
+      "Deals 20% additional True Damage when dealing damage with attack cards."
     ]
   },
   "${modID}:FearPower": {
@@ -92,6 +92,38 @@
       " times.",
       " turns.",
       ""
+    ]
+  },
+  "${modID}:SwordArsenalPower": {
+    "NAME": "Equipment Rack",
+    "DESCRIPTIONS": [
+      "Gain #b%d equipment slots. Whenever you #yDeploy equipment, gain #b3 #yBlock.",
+      " NL Current equipment:",
+      ", "
+    ]
+  },
+  "${modID}:InstabilityPower": {
+    "NAME": "Instability",
+    "DESCRIPTIONS": [
+      "Current Instability: #b%d . NL At #b%d , trigger #yRampage : gain #b3 Strength, evoke all tactical equipment (without losing it), lasts #b2 turns. While active, you cannot gain Block and take #b2 True Damage at the end of each turn. When it ends, gain #b3 Instability. NL Playing an Attack +1 Instability; a Skill -1 (to a minimum of 0); an Exhausting card -1 additional."
+    ]
+  },
+  "${modID}:RampagePower": {
+    "NAME": "Rampage",
+    "DESCRIPTIONS": [
+      "You cannot gain Block and take #b2 True Damage at the end of each turn. Lasts #b%d turns. When it ends, gain #b3 Instability."
+    ]
+  },
+  "${modID}:CatharsisPower": {
+    "NAME": "Catharsis",
+    "DESCRIPTIONS": [
+      "Whenever you consume Instability, draw 1 card."
+    ]
+  },
+  "${modID}:CherishPower": {
+    "NAME": "Cherish",
+    "DESCRIPTIONS": [
+      "Whenever you play an Exhausting card, gain #b%d Block."
     ]
   }
 }

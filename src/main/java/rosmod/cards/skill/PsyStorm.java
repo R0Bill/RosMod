@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import rosmod.cards.BaseCard;
 import rosmod.character.Rosmontis;
+import rosmod.powers.InstabilityPower;
 import rosmod.util.CardStats;
 
 public class PsyStorm extends BaseCard {
@@ -27,23 +28,19 @@ public class PsyStorm extends BaseCard {
 
 
     @Override
-    public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster){
-        abstractPlayer.state.setAnimation(0,"Skill_3_Begin",false);
-        abstractPlayer.state.addAnimation(0,"Skill_3_Loop",true,0.3f);
+    public void use(AbstractPlayer p, AbstractMonster abstractMonster){
+        InstabilityPower.shift(3);
+        p.state.setAnimation(0,"Skill_3_Begin",false);
+        p.state.addAnimation(0,"Skill_3_Loop",true,0.3f);
+        // 每段 3-6-12-24...（3×2^n）真实伤害，段数 = 1 + 消耗能量
         for(int i = 0 ; i < 1 + this.energyOnUse ; i++){
-            int tempDamage = 2;
-            for(int j = 0; j<i;j++){
-                int Ftemp = tempDamage;
-                tempDamage = Ftemp * 2;
-            }
-//            for(AbstractMonster mo: AbstractDungeon.getCurrRoom().monsters.monsters)
-//                addToBot(new DamageAction(mo,new DamageInfo(mo,(tempDamage/monum)+1),AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
-
-            addToBot(new DamageAllEnemiesAction(abstractPlayer, DamageInfo.createDamageMatrix(tempDamage, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+            int tempDamage = 3 << i;
+            addToBot(new DamageAllEnemiesAction(p, DamageInfo.createDamageMatrix(tempDamage, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         }
-        abstractPlayer.state.addAnimation(0,"Skill_3_End",false,(1+this.energyOnUse)*0.2f);
-        abstractPlayer.state.addAnimation(0,"Idle",true,0.3f);
+        p.state.addAnimation(0,"Skill_3_End",false,(1+this.energyOnUse)*0.2f);
+        p.state.addAnimation(0,"Idle",true,0.3f);
+        // X费卡按原版惯例自行扣费（Whirlwind 同款模式）
         if(!this.freeToPlayOnce)
-           abstractPlayer.energy.use(this.energyOnUse);
+           p.energy.use(this.energyOnUse);
     }
 }

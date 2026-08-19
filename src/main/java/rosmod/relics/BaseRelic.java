@@ -4,6 +4,7 @@ import basemod.abstracts.CustomRelic;
 import basemod.helpers.RelicType;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import rosmod.util.GeneralUtils;
 import rosmod.util.TextureLoader;
 
@@ -74,5 +75,13 @@ public abstract class BaseRelic extends CustomRelic {
 
     public String getUpdatedDescription() {
         return this.DESCRIPTIONS[0];
+    }
+
+    /** 悬浮剑被御剑时触发（由 AbstractRosBlade.playChannelSFX 的遗物遍历调用）。 */
+    public void onSwordChanneled(AbstractOrb orb) {
+    }
+
+    /** 暴走触发时调用（由 InstabilityPower.checkThreshold 的遗物遍历调用）。 */
+    public void onRampageTriggered() {
     }
 }

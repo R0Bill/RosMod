@@ -1,14 +1,13 @@
 package rosmod.cards.other;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
+import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import rosmod.cards.BaseCard;
 import rosmod.character.Rosmontis;
+import rosmod.orbs.AbstractRosBlade;
+import rosmod.orbs.ThornBlade;
 import rosmod.util.CardStats;
 
 public class OptionStrike extends BaseCard {
@@ -24,12 +23,11 @@ public class OptionStrike extends BaseCard {
 
     public OptionStrike() {
         super(ID, info);
-        setDamage(4);
     }
 
     public void onChoseThisOption() {
-        AbstractPlayer player = AbstractDungeon.player;
-        addToBot(new DamageAllEnemiesAction(player, DamageInfo.createDamageMatrix(damage), DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.SLASH_HEAVY));
+        AbstractRosBlade.ensureSlot();
+        addToBot(new ChannelAction(new ThornBlade()));
     }
 
     public boolean canUpgrade() {

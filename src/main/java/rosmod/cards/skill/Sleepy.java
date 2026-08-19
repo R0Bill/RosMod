@@ -2,7 +2,6 @@ package rosmod.cards.skill;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.EnergizedPower;
 import rosmod.cards.BaseCard;
@@ -16,7 +15,7 @@ public class Sleepy extends BaseCard {
             CardType.SKILL,
             CardRarity.UNCOMMON,
             CardTarget.SELF,
-            -2
+            0
     );
 
     public Sleepy() {
@@ -24,20 +23,10 @@ public class Sleepy extends BaseCard {
         setEthereal(true);
     }
 
-    public boolean canUpgrade() {
-        return false;
+    @Override
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        // 重做：原为不可打出的「诅咒式」孤儿卡。现为0费延迟能量，虚无保留紧张感
+        addToBot(new ApplyPowerAction(p, p, new EnergizedPower(p, this.upgraded ? 2 : 1), this.upgraded ? 2 : 1));
     }
-
-    public boolean canUse(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        return false;
-    }
-
-    public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-    }
-
-    public void triggerOnExhaust() {
-        addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new EnergizedPower(AbstractDungeon.player, 1)));
-    }
-
 
 }

@@ -17,10 +17,11 @@ public class Skill3 extends BaseCard {
 
     public static final String ID = makeID("Skill3");
 
+    // 原 SPECIAL（仅训练室事件获取）；事件移除后改为 RARE 进入卡牌奖励池
     private static final CardStats info = new CardStats(
             Rosmontis.Enums.CARD_COLOR,
             CardType.POWER,
-            CardRarity.SPECIAL,
+            CardRarity.RARE,
             CardTarget.SELF,
             3
     );
@@ -63,7 +64,7 @@ public class Skill3 extends BaseCard {
                 }
             }
             for (AbstractCard abstractCard : groupCopy) {
-                if (!abstractCard.cardID.equals("TouchingStars") && !abstractCard.cardID.equals("rosmontis:ForgetMeNot")) {
+                if (!abstractCard.cardID.equals("rosmontis:TouchingStars") && !abstractCard.cardID.equals("rosmontis:ForgetMeNot")) {
                     int tempa = abstractCard.cost;
                     abstractCard.setCostForTurn(tempa * 2);
                 }

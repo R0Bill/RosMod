@@ -1,5 +1,6 @@
 package rosmod.cards.skill;
 
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.unique.RemoveDebuffsAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -14,17 +15,19 @@ public class Refresh extends BaseCard {
             CardType.SKILL,
             CardRarity.UNCOMMON,
             CardTarget.SELF,
-            2
+            1
     );
 
     public Refresh() {
         super(ID, info);
-        setCostUpgrade(1);
+        setCostUpgrade(0);
     }
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster m) {
+        // 移除全部负面效果（含 失控 ，DEBUFF 类型会被一并清除）
         addToBot(new RemoveDebuffsAction(abstractPlayer));
+        addToBot(new DrawCardAction(abstractPlayer, 1));
     }
 
 }

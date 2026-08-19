@@ -17,8 +17,14 @@ public class ForgetMeNot extends BaseCard {
             AbstractCard.CardType.ATTACK,
             AbstractCard.CardRarity.RARE,
             AbstractCard.CardTarget.ENEMY,
-            3
+            2
     );
+
+    private static final int FLOOR = 8;
+    private static final int UPG_FLOOR = 4;
+    private static final int RECALL_DIVISOR = 5;
+    private static final int RECALL_BONUS = 3;
+    private static final int UPG_RECALL_BONUS = 2;
 
     public ForgetMeNot() {
         super(ID, info);
@@ -26,7 +32,13 @@ public class ForgetMeNot extends BaseCard {
     }
 
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        addToBot(new DamageAction(abstractMonster, new DamageInfo(abstractPlayer, this.upgraded ? (5 * (abstractMonster.maxHealth - abstractMonster.currentHealth) / 10) : (4 * (abstractMonster.maxHealth - abstractMonster.currentHealth) / 10), DamageInfo.DamageType.HP_LOSS), AbstractGameAction.AttackEffect.SLASH_HEAVY));
+        int lost = abstractMonster.maxHealth - abstractMonster.currentHealth;
+        int percent = this.upgraded ? 50 : 40;
+        // 保底伤害，避免满血敌人时打0
+        int base = Math.max(this.upgraded ? FLOOR + UPG_FLOOR : FLOOR, lost * percent / 100);
+        // 回忆：消耗堆每有5张牌，伤害额外+3(升5)
+        int recallBonus = (abstractPlayer.exhaustPile.size() / RECALL_DIVISOR) * (this.upgraded ? RECALL_BONUS + UPG_RECALL_BONUS : RECALL_BONUS);
+        addToBot(new DamageAction(abstractMonster, new DamageInfo(abstractPlayer, base + recallBonus, DamageInfo.DamageType.HP_LOSS), AbstractGameAction.AttackEffect.SLASH_HEAVY));
     }
 
 }

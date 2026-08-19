@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import rosmod.cards.BaseCard;
 import rosmod.character.Rosmontis;
+import rosmod.powers.InstabilityPower;
 import rosmod.util.CardStats;
 
 public class LoseControl extends BaseCard {
@@ -33,6 +34,7 @@ public class LoseControl extends BaseCard {
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
+        InstabilityPower.shift(2);
         addToBot(new LoseHPAction(abstractPlayer, abstractPlayer, 2));
         int temp = 12;
         AbstractPower strength = AbstractDungeon.player.getPower("Strength");

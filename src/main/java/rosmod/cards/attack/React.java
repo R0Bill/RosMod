@@ -25,12 +25,12 @@ public class React extends BaseCard {
 
     public React() {
         super(ID, info);
-        setDamage(10, 5);
+        setDamage(14, 4);
     }
 
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         if (abstractMonster != null && abstractMonster.getIntentBaseDmg() >= 0)
-            addToBot(new ApplyPowerAction(abstractMonster, abstractPlayer, new FearPower(abstractMonster, this.upgraded ? 3 : 2)));
+            addToBot(new ApplyPowerAction(abstractMonster, abstractPlayer, new FearPower(abstractMonster, this.upgraded ? 4 : 3)));
         else
             addToBot(new DamageAction(abstractMonster, new DamageInfo(abstractPlayer, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_HEAVY));
 

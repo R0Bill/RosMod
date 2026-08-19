@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import rosmod.cards.BaseCard;
 import rosmod.character.Rosmontis;
+import rosmod.powers.InstabilityPower;
 import rosmod.util.CardStats;
 
 public class SolidifyMind extends BaseCard {
@@ -25,6 +26,7 @@ public class SolidifyMind extends BaseCard {
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster m) {
+        InstabilityPower.shift(-3);
         int a = this.upgraded ? abstractPlayer.currentBlock / 2 : abstractPlayer.currentBlock / 3;
         addToBot(new AddTemporaryHPAction(abstractPlayer, abstractPlayer, a));
         addToBot(new LoseBlockAction(abstractPlayer, abstractPlayer, a));

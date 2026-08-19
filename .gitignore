@@ -1,0 +1,9 @@
+# IDE
+.idea/
+
+# Claude Code
+.claude/
+CLAUDE.md
+
+# Build output
+target/

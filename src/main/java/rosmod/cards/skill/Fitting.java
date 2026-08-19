@@ -17,20 +17,19 @@ public class Fitting extends BaseCard {
             CardType.SKILL,
             CardRarity.UNCOMMON,
             CardTarget.ENEMY,
-            2
+            1
     );
-
 
     public Fitting() {
         super(ID, info);
-        setCostUpgrade(1);
+        setCostUpgrade(0);
     }
 
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         if (abstractMonster != null && abstractMonster.getIntentBaseDmg() >= 0)
-            addToBot(new ApplyPowerAction(abstractPlayer, abstractPlayer, new DexterityPower(abstractPlayer, 1)));
+            addToBot(new ApplyPowerAction(abstractPlayer, abstractPlayer, new DexterityPower(abstractPlayer, 2)));
         else
-            addToBot(new ApplyPowerAction(abstractPlayer, abstractPlayer, new StrengthPower(abstractPlayer, 1)));
+            addToBot(new ApplyPowerAction(abstractPlayer, abstractPlayer, new StrengthPower(abstractPlayer, 2)));
 
     }
 }

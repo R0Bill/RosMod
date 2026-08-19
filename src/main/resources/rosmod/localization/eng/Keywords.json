@@ -57,5 +57,48 @@
       "Independent"
     ],
     "DESCRIPTION": "Not affected by #y“As You Wish” responses and not easily affected by combo and energy changes."
+  },
+  {
+    "PROPER_NAME": "Tactical Equipment",
+    "NAMES": [
+      "Tactical Equipment",
+      "equipment",
+      "Equipment",
+      "rig",
+      "Rig"
+    ],
+    "DESCRIPTION": "Rosmontis's tactical equipment, maneuvered by her telekinetic Arts - colossal blades forged from city walls, each as heavy as a door. Triggers its passive at the start of your turn. When your slots are full, deploying new equipment evokes the oldest one."
+  },
+  {
+    "PROPER_NAME": "Deploy",
+    "NAMES": [
+      "Deploy",
+      "deploy"
+    ],
+    "DESCRIPTION": "Deploy a piece of tactical equipment into one of your equipment slots."
+  },
+  {
+    "PROPER_NAME": "Recall",
+    "NAMES": [
+      "Recall",
+      "recall"
+    ],
+    "DESCRIPTION": "This effect scales with the number of cards in your exhaust pile."
+  },
+  {
+    "PROPER_NAME": "Instability",
+    "NAMES": [
+      "Instability",
+      "instability"
+    ],
+    "DESCRIPTION": "Rosmontis's mental state. Playing an Attack grants 1 Instability; playing a Skill removes 1 (to a minimum of 0); playing an Exhausting card removes 1 additional. NL Instability N : If you have at least N Instability when played, consume N Instability and trigger the following effect."
+  },
+  {
+    "PROPER_NAME": "Rampage",
+    "NAMES": [
+      "Rampage",
+      "rampage"
+    ],
+    "DESCRIPTION": "Triggers at 10 Instability: gain 3 Strength, evoke all tactical equipment (without losing it), lasts 2 turns. While active, you cannot gain Block and take 2 HP loss at the end of each turn. When it ends, gain 3 Instability."
   }
 ]

@@ -18,7 +18,7 @@ public class CommandTerminal extends BaseCard {
             CardType.POWER,
             CardRarity.UNCOMMON,
             CardTarget.NONE,
-            2
+            1
     );
 
     public CommandTerminal() {

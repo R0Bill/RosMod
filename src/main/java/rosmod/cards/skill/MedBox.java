@@ -28,6 +28,8 @@ public class MedBox extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        // 修复：若经自动打出等非抽牌途径进入手牌被强制打出，空 use() 会白耗
+        addToBot(new HealAction(p, p, this.magicNumber));
     }
 
     public boolean canUpgrade() {

@@ -1,5 +1,6 @@
 package rosmod.cards.skill;
 
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.watcher.ChooseOneAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -23,7 +24,6 @@ public class Switching extends BaseCard {
 
     public Switching() {
         super(ID, info);
-        setInnate(false, true);
         setExhaust(true);
     }
 
@@ -33,6 +33,9 @@ public class Switching extends BaseCard {
         list.add(new STD());
         list.add(new DTS());
         addToBot(new ChooseOneAction(list));
+        // 升级：原「固有」首回合无属性可转是自坑，改为抽1张
+        if (this.upgraded)
+            addToBot(new DrawCardAction(abstractPlayer, 1));
     }
 
 

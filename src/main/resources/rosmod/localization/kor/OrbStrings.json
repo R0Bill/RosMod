@@ -1,12 +1,23 @@
 {
-  "${modID}:OrbID": {
-    "NAME": "오브 이름",
+  "rosmontis:BarrierBlade": {
+    "NAME": "방벽 장비",
     "DESCRIPTION": [
-      "#y패시브: 턴 시작 시 카드 #b",
-      " 장을 뽑습니다.",
-      " 장을 뽑습니다.",
-      " NL #y발동: 모든 적에게 #b",
-      " 피해를 입힙니다."
+      "패시브: 턴 시작 시 방어도 #b3 획득.",
+      "각성: 방어도 #b7 획득."
+    ]
+  },
+  "rosmontis:AssaultBlade": {
+    "NAME": "돌격 장비",
+    "DESCRIPTION": [
+      "패시브: 턴 시작 시 무작위 적에게 피해 #b3.",
+      "각성: 무작위 적에게 피해 #b9."
+    ]
+  },
+  "rosmontis:ThornBlade": {
+    "NAME": "가시 장비",
+    "DESCRIPTION": [
+      "패시브: 턴 시작 시 가시 #b1 획득.",
+      "각성: 모든 적에게 고정 피해 #b5."
     ]
   }
 }

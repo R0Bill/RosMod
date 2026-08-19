@@ -24,8 +24,8 @@
   },
   "${modID}:Memory": {
     "NAME": "回忆",
-    "DESCRIPTION": "在下回合获得 [E] [E] 。",
-    "UPGRADE_DESCRIPTION": " 保留 。在下回合获得 [E] [E] 。"
+    "DESCRIPTION": "在下回合获得 [E] [E] 。 NL ${modID}:回忆 ：消耗堆中每有 #b5 张牌，额外获得 !rosmontis:RecallEnergy! [E] 。",
+    "UPGRADE_DESCRIPTION": " 保留 。在下回合获得 [E] [E] 。 NL ${modID}:回忆 ：消耗堆中每有 #b5 张牌，额外获得 !rosmontis:RecallEnergy! [E] 。"
   },
   "${modID}:ConcentrateRos": {
     "NAME": "集中",
@@ -43,8 +43,8 @@
   },
   "${modID}:PsyStorm": {
     "NAME": "念力风暴",
-    "DESCRIPTION": " 消耗 。 NL 对全体敌人造成共享的2-4-8-16...点伤害。伤害段数取决于使用的能量。",
-    "UPGRADE_DESCRIPTION": " 消耗 ，保留 。 NL 对全体敌人造成共享的2-4-8-16...点伤害。伤害段数取决于使用的能量。"
+    "DESCRIPTION": " 消耗 。 NL 对全体敌人造成共享的3-6-12-24...点 ${modID}:真实伤害 。伤害段数取决于使用的能量。 NL ${modID}:失控 +3 。",
+    "UPGRADE_DESCRIPTION": " 消耗 ，保留 。 NL 对全体敌人造成共享的3-6-12-24...点 ${modID}:真实伤害 。伤害段数取决于使用的能量。 NL ${modID}:失控 +3 。"
   },
   "${modID}:QuickAttack": {
     "NAME": "快速攻击",
@@ -70,7 +70,7 @@
   },
   "${modID}:EntrenchRos": {
     "NAME": "战线维持",
-    "DESCRIPTION": "消耗。 格挡 翻倍。"
+    "DESCRIPTION": " 格挡 翻倍。"
   },
   "${modID}:CommandTerminal": {
     "NAME": "指挥终端",
@@ -92,13 +92,12 @@
   },
   "${modID}:StealBlock": {
     "NAME": "破障",
-    "DESCRIPTION": "造成敌人 格挡 量的伤害，获得造成伤害量的 格挡 。最低伤害为5。",
-    "UPGRADE_DESCRIPTION": "造成双倍敌人 格挡 量的伤害，获得造成伤害量的 格挡 。最低伤害为10。"
+    "DESCRIPTION": "造成 !rosmontis:StealDamage! 点伤害（等于目标 格挡 +5），获得等同于目标 格挡 的 格挡 。"
   },
   "${modID}:MilliaDisaster": {
     "NAME": "“米利亚的灾祸”",
-    "DESCRIPTION": "将一张 *感染 加入抽牌堆。 NL 每使用一张技能牌对随机敌人施加 2 ${modID}:恐惧 。",
-    "UPGRADE_DESCRIPTION": "将一张 *感染 加入抽牌堆。 NL 每使用一张技能牌对随机敌人施加 3 ${modID}:恐惧 。"
+    "DESCRIPTION": "将一张 *感染 加入抽牌堆。 NL 每使用一张技能牌对随机敌人施加 3 ${modID}:恐惧 。",
+    "UPGRADE_DESCRIPTION": "将一张 *感染 加入抽牌堆。 NL 每使用一张技能牌对随机敌人施加 4 ${modID}:恐惧 。"
   },
   "${modID}:Stable": {
     "NAME": "感知稳定",
@@ -111,23 +110,22 @@
   },
   "${modID}:Extrasensory": {
     "NAME": "超感",
-    "DESCRIPTION": "消耗 。为你给予一次余震强化。",
-    "UPGRADE_DESCRIPTION": "消耗 。为你给予持续一回合余震强化。"
+    "DESCRIPTION": "消耗 。若没有 余震强化 ：获得 #b3 层（一次性）；若有：使其层数 +3 。 NL ${modID}:失控 -2 。",
+    "UPGRADE_DESCRIPTION": "消耗 。获得的 余震强化 为持续型（每回合结束层数 -1）。 NL ${modID}:失控 -2 。"
   },
   "${modID}:LoseControl": {
     "NAME": "失控",
-    "DESCRIPTION": "失去2生命，造成 !D! 点伤害（受益2倍 *力量 加成）。如果计入力量的最终伤害大于等于16点，获得1 *力量 。",
-    "UPGRADE_DESCRIPTION": "失去2生命，造成 !D! 点伤害（受益2倍 *力量 加成）。如果计入力量的最终伤害大于等于14点，获得2 *力量 。"
+    "DESCRIPTION": "失去2生命，造成 !D! 点伤害（受益2倍 *力量 加成）。如果计入力量的最终伤害大于等于16点，获得1 *力量 。 NL ${modID}:失控 +2 。",
+    "UPGRADE_DESCRIPTION": "失去2生命，造成 !D! 点伤害（受益2倍 *力量 加成）。如果计入力量的最终伤害大于等于14点，获得2 *力量 。 NL ${modID}:失控 +2 。"
   },
   "${modID}:ThrowAway": {
     "NAME": "挥袖",
-    "DESCRIPTION": "造成 !D! 点伤害，抽1张牌。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害，抽2张牌。"
+    "DESCRIPTION": "造成 !D! 点伤害。随机 消耗 手牌中1张牌。"
   },
   "${modID}:DoublePre": {
     "NAME": "两手准备",
     "DESCRIPTION": "消耗 。获得 *快速攻击 ， *快速格挡 。",
-    "UPGRADE_DESCRIPTION": "获得 *快速攻击 ， *快速格挡 。"
+    "UPGRADE_DESCRIPTION": "消耗 。获得 2 张 *快速攻击 ， *快速格挡 。"
   },
   "${modID}:Deprive": {
     "NAME": "感知剥夺",
@@ -173,7 +171,7 @@
   "${modID}:ExtendP": {
     "NAME": "创想",
     "DESCRIPTION": "在每回合的开始和现在将 1 张 *思维衍生 加入手牌。",
-    "UPGRADE_DESCRIPTION": "固有 。在每回合的开始和现在将 2 张 *思维衍生 加入手牌。"
+    "UPGRADE_DESCRIPTION": "固有 。费用降为 #b0 。在每回合的开始和现在将 2 张 *思维衍生 加入手牌。"
   },
   "${modID}:GetReady": {
     "NAME": "准备就绪",
@@ -186,7 +184,7 @@
   },
   "${modID}:ExpressStrike": {
     "NAME": "无缝连击",
-    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。"
+    "DESCRIPTION": "造成 !rosmontis:ExpressHits! 次 !D! 点伤害。每件 ${modID}:战术装备 使次数 +1 。"
   },
   "${modID}:Hunter": {
     "NAME": "“猎人”",
@@ -207,8 +205,8 @@
   },
   "${modID}:ForgetMeNot": {
     "NAME": "“勿忘我”",
-    "DESCRIPTION": "消耗 ， ${modID}:独立 。造成敌人已损失生命值的百分之40的 ${modID}:真实伤害 。",
-    "UPGRADE_DESCRIPTION": "消耗 ， ${modID}:独立 。造成敌人已损失生命值的百分之50的 ${modID}:真实伤害 。"
+    "DESCRIPTION": "消耗 ， ${modID}:独立 。造成等同于敌人已损失生命值 40% 的 ${modID}:真实伤害 （最低 #b8 ）。 NL ${modID}:回忆 ：消耗堆中每有 #b5 张牌，伤害额外 +3 。",
+    "UPGRADE_DESCRIPTION": "消耗 ， ${modID}:独立 。造成等同于敌人已损失生命值 50% 的 ${modID}:真实伤害 （最低 #b12 ）。 NL ${modID}:回忆 ：消耗堆中每有 #b5 张牌，伤害额外 +5 。"
   },
   "${modID}:Shadow": {
     "NAME": "乳影随行",
@@ -217,21 +215,21 @@
   },
   "${modID}:React": {
     "NAME": "随机应变",
-    "DESCRIPTION": "如果敌人的意图是攻击， NL 给予 2 ${modID}:恐惧 ， NL 否则造成 !D! 伤害。",
-    "UPGRADE_DESCRIPTION": "如果敌人的意图是攻击， NL 给予 3 ${modID}:恐惧 ， NL 否则造成 !D! 伤害。"
+    "DESCRIPTION": "如果敌人的意图是攻击， NL 给予 3 ${modID}:恐惧 ， NL 否则造成 !D! 伤害。",
+    "UPGRADE_DESCRIPTION": "如果敌人的意图是攻击， NL 给予 4 ${modID}:恐惧 ， NL 否则造成 !D! 伤害。"
   },
   "${modID}:Switching": {
     "NAME": "战术交会",
     "DESCRIPTION": "消耗 。自主选择将 力量 和 敏捷 相互转换。",
-    "UPGRADE_DESCRIPTION": "消耗 ， 固有 。自主选择将 力量 和 敏捷 相互转换。"
+    "UPGRADE_DESCRIPTION": "消耗 。自主选择将 力量 和 敏捷 相互转换。 NL 抽1张牌。"
   },
   "${modID}:Fitting": {
     "NAME": "战场直觉",
-    "DESCRIPTION": "如果敌人的意图是攻击， NL 获得1 敏捷 ， NL 否则获得1 力量 。"
+    "DESCRIPTION": "如果敌人的意图是攻击， NL 获得2 敏捷 ， NL 否则获得2 力量 。"
   },
   "${modID}:Refresh": {
     "NAME": "褪生",
-    "DESCRIPTION": "移除你当前的所有负面效果。"
+    "DESCRIPTION": "移除你当前的所有负面效果（包括 ${modID}:失控 ）。抽1张牌。"
   },
   "${modID}:STD": {
     "NAME": "战术：防守",
@@ -243,8 +241,8 @@
   },
   "${modID}:SolidifyMind": {
     "NAME": "固化情绪",
-    "DESCRIPTION": "消耗 。转换三分之一的 格挡 到 临时生命 。",
-    "UPGRADE_DESCRIPTION": "消耗 。转换二分之一的 格挡 到 临时生命 。"
+    "DESCRIPTION": "消耗 。转换三分之一的 格挡 到 临时生命 。 NL ${modID}:失控 -3 。",
+    "UPGRADE_DESCRIPTION": "消耗 。转换二分之一的 格挡 到 临时生命 。 NL ${modID}:失控 -3 。"
   },
   "${modID}:Lullaby": {
     "NAME": "“摇篮曲”",
@@ -258,7 +256,8 @@
   },
   "${modID}:Sleepy": {
     "NAME": "睡意朦胧",
-    "DESCRIPTION": "虚无 。 NL 当此卡被消耗时，下一回合开始时获得 [E] 。 NL 不可升级。"
+    "DESCRIPTION": "虚无 。 消耗 。下回合获得 [E] 。",
+    "UPGRADE_DESCRIPTION": "虚无 。 消耗 。下回合获得 [E] [E] 。"
   },
   "${modID}:Endophobia": {
     "NAME": "内源性恐慌",
@@ -266,20 +265,20 @@
     "UPGRADE_DESCRIPTION": "将一张 *感染 加入抽牌堆， NL 对所有敌人给予 3 ${modID}:恐惧 ， NL 然后造成 !D! 伤害。"
   },
   "${modID}:OptionBlock": {
-    "NAME": "源石剑：格挡",
-    "DESCRIPTION": "获得10 格挡 。"
+    "NAME": "先驱者·壁垒",
+    "DESCRIPTION": "${modID}:部署 一件 #y壁垒 。"
   },
   "${modID}:OptionDefend": {
-    "NAME": "源石剑：防御",
-    "DESCRIPTION": "获得4 金属化 。"
+    "NAME": "后继者·防卫",
+    "DESCRIPTION": "${modID}:部署 一件 #y壁垒 ，获得 #b4 点 格挡 。"
   },
   "${modID}:OptionAttack": {
-    "NAME": "源石剑：攻击",
-    "DESCRIPTION": "对随机敌人造成 !D! 伤害。"
+    "NAME": "先驱者·突击",
+    "DESCRIPTION": "${modID}:部署 一件 #y突击 。"
   },
   "${modID}:OptionStrike": {
-    "NAME": "源石剑：打击",
-    "DESCRIPTION": "对全体敌人造成 !D! 伤害。"
+    "NAME": "后继者·棘刺",
+    "DESCRIPTION": "${modID}:部署 一件 #y棘刺 。"
   },
   "${modID}:AMOS": {
     "NAME": "A.M.O.S",
@@ -287,11 +286,11 @@
   },
   "${modID}:Inheritors": {
     "NAME": "后继者",
-    "DESCRIPTION": "在 *源石剑：防御 和 *源石剑：打击 中选择一项触发。"
+    "DESCRIPTION": "在 *后继者·防卫 和 *后继者·棘刺 中选择一项触发。"
   },
   "${modID}:Outriders": {
     "NAME": "先驱者",
-    "DESCRIPTION": "在 *源石剑：格挡 和 *源石剑：攻击 中选择一项触发。"
+    "DESCRIPTION": "在 *先驱者·壁垒 和 *先驱者·突击 中选择一项触发。"
   },
   "${modID}:Spiritualization": {
     "NAME": "“拉特兰净化券”",
@@ -299,11 +298,89 @@
   },
   "${modID}:WhoAreYou": {
     "NAME": "你是？？？",
-    "DESCRIPTION": "固有 。 [#19FFF9]我是？？？[] NL 获得 混乱 。",
+    "DESCRIPTION": "固有 。 [#19FFF9]我是？？？[] NL 抽2张牌。${modID}:失控 +2 。",
     "EXTENDED_DESCRIPTION": [
       "我总是把‘他’和‘她’弄混，中文发音都是‘ta’多简单。",
       "我还是想说，在另一个生命里，我真的很喜欢和你一起洗衣服和报税。",
       "敬启，致无法停止的心跳与最初的你."
     ]
+  },
+  "${modID}:SwordArsenal": {
+    "NAME": "装备架",
+    "DESCRIPTION": "获得 #b!M! 点装备槽。每当你 ${modID}:部署 ，获得 #b3 点 格挡 。"
+  },
+  "${modID}:SwordSheath": {
+    "NAME": "壁垒部署",
+    "DESCRIPTION": "消耗 。获得 #b1 点装备槽，${modID}:部署 一件 #y壁垒 。"
+  },
+  "${modID}:SwordChanneling": {
+    "NAME": "突击部署",
+    "DESCRIPTION": "消耗 。${modID}:部署 一件 #y突击 。",
+    "UPGRADE_DESCRIPTION": "消耗 。${modID}:部署 一件 #y突击 ，并立即触发其被动。"
+  },
+  "${modID}:SwordRain": {
+    "NAME": "全装激发",
+    "DESCRIPTION": "消耗 。激发你所有的 ${modID}:战术装备 （它们会离开你）。每激发一件，对所有敌人造成 #b!M! 点 ${modID}:真实伤害 。"
+  },
+  "${modID}:BreachPoint": {
+    "NAME": "临界",
+    "DESCRIPTION": "${modID}:失控 +!M! 。"
+  },
+  "${modID}:Frenzy": {
+    "NAME": "狂乱",
+    "DESCRIPTION": "造成 !D! 点伤害。 ${modID}:失控 !M! ：消耗 !M! 点失控，额外造成 !rosmontis:FrenzyBonus! 点伤害。"
+  },
+  "${modID}:Serenity": {
+    "NAME": "精神安定",
+    "DESCRIPTION": "${modID}:失控 -!M! 。获得 !B! 点 格挡 。"
+  },
+  "${modID}:Tranquilizer": {
+    "NAME": "镇定剂",
+    "DESCRIPTION": "若 ${modID}:暴走 ：移除 暴走 。获得 #b8 点 格挡 。",
+    "UPGRADE_DESCRIPTION": "若 ${modID}:暴走 ：移除 暴走 。获得 #b8 点 格挡 。抽1张牌。"
+  },
+  "${modID}:Reminiscence": {
+    "NAME": "追忆",
+    "DESCRIPTION": "消耗 。从 消耗堆 选择1张牌加入手牌，本回合其费用为 #b0 。若 消耗堆 中没有其他牌，抽1张牌。",
+    "UPGRADE_DESCRIPTION": "消耗 。从 消耗堆 选择1张牌加入手牌，本回合其费用为 #b0 。若 消耗堆 中没有其他牌，抽1张牌。 NL 抽1张牌。"
+  },
+  "${modID}:Somniloquy": {
+    "NAME": "梦呓",
+    "DESCRIPTION": "消耗 。获得等同于 消耗堆 牌数的 !rosmontis:RecallBlock! 点 格挡 。"
+  },
+  "${modID}:Engrave": {
+    "NAME": "铭刻",
+    "DESCRIPTION": "消耗 。造成 !D! 点伤害。 NL ${modID}:回忆 ：消耗堆中每有 #b3 张牌，本卡伤害永久 +1 （跨战斗保留）。"
+  },
+  "${modID}:TwinBlades": {
+    "NAME": "双装部署",
+    "DESCRIPTION": "消耗 。${modID}:部署 一件 #y壁垒 和一件 #y突击 。"
+  },
+  "${modID}:BladeDance": {
+    "NAME": "重装连击",
+    "DESCRIPTION": "造成 !rosmontis:BladeDmg! 点伤害。每件 ${modID}:战术装备 使伤害 +3 。",
+    "UPGRADE_DESCRIPTION": "造成 !rosmontis:BladeDmg! 点伤害。每件 ${modID}:战术装备 使伤害 +4 。"
+  },
+  "${modID}:Overload": {
+    "NAME": "过载",
+    "DESCRIPTION": "造成 !rosmontis:OverloadDmg! 点伤害（基础 #b12 ，加上当前 ${modID}:失控 值）。",
+    "UPGRADE_DESCRIPTION": "造成 !rosmontis:OverloadDmg! 点伤害（基础 #b16 ，加上当前 ${modID}:失控 值）。"
+  },
+  "${modID}:Catharsis": {
+    "NAME": "宣泄",
+    "DESCRIPTION": "每当你消耗 ${modID}:失控 时，抽1张牌。"
+  },
+  "${modID}:Forget": {
+    "NAME": "遗忘",
+    "DESCRIPTION": "消耗 。选择并 消耗 手牌中1张牌。抽1张牌。"
+  },
+  "${modID}:Echo": {
+    "NAME": "残响",
+    "DESCRIPTION": "消耗 。造成 !rosmontis:EchoDmg! 点伤害（等于 消耗堆 牌数 +5）。",
+    "UPGRADE_DESCRIPTION": "消耗 。造成 !rosmontis:EchoDmg! 点伤害（等于 消耗堆 牌数 +8）。"
+  },
+  "${modID}:Cherish": {
+    "NAME": "念旧",
+    "DESCRIPTION": "每当你打出 消耗 牌，获得 !M! 点 格挡 。"
   }
 }

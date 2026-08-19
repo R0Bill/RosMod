@@ -2,7 +2,7 @@ package rosmod.cards.attack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.ExhaustAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -19,17 +19,19 @@ public class ThrowAway extends BaseCard {
             CardTarget.ENEMY,
             1
     );
-    private static final int DAMAGE = 3;
+    private static final int DAMAGE = 9;
+    private static final int UPG_DAMAGE = 3;
 
     public ThrowAway() {
         super(ID, info);
-        setDamage(DAMAGE);
+        setDamage(DAMAGE, UPG_DAMAGE);
     }
 
     @Override
-    public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        addToBot(new DamageAction(abstractMonster, new DamageInfo(abstractPlayer, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_HEAVY));
-        addToBot(new DrawCardAction(abstractPlayer, this.upgraded ? 2 : 1));
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_HEAVY));
+        // 挥袖：随机消耗1张手牌——记忆体系启动器
+        addToBot(new ExhaustAction(1, true, false, false));
     }
 
 }

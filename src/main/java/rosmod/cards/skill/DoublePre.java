@@ -16,18 +16,17 @@ public class DoublePre extends BaseCard {
             AbstractCard.CardType.SKILL,
             CardRarity.UNCOMMON,
             AbstractCard.CardTarget.SELF,
-            1
+            0
     );
 
     public DoublePre() {
         super(ID, info);
-        setCostUpgrade(0);
-        setExhaust(true, false);
+        setExhaust(true);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new MakeTempCardInHandAction(new Summon(), 1));
-        addToBot(new MakeTempCardInHandAction(new QuickAttack(), 1));
+        addToBot(new MakeTempCardInHandAction(new QuickAttack(), this.upgraded ? 2 : 1));
     }
 }

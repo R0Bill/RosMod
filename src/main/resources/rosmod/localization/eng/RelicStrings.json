@@ -48,7 +48,7 @@
       "At the start of combat, gain ",
       " Dexterity and ",
       " Strength .",
-      "At the start of combat, gain Dexterity equal to the stacks and half of the stacks as Strength."
+      "At the start of combat, gain Dexterity and Strength equal to half of the stacks. (Every 2 Executions grant 1 Strength and 1 Dexterity.)"
     ]
   },
   "${modID}:AncientCoin": {
@@ -98,6 +98,48 @@
     "FLAVOR": "A peculiar mask that does not belong to any known culture, causing individuals to lose their will to fight... and inadvertently fall into deep contemplation.",
     "DESCRIPTIONS": [
       "#y${modID}:Fear No longer lose stacks."
+    ]
+  },
+  "${modID}:SwordTassel": {
+    "NAME": "Resonance Module",
+    "FLAVOR": "A small module that resonates with tactical equipment, said to wake the data slumbering within.",
+    "DESCRIPTIONS": [
+      "When your tactical equipment is evoked, also trigger its passive."
+    ]
+  },
+  "${modID}:SwordMound": {
+    "NAME": "Equipment Graveyard",
+    "FLAVOR": "Countless scrapped pieces of tactical equipment slumber here, each as heavy as a door.",
+    "DESCRIPTIONS": [
+      "At the start of combat, gain #b2 equipment slots, deploy a #yBarrier Rig and an #yAssault Rig."
+    ]
+  },
+  "${modID}:MindResonator": {
+    "NAME": "Mind Resonator",
+    "FLAVOR": "A small device that resonates with Rosmontis's mental waves.",
+    "DESCRIPTIONS": [
+      "At the start of combat, gain #b3 Instability."
+    ]
+  },
+  "${modID}:RampageAmplifier": {
+    "NAME": "Rampage Amplifier",
+    "FLAVOR": "Dangerous, but effective.",
+    "DESCRIPTIONS": [
+      "When Rampage triggers, gain #b2 additional Strength."
+    ]
+  },
+  "${modID}:OldDiary": {
+    "NAME": "Old Diary",
+    "FLAVOR": "The handwriting is blurred, yet a faint scent of shampoo remains.",
+    "DESCRIPTIONS": [
+      "Whenever you Exhaust a card, gain #b2 Block."
+    ]
+  },
+  "${modID}:PostBattleReview": {
+    "NAME": "Post-Battle Review",
+    "FLAVOR": "The pen is mightier than the memory - the Doctor's motto.",
+    "DESCRIPTIONS": [
+      "If you Exhaust at least #b6 cards this combat, heal #b4 HP when it ends."
     ]
   }
 }

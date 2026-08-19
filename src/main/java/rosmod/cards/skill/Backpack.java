@@ -21,7 +21,6 @@ public class Backpack extends BaseCard {
     public Backpack() {
         super(ID, info);
         setExhaust(true);
-        setMagic(2);
     }
 
     @Override

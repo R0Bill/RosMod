@@ -29,21 +29,15 @@ public class FallOut extends BaseCard {
     }
 
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        boolean i = true;
-        int temp = damage;
-//        abstractPlayer.state.setAnimation(0, "Skill_2", false);
-        while (i) {
-            for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-                if (!i)
-                    break;
-                if (temp <= 0)
-                    i = false;
-                if (!mo.isDead) {
+        // 修复：原实现递减值在敌人间轮替（A吃16、B吃12…），与描述「每个敌人独立递减」不符
+        for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
+            if (!mo.isDead) {
+                int temp = damage;
+                while (temp > 0) {
                     addToBot(new DamageAction(mo, new DamageInfo(abstractPlayer, temp, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
                     temp -= 4;
                 }
             }
-//            abstractPlayer.state.addAnimation(0, "Idle", true, 3.15f);
         }
     }
 

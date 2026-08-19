@@ -13,10 +13,11 @@ import rosmod.util.CardStats;
 
 public class Skill2 extends BaseCard {
     public static final String ID = makeID("Skill2");
+    // 原 SPECIAL（仅训练室事件获取）；事件移除后改为 RARE 进入卡牌奖励池
     private static final CardStats info = new CardStats(
             Rosmontis.Enums.CARD_COLOR,
             CardType.POWER,
-            CardRarity.SPECIAL,
+            CardRarity.RARE,
             CardTarget.SELF,
             2
     );

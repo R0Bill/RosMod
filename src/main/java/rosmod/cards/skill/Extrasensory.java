@@ -7,10 +7,12 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import rosmod.cards.BaseCard;
 import rosmod.character.Rosmontis;
 import rosmod.powers.BombPower;
+import rosmod.powers.InstabilityPower;
 import rosmod.util.CardStats;
 
 public class Extrasensory extends BaseCard {
     public static final String ID = makeID("Extrasensory");
+    private static final int BOMB_AMOUNT = 3;
     private static final CardStats info = new CardStats(
             Rosmontis.Enums.CARD_COLOR,
             CardType.SKILL,
@@ -22,21 +24,23 @@ public class Extrasensory extends BaseCard {
     public Extrasensory() {
         super(ID, info);
         setExhaust(true);
-        setMagic(3);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (p.hasPower("rosmontis:BombPower")) {
-            BombPower B = (BombPower) p.getPower("rosmontis:BombPower");
-            if (B.IsOnce() && this.upgraded) {
-                addToBot(new RemoveSpecificPowerAction(p, p, p.getPower("rosmontis:BombPower")));
-            } else {
-                B.UPGAmount(9);
-            }
-
+        InstabilityPower.shift(-2);
+        BombPower b = (BombPower) p.getPower("rosmontis:BombPower");
+        if (b == null) {
+            // 未升级：一次性余震强化；升级：持续型（每回合-1）
+            addToBot(new ApplyPowerAction(p, p, new BombPower(p, BOMB_AMOUNT, !this.upgraded)));
+        } else if (b.IsOnce() && this.upgraded) {
+            // 修复：原实现只移除一次性余震而不补持续型，与升级描述不符
+            addToBot(new RemoveSpecificPowerAction(p, p, b));
+            addToBot(new ApplyPowerAction(p, p, new BombPower(p, BOMB_AMOUNT, false)));
         } else {
-            addToBot(new ApplyPowerAction(p, p, new BombPower(p, 1, !this.upgraded)));
+            // 修复：原 UPGAmount(9) 笔误
+            b.UPGAmount(BOMB_AMOUNT);
+            b.flash();
         }
     }
 }

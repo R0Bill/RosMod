@@ -1,83 +1,64 @@
 {
-  "${modID}:EventID": {
-    "NAME": "Event Name",
+  "${modID}:BrokenSwordMound": {
+    "NAME": "Abandoned Equipment Yard",
     "DESCRIPTIONS": [
-      "This is event text, generally used to describe what's happening.",
-      "#g~This~ #g~text~ #g~is~ #g~green~ #g~and~ #g~wavy.~",
-      "#r@RED@ #r@AND@ #r@VIBRATING@ #r@TEXT.@",
-      "#rRed #gGreen #yYellow #bBlue #pPurple. ~Wavy~ @vibrating.@",
-      "You have to mark every word individually.",
-      "You can also use [#ffffff]white[] hex color codes like this to color text.",
-      "This also works in card text! But not on keywords."
+      "Scrapped heavy equipment litters the Spire's shadow, each hulk as heavy as a door.",
+      "You drag a still-working rig out of the scrap. It resonates faintly with your spirit.",
+      "You gather the wreckage into neat rows, burying a piece of your past within.",
+      "Time to keep moving."
     ],
     "OPTIONS": [
-      "[Action Description] What you actually get.",
-      "[Denial] #rLose #r1 #rMax #rHP. Bad stuff is red.",
-      "[Acceptance] #gGain #gApotheosis. Good stuff is green.",
+      "[Salvage] Obtain a random Tactical Equipment card.",
+      "[Bury the Wreckage] Remove a card from your deck.",
       "[Leave]",
-      "Select card to remove. (You can also stick extra text like this in here.)"
+      "[Leave]",
+      "Select a card to remove."
     ]
   },
-  "${modID}:PickUp": {
-    "NAME": "Pick Up",
+  "${modID}:LostNotebook": {
+    "NAME": "Lost Notebook",
     "DESCRIPTIONS": [
-      "You suddenly find yourself back on Rhodes Island's promenade. You spot #y a wallet at your feet.",
-      "You wait a while in place, and from a distance, you see a Filin coming your way.",
-      "You pick up the wallet, feeling the weight of coins inside through the leather. Best to leave quickly.",
-      "A wallet lying conspicuously on the ground? Too suspicious, better act like you didn't see it.",
-      "Jessica expresses her gratitude to you and invites you for afternoon tea.",
-      "You join Jessica for her lavish afternoon tea, delightful. (Restore all life, increase maximum life by 15)",
-      "You decline the invitation; there are more important matters at hand. As you leave, she hands you a gift from the Doctor."
+      "You find a notebook full of battle records among the Spire's ruins. Its cover is worn from repeated handling.",
+      "You read through the stranger's battle records and feel your spirit settle.",
+      "You copy several useful passages into your terminal.",
+      "You tear out a few pages for yourself and toss the rest into the fire - what can't be remembered, let it go."
     ],
     "OPTIONS": [
-      "Wait for someone.",
-      "No one around, pick it up.",
-      "Best not to meddle.",
-      "Accept graciously.",
-      "Politely decline and leave.",
-      "Seems to belong to Jessica.",
+      "[Read] Heal #g12 HP.",
+      "[Copy] Obtain a random memory card.",
+      "[Tear Up] Remove a card from your deck.",
+      "[Leave]",
+      "Select a card to remove."
+    ]
+  },
+  "${modID}:RestlessFlames": {
+    "NAME": "Restless Flames",
+    "DESCRIPTIONS": [
+      "An ownerless flame flickers in the Spire's corridor. It swells as you approach, as if answering your spirit.",
+      "The fire scorches your arm, but it also kindles something in your mind.",
+      "You warm yourself by the fire, and your restless thoughts slowly calm.",
+      "You leap into the flames! Amid the agony, a burning-hot object drops into your pack."
+    ],
+    "OPTIONS": [
+      "[Touch the Flame] #rLose #r8 #rHP. Obtain a random instability card.",
+      "[Warm Yourself] Heal #g10 HP.",
+      "[Leap In] #rLose #r15 #rHP. Obtain the #yRampage #yAmplifier relic.",
       "[Leave]"
     ]
   },
-  "${modID}:RhodesIslandSafeHouse": {
-    "NAME": "Rhodes Island Safe House",
+  "${modID}:SpireScavenger": {
+    "NAME": "Spire Scavenger",
     "DESCRIPTIONS": [
-      "You turn a corner, and before you is a familiar door. Behind the door seems to be a commonly seen backup safe house from Rhodes Island's various locations. Do you want to check it out?",
-      "You use the terminal to unlock the safe house. Inside, though a bit rudimentary, it has all the basic amenities and can serve as a temporary rest stop.",
-      "You try to forcefully break into the safe house and accidentally scratch your arm on a sharp piece of metal. Despite being a bit rudimentary inside, the safe house has all the basic amenities and can serve as a temporary rest stop.",
-      "Better to keep moving, slip away.",
-      "You use the medical kit on the wall and rest on the bed for a while. Feeling much better, it's time to leave.",
-      "You search the room and find a #y relic! It's time to leave.",
-      "You upgrade your equipment with the tools left behind in the room; it's time to go."
+      "You stop beside an adventurer's remains. His pack hangs open, revealing coins and a yellowed IOU.",
+      "You rummage through the pack and come away richer - though a sticky lump of Originium crystal has somehow found its way into your pocket.",
+      "You close the dead man's eyes and build a small cairn of stones.",
+      "You walk away in silence."
     ],
     "OPTIONS": [
-      "Use the terminal to unlock.",
-      "[Need Relic: Rosemary's Terminal]",
-      "[Cursed: #rInfection] Forcefully break in.",
+      "[Scavenge] Gain #g50 Gold. Obtain the #yInfected curse.",
+      "[Bury Him] Heal #g10 HP.",
       "[Leave]",
-      "Restore 40% of max HP.",
-      "Obtain 1 #y relic.",
-      "Randomly upgrade two cards. If the deck has *Training, upgrade once.",
-      ""
-    ]
-  },
-  "${modID}:UPGSkill": {
-    "NAME": "Rhodes Island Training Room",
-    "DESCRIPTIONS": [
-      "You suddenly find yourself back in the Rhodes Island training room, the equipment in front of you so familiar. Do you want to practice your skills?",
-      "You start from scratch and gain #ySkill1.",
-      "You advance your skills, losing #ySkill1 and gaining #ySkill2.",
-      "You advance your skills, losing #ySkill1 and gaining #ySkill3.",
-      "Nothing new to learn, slip away.",
-      "You practice your existing skills.",
-      "This also works in card text! But not on keywords."
-    ],
-    "OPTIONS": [
-      "[Practice] Gain #ySkill1",
-      "[Advance] #rLose #ySkill1 and gain #ySkill2",
-      "[Advance] #rLose #ySkill1 and gain #ySkill3",
-      "[Leave]",
-      "[Nothing more to learn] Upgrade one card. If the deck has *Training, upgrade once."
+      "[Leave]"
     ]
   }
 }

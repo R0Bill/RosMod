@@ -24,8 +24,8 @@
   },
   "${modID}:Memory": {
     "NAME": "Memory",
-    "DESCRIPTION": "Gain [E] [E] next turn.",
-    "UPGRADE_DESCRIPTION": "Retain. Gain [E] [E] next turn."
+    "DESCRIPTION": "Gain [E] [E] next turn. NL ${modID}:Recall : For every #b5 cards in your exhaust pile, gain !rosmontis:RecallEnergy! additional [E] next turn.",
+    "UPGRADE_DESCRIPTION": "Retain. Gain [E] [E] next turn. NL ${modID}:Recall : For every #b5 cards in your exhaust pile, gain !rosmontis:RecallEnergy! additional [E] next turn."
   },
   "${modID}:ConcentrateRos": {
     "NAME": "Concentrate",
@@ -42,8 +42,8 @@
   },
   "${modID}:PsyStorm": {
     "NAME": "Psy Storm",
-    "DESCRIPTION": "Exhaust . NL Deal 2-4-8-16... shared damage to all enemies. Number of hits depends on energy used.",
-    "UPGRADE_DESCRIPTION": "Exhaust , Retain . NL Deal 2-4-8-16... shared damage to all enemies. Number of hits depends on energy used."
+    "DESCRIPTION": "Exhaust . NL Deal shared 3-6-12-24... ${modID}:TrueDamage to all enemies. Number of hits depends on energy used. NL ${modID}:Instability +3.",
+    "UPGRADE_DESCRIPTION": "Exhaust , Retain . NL Deal shared 3-6-12-24... ${modID}:TrueDamage to all enemies. Number of hits depends on energy used. NL ${modID}:Instability +3."
   },
   "${modID}:QuickAttack": {
     "NAME": "Quick Attack",
@@ -69,7 +69,7 @@
   },
   "${modID}:EntrenchRos": {
     "NAME": "Frontline Maintain",
-    "DESCRIPTION": "Exhaust . Double your Block ."
+    "DESCRIPTION": "Double your Block ."
   },
   "${modID}:CommandTerminal": {
     "NAME": "Command Terminal",
@@ -91,13 +91,12 @@
   },
   "${modID}:StealBlock": {
     "NAME": "Breakthrough",
-    "DESCRIPTION": "Deal damage equal to the enemy's Block. Gain Block equal to the damage dealt. Minimum damage is 5.",
-    "UPGRADE_DESCRIPTION": "Deal damage equal to double enemy's Block. Gain Block equal to the damage dealt. Minimum damage is 10."
+    "DESCRIPTION": "Deal !rosmontis:StealDamage! damage (equal to the target's Block +5), gain Block equal to the target's Block."
   },
   "${modID}:MilliaDisaster": {
     "NAME": "Millia's Disaster",
-    "DESCRIPTION": "Add one *Infected to draw pile. NL Apply 2 ${modID}:Fear to a random enemy each time a Skill is played.",
-    "UPGRADE_DESCRIPTION": "Add one *Infected to draw pile. NL Apply 3 ${modID}:Fear to a random enemy each time a Skill is played."
+    "DESCRIPTION": "Add one *Infected to draw pile. NL Apply 3 ${modID}:Fear to a random enemy each time a Skill is played.",
+    "UPGRADE_DESCRIPTION": "Add one *Infected to draw pile. NL Apply 4 ${modID}:Fear to a random enemy each time a Skill is played."
   },
   "${modID}:Stable": {
     "NAME": "Stable Perception",
@@ -110,23 +109,22 @@
   },
   "${modID}:Extrasensory": {
     "NAME": "Extrasensory",
-    "DESCRIPTION": "Exhaust . Gain *AfterShock *Boost for once.",
-    "UPGRADE_DESCRIPTION": "Exhaust . Gain *AfterShock *Boost for this turn."
+    "DESCRIPTION": "Exhaust . If you have no *AfterShock *Boost: gain #b3 (one-time). Otherwise: +3 stacks. NL ${modID}:Instability -2.",
+    "UPGRADE_DESCRIPTION": "Exhaust . The *AfterShock *Boost you gain is persistent (loses 1 stack per turn). NL ${modID}:Instability -2."
   },
   "${modID}:LoseControl": {
     "NAME": "Lose Control",
-    "DESCRIPTION": "Lose 2 HP. Deal !D! damage (benefits from 2 times *Strength multiplier). If the damage calculated is 16 or more, gain 1 *Strength.",
-    "UPGRADE_DESCRIPTION": "Lose 2 HP. Deal !D! damage (benefits from 2 times *Strength multiplier). If the damage calculated is 14 or more, gain 2 *Strength."
+    "DESCRIPTION": "Lose 2 HP. Deal !D! damage (benefits from 2 times *Strength multiplier). If the damage calculated is 16 or more, gain 1 *Strength. NL ${modID}:Instability +2.",
+    "UPGRADE_DESCRIPTION": "Lose 2 HP. Deal !D! damage (benefits from 2 times *Strength multiplier). If the damage calculated is 14 or more, gain 2 *Strength. NL ${modID}:Instability +2."
   },
   "${modID}:ThrowAway": {
     "NAME": "Throw",
-    "DESCRIPTION": "Deal !D! damage, draw 1 card.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage, draw 2 cards."
+    "DESCRIPTION": "Deal !D! damage. Exhaust a random card in your hand."
   },
   "${modID}:DoublePre": {
     "NAME": "Double Preparedness",
     "DESCRIPTION": "Exhaust . Gain *Quick *Attack, *Quick *Block.",
-    "UPGRADE_DESCRIPTION": "Gain *Quick *Attack, *Quick *Block."
+    "UPGRADE_DESCRIPTION": "Exhaust . Gain 2 copies of *Quick *Attack, and a *Quick *Block."
   },
   "${modID}:Deprive": {
     "NAME": "Perceptive Deprivation",
@@ -171,7 +169,7 @@
   "${modID}:ExtendP": {
     "NAME": "Inception",
     "DESCRIPTION": "Add 1 *Mind *Extension to hand at the start of each turn and now.",
-    "UPGRADE_DESCRIPTION": "Innate . Add 2 *Mind *Extension to hand at the start of each turn and now."
+    "UPGRADE_DESCRIPTION": "Innate . Cost becomes #b0 . Add 2 *Mind *Extension to hand at the start of each turn and now."
   },
   "${modID}:GetReady": {
     "NAME": "Get Ready",
@@ -185,7 +183,7 @@
   },
   "${modID}:ExpressStrike": {
     "NAME": "Seamless Strikes",
-    "DESCRIPTION": "Deal !D! damage !M! times."
+    "DESCRIPTION": "Deal !D! damage !rosmontis:ExpressHits! times. Each ${modID}:Tactical Equipment grants 1 additional hit."
   },
   "${modID}:Hunter": {
     "NAME": "Hunter",
@@ -206,8 +204,8 @@
   },
   "${modID}:ForgetMeNot": {
     "NAME": "Forget Me Not",
-    "DESCRIPTION": "Exhaust , ${modID}:Unique . NL Deal ${modID}:TrueDamage equal to 40% of the enemy's missing HP to all enemies.",
-    "UPGRADE_DESCRIPTION": "Exhaust , ${modID}:Unique . NL Deal ${modID}:TrueDamage equal to 50% of the enemy's missing HP to all enemies."
+    "DESCRIPTION": "Exhaust , ${modID}:Independent . Deal ${modID}:TrueDamage equal to 40% of the enemy's missing HP (minimum #b8 ). NL ${modID}:Recall : For every #b5 cards in your exhaust pile, deal #b3 additional damage.",
+    "UPGRADE_DESCRIPTION": "Exhaust , ${modID}:Independent . Deal ${modID}:TrueDamage equal to 50% of the enemy's missing HP (minimum #b12 ). NL ${modID}:Recall : For every #b5 cards in your exhaust pile, deal #b5 additional damage."
   },
   "${modID}:Shadow": {
     "NAME": "Shadow",
@@ -216,21 +214,21 @@
   },
   "${modID}:React": {
     "NAME": "Adaptability",
-    "DESCRIPTION": "If the enemy's intent is to attack, give 2 ${modID}:Fear . Otherwise, deal !D! damage.",
-    "UPGRADE_DESCRIPTION": "If the enemy's intent is to attack, give 3 ${modID}:Fear . Otherwise, deal !D! damage."
+    "DESCRIPTION": "If the enemy's intent is to attack, give 3 ${modID}:Fear . Otherwise, deal !D! damage.",
+    "UPGRADE_DESCRIPTION": "If the enemy's intent is to attack, give 4 ${modID}:Fear . Otherwise, deal !D! damage."
   },
   "${modID}:Switching": {
     "NAME": "Tactical Exchange",
     "DESCRIPTION": "Exhaust . Choose to swap Strength and Dexterity.",
-    "UPGRADE_DESCRIPTION": "Exhaust , Innate . Choose to swap Strength and Dexterity."
+    "UPGRADE_DESCRIPTION": "Exhaust . Choose to swap Strength and Dexterity. NL Draw 1 card."
   },
   "${modID}:Fitting": {
     "NAME": "Battle Instinct",
-    "DESCRIPTION": "If the enemy's intent is to attack, gain 1 Dexterity , otherwise gain 1 Strength ."
+    "DESCRIPTION": "If the enemy's intent is to attack, gain 2 Dexterity , otherwise gain 2 Strength ."
   },
   "${modID}:Refresh": {
     "NAME": "Revitalize",
-    "DESCRIPTION": "Remove all your current negative effects."
+    "DESCRIPTION": "Remove all your current negative effects (including ${modID}:Instability ). Draw 1 card."
   },
   "${modID}:STD": {
     "NAME": "Tactical Discipline",
@@ -242,8 +240,8 @@
   },
   "${modID}:SolidifyMind": {
     "NAME": "Emotional Fortification",
-    "DESCRIPTION": "Exhaust . Convert one-third of your current Block to Temporary HP.",
-    "UPGRADE_DESCRIPTION": "Exhaust . Convert one-half of your current Block to Temporary HP."
+    "DESCRIPTION": "Exhaust . Convert one-third of your current Block to Temporary HP. NL ${modID}:Instability -3.",
+    "UPGRADE_DESCRIPTION": "Exhaust . Convert one-half of your current Block to Temporary HP. NL ${modID}:Instability -3."
   },
   "${modID}:Lullaby": {
     "NAME": "Lullaby",
@@ -257,7 +255,8 @@
   },
   "${modID}:Sleepy": {
     "NAME": "Sleepy",
-    "DESCRIPTION": "Ethereal . Upon being exhausted, gain [E] next turn. Unupgradable."
+    "DESCRIPTION": "Ethereal . Exhaust . Gain [E] next turn.",
+    "UPGRADE_DESCRIPTION": "Ethereal . Exhaust . Gain [E] [E] next turn."
   },
   "${modID}:Endophobia": {
     "NAME": "Endophobia",
@@ -265,32 +264,32 @@
     "UPGRADE_DESCRIPTION": "Add one *Infected to draw pile, give all enemies 3 ${modID}:Fear , then deal !D! damage."
   },
   "${modID}:OptionBlock": {
-    "NAME": "Originiums Blade: Block",
-    "DESCRIPTION": "Gain 10 Block ."
+    "NAME": "Pioneer: Barrier",
+    "DESCRIPTION": "${modID}:Deploy a #yBarrier Rig."
   },
   "${modID}:OptionDefend": {
-    "NAME": "Originiums Blade: Defend",
-    "DESCRIPTION": "Gain 4 Metallicize ."
+    "NAME": "Successor: Defense",
+    "DESCRIPTION": "${modID}:Deploy a #yBarrier Rig, gain #b4 Block."
   },
   "${modID}:OptionAttack": {
-    "NAME": "Originiums Blade: Attack",
-    "DESCRIPTION": "Deal !D! damage to a random enemy."
+    "NAME": "Pioneer: Assault",
+    "DESCRIPTION": "${modID}:Deploy an #yAssault Rig."
   },
   "${modID}:OptionStrike": {
-    "NAME": "Originiums Blade: Siege",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies."
+    "NAME": "Successor: Spikes",
+    "DESCRIPTION": "${modID}:Deploy a #ySpike Rig."
   },
   "${modID}:AMOS": {
     "NAME": "A.M.O.S",
-    "DESCRIPTION": "Exhaust . Add 2 *Inheritors and *Outriders to the draw pile."
+    "DESCRIPTION": "Exhaust . Add 2 *Successors and *Pioneers to the draw pile."
   },
   "${modID}:Inheritors": {
-    "NAME": "Inheritors",
-    "DESCRIPTION": "Trigger either *Primordial Blade: Defend or *Primordial Blade: Strike."
+    "NAME": "Successors",
+    "DESCRIPTION": "Trigger either *Successor: Defense or *Successor: Spikes."
   },
   "${modID}:Outriders": {
-    "NAME": "Outriders",
-    "DESCRIPTION": "Trigger either *Primordial Blade: Block or *Primordial Blade: Attack."
+    "NAME": "Pioneers",
+    "DESCRIPTION": "Trigger either *Pioneer: Barrier or *Pioneer: Assault."
   },
   "${modID}:Spiritualization": {
     "NAME": "Latelean purification ticket",
@@ -298,11 +297,89 @@
   },
   "${modID}:WhoAreYou": {
     "NAME": "WhoAreYou",
-    "DESCRIPTION": "Innate . [#19FFF9]Who am I???[] NL Gain Confusion.",
+    "DESCRIPTION": "Innate . [#19FFF9]Who am I???[] NL Draw 2 cards. ${modID}:Instability +2.",
     "EXTENDED_DESCRIPTION": [
       "I always get 'he' and 'she' mixed up. In Chinese, it's just 'ta' – so simple.",
       "I still want to say, in another life, I really enjoyed doing laundry and taxes with you.",
       "Yours sincerely, to the unstoppable heartbeat and the original you."
     ]
+  },
+  "${modID}:SwordArsenal": {
+    "NAME": "Equipment Rack",
+    "DESCRIPTION": "Gain #b!M! equipment slots. Whenever you ${modID}:Deploy equipment, gain #b3 Block."
+  },
+  "${modID}:SwordSheath": {
+    "NAME": "Barrier Deployment",
+    "DESCRIPTION": "Exhaust. Gain #b1 equipment slot, ${modID}:Deploy a #yBarrier Rig."
+  },
+  "${modID}:SwordChanneling": {
+    "NAME": "Assault Deployment",
+    "DESCRIPTION": "Exhaust. ${modID}:Deploy an #yAssault Rig.",
+    "UPGRADE_DESCRIPTION": "Exhaust. ${modID}:Deploy an #yAssault Rig and trigger its passive."
+  },
+  "${modID}:SwordRain": {
+    "NAME": "Full Evocation",
+    "DESCRIPTION": "Exhaust. Evoke all your ${modID}:Tactical Equipment (it leaves you). For each rig evoked, deal #b!M! ${modID}:TrueDamage to ALL enemies."
+  },
+  "${modID}:BreachPoint": {
+    "NAME": "Breach Point",
+    "DESCRIPTION": "${modID}:Instability +!M!."
+  },
+  "${modID}:Frenzy": {
+    "NAME": "Frenzy",
+    "DESCRIPTION": "Deal !D! damage. ${modID}:Instability !M! : consume !M! Instability, deal !rosmontis:FrenzyBonus! additional damage."
+  },
+  "${modID}:Serenity": {
+    "NAME": "Serenity",
+    "DESCRIPTION": "${modID}:Instability -!M!. Gain !B! Block."
+  },
+  "${modID}:Tranquilizer": {
+    "NAME": "Tranquilizer",
+    "DESCRIPTION": "If ${modID}:Rampage : remove Rampage. Gain #b8 Block.",
+    "UPGRADE_DESCRIPTION": "If ${modID}:Rampage : remove Rampage. Gain #b8 Block. Draw 1 card."
+  },
+  "${modID}:Reminiscence": {
+    "NAME": "Reminiscence",
+    "DESCRIPTION": "Exhaust. Choose 1 card from your exhaust pile and add it to your hand. It costs #b0 this turn. If there are no other cards there, draw 1 card.",
+    "UPGRADE_DESCRIPTION": "Exhaust. Choose 1 card from your exhaust pile and add it to your hand. It costs #b0 this turn. If there are no other cards there, draw 1 card. NL Draw 1 card."
+  },
+  "${modID}:Somniloquy": {
+    "NAME": "Somniloquy",
+    "DESCRIPTION": "Exhaust. Gain !rosmontis:RecallBlock! Block, equal to the number of cards in your exhaust pile."
+  },
+  "${modID}:Engrave": {
+    "NAME": "Engrave",
+    "DESCRIPTION": "Exhaust. Deal !D! damage. NL ${modID}:Recall : For every #b3 cards in your exhaust pile, permanently increase this card's damage by 1 (kept between combats)."
+  },
+  "${modID}:TwinBlades": {
+    "NAME": "Dual Deployment",
+    "DESCRIPTION": "Exhaust. ${modID}:Deploy a #yBarrier Rig and an #yAssault Rig."
+  },
+  "${modID}:BladeDance": {
+    "NAME": "Heavy Strikes",
+    "DESCRIPTION": "Deal !rosmontis:BladeDmg! damage. Each ${modID}:Tactical Equipment increases damage by #b3 .",
+    "UPGRADE_DESCRIPTION": "Deal !rosmontis:BladeDmg! damage. Each ${modID}:Tactical Equipment increases damage by #b4 ."
+  },
+  "${modID}:Overload": {
+    "NAME": "Overload",
+    "DESCRIPTION": "Deal !rosmontis:OverloadDmg! damage (#b12 base, plus your current ${modID}:Instability ).",
+    "UPGRADE_DESCRIPTION": "Deal !rosmontis:OverloadDmg! damage (#b16 base, plus your current ${modID}:Instability )."
+  },
+  "${modID}:Catharsis": {
+    "NAME": "Catharsis",
+    "DESCRIPTION": "Whenever you consume ${modID}:Instability , draw 1 card."
+  },
+  "${modID}:Forget": {
+    "NAME": "Forget",
+    "DESCRIPTION": "Exhaust. Choose and Exhaust 1 card in your hand. Draw 1 card."
+  },
+  "${modID}:Echo": {
+    "NAME": "Echo",
+    "DESCRIPTION": "Exhaust. Deal !rosmontis:EchoDmg! damage (equal to your exhaust pile size +5).",
+    "UPGRADE_DESCRIPTION": "Exhaust. Deal !rosmontis:EchoDmg! damage (equal to your exhaust pile size +8)."
+  },
+  "${modID}:Cherish": {
+    "NAME": "Cherish",
+    "DESCRIPTION": "Whenever you play an Exhausting card, gain !M! Block."
   }
 }

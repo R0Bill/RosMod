@@ -18,7 +18,7 @@ public class MilliaDisaster extends BaseCard {
             CardType.POWER,
             AbstractCard.CardRarity.RARE,
             AbstractCard.CardTarget.SELF,
-            2
+            1
     );
 
     public MilliaDisaster() {
@@ -29,7 +29,7 @@ public class MilliaDisaster extends BaseCard {
     }
 
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        addToBot(new ApplyPowerAction(abstractPlayer, abstractPlayer, new MilliaPower(abstractPlayer, this.upgraded ? 3 : 2)));
+        addToBot(new ApplyPowerAction(abstractPlayer, abstractPlayer, new MilliaPower(abstractPlayer, this.upgraded ? 4 : 3)));
         addToBot(new MakeTempCardInDrawPileAction(new Infected(), 1, true, false, false));
     }
 }

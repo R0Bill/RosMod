@@ -21,7 +21,6 @@ public class EntrenchRos extends BaseCard {
     public EntrenchRos() {
         super(ID, info);
         setCostUpgrade(1);
-        setExhaust(true);
     }
 
     @Override

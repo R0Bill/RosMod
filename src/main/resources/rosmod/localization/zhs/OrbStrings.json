@@ -1,12 +1,23 @@
 {
-  "${modID}:OrbID": {
-    "NAME": "Orb Name",
+  "rosmontis:BarrierBlade": {
+    "NAME": "壁垒",
     "DESCRIPTION": [
-      "#yPassive: At the start of your turn, draw #b",
-      " card.",
-      " cards.",
-      " NL #yEvoke: Deal #b",
-      " damage to all enemies."
+      "被动：每回合开始获得 #b3 点 格挡 。",
+      "激发：获得 #b7 点 格挡 。"
+    ]
+  },
+  "rosmontis:AssaultBlade": {
+    "NAME": "突击",
+    "DESCRIPTION": [
+      "被动：每回合开始对随机敌人造成 #b3 点伤害。",
+      "激发：对随机敌人造成 #b9 点伤害。"
+    ]
+  },
+  "rosmontis:ThornBlade": {
+    "NAME": "棘刺",
+    "DESCRIPTION": [
+      "被动：每回合开始获得 #b1 点 荆棘 。",
+      "激发：对所有敌人造成 #b5 点 真实伤害 。"
     ]
   }
 }

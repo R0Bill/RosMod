@@ -20,5 +20,10 @@
       "Rebirth",
       "8007"
     ]
+  },
+  "${modID}:ReminiscenceAction": {
+    "TEXT": [
+      "Choose a card to add to your hand"
+    ]
   }
 }

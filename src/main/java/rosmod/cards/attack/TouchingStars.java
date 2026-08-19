@@ -34,12 +34,8 @@ public class TouchingStars extends BaseCard {
         this.dontTriggerOnUseCard = true;
     }
 
-    public void setCostForTurn(int amt) {
-        if (amt == this.magicNumber - 1) {
-            this.costForTurn = amt;
-        }
-    }
-
+    // 修复：原 setCostForTurn 覆写只接受 amt == magicNumber-1，与 ReduceCostAction 传入值永不相等，
+    // 导致费用死锁在 8 点无法打出。外部改费已由 TouchingStarBalancePatches 保护，无需覆写。
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         addToBot(new DamageAction(abstractMonster, new DamageInfo(abstractPlayer, damage, DamageInfo.DamageType.HP_LOSS), AbstractGameAction.AttackEffect.SLASH_HEAVY));

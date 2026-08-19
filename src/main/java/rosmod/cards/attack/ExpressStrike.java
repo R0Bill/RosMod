@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import rosmod.cards.BaseCard;
 import rosmod.character.Rosmontis;
+import rosmod.orbs.AbstractRosBlade;
 import rosmod.util.CardStats;
 
 public class ExpressStrike extends BaseCard {
@@ -20,20 +21,23 @@ public class ExpressStrike extends BaseCard {
             1
     );
 
-    private static final int DAMAGE = 1;
-    private static final int MAGIC = 5;
-    private static final int UPG_MAGIC = 5;
+    private static final int DAMAGE = 2;
+    private static final int UPG_DAMAGE = 1;
+    private static final int BASE_HITS = 4;
 
     public ExpressStrike() {
         super(ID, info);
-        setDamage(DAMAGE);
-        setMagic(MAGIC, UPG_MAGIC);
+        setDamage(DAMAGE, UPG_DAMAGE);
+        // 段数 = 4 + 悬浮剑数，实时显示
+        setCustomVar("ExpressHits", VariableType.MAGIC, BASE_HITS, 0,
+                (m, baseVal) -> baseVal + AbstractRosBlade.countBlades());
     }
 
     @Override
-    public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        for (int i = 1; i <= this.magicNumber; i++)
-            addToBot(new DamageAction(abstractMonster, new DamageInfo(abstractPlayer, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_HEAVY));
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        int hits = BASE_HITS + AbstractRosBlade.countBlades();
+        for (int i = 0; i < hits; i++)
+            addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
     }
 
 }

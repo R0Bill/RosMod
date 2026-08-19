@@ -20,9 +20,10 @@ import org.apache.logging.log4j.Logger;
 import org.scannotation.AnnotationDB;
 import rosmod.cards.BaseCard;
 import rosmod.character.Rosmontis;
-import rosmod.event.PickUp;
-import rosmod.event.RhodesIslandSafeHouse;
-import rosmod.event.UPGSkill;
+import rosmod.event.BrokenSwordMound;
+import rosmod.event.LostNotebook;
+import rosmod.event.RestlessFlames;
+import rosmod.event.SpireScavenger;
 import rosmod.relics.BaseRelic;
 import rosmod.relics.Terminal;
 import rosmod.util.GeneralUtils;
@@ -145,14 +146,15 @@ public class BasicMod implements
 
     @Override
     public void receivePostInitialize() {
-        BaseMod.addEvent(PickUp.ID, PickUp.class, "TheCity");
-        BaseMod.addEvent(RhodesIslandSafeHouse.ID, RhodesIslandSafeHouse.class, "Exordium");
-        BaseMod.addEvent(RhodesIslandSafeHouse.ID, RhodesIslandSafeHouse.class, "TheCity");
-        BaseMod.addEvent(RhodesIslandSafeHouse.ID, RhodesIslandSafeHouse.class, "TheBeyond");
-
-        BaseMod.addEvent(UPGSkill.ID, UPGSkill.class, "Exordium");
-        BaseMod.addEvent(UPGSkill.ID, UPGSkill.class, "TheCity");
-        BaseMod.addEvent(UPGSkill.ID, UPGSkill.class, "TheBeyond");
+        BaseMod.addEvent(BrokenSwordMound.ID, BrokenSwordMound.class, "Exordium");
+        BaseMod.addEvent(BrokenSwordMound.ID, BrokenSwordMound.class, "TheCity");
+        BaseMod.addEvent(LostNotebook.ID, LostNotebook.class, "Exordium");
+        BaseMod.addEvent(LostNotebook.ID, LostNotebook.class, "TheCity");
+        BaseMod.addEvent(LostNotebook.ID, LostNotebook.class, "TheBeyond");
+        BaseMod.addEvent(RestlessFlames.ID, RestlessFlames.class, "TheCity");
+        BaseMod.addEvent(RestlessFlames.ID, RestlessFlames.class, "TheBeyond");
+        BaseMod.addEvent(SpireScavenger.ID, SpireScavenger.class, "Exordium");
+        BaseMod.addEvent(SpireScavenger.ID, SpireScavenger.class, "TheCity");
         //This loads the image used as an icon in the in-game mods menu.
         Texture badgeTexture = TextureLoader.getTexture(imagePath("badge.png"));
         //Set up the mod information displayed in the in-game mods menu.
