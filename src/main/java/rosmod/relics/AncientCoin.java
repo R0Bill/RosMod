@@ -19,7 +19,7 @@ public class AncientCoin extends BaseRelic {
 
     public void onEquip() {
         CardCrawlGame.sound.play("GOLD_GAIN");
-        AbstractDungeon.player.gainGold(130);
+        AbstractDungeon.player.gainGold(500);
     }
 
     public boolean canSpawn() {

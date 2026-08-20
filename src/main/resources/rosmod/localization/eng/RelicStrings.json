@@ -53,9 +53,9 @@
   },
   "${modID}:AncientCoin": {
     "NAME": "Ancient Coin",
-    "FLAVOR": "Rusted ancient coin, impossible to tell its age. These are seen everywhere in Terra Firma.",
+    "FLAVOR": "Rusted ancient coin, impossible to tell its age. These are seen everywhere in the wastelands of Terra.",
     "DESCRIPTIONS": [
-      "Gain 150 gold immediately."
+      "Gain 500 gold immediately."
     ]
   },
   "${modID}:TheHug": {

@@ -24,8 +24,14 @@ public class Oath extends BaseRelic {
     }
 
     public void onTrigger() {
+        if (this.usedUp)
+            return;
         flash();
         addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+        // The killing blow was already subtracted, so HP can be negative here.
+        // heal() has no lower clamp; clamp to 0 first so the revive can't leave us below 0.
+        if (AbstractDungeon.player.currentHealth < 0)
+            AbstractDungeon.player.currentHealth = 0;
         int healAmt = AbstractDungeon.player.maxHealth / 2;
         if (healAmt < 30)
             healAmt = 30;
