@@ -111,35 +111,35 @@
     "NAME": "Equipment Graveyard",
     "FLAVOR": "Countless scrapped pieces of tactical equipment slumber here, each as heavy as a door.",
     "DESCRIPTIONS": [
-      "At the start of combat, gain #b2 equipment slots, deploy a #yBarrier Rig and an #yAssault Rig."
+      "At the start of combat, gain 2 equipment slots, deploy a #yBarrier Rig and an #yAssault Rig."
     ]
   },
   "${modID}:MindResonator": {
     "NAME": "Mind Resonator",
     "FLAVOR": "A small device that resonates with Rosmontis's mental waves.",
     "DESCRIPTIONS": [
-      "At the start of combat, gain #b3 Instability."
+      "At the start of combat, gain 3 Instability."
     ]
   },
   "${modID}:RampageAmplifier": {
     "NAME": "Rampage Amplifier",
     "FLAVOR": "Dangerous, but effective.",
     "DESCRIPTIONS": [
-      "When Rampage triggers, gain #b2 additional Strength."
+      "When Rampage triggers, gain 2 additional Strength."
     ]
   },
   "${modID}:OldDiary": {
     "NAME": "Old Diary",
     "FLAVOR": "The handwriting is blurred, yet a faint scent of shampoo remains.",
     "DESCRIPTIONS": [
-      "Whenever you Exhaust a card, gain #b2 Block."
+      "Whenever you Exhaust a card, gain 2 Block."
     ]
   },
   "${modID}:PostBattleReview": {
     "NAME": "Post-Battle Review",
     "FLAVOR": "The pen is mightier than the memory - the Doctor's motto.",
     "DESCRIPTIONS": [
-      "If you Exhaust at least #b6 cards this combat, heal #b4 HP when it ends."
+      "If you Exhaust at least 6 cards this combat, heal 4 HP when it ends."
     ]
   }
 }

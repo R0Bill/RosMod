@@ -2,22 +2,22 @@
   "rosmontis:BarrierBlade": {
     "NAME": "Barrier Rig",
     "DESCRIPTION": [
-      "Passive: At the start of your turn, gain #b3 Block.",
-      "Evoke: Gain #b7 Block."
+      "Passive: At the start of your turn, gain 3 Block.",
+      "Evoke: Gain 7 Block."
     ]
   },
   "rosmontis:AssaultBlade": {
     "NAME": "Assault Rig",
     "DESCRIPTION": [
-      "Passive: At the start of your turn, deal #b3 damage to a random enemy.",
-      "Evoke: Deal #b9 damage to a random enemy."
+      "Passive: At the start of your turn, deal 3 damage to a random enemy.",
+      "Evoke: Deal 9 damage to a random enemy."
     ]
   },
   "rosmontis:ThornBlade": {
     "NAME": "Spike Rig",
     "DESCRIPTION": [
-      "Passive: At the start of your turn, gain #b1 Thorns.",
-      "Evoke: Deal #b5 True Damage to ALL enemies."
+      "Passive: At the start of your turn, gain 1 Thorns.",
+      "Evoke: Deal 5 True Damage to ALL enemies."
     ]
   }
 }

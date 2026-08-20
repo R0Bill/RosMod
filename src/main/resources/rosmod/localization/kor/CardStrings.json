@@ -24,8 +24,8 @@
   },
   "${modID}:Memory": {
     "NAME": "추억",
-    "DESCRIPTION": "다음 턴에 [E] [E] 를 획득합니다. NL ${modID}:회상 : 소모 더미에 카드 #b5 장마다 다음 턴에 !rosmontis:RecallEnergy! [E] 를 추가로 획득합니다.",
-    "UPGRADE_DESCRIPTION": "보존 。다음 턴에 [E] [E] 를 획득합니다. NL ${modID}:회상 : 소모 더미에 카드 #b5 장마다 다음 턴에 !rosmontis:RecallEnergy! [E] 를 추가로 획득합니다."
+    "DESCRIPTION": "다음 턴에 [E] [E] 를 획득합니다. NL ${modID}:회상 : 소모 더미에 카드 5 장마다 다음 턴에 !rosmontis:RecallEnergy! [E] 를 추가로 획득합니다.",
+    "UPGRADE_DESCRIPTION": "보존 。다음 턴에 [E] [E] 를 획득합니다. NL ${modID}:회상 : 소모 더미에 카드 5 장마다 다음 턴에 !rosmontis:RecallEnergy! [E] 를 추가로 획득합니다."
   },
   "${modID}:ConcentrateRos": {
     "NAME": "집중",
@@ -110,7 +110,7 @@
   },
   "${modID}:Extrasensory": {
     "NAME": "초감각",
-    "DESCRIPTION": "소멸 。여진 강화가 없으면: #b3 획득(1회용). 있으면: 스택 +3. NL ${modID}:불안정 -2.",
+    "DESCRIPTION": "소멸 。여진 강화가 없으면: 3 획득(1회용). 있으면: 스택 +3. NL ${modID}:불안정 -2.",
     "UPGRADE_DESCRIPTION": "소멸 。획득하는 여진 강화가 지속형입니다(턴 종료 시 -1). NL ${modID}:불안정 -2."
   },
   "${modID}:LoseControl": {
@@ -171,7 +171,7 @@
   "${modID}:ExtendP": {
     "NAME": "창상",
     "DESCRIPTION": "매 턴 시작 시와 지금 *사고 파생 1장을 손패에 추가합니다.",
-    "UPGRADE_DESCRIPTION": "선천적 。비용이 #b0 이 됩니다。매 턴 시작 시와 지금 *사고 파생 2장을 손패에 추가합니다."
+    "UPGRADE_DESCRIPTION": "선천적 。비용이 0 이 됩니다。매 턴 시작 시와 지금 *사고 파생 2장을 손패에 추가합니다."
   },
   "${modID}:GetReady": {
     "NAME": "준비 완료",
@@ -205,8 +205,8 @@
   },
   "${modID}:ForgetMeNot": {
     "NAME": "\"물망초\"",
-    "DESCRIPTION": "소멸 , ${modID}:독립 。적이 잃은 생명력의 40%만큼 ${modID}:고정 피해 를 입힙니다(최소 #b8 ). NL ${modID}:회상 : 소모 더미에 카드 #b5 장마다 추가 피해 #b3 .",
-    "UPGRADE_DESCRIPTION": "소멸 , ${modID}:독립 。적이 잃은 생명력의 50%만큼 ${modID}:고정 피해 를 입힙니다(최소 #b12 ). NL ${modID}:회상 : 소모 더미에 카드 #b5 장마다 추가 피해 #b5 ."
+    "DESCRIPTION": "소멸 , ${modID}:독립 。적이 잃은 생명력의 40%만큼 ${modID}:고정 피해 를 입힙니다(최소 8 ). NL ${modID}:회상 : 소모 더미에 카드 5 장마다 추가 피해 3 .",
+    "UPGRADE_DESCRIPTION": "소멸 , ${modID}:독립 。적이 잃은 생명력의 50%만큼 ${modID}:고정 피해 를 입힙니다(최소 12 ). NL ${modID}:회상 : 소모 더미에 카드 5 장마다 추가 피해 5 ."
   },
   "${modID}:Shadow": {
     "NAME": "그림자처럼",
@@ -270,7 +270,7 @@
   },
   "${modID}:OptionDefend": {
     "NAME": "계승자: 수비",
-    "DESCRIPTION": "${modID}:배치 로 #y방벽 장비 를 배치하고 방어도 #b4 획득."
+    "DESCRIPTION": "${modID}:배치 로 #y방벽 장비 를 배치하고 방어도 4 획득."
   },
   "${modID}:OptionAttack": {
     "NAME": "선구자: 돌격",
@@ -307,11 +307,11 @@
   },
   "${modID}:SwordArsenal": {
     "NAME": "장비 거치대",
-    "DESCRIPTION": "장비 슬롯 #b!M! 개를 얻습니다. ${modID}:배치 할 때마다 방어도 #b3 획득."
+    "DESCRIPTION": "장비 슬롯 !M! 개를 얻습니다. ${modID}:배치 할 때마다 방어도 3 획득."
   },
   "${modID}:SwordSheath": {
     "NAME": "방벽 배치",
-    "DESCRIPTION": "소모. 장비 슬롯 #b1 개를 얻고 ${modID}:배치 로 #y방벽 장비 를 배치합니다."
+    "DESCRIPTION": "소모. 장비 슬롯 1 개를 얻고 ${modID}:배치 로 #y방벽 장비 를 배치합니다."
   },
   "${modID}:SwordChanneling": {
     "NAME": "돌격 배치",
@@ -320,7 +320,7 @@
   },
   "${modID}:SwordRain": {
     "NAME": "전장비 각성",
-    "DESCRIPTION": "소모. 배치된 모든 ${modID}:전술 장비 를 각성시킵니다 (장비가 사라집니다). 각성한 장비 하나당 모든 적에게 #b!M! 의 ${modID}:고정 피해 를 입힙니다."
+    "DESCRIPTION": "소모. 배치된 모든 ${modID}:전술 장비 를 각성시킵니다 (장비가 사라집니다). 각성한 장비 하나당 모든 적에게 !M! 의 ${modID}:고정 피해 를 입힙니다."
   },
   "${modID}:BreachPoint": {
     "NAME": "임계점",
@@ -336,13 +336,13 @@
   },
   "${modID}:Tranquilizer": {
     "NAME": "진정제",
-    "DESCRIPTION": "${modID}:폭주 중이면: 폭주를 제거합니다. 방어도 #b8 획득.",
-    "UPGRADE_DESCRIPTION": "${modID}:폭주 중이면: 폭주를 제거합니다. 방어도 #b8 획득. 카드 1장을 뽑습니다."
+    "DESCRIPTION": "${modID}:폭주 중이면: 폭주를 제거합니다. 방어도 8 획득.",
+    "UPGRADE_DESCRIPTION": "${modID}:폭주 중이면: 폭주를 제거합니다. 방어도 8 획득. 카드 1장을 뽑습니다."
   },
   "${modID}:Reminiscence": {
     "NAME": "회상",
-    "DESCRIPTION": "소멸. 소모 더미에서 카드 1장을 선택해 손패에 추가합니다. 이번 턴 비용이 #b0 이 됩니다. 소모 더미에 다른 카드가 없으면 카드 1장을 뽑습니다.",
-    "UPGRADE_DESCRIPTION": "소멸. 소모 더미에서 카드 1장을 선택해 손패에 추가합니다. 이번 턴 비용이 #b0 이 됩니다. 소모 더미에 다른 카드가 없으면 카드 1장을 뽑습니다. NL 카드 1장을 뽑습니다."
+    "DESCRIPTION": "소멸. 소모 더미에서 카드 1장을 선택해 손패에 추가합니다. 이번 턴 비용이 0 이 됩니다. 소모 더미에 다른 카드가 없으면 카드 1장을 뽑습니다.",
+    "UPGRADE_DESCRIPTION": "소멸. 소모 더미에서 카드 1장을 선택해 손패에 추가합니다. 이번 턴 비용이 0 이 됩니다. 소모 더미에 다른 카드가 없으면 카드 1장을 뽑습니다. NL 카드 1장을 뽑습니다."
   },
   "${modID}:Somniloquy": {
     "NAME": "잠꼬대",
@@ -350,7 +350,7 @@
   },
   "${modID}:Engrave": {
     "NAME": "각인",
-    "DESCRIPTION": "소멸. 피해 !D!. NL ${modID}:회상 : 소모 더미에 카드 #b3 장마다 이 카드의 피해가 영구히 +1 (전투 간 유지)."
+    "DESCRIPTION": "소멸. 피해 !D!. NL ${modID}:회상 : 소모 더미에 카드 3 장마다 이 카드의 피해가 영구히 +1 (전투 간 유지)."
   },
   "${modID}:TwinBlades": {
     "NAME": "이중 배치",
@@ -363,8 +363,8 @@
   },
   "${modID}:Overload": {
     "NAME": "과부하",
-    "DESCRIPTION": "!rosmontis:OverloadDmg! 피해를 입힙니다(기본 #b12 + 현재 ${modID}:불안정).",
-    "UPGRADE_DESCRIPTION": "!rosmontis:OverloadDmg! 피해를 입힙니다(기본 #b16 + 현재 ${modID}:불안정)."
+    "DESCRIPTION": "!rosmontis:OverloadDmg! 피해를 입힙니다(기본 12 + 현재 ${modID}:불안정).",
+    "UPGRADE_DESCRIPTION": "!rosmontis:OverloadDmg! 피해를 입힙니다(기본 16 + 현재 ${modID}:불안정)."
   },
   "${modID}:Catharsis": {
     "NAME": "배출",

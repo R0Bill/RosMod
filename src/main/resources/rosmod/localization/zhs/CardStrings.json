@@ -24,8 +24,8 @@
   },
   "${modID}:Memory": {
     "NAME": "回忆",
-    "DESCRIPTION": "在下回合获得 [E] [E] 。 NL ${modID}:回忆 ：消耗堆中每有 #b5 张牌，额外获得 !rosmontis:RecallEnergy! [E] 。",
-    "UPGRADE_DESCRIPTION": " 保留 。在下回合获得 [E] [E] 。 NL ${modID}:回忆 ：消耗堆中每有 #b5 张牌，额外获得 !rosmontis:RecallEnergy! [E] 。"
+    "DESCRIPTION": "在下回合获得 [E] [E] 。 NL ${modID}:回忆 ：消耗堆中每有 5 张牌，额外获得 !rosmontis:RecallEnergy! [E] 。",
+    "UPGRADE_DESCRIPTION": " 保留 。在下回合获得 [E] [E] 。 NL ${modID}:回忆 ：消耗堆中每有 5 张牌，额外获得 !rosmontis:RecallEnergy! [E] 。"
   },
   "${modID}:ConcentrateRos": {
     "NAME": "集中",
@@ -110,7 +110,7 @@
   },
   "${modID}:Extrasensory": {
     "NAME": "超感",
-    "DESCRIPTION": "消耗 。若没有 余震强化 ：获得 #b3 层（一次性）；若有：使其层数 +3 。 NL ${modID}:失控 -2 。",
+    "DESCRIPTION": "消耗 。若没有 余震强化 ：获得 3 层（一次性）；若有：使其层数 +3 。 NL ${modID}:失控 -2 。",
     "UPGRADE_DESCRIPTION": "消耗 。获得的 余震强化 为持续型（每回合结束层数 -1）。 NL ${modID}:失控 -2 。"
   },
   "${modID}:LoseControl": {
@@ -171,7 +171,7 @@
   "${modID}:ExtendP": {
     "NAME": "创想",
     "DESCRIPTION": "在每回合的开始和现在将 1 张 *思维衍生 加入手牌。",
-    "UPGRADE_DESCRIPTION": "固有 。费用降为 #b0 。在每回合的开始和现在将 2 张 *思维衍生 加入手牌。"
+    "UPGRADE_DESCRIPTION": "固有 。费用降为 0 。在每回合的开始和现在将 2 张 *思维衍生 加入手牌。"
   },
   "${modID}:GetReady": {
     "NAME": "准备就绪",
@@ -205,8 +205,8 @@
   },
   "${modID}:ForgetMeNot": {
     "NAME": "“勿忘我”",
-    "DESCRIPTION": "消耗 ， ${modID}:独立 。造成等同于敌人已损失生命值 40% 的 ${modID}:真实伤害 （最低 #b8 ）。 NL ${modID}:回忆 ：消耗堆中每有 #b5 张牌，伤害额外 +3 。",
-    "UPGRADE_DESCRIPTION": "消耗 ， ${modID}:独立 。造成等同于敌人已损失生命值 50% 的 ${modID}:真实伤害 （最低 #b12 ）。 NL ${modID}:回忆 ：消耗堆中每有 #b5 张牌，伤害额外 +5 。"
+    "DESCRIPTION": "消耗 ， ${modID}:独立 。造成等同于敌人已损失生命值 40% 的 ${modID}:真实伤害 （最低 8 ）。 NL ${modID}:回忆 ：消耗堆中每有 5 张牌，伤害额外 +3 。",
+    "UPGRADE_DESCRIPTION": "消耗 ， ${modID}:独立 。造成等同于敌人已损失生命值 50% 的 ${modID}:真实伤害 （最低 12 ）。 NL ${modID}:回忆 ：消耗堆中每有 5 张牌，伤害额外 +5 。"
   },
   "${modID}:Shadow": {
     "NAME": "乳影随行",
@@ -270,7 +270,7 @@
   },
   "${modID}:OptionDefend": {
     "NAME": "后继者·防卫",
-    "DESCRIPTION": "${modID}:部署 一件 #y壁垒 ，获得 #b4 点 格挡 。"
+    "DESCRIPTION": "${modID}:部署 一件 #y壁垒 ，获得 4 点 格挡 。"
   },
   "${modID}:OptionAttack": {
     "NAME": "先驱者·突击",
@@ -307,11 +307,11 @@
   },
   "${modID}:SwordArsenal": {
     "NAME": "装备架",
-    "DESCRIPTION": "获得 #b!M! 点装备槽。每当你 ${modID}:部署 ，获得 #b3 点 格挡 。"
+    "DESCRIPTION": "获得 !M! 点装备槽。每当你 ${modID}:部署 ，获得 3 点 格挡 。"
   },
   "${modID}:SwordSheath": {
     "NAME": "壁垒部署",
-    "DESCRIPTION": "消耗 。获得 #b1 点装备槽，${modID}:部署 一件 #y壁垒 。"
+    "DESCRIPTION": "消耗 。获得 1 点装备槽，${modID}:部署 一件 #y壁垒 。"
   },
   "${modID}:SwordChanneling": {
     "NAME": "突击部署",
@@ -320,7 +320,7 @@
   },
   "${modID}:SwordRain": {
     "NAME": "全装激发",
-    "DESCRIPTION": "消耗 。激发你所有的 ${modID}:战术装备 （它们会离开你）。每激发一件，对所有敌人造成 #b!M! 点 ${modID}:真实伤害 。"
+    "DESCRIPTION": "消耗 。激发你所有的 ${modID}:战术装备 （它们会离开你）。每激发一件，对所有敌人造成 !M! 点 ${modID}:真实伤害 。"
   },
   "${modID}:BreachPoint": {
     "NAME": "临界",
@@ -336,13 +336,13 @@
   },
   "${modID}:Tranquilizer": {
     "NAME": "镇定剂",
-    "DESCRIPTION": "若 ${modID}:暴走 ：移除 暴走 。获得 #b8 点 格挡 。",
-    "UPGRADE_DESCRIPTION": "若 ${modID}:暴走 ：移除 暴走 。获得 #b8 点 格挡 。抽1张牌。"
+    "DESCRIPTION": "若 ${modID}:暴走 ：移除 暴走 。获得 8 点 格挡 。",
+    "UPGRADE_DESCRIPTION": "若 ${modID}:暴走 ：移除 暴走 。获得 8 点 格挡 。抽1张牌。"
   },
   "${modID}:Reminiscence": {
     "NAME": "追忆",
-    "DESCRIPTION": "消耗 。从 消耗堆 选择1张牌加入手牌，本回合其费用为 #b0 。若 消耗堆 中没有其他牌，抽1张牌。",
-    "UPGRADE_DESCRIPTION": "消耗 。从 消耗堆 选择1张牌加入手牌，本回合其费用为 #b0 。若 消耗堆 中没有其他牌，抽1张牌。 NL 抽1张牌。"
+    "DESCRIPTION": "消耗 。从 消耗堆 选择1张牌加入手牌，本回合其费用为 0 。若 消耗堆 中没有其他牌，抽1张牌。",
+    "UPGRADE_DESCRIPTION": "消耗 。从 消耗堆 选择1张牌加入手牌，本回合其费用为 0 。若 消耗堆 中没有其他牌，抽1张牌。 NL 抽1张牌。"
   },
   "${modID}:Somniloquy": {
     "NAME": "梦呓",
@@ -350,7 +350,7 @@
   },
   "${modID}:Engrave": {
     "NAME": "铭刻",
-    "DESCRIPTION": "消耗 。造成 !D! 点伤害。 NL ${modID}:回忆 ：消耗堆中每有 #b3 张牌，本卡伤害永久 +1 （跨战斗保留）。"
+    "DESCRIPTION": "消耗 。造成 !D! 点伤害。 NL ${modID}:回忆 ：消耗堆中每有 3 张牌，本卡伤害永久 +1 （跨战斗保留）。"
   },
   "${modID}:TwinBlades": {
     "NAME": "双装部署",
@@ -363,8 +363,8 @@
   },
   "${modID}:Overload": {
     "NAME": "过载",
-    "DESCRIPTION": "造成 !rosmontis:OverloadDmg! 点伤害（基础 #b12 ，加上当前 ${modID}:失控 值）。",
-    "UPGRADE_DESCRIPTION": "造成 !rosmontis:OverloadDmg! 点伤害（基础 #b16 ，加上当前 ${modID}:失控 值）。"
+    "DESCRIPTION": "造成 !rosmontis:OverloadDmg! 点伤害（基础 12 ，加上当前 ${modID}:失控 值）。",
+    "UPGRADE_DESCRIPTION": "造成 !rosmontis:OverloadDmg! 点伤害（基础 16 ，加上当前 ${modID}:失控 值）。"
   },
   "${modID}:Catharsis": {
     "NAME": "宣泄",

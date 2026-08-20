@@ -8,7 +8,7 @@
   "${modID}:Skill3Power": {
     "NAME": "As You Wish",
     "DESCRIPTIONS": [
-      "All attack cards cost #y2 times more and are considered to be played #y3 times. Each play has a #b41% chance to #yStun the target. #rLose 3 Dexterity."
+      "All attack cards cost #y2 times more and are considered to be played #y3 times. Each play has a 41% chance to #yStun the target. #rLose 3 Dexterity."
     ]
   },
   "${modID}:Skill2Power": {
@@ -97,7 +97,7 @@
   "${modID}:SwordArsenalPower": {
     "NAME": "Equipment Rack",
     "DESCRIPTIONS": [
-      "Gain #b%d equipment slots. Whenever you #yDeploy equipment, gain #b3 #yBlock.",
+      "Gain %d equipment slots. Whenever you #yDeploy equipment, gain 3 #yBlock.",
       " NL Current equipment:",
       ", "
     ]
@@ -105,13 +105,13 @@
   "${modID}:InstabilityPower": {
     "NAME": "Instability",
     "DESCRIPTIONS": [
-      "Current Instability: #b%d . NL At #b%d , trigger #yRampage : gain #b3 Strength, evoke all tactical equipment (without losing it), lasts #b2 turns. While active, you cannot gain Block and take #b2 True Damage at the end of each turn. When it ends, gain #b3 Instability. NL Playing an Attack +1 Instability; a Skill -1 (to a minimum of 0); an Exhausting card -1 additional."
+      "Current Instability: %d . NL At %d , trigger #yRampage : gain 3 Strength, evoke all tactical equipment (without losing it), lasts 2 turns. While active, you cannot gain Block and take 2 True Damage at the end of each turn. When it ends, gain 3 Instability. NL Playing an Attack +1 Instability; a Skill -1 (to a minimum of 0); an Exhausting card -1 additional."
     ]
   },
   "${modID}:RampagePower": {
     "NAME": "Rampage",
     "DESCRIPTIONS": [
-      "You cannot gain Block and take #b2 True Damage at the end of each turn. Lasts #b%d turns. When it ends, gain #b3 Instability."
+      "You cannot gain Block and take 2 True Damage at the end of each turn. Lasts %d turns. When it ends, gain 3 Instability."
     ]
   },
   "${modID}:CatharsisPower": {
@@ -123,7 +123,7 @@
   "${modID}:CherishPower": {
     "NAME": "Cherish",
     "DESCRIPTIONS": [
-      "Whenever you play an Exhausting card, gain #b%d Block."
+      "Whenever you play an Exhausting card, gain %d Block."
     ]
   }
 }
